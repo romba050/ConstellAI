@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ConstellAI — an atlas for the world's rare diseases</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="#">
+    <svg viewBox="0 0 28 28" width="22" height="22" aria-hidden="true"><g stroke="currentColor" stroke-width="1" opacity=".55"><path d="M5 20 13 13 22 16M13 13 17 5"/></g><g fill="currentColor"><circle cx="5" cy="20" r="2"/><circle cx="13" cy="13" r="2.8"/><circle cx="22" cy="16" r="2"/><circle cx="17" cy="5" r="1.6"/></g></svg>
+    ConstellAI
+  </a>
+  <div class="search">
+    <input id="q" type="search" autocomplete="off" spellcheck="false"
+           placeholder="Search a disease, gene, symptom, mechanism or patient group — e.g. “STXBP1” or “lysosomal”">
+    <div id="hits" hidden></div>
+  </div>
+  <div class="persona" role="radiogroup" aria-label="Viewing as">
+    <span>Viewing as</span>
+    <button data-persona="maria" title="Patient organisation leader">Maria</button>
+    <button data-persona="devon" title="Newly diagnosed family — plain language">Devon</button>
+    <button data-persona="priya" title="Biotech scout — rank clusters by mechanism">Priya</button>
+    <button data-persona="osei" title="Researcher — who else works on this mechanism">Dr. Osei</button>
+  </div>
+</header>
+<main>
+  <aside id="legend"></aside>
+  <section id="mapwrap">
+    <canvas id="map"></canvas>
+    <div id="tip" hidden></div>
+    <div class="mapkey">
+      <span><i class="line"></i> same constellation</span>
+      <span><i class="line dashed"></i> bridge across constellations</span>
+      <button id="reset">Reset view</button>
+    </div>
+  </section>
+  <aside id="panel"></aside>
+</main>
+<div id="modal" hidden>
+  <div class="sheet">
+    <div class="sheet-head">
+      <strong>Sourced proposal</strong>
+      <span>
+        <button id="copy">Copy</button>
+        <button id="download">Download .md</button>
+        <button id="close">Close</button>
+      </span>
+    </div>
+    <pre id="brief"></pre>
+  </div>
+</div>
+<script src="vendor/d3.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

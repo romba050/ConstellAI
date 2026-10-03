@@ -1,0 +1,1101 @@
+{
+ "about": "Hand-curated list of patient organisations and cross-disease registries. Liveness of every URL is checked by `python -m atlas.check_orgs`; the gene and keyword lists drive matching and should be reviewed by the community.",
+ "verified": "2026-10-03",
+ "organizations": [
+  {
+   "name": "STXBP1 Foundation",
+   "url": "https://www.stxbp1disorders.org",
+   "genes": [
+    "STXBP1"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "SynGAP Research Fund",
+   "url": "https://curesyngap1.org",
+   "genes": [
+    "SYNGAP1"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Bridge the Gap – SYNGAP Education and Research Foundation",
+   "url": "https://bridgesyngap.org",
+   "genes": [
+    "SYNGAP1"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Dravet Syndrome Foundation",
+   "url": "https://dravetfoundation.org",
+   "genes": [
+    "SCN1A"
+   ],
+   "keywords": [
+    "Dravet"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "FamilieSCN2A Foundation",
+   "url": "https://www.scn2a.org",
+   "genes": [
+    "SCN2A"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "International SCN8A Alliance",
+   "url": "https://scn8aalliance.org",
+   "genes": [
+    "SCN8A"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": false
+  },
+  {
+   "name": "KCNQ2 Cure Alliance",
+   "url": "https://www.kcnq2cure.org",
+   "genes": [
+    "KCNQ2"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "CureGRIN Foundation",
+   "url": "https://curegrin.org",
+   "genes": [
+    "GRIN1",
+    "GRIN2A",
+    "GRIN2B",
+    "GRIN2D",
+    "GRIA1",
+    "GRIA2",
+    "GRIA3",
+    "GRIA4"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "GRIN2B Foundation",
+   "url": "https://grin2b.com",
+   "genes": [
+    "GRIN2B"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "SLC6A1 Connect",
+   "url": "https://slc6a1connect.org",
+   "genes": [
+    "SLC6A1"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "International Foundation for CDKL5 Research",
+   "url": "https://www.cdkl5.com",
+   "genes": [
+    "CDKL5"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Loulou Foundation",
+   "url": "https://www.louloufoundation.org",
+   "genes": [
+    "CDKL5"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": false
+  },
+  {
+   "name": "FOXG1 Research Foundation",
+   "url": "https://foxg1research.org",
+   "genes": [
+    "FOXG1"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Rett Syndrome Research Trust",
+   "url": "https://reverserett.org",
+   "genes": [
+    "MECP2"
+   ],
+   "keywords": [
+    "Rett syndrome"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "International Rett Syndrome Foundation",
+   "url": "https://www.rettsyndrome.org",
+   "genes": [
+    "MECP2"
+   ],
+   "keywords": [
+    "Rett syndrome"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Angelman Syndrome Foundation",
+   "url": "https://www.angelman.org",
+   "genes": [
+    "UBE3A"
+   ],
+   "keywords": [
+    "Angelman"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Foundation for Angelman Syndrome Therapeutics (FAST)",
+   "url": "https://cureangelman.org",
+   "genes": [
+    "UBE3A"
+   ],
+   "keywords": [
+    "Angelman"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "TESS Research Foundation",
+   "url": "https://www.tessresearch.org",
+   "genes": [
+    "SLC13A5"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "KIF1A.ORG",
+   "url": "https://www.kif1a.org",
+   "genes": [
+    "KIF1A"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Glut1 Deficiency Foundation",
+   "url": "https://www.g1dfoundation.org",
+   "genes": [
+    "SLC2A1"
+   ],
+   "keywords": [
+    "GLUT1 deficiency"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "PCDH19 Alliance",
+   "url": "https://www.pcdh19info.org",
+   "genes": [
+    "PCDH19"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Phelan-McDermid Syndrome Foundation",
+   "url": "https://pmsf.org",
+   "genes": [
+    "SHANK3"
+   ],
+   "keywords": [
+    "Phelan-McDermid"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "TSC Alliance",
+   "url": "https://www.tscalliance.org",
+   "genes": [
+    "TSC1",
+    "TSC2"
+   ],
+   "keywords": [
+    "tuberous sclerosis"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Pitt Hopkins Research Foundation",
+   "url": "https://pitthopkins.org",
+   "genes": [
+    "TCF4"
+   ],
+   "keywords": [
+    "Pitt-Hopkins"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "CACNA1A Foundation",
+   "url": "https://www.cacna1a.org",
+   "genes": [
+    "CACNA1A"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "KCNT1 Epilepsy Foundation",
+   "url": "https://kcnt1epilepsy.org",
+   "genes": [
+    "KCNT1"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "ADNP Kids Research Foundation",
+   "url": "https://www.adnpfoundation.org",
+   "genes": [
+    "ADNP"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Coalition to Cure CHD2",
+   "url": "https://www.curechd2.org",
+   "genes": [
+    "CHD2"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Association for Creatine Deficiencies",
+   "url": "https://creatineinfo.org",
+   "genes": [
+    "SLC6A8",
+    "GAMT",
+    "GATM"
+   ],
+   "keywords": [
+    "creatine"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "DYRK1A Syndrome International Association",
+   "url": "https://www.dyrk1a.org",
+   "genes": [
+    "DYRK1A"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "CSNK2A1 Foundation",
+   "url": "https://www.csnk2a1foundation.org",
+   "genes": [
+    "CSNK2A1"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Yellow Brick Road Project (HNRNPH2)",
+   "url": "https://www.yellowbrickroadproject.org",
+   "genes": [
+    "HNRNPH2"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "The Bow Foundation (GNAO1)",
+   "url": "https://gnao1.org",
+   "genes": [
+    "GNAO1"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "National Tay-Sachs & Allied Diseases Association",
+   "url": "https://www.ntsad.org",
+   "genes": [
+    "HEXA",
+    "HEXB",
+    "GM2A",
+    "GLB1",
+    "ASPA"
+   ],
+   "keywords": [
+    "Tay-Sachs",
+    "Sandhoff",
+    "GM1 gangliosidosis",
+    "Canavan"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Cure GM1 Foundation",
+   "url": "https://curegm1.org",
+   "genes": [
+    "GLB1"
+   ],
+   "keywords": [
+    "GM1 gangliosidosis"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "National MPS Society",
+   "url": "https://mpssociety.org",
+   "genes": [
+    "IDUA",
+    "IDS",
+    "SGSH",
+    "NAGLU",
+    "HGSNAT",
+    "GNS",
+    "GALNS",
+    "ARSB",
+    "GUSB"
+   ],
+   "keywords": [
+    "mucopolysaccharidosis",
+    "mucolipidosis"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Cure Sanfilippo Foundation",
+   "url": "https://curesanfilippofoundation.org",
+   "genes": [
+    "SGSH",
+    "NAGLU",
+    "HGSNAT",
+    "GNS"
+   ],
+   "keywords": [
+    "Sanfilippo"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "National Niemann-Pick Disease Foundation",
+   "url": "https://nnpdf.org",
+   "genes": [
+    "NPC1",
+    "NPC2",
+    "SMPD1"
+   ],
+   "keywords": [
+    "Niemann-Pick"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "National Gaucher Foundation",
+   "url": "https://www.gaucherdisease.org",
+   "genes": [
+    "GBA",
+    "GBA1"
+   ],
+   "keywords": [
+    "Gaucher"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Fabry Support & Information Group",
+   "url": "https://fabry.org",
+   "genes": [
+    "GLA"
+   ],
+   "keywords": [
+    "Fabry"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "National Fabry Disease Foundation",
+   "url": "https://www.fabrydisease.org",
+   "genes": [
+    "GLA"
+   ],
+   "keywords": [
+    "Fabry"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Acid Maltase Deficiency Association",
+   "url": "https://amda-pompe.org",
+   "genes": [
+    "GAA"
+   ],
+   "keywords": [
+    "Pompe",
+    "glycogen storage disease II"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "MLD Foundation",
+   "url": "https://mldfoundation.org",
+   "genes": [
+    "ARSA"
+   ],
+   "keywords": [
+    "metachromatic leukodystrophy"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Hunter's Hope Foundation",
+   "url": "https://www.huntershope.org",
+   "genes": [
+    "GALC"
+   ],
+   "keywords": [
+    "Krabbe"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Batten Disease Support, Research & Advocacy Foundation",
+   "url": "https://bdsrafoundation.org",
+   "genes": [
+    "PPT1",
+    "TPP1",
+    "CLN3",
+    "CLN5",
+    "CLN6",
+    "MFSD8",
+    "CLN8"
+   ],
+   "keywords": [
+    "ceroid lipofuscinosis",
+    "Batten"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Cystinosis Research Network",
+   "url": "https://www.cystinosis.org",
+   "genes": [
+    "CTNS"
+   ],
+   "keywords": [
+    "cystinosis"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Mucolipidosis Type IV Foundation",
+   "url": "https://ml4.org",
+   "genes": [
+    "MCOLN1"
+   ],
+   "keywords": [
+    "mucolipidosis type IV"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Cure SMA",
+   "url": "https://www.curesma.org",
+   "genes": [
+    "SMN1"
+   ],
+   "keywords": [
+    "spinal muscular atrophy"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Parent Project Muscular Dystrophy",
+   "url": "https://www.parentprojectmd.org",
+   "genes": [
+    "DMD"
+   ],
+   "keywords": [
+    "Duchenne",
+    "Becker muscular dystrophy"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Cure CMD",
+   "url": "https://www.curecmd.org",
+   "genes": [
+    "LAMA2",
+    "COL6A1",
+    "COL6A2",
+    "COL6A3",
+    "SELENON"
+   ],
+   "keywords": [
+    "congenital muscular dystrophy"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "RYR-1 Foundation",
+   "url": "https://ryr1.org",
+   "genes": [
+    "RYR1"
+   ],
+   "keywords": [],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Cystic Fibrosis Foundation",
+   "url": "https://www.cff.org",
+   "genes": [
+    "CFTR"
+   ],
+   "keywords": [
+    "cystic fibrosis"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "The Marfan Foundation",
+   "url": "https://marfan.org",
+   "genes": [
+    "FBN1"
+   ],
+   "keywords": [
+    "Marfan",
+    "Loeys-Dietz"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Huntington's Disease Society of America",
+   "url": "https://hdsa.org",
+   "genes": [
+    "HTT"
+   ],
+   "keywords": [
+    "Huntington disease"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Friedreich's Ataxia Research Alliance",
+   "url": "https://www.curefa.org",
+   "genes": [
+    "FXN"
+   ],
+   "keywords": [
+    "Friedreich"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "PKD Foundation",
+   "url": "https://pkdcure.org",
+   "genes": [
+    "PKD1",
+    "PKD2"
+   ],
+   "keywords": [
+    "polycystic kidney disease"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Alpha-1 Foundation",
+   "url": "https://alpha1.org",
+   "genes": [
+    "SERPINA1"
+   ],
+   "keywords": [
+    "alpha 1-antitrypsin"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Children's Tumor Foundation",
+   "url": "https://www.ctf.org",
+   "genes": [
+    "NF1",
+    "NF2"
+   ],
+   "keywords": [
+    "neurofibromatosis",
+    "schwannomatosis"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "RASopathies Network",
+   "url": "https://rasopathiesnet.org",
+   "genes": [
+    "PTPN11",
+    "SOS1",
+    "RAF1",
+    "BRAF",
+    "HRAS",
+    "KRAS",
+    "MAP2K1",
+    "MAP2K2",
+    "RIT1",
+    "SHOC2",
+    "LZTR1"
+   ],
+   "keywords": [
+    "Noonan",
+    "cardiofaciocutaneous",
+    "Costello"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "FRAXA Research Foundation",
+   "url": "https://www.fraxa.org",
+   "genes": [
+    "FMR1"
+   ],
+   "keywords": [
+    "fragile X"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "National Fragile X Foundation",
+   "url": "https://fragilex.org",
+   "genes": [
+    "FMR1"
+   ],
+   "keywords": [
+    "fragile X"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Wilson Disease Association",
+   "url": "https://wilsondisease.org",
+   "genes": [
+    "ATP7B"
+   ],
+   "keywords": [
+    "Wilson disease"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "ALD Connect",
+   "url": "https://aldconnect.org",
+   "genes": [
+    "ABCD1"
+   ],
+   "keywords": [
+    "adrenoleukodystrophy"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "National PKU Alliance",
+   "url": "https://npkua.org",
+   "genes": [
+    "PAH"
+   ],
+   "keywords": [
+    "phenylketonuria"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "National Urea Cycle Disorders Foundation",
+   "url": "https://nucdf.org",
+   "genes": [
+    "OTC",
+    "ASS1",
+    "ASL",
+    "CPS1",
+    "ARG1",
+    "NAGS"
+   ],
+   "keywords": [
+    "citrullinemia",
+    "argininemia",
+    "urea cycle"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Alström Syndrome International",
+   "url": "https://www.alstrom.org",
+   "genes": [
+    "ALMS1"
+   ],
+   "keywords": [
+    "Alstrom",
+    "Alström"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "CHARGE Syndrome Foundation",
+   "url": "https://www.chargesyndrome.org",
+   "genes": [
+    "CHD7"
+   ],
+   "keywords": [
+    "CHARGE syndrome"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "All Things Kabuki",
+   "url": "https://www.allthingskabuki.org",
+   "genes": [
+    "KMT2D",
+    "KDM6A"
+   ],
+   "keywords": [
+    "Kabuki"
+   ],
+   "scope": "gene",
+   "reachable": true
+  },
+  {
+   "name": "Usher Syndrome Coalition",
+   "url": "https://www.usher-syndrome.org",
+   "genes": [],
+   "keywords": [
+    "Usher syndrome"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "Foundation Fighting Blindness",
+   "url": "https://www.fightingblindness.org",
+   "genes": [],
+   "keywords": [
+    "retinitis pigmentosa",
+    "Leber congenital amaurosis",
+    "Stargardt",
+    "cone-rod dystrophy",
+    "achromatopsia",
+    "choroideremia"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "United Mitochondrial Disease Foundation",
+   "url": "https://umdf.org",
+   "genes": [],
+   "keywords": [
+    "mitochondrial",
+    "Leigh syndrome",
+    "combined oxidative phosphorylation"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "CDG CARE",
+   "url": "https://cdgcare.org",
+   "genes": [],
+   "keywords": [
+    "congenital disorder of glycosylation"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "debra of America",
+   "url": "https://www.debra.org",
+   "genes": [],
+   "keywords": [
+    "epidermolysis bullosa"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "Osteogenesis Imperfecta Foundation",
+   "url": "https://oif.org",
+   "genes": [],
+   "keywords": [
+    "osteogenesis imperfecta"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "The Ehlers-Danlos Society",
+   "url": "https://www.ehlers-danlos.com",
+   "genes": [],
+   "keywords": [
+    "Ehlers-Danlos"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "Charcot-Marie-Tooth Association",
+   "url": "https://www.cmtausa.org",
+   "genes": [],
+   "keywords": [
+    "Charcot-Marie-Tooth"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "Spastic Paraplegia Foundation",
+   "url": "https://sp-foundation.org",
+   "genes": [],
+   "keywords": [
+    "spastic paraplegia"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "National Ataxia Foundation",
+   "url": "https://www.ataxia.org",
+   "genes": [],
+   "keywords": [
+    "spinocerebellar ataxia",
+    "episodic ataxia"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "Immune Deficiency Foundation",
+   "url": "https://primaryimmune.org",
+   "genes": [],
+   "keywords": [
+    "immunodeficiency",
+    "agammaglobulinemia"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "Fanconi Cancer Foundation",
+   "url": "https://www.fanconi.org",
+   "genes": [],
+   "keywords": [
+    "Fanconi anemia"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "United Leukodystrophy Foundation",
+   "url": "https://ulf.org",
+   "genes": [],
+   "keywords": [
+    "leukodystrophy",
+    "leukoencephalopathy"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "Organic Acidemia Association",
+   "url": "https://www.oaanews.org",
+   "genes": [],
+   "keywords": [
+    "acidemia",
+    "aciduria"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "Bardet-Biedl Syndrome Foundation",
+   "url": "https://www.bardetbiedl.org",
+   "genes": [],
+   "keywords": [
+    "Bardet-Biedl"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "Joubert Syndrome & Related Disorders Foundation",
+   "url": "https://jsrdf.org",
+   "genes": [],
+   "keywords": [
+    "Joubert"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "Cornelia de Lange Syndrome Foundation",
+   "url": "https://www.cdlsusa.org",
+   "genes": [],
+   "keywords": [
+    "Cornelia de Lange"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "DEE-P Connections",
+   "url": "https://deepconnections.net",
+   "genes": [],
+   "keywords": [
+    "developmental and epileptic encephalopathy"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  },
+  {
+   "name": "Muscular Dystrophy Association",
+   "url": "https://www.mda.org",
+   "genes": [],
+   "keywords": [
+    "muscular dystrophy",
+    "congenital myopathy",
+    "myasthenic syndrome"
+   ],
+   "scope": "disease-family",
+   "reachable": true
+  }
+ ],
+ "cross_disease_registries": [
+  {
+   "name": "Simons Searchlight",
+   "url": "https://www.simonssearchlight.org",
+   "what": "Gene-specific natural-history registry for neurodevelopmental conditions; shares data and biospecimens with qualified researchers.",
+   "genes": [
+    "STXBP1",
+    "SYNGAP1",
+    "SCN2A",
+    "GRIN2B",
+    "CHD8",
+    "DYRK1A",
+    "ADNP",
+    "SLC6A1",
+    "CSNK2A1",
+    "HNRNPH2",
+    "SHANK3",
+    "CHD2",
+    "FOXP1",
+    "MED13L",
+    "PPP2R5D",
+    "ARID1B",
+    "ASXL3",
+    "CTNNB1",
+    "KIF1A",
+    "SETBP1",
+    "HIVEP2",
+    "STXBP1",
+    "SCN8A",
+    "CACNA1C",
+    "ANKRD11",
+    "DDX3X"
+   ],
+   "reachable": true
+  },
+  {
+   "name": "RARE-X",
+   "url": "https://rare-x.org",
+   "what": "Free patient-owned data collection platform open to any rare disease; a community can launch a structured registry without building software.",
+   "reachable": true
+  },
+  {
+   "name": "CoRDS registry (Sanford Research)",
+   "url": "https://research.sanfordhealth.org/rare-disease-registry",
+   "what": "Central registry that accepts participants with any rare disease, including undiagnosed, and partners with patient groups at no cost.",
+   "reachable": true
+  },
+  {
+   "name": "NORD IAMRARE registry program",
+   "url": "https://rarediseases.org/iamrare-registry-program/",
+   "what": "Registry platform and natural-history study support that patient organisations can adopt.",
+   "reachable": true
+  }
+ ]
+}
