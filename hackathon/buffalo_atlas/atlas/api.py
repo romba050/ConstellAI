@@ -23,10 +23,14 @@ def disease_bundle(id):
                 dict(title='Patient-powered program resources',text='Explore Buffalo Initiative resources; no pilot-specific Buffalo affiliation is asserted.',url=sources()['buffalo']['source_url'])]
     comparisons=[score_from_graph(disease,c,graph) for c in dataset()['interventions'] if id in c['disease_ids']]
     hero=dataset()['hero_journey'] if id=='angelman' else None
+    programmes=[dict(p,provenance=provenance(p['source_ids'])) for p in dataset().get('research_programmes',[]) if p['disease_id']==id]
+    resources=provenance(disease.get('patient_resource_ids',[])) if disease.get('patient_resource_ids') else []
+    graph_refs=list(dict.fromkeys(r for item in graph['nodes']+graph['edges'] for r in item['source_ids']))
     return dict(disease=disease,graph=graph,ranking=ranking,comparison=comparisons,hero_journey=hero,benchmark=report(),
+                research_programmes=programmes,patient_resources=resources,source_policy=dataset().get('source_policy',{}),
                 complementary=rank_complementary_candidates(disease,primary,evaluated_rows=comparisons) if primary else dict(candidates=[],explanation='No eligible primary to complement.'),
                 surrogates=find_mechanistic_surrogates(disease,primary,evaluated_rows=comparisons) if primary else [], experiment=propose_next_experiment(disease,primary),
                 next_steps=dict(patient=patient,researcher=researcher),trials=trials,
-                studies=[sources()[r] for r in disease['study_ids']], sources=provenance(list(dict.fromkeys(disease['source_ids']+disease['study_ids']+[disease['organization']]+[t['id'] for t in trials]))),
+                studies=[sources()[r] for r in disease['study_ids']], sources=provenance(list(dict.fromkeys(graph_refs+disease.get('patient_resource_ids',[])))),
                 snapshot_date=dataset()['retrieved_at'],physiology=dict(candidates=[],reason='No disease-specific sourced physiology surrogate passed this pilot gate. The core supports physiology candidates with the same evidence requirements.'),
                 disclaimer='Research decision support — not medical advice. Therapeutic hypotheses require experimental and clinical validation.')

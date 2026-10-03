@@ -33,7 +33,10 @@ def build_graph(disease):
         edges.append(dict(id=f'e:{len(edges)}',source=a,target=b,type=type,source_ids=refs,provenance=provenance(refs),description=description,status=status,
                           confidence='Source-specific evidence; not causal certainty' if status!='hypothesis' else 'Unvalidated research hypothesis'))
     did=disease['id']; gene='gene:'+disease['gene']; refs=disease['source_ids']
-    node(did,'Disease',disease['name'],refs,disease['mechanism'])
+    identifiers=disease.get('ontology_identifiers',[])
+    terminology_refs=list(dict.fromkeys(r for x in identifiers for r in x['source_ids']))
+    node(did,'Disease',disease['name'],list(dict.fromkeys(refs+terminology_refs)),disease['mechanism'])
+    nodes[-1]['ontology_identifiers']=identifiers
     node(gene,'Gene',disease['gene'],refs,disease['mechanism'])
     edge(did,gene,'DISEASE_CAUSED_BY_GENE',refs,disease['mechanism'])
     for axis in disease.get('signature',[]):
@@ -44,14 +47,33 @@ def build_graph(disease):
     edge(did,variant,'DISEASE_HAS_MECHANISM_CLASS',refs,disease['mechanism'])
     edge(variant,gene,'VARIANT_CLASS_AFFECTS_GENE',refs,disease['direction'])
     for i,p in enumerate(disease['phenotypes']):
-        id=f'{did}:phenotype:{i}'; node(id,'Phenotype',p,refs)
-        edge(did,id,'DISEASE_HAS_PHENOTYPE',refs,'Reported disease feature; not diagnostic by itself.')
+        mapping=next((x for x in disease.get('phenotype_identifiers',[]) if x['label']==p),None)
+        feature_refs=list(dict.fromkeys(refs+(mapping['source_ids'] if mapping else [])))
+        id=f'{did}:phenotype:{i}'; node(id,'Phenotype',p,feature_refs)
+        nodes[-1]['ontology_identifiers']=[mapping] if mapping else []
+        edge(did,id,'DISEASE_HAS_PHENOTYPE',feature_refs,'Disease-specific sources report the feature; HPO supplies terminology only. Not diagnostic by itself.')
+    for example in disease.get('variant_examples',[]):
+        sid=example['source_id'];s=sources()[sid]
+        node(sid,'Variant',example['name'],[sid],example['scope'])
+        edge(sid,did,'CLINVAR_CONDITION_ASSERTION',[sid],s['condition_record']+' lists '+s['condition_classification']+'; '+s['review_status']+'. Database assertion, not functional-direction or treatment-response evidence.')
+        edge(sid,gene,'VARIANT_RECORDED_IN_GENE',[sid],'Transcript-specific public example; no patient genotype or gain/loss classification assigned.')
     org=disease['organization']; s=sources()[org]
     node(org,'Patient Group',s['source'],[org],s['summary'])
     edge(org,did,'PATIENT_GROUP_SUPPORTS_DISEASE',[org],s['summary'])
     for sid in disease['study_ids']:
         s=sources()[sid]; node(sid,'Study',s['identifier'] or s['source'],[sid],s['summary'])
         edge(sid,did,'STUDY_EXAMINES_DISEASE',[sid],s['summary'])
+    for programme in dataset().get('research_programmes',[]):
+        if programme['disease_id']!=did:
+            continue
+        sid=programme['id'];s=sources()[sid]
+        node(sid,'Study',s['identifier']+' · NIH project',programme['source_ids'],s['summary'])
+        nodes[-1]['study_subtype']='funded_research_programme'
+        edge(sid,did,'FUNDED_PROGRAMME_STUDIES_DISEASE',programme['source_ids'],'Public award aims, not completed evidence. '+programme['availability'])
+        edge(sid,gene,'FUNDED_PROGRAMME_INVESTIGATES_GENE',programme['source_ids'],'Research plan investigates unsilencing; no therapeutic-effect direction added to scoring.')
+        team='team:'+sid
+        node(team,'Research Team',', '.join(programme['principal_investigators']),programme['source_ids'],programme['organization']+' · '+programme['availability'])
+        edge(team,sid,'INVESTIGATORS_LISTED_ON_PROGRAMME',programme['source_ids'],'Public NIH principal-investigator listing; contact availability and collaboration unverified.')
     for t in dataset()['trials']:
         if t['disease']!=did:
             continue
@@ -105,6 +127,7 @@ def build_graph(disease):
     for item in nodes+edges:
         item['classification']='HYPOTHESIS' if item['status']=='hypothesis' else 'INFERENCE' if item['status']=='inference' else 'CLINICAL EVIDENCE' if any(p['evidence_type']=='human_randomized_trial' for p in item['provenance']) else 'FACT'
         item['observed_or_inferred']='proposed' if item['classification']=='HYPOTHESIS' else 'inferred' if item['classification']=='INFERENCE' else 'source-reported observation'
+        item['claim_kind']='proposed_hypothesis' if item['classification']=='HYPOTHESIS' else 'inferred_relationship' if item['classification']=='INFERENCE' else 'direct_source_report'
         item['contradictory_evidence']='Not systematically reviewed. Context limitations are reported in linked sources.'
         if did=='angelman' and item.get('source_ids') and 'meng2015' in item['source_ids']:
             item['contradictory_evidence']='Meng et al. report incomplete phenotype rescue; restored expression alone does not establish complete functional rescue.'

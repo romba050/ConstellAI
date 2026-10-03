@@ -1,0 +1,116 @@
+{
+  "reviewed_at": "2026-10-03",
+  "records": [
+    {
+      "local_review_input": "access-review.json",
+      "sha256": "acd9af5bd0ec7acc3bc20818b86eae3395692d655375815125e8560951bb7ec6",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "clinvar-155984.xml",
+      "sha256": "a4a7ced6bb506719fe041d471d6c106b4ce937b72b8c0b5d99d61a3926ae6832",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "clinvar-7972.xml",
+      "sha256": "0b9fb7119d71ea30a6234a90ced3c15c60b969485c0842db9b98671aac2af844",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "hpo-ataxia.json",
+      "sha256": "e84b24c2a0442562ab58ea3f4116deebebca608bb41c61a2f0920e9dcde155c8",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "hpo-development.json",
+      "sha256": "5a1fb6aa5f78ad9787f8cd62c38f3c8bf67dbda80e602bc1c68c81c514632e98",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "hpo-seizure.json",
+      "sha256": "09b749c79adc51b841866a3f3c444efcc57fb7c451fc10331ad7cbec44fb157e",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "hpo-speech.json",
+      "sha256": "2cbc94069bb6dc39fa615e82e186c84cf708a89e986de25a6edd5b7d1238c465",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "mondo-angelman.json",
+      "sha256": "39899486450cca5433071ec09b5658089c2115cc825f5c670b141df262a4d17d",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "mondo-cdkl5.json",
+      "sha256": "1fa685d69beaef79aa4bd673839920d3143f1fefd5f16b7a67729e055e0added",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "mondo-search-CACNA1A-related.json",
+      "sha256": "593eb1fc5ec906b33f6d759234f31d9a257efec623519ab102ceb467d25d188f",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "mondo-search-CDKL5.json",
+      "sha256": "aed0db468e2a521b6889c5506882b05231b9555911095638eb1f26bbed607c51",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "mondo-search-STXBP1.json",
+      "sha256": "96baa866519e23a68726386b0d032c5118a1b81f0eeff0f747d6bc12c8a9c7a1",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "mondo-stxbp1.json",
+      "sha256": "dbc25e46cbd083ffd88b6ad9e893f8da373635d895b3d88effd533d1d0b146e1",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "nih-reporter.json",
+      "sha256": "f2099f586788e999a7344add4acd839131b7f0d94a411b7b8c2b408001c7ba15",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "papers.json",
+      "sha256": "905287db8eaf2415099b0dc49be21ee3ede22045335e417c5c6a06f4bc32c195",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "PMC11231141.xml",
+      "sha256": "6386676f857d6bdea1aa3730d284ee2f68849d6c91a1be96de7a301f137bd7b0",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "PMC2955112.xml",
+      "sha256": "e30b7c2b2da80d5d4130f542c02df2244745baca09e1e24a33e1196047336bf9",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "PMC3257422.xml",
+      "sha256": "05232614151ac2fae94e24d758ef0e3553b4bc6fa6e887f389db35b90ab7a100",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "PMC3767287.xml",
+      "sha256": "2f31adeb9f11c440d6e0dca2f252e3db307881d9b7691592703bc0d6f36f7359",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "PMC4351819.xml",
+      "sha256": "4aea81cff15338577acf7b74f2a7ea342297c3e7844452475f77db24e6e0896a",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "PMC5413969.xml",
+      "sha256": "e6fc010bed9a1f00b5ce5ecc690f583373f67bd62ec58eb04cecaa2289eca53c",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    },
+    {
+      "local_review_input": "pubmed.xml",
+      "sha256": "7cef13693c467f0c47e1e83cdf272ee4ed9d7165cbe01986ef9d3e2df473e325",
+      "note": "Review receipt only. Full copyrighted abstracts/text and patient-level records are not distributed."
+    }
+  ],
+  "note": "Public metadata was reviewed against official APIs/records; curated claims are paraphrases. Receipt hashes identify transient reviewer inputs, not independently retrievable permanent archives."
+}

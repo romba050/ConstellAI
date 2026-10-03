@@ -1,4 +1,8 @@
-# 90–120 second pitch route — scope frozen
+# Demo scripts — scope frozen
+
+**Official submission:** the supplied PDF (p. 6) requires a Team video and a **1-minute walkthrough**. Use the 60-second recording table in [OFFICIAL_CHALLENGE_REVIEW.md](OFFICIAL_CHALLENGE_REVIEW.md). That script is prepared; no video is recorded or submitted. The longer route below is for a live pitch or deeper review.
+
+## 90–120 second live pitch route
 
 Launch from repository root: `python hackathon/buffalo_atlas/run.py`. Open **http://127.0.0.1:8795/demo**. Hero: **Angelman / UBE3A deficiency**. CACNA1A remains variant-direction gated because its full hero chain was not as deeply curated. Cached loading has no external API dependency. The timing below is a pitch plan, not a measured user-performance claim.
 

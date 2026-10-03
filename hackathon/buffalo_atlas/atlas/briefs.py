@@ -2,6 +2,18 @@
 from .api import disease_bundle
 from .data import provenance
 
+def citation_text(s):
+    lines=[s.get('title') or s['source'],s['source_url'],s['evidence_type']+'; checked '+s['retrieved_at'],
+           'Claim: '+s.get('extracted_claim',s['summary']), 'Study/record: '+s.get('study_design','Design not extracted')]
+    if s.get('pmid'):
+        lines += ['PMID: '+s['pmid']+'; DOI: '+str(s.get('doi') or 'unavailable'),
+                  str(s.get('journal') or 'Journal unavailable')+'; '+str(s.get('publication_year') or 'Year unavailable'),
+                  'Authors: '+'; '.join(s.get('authors',[])),
+                  'Publication types: '+'; '.join(s.get('publication_types',[])),
+                  'Sample/denominator: '+(s.get('sample_size',{}).get('reported') or s.get('sample_size',{}).get('location') or 'Not extracted')]
+    lines.append('Uncertainty: '+s.get('uncertainty','Not independently reviewed'))
+    return '\n'.join(lines)
+
 def brief(disease_id, kind='evidence'):
     b=disease_bundle(disease_id)
     rows=[f"MEDR5 Atlas: {b['disease']['name']}",b['disclaimer'],f"Evidence snapshot: {b['snapshot_date']}"]
@@ -25,5 +37,5 @@ def brief(disease_id, kind='evidence'):
     else:
         raise ValueError('Unknown brief type')
     rows += [f"Proposed research experiment: {b['experiment']['question']}",f"Falsifier: {b['experiment']['falsifier']}",
-             'Sources:',*[f"{s['source']}\n{s['source_url']}\n{s['evidence_type']}; retrieved {s['retrieved_at']}" for s in refs]]
+             'Sources:',*[citation_text(s) for s in refs]]
     return dict(text='\n\n'.join(rows),filename=f'MEDR5-Atlas-{disease_id}-{kind}-brief.txt')

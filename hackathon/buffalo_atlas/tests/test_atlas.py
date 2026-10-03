@@ -345,7 +345,7 @@ class HTTPTests(unittest.TestCase):
             self.assertTrue(disease_bundle('angelman')['ranking']['ranked'])
     def test_collaboration_brief_cited_reviewable(self):
         doc=self.get_json('/api/brief?id=angelman&type=collaboration')
-        self.assertIn('https://www.pnas.org/',doc['text']);self.assertIn('does not imply shared treatment',doc['text'])
+        self.assertIn('https://pubmed.ncbi.nlm.nih.gov/20876107/',doc['text']);self.assertIn('10.1073/pnas.1004487107',doc['text']);self.assertIn('does not imply shared treatment',doc['text'])
         self.assertIn('Falsifier:',doc['text'])
     def test_download_evidence_brief_real_attachment(self):
         with urlopen(self.base+'/api/brief?id=angelman&download=1',timeout=5) as r:

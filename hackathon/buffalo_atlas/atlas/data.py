@@ -1,6 +1,7 @@
 from functools import lru_cache
 import json
 from pathlib import Path
+from urllib.parse import urlparse
 
 EDITION = Path(__file__).resolve().parents[1]
 REPO = EDITION.parents[1]
@@ -12,10 +13,36 @@ def dataset():
 def sources():
     return {s['id']: s for s in dataset()['sources']}
 
+AUTHORITATIVE_HOSTS = {'pubmed.ncbi.nlm.nih.gov', 'pmc.ncbi.nlm.nih.gov', 'www.ncbi.nlm.nih.gov',
+    'medlineplus.gov', 'dailymed.nlm.nih.gov', 'clinicaltrials.gov', 'reporter.nih.gov',
+    'www.ebi.ac.uk', 'omim.org', 'www.orpha.net', 'rarediseases.org', 'globalgenes.org',
+    'www.eurordis.org', 'angelman.org', 'cdkl5.com', 'www.cacna1a.org',
+    'www.stxbp1disorders.org', 'www.pwsausa.org', 'buffaloinitiative.org'}
+
+def valid_source(s):
+    """Check the reviewed registry contract, not scientific truth by URL alone."""
+    if not all(s.get(k) for k in ('source', 'source_url', 'evidence_type', 'evidence_level',
+                                 'retrieved_at', 'source_family', 'verification_status', 'extracted_claim', 'uncertainty')):
+        return False
+    address = urlparse(s['source_url'])
+    if address.scheme != 'https' or address.hostname not in AUTHORITATIVE_HOSTS or address.username or address.password:
+        return False
+    if s.get('claim_kind') not in {'direct_source_report', 'inferred_relationship', 'proposed_hypothesis'}:
+        return False
+    if (s.get('identifier') or '').startswith('PMID:'):
+        pmid = s.get('pmid', '')
+        if not isinstance(pmid, str) or not pmid.isdigit() or s['identifier'] != 'PMID:' + pmid:
+            return False
+        if address.hostname != 'pubmed.ncbi.nlm.nih.gov' or address.path != '/' + pmid + '/':
+            return False
+        if not all(s.get(k) for k in ('title', 'journal', 'authors', 'publication_year',
+                                     'publication_types', 'study_design', 'sample_size', 'metadata_source_url')):
+            return False
+    return True
+
 def valid_refs(refs):
     known = sources()
-    return bool(refs) and all(r in known and all(known[r].get(k) for k in
-        ('source', 'source_url', 'evidence_type', 'evidence_level', 'retrieved_at')) for r in refs)
+    return bool(refs) and all(r in known and valid_source(known[r]) for r in refs)
 
 def provenance(refs):
     if not valid_refs(refs):

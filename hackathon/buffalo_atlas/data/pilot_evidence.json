@@ -11,7 +11,13 @@
       "publication_date": "2022-05-17",
       "identifier": null,
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "Loss of maternal UBE3A activity in neurons is central to Angelman syndrome. Developmental delay, severe speech impairment, ataxia and seizures are characteristic. Large deletions may involve additional genes.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "Official programme resource",
+      "study_design": "Authoritative overview/navigation; not a candidate intervention experiment."
     },
     {
       "id": "cdkl5-nlm",
@@ -22,7 +28,13 @@
       "publication_date": null,
       "identifier": null,
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "Pathogenic CDKL5 variants cause a neurodevelopmental disorder with early seizures and severe developmental impairment. CDKL5 is on the X chromosome.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "Official programme resource",
+      "study_design": "Authoritative overview/navigation; not a candidate intervention experiment."
     },
     {
       "id": "cdkl5-genereviews",
@@ -33,7 +45,13 @@
       "publication_date": null,
       "identifier": null,
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "CDKL5 deficiency involves loss of function. Neurological features include epilepsy, developmental impairment and cortical visual impairment.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "NLM disease reference",
+      "study_design": "Authoritative overview/navigation; not a candidate intervention experiment."
     },
     {
       "id": "stxbp1-genereviews",
@@ -44,7 +62,13 @@
       "publication_date": "2023-09-28",
       "identifier": null,
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "STXBP1 loss of function impairs neurotransmitter release. Developmental impairment, epilepsy and movement abnormalities occur. Inheritance is autosomal dominant, usually de novo.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "NLM disease reference",
+      "study_design": "Authoritative overview/navigation; not a candidate intervention experiment."
     },
     {
       "id": "cacna1a-study",
@@ -55,18 +79,82 @@
       "publication_date": "2022",
       "identifier": "PMID:35722745",
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "A clinical cohort describes heterogeneous CACNA1A-related neurological phenotypes. Gene-level association does not establish the functional direction of an individual variant.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "pubmed_metadata_verified_claim_reviewed",
+      "uncertainty": "Cohort ascertainment and model-predicted functional direction; individual variant direction requires experimental confirmation.",
+      "original_source_url": "https://pubmed.ncbi.nlm.nih.gov/35722745/",
+      "pmid": "35722745",
+      "doi": "10.1111/cge.14180",
+      "pmcid": "PMC9458680",
+      "title": "Clinical and genetic characterization of CACNA1A-related disease.",
+      "journal": "Clinical genetics",
+      "authors": [
+        "Amy R Lipman",
+        "Xiao Fan",
+        "Yufeng Shen",
+        "Wendy K Chung"
+      ],
+      "publication_year": "2022",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, N.I.H., Extramural"
+      ],
+      "corrections": [],
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=35722745%2C33737904%2C22190039%2C25470045%2C23995680%2C28436452%2C38977672%2C35429480%2C26865513%2C20876107%2C25884337&retmode=xml&tool=MEDR5Atlas",
+      "metadata_retrieved_at": "2026-10-03",
+      "source_family": "PubMed / PMC",
+      "pmc_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9458680/",
+      "study_design": "Observational genotype/phenotype cohort; some functional directions are model predictions, not measured electrophysiology.",
+      "sample_size": {
+        "reported": "47 individuals; 33 distinct likely pathogenic/pathogenic variants.",
+        "availability": "verified_context_specific",
+        "location": "PubMed abstract",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/35722745/"
+      }
     },
     {
       "id": "cacna1a-review",
       "source": "From genotype to phenotype: CACNA1A variants",
-      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7960780/",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33737904/",
       "evidence_type": "review",
       "summary": "CACNA1A disorders include gain- and loss-of-function mechanisms, with hemiplegic migraine, episodic ataxia and developmental epileptic phenotypes. Variant-specific direction is required.",
       "publication_date": "2021",
       "identifier": "PMID:33737904",
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "CACNA1A disorders include gain- and loss-of-function mechanisms, with hemiplegic migraine, episodic ataxia and developmental epileptic phenotypes. Variant-specific direction is required.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "pubmed_metadata_verified_claim_reviewed",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "original_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7960780/",
+      "pmid": "33737904",
+      "doi": "10.3389/fneur.2021.639994",
+      "pmcid": "PMC7960780",
+      "title": "From Genotype to Phenotype: Expanding the Clinical Spectrum of CACNA1A Variants in the Era of Next Generation Sequencing.",
+      "journal": "Frontiers in neurology",
+      "authors": [
+        "Elisabetta Indelicato",
+        "Sylvia Boesch"
+      ],
+      "publication_year": "2021",
+      "publication_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "corrections": [],
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=35722745%2C33737904%2C22190039%2C25470045%2C23995680%2C28436452%2C38977672%2C35429480%2C26865513%2C20876107%2C25884337&retmode=xml&tool=MEDR5Atlas",
+      "metadata_retrieved_at": "2026-10-03",
+      "source_family": "PubMed / PMC",
+      "pmc_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7960780/",
+      "study_design": "Narrative mini-review of heterogeneous CACNA1A phenotypes and mechanisms.",
+      "sample_size": {
+        "reported": null,
+        "availability": "not_extracted_or_not_applicable",
+        "location": "Review: no single participant denominator",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/33737904/"
+      }
     },
     {
       "id": "huang2012",
@@ -74,22 +162,121 @@
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/22190039/",
       "evidence_type": "preclinical_animal",
       "summary": "Topotecan restored paternal Ube3a expression in neuronal models by reducing an antisense transcript. This is experimental unsilencing evidence, not clinical efficacy.",
-      "publication_date": "2012",
+      "publication_date": "2011",
       "identifier": "PMID:22190039",
       "retrieved_at": "2026-10-03",
       "evidence_level": "source-specific; not a probability of treatment success",
-      "excerpt": "These results indicate that topotecan unsilences Ube3a in cis by reducing transcription of an imprinted antisense RNA."
+      "excerpt": "These results indicate that topotecan unsilences Ube3a in cis by reducing transcription of an imprinted antisense RNA.",
+      "extracted_claim": "Topotecan restored paternal Ube3a expression in neuronal models by reducing an antisense transcript. This is experimental unsilencing evidence, not clinical efficacy.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "pubmed_metadata_verified_claim_reviewed",
+      "uncertainty": "Preclinical/cellular context. Replicate counts depend on assay; no clinical efficacy or safety established by these experiments.",
+      "original_source_url": "https://pubmed.ncbi.nlm.nih.gov/22190039/",
+      "pmid": "22190039",
+      "doi": "10.1038/nature10726",
+      "pmcid": "PMC3257422",
+      "title": "Topoisomerase inhibitors unsilence the dormant allele of Ube3a in neurons.",
+      "journal": "Nature",
+      "authors": [
+        "Hsien-Sung Huang",
+        "John A Allen",
+        "Angela M Mabb",
+        "Ian F King",
+        "Jayalakshmi Miriyala",
+        "Bonnie Taylor-Blake",
+        "Noah Sciaky",
+        "J Walter Dutton",
+        "Hyeong-Min Lee",
+        "Xin Chen",
+        "Jian Jin",
+        "Arlene S Bridges",
+        "Mark J Zylka",
+        "Bryan L Roth",
+        "Benjamin D Philpot"
+      ],
+      "publication_year": "2011",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, N.I.H., Extramural",
+        "Research Support, Non-U.S. Gov't",
+        "Research Support, U.S. Gov't, Non-P.H.S."
+      ],
+      "corrections": [
+        {
+          "type": "CommentIn",
+          "pmid": "22190038",
+          "note": null
+        },
+        {
+          "type": "CommentIn",
+          "pmid": "22270025",
+          "note": null
+        }
+      ],
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=35722745%2C33737904%2C22190039%2C25470045%2C23995680%2C28436452%2C38977672%2C35429480%2C26865513%2C20876107%2C25884337&retmode=xml&tool=MEDR5Atlas",
+      "metadata_retrieved_at": "2026-10-03",
+      "source_family": "PubMed / PMC",
+      "pmc_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3257422/",
+      "study_design": "Small-molecule screening and experimental neuronal/mouse unsilencing assays.",
+      "sample_size": {
+        "reported": "Figure 2a: n=4 per dose-response point; 2h: n=4–5 cultures per point. Assay-level counts, not patients or a study-wide N.",
+        "availability": "verified_context_specific",
+        "location": "PMC Figure 2",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3257422/"
+      }
     },
     {
       "id": "meng2015",
       "source": "Meng et al.: Towards a therapy for Angelman syndrome by targeting a long non-coding RNA",
-      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4351819/",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/25470045/",
       "evidence_type": "preclinical_animal",
       "summary": "UBE3A-ATS antisense perturbations restored paternal UBE3A in mouse models. The authors compared selective antisense effects with topotecan effects on long-gene transcription; phenotypic rescue was incomplete.",
       "publication_date": "2015",
       "identifier": "PMID:25470045",
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "UBE3A-ATS antisense perturbations restored paternal UBE3A in mouse models. The authors compared selective antisense effects with topotecan effects on long-gene transcription; phenotypic rescue was incomplete.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "pubmed_metadata_verified_claim_reviewed",
+      "uncertainty": "Preclinical/cellular context. Replicate counts depend on assay; no clinical efficacy or safety established by these experiments.",
+      "original_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4351819/",
+      "pmid": "25470045",
+      "doi": "10.1038/nature13975",
+      "pmcid": "PMC4351819",
+      "title": "Towards a therapy for Angelman syndrome by targeting a long non-coding RNA.",
+      "journal": "Nature",
+      "authors": [
+        "Linyan Meng",
+        "Amanda J Ward",
+        "Seung Chun",
+        "C Frank Bennett",
+        "Arthur L Beaudet",
+        "Frank Rigo"
+      ],
+      "publication_year": "2015",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, N.I.H., Extramural",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "corrections": [
+        {
+          "type": "CommentIn",
+          "pmid": "25511900",
+          "note": null
+        }
+      ],
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=35722745%2C33737904%2C22190039%2C25470045%2C23995680%2C28436452%2C38977672%2C35429480%2C26865513%2C20876107%2C25884337&retmode=xml&tool=MEDR5Atlas",
+      "metadata_retrieved_at": "2026-10-03",
+      "source_family": "PubMed / PMC",
+      "pmc_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4351819/",
+      "study_design": "Experimental antisense perturbations in neuronal and mouse models; expression and phenotype readouts.",
+      "sample_size": {
+        "reported": "Extended Data Figure 1b: n=2 per group for the nascent-transcript assay. Other assays have different counts; not a study-wide N.",
+        "availability": "verified_context_specific",
+        "location": "PMC Extended Data Figure 1",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4351819/"
+      }
     },
     {
       "id": "king2013",
@@ -100,18 +287,116 @@
       "publication_date": "2013",
       "identifier": "PMID:23995680",
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "Topotecan reduced transcription of long neuronal genes in mouse and human models. This broad transcriptional effect is a spillover concern when probing UBE3A unsilencing.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "pubmed_metadata_verified_claim_reviewed",
+      "uncertainty": "Preclinical/cellular context. Replicate counts depend on assay; no clinical efficacy or safety established by these experiments.",
+      "original_source_url": "https://pubmed.ncbi.nlm.nih.gov/23995680/",
+      "pmid": "23995680",
+      "doi": "10.1038/nature12504",
+      "pmcid": "PMC3767287",
+      "title": "Topoisomerases facilitate transcription of long genes linked to autism.",
+      "journal": "Nature",
+      "authors": [
+        "Ian F King",
+        "Chandri N Yandava",
+        "Angela M Mabb",
+        "Jack S Hsiao",
+        "Hsien-Sung Huang",
+        "Brandon L Pearson",
+        "J Mauro Calabrese",
+        "Joshua Starmer",
+        "Joel S Parker",
+        "Terry Magnuson",
+        "Stormy J Chamberlain",
+        "Benjamin D Philpot",
+        "Mark J Zylka"
+      ],
+      "publication_year": "2013",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, N.I.H., Extramural",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "corrections": [
+        {
+          "type": "CommentIn",
+          "pmid": "23995684",
+          "note": null
+        },
+        {
+          "type": "CommentIn",
+          "pmid": "25100484",
+          "note": null
+        },
+        {
+          "type": "CommentIn",
+          "pmid": "25100485",
+          "note": null
+        }
+      ],
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=35722745%2C33737904%2C22190039%2C25470045%2C23995680%2C28436452%2C38977672%2C35429480%2C26865513%2C20876107%2C25884337&retmode=xml&tool=MEDR5Atlas",
+      "metadata_retrieved_at": "2026-10-03",
+      "source_family": "PubMed / PMC",
+      "pmc_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3767287/",
+      "study_design": "Experimental TOP1 perturbation with neuronal transcriptomics and knockdown controls.",
+      "sample_size": {
+        "reported": "Figure 1: n=5 mouse neuronal biological replicates; n=2 human iPSC-neuron biological replicates. Not patients.",
+        "availability": "verified_context_specific",
+        "location": "PMC Figure 1",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3767287/"
+      }
     },
     {
       "id": "fink2017",
       "source": "Fink et al.: Disrupted neuronal maturation in Angelman syndrome-derived induced pluripotent stem cells",
-      "source_url": "https://www.nature.com/articles/ncomms15038",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/28436452/",
       "evidence_type": "human_cellular",
       "summary": "Angelman-derived neuronal models showed electrophysiological maturation deficits; topotecan increased synaptic-event frequency in this in-vitro setting.",
       "publication_date": "2017",
       "identifier": "PMID:28436452",
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "Angelman-derived neuronal models showed electrophysiological maturation deficits; topotecan increased synaptic-event frequency in this in-vitro setting.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "pubmed_metadata_verified_claim_reviewed",
+      "uncertainty": "Preclinical/cellular context. Replicate counts depend on assay; no clinical efficacy or safety established by these experiments.",
+      "original_source_url": "https://www.nature.com/articles/ncomms15038",
+      "pmid": "28436452",
+      "doi": "10.1038/ncomms15038",
+      "pmcid": "PMC5413969",
+      "title": "Disrupted neuronal maturation in Angelman syndrome-derived induced pluripotent stem cells.",
+      "journal": "Nature communications",
+      "authors": [
+        "James J Fink",
+        "Tiwanna M Robinson",
+        "Noelle D Germain",
+        "Carissa L Sirois",
+        "Kaitlyn A Bolduc",
+        "Amanda J Ward",
+        "Frank Rigo",
+        "Stormy J Chamberlain",
+        "Eric S Levine"
+      ],
+      "publication_year": "2017",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, N.I.H., Extramural",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "corrections": [],
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=35722745%2C33737904%2C22190039%2C25470045%2C23995680%2C28436452%2C38977672%2C35429480%2C26865513%2C20876107%2C25884337&retmode=xml&tool=MEDR5Atlas",
+      "metadata_retrieved_at": "2026-10-03",
+      "source_family": "PubMed / PMC",
+      "pmc_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5413969/",
+      "study_design": "Human iPSC-derived neuronal experiments with unaffected controls, UBE3A perturbations and cellular rescue readouts.",
+      "sample_size": {
+        "reported": "3 Angelman donors and 4 unrelated control donors. Figure 2c topotecan RMP assay: 2–4 coverslips per condition, 15 cells per coverslip. Cells/coverslips are not independent patient counts.",
+        "availability": "verified_context_specific",
+        "location": "PMC Methods / Figure 2c",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5413969/"
+      }
     },
     {
       "id": "pha2024",
@@ -122,7 +407,51 @@
       "publication_date": "2024",
       "identifier": "PMID:38977672",
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "(S)-PHA533533 unsilenced paternal Ube3a in models. The effect was independent of its known CDK2/CDK5 targets and TOP1 inhibition. It is a research compound, not an approved repurposed drug.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "pubmed_metadata_verified_claim_reviewed",
+      "uncertainty": "Preclinical/cellular context. Replicate counts depend on assay; no clinical efficacy or safety established by these experiments.",
+      "original_source_url": "https://pubmed.ncbi.nlm.nih.gov/38977672/",
+      "pmid": "38977672",
+      "doi": "10.1038/s41467-024-49788-8",
+      "pmcid": "PMC11231141",
+      "title": "Ube3a unsilencer for the potential treatment of Angelman syndrome.",
+      "journal": "Nature communications",
+      "authors": [
+        "Hanna Vihma",
+        "Kelin Li",
+        "Anna Welton-Arndt",
+        "Audrey L Smith",
+        "Kiran R Bettadapur",
+        "Rachel B Gilmore",
+        "Eric Gao",
+        "Justin L Cotney",
+        "Hsueh-Cheng Huang",
+        "Jon L Collins",
+        "Stormy J Chamberlain",
+        "Hyeong-Min Lee",
+        "Jeffrey Aubé",
+        "Benjamin D Philpot"
+      ],
+      "publication_year": "2024",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't",
+        "Research Support, N.I.H., Extramural"
+      ],
+      "corrections": [],
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=35722745%2C33737904%2C22190039%2C25470045%2C23995680%2C28436452%2C38977672%2C35429480%2C26865513%2C20876107%2C25884337&retmode=xml&tool=MEDR5Atlas",
+      "metadata_retrieved_at": "2026-10-03",
+      "source_family": "PubMed / PMC",
+      "pmc_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11231141/",
+      "study_design": "Small-molecule screening and mechanistic assays in mouse and patient-derived neurons; mouse expression experiments.",
+      "sample_size": {
+        "reported": "Figure 2: dose-response assays repeated n=3 in quadruplicates; inactive (R) enantiomer n=2. This is an assay example, not a human trial or a study-wide N.",
+        "availability": "verified_context_specific",
+        "location": "PMC Figure 2",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11231141/"
+      }
     },
     {
       "id": "topotecan-label",
@@ -133,7 +462,13 @@
       "publication_date": null,
       "identifier": null,
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "Oncology labeling warns of severe myelosuppression and identifies renal impairment as relevant to exposure. It supplies no validated organ-burden number for Angelman research.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "DailyMed",
+      "study_design": "Regulatory drug label; oncology indications and warnings."
     },
     {
       "id": "ganaxolone-trial",
@@ -144,7 +479,66 @@
       "publication_date": "2022",
       "identifier": "PMID:35429480",
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "A randomized trial assessed ganaxolone for seizures in CDKL5 deficiency disorder. Symptom-directed clinical evidence does not show restoration of the causal CDKL5 deficit.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "pubmed_metadata_verified_claim_reviewed",
+      "uncertainty": "Seizure endpoint, limited blinded duration, sponsor-funded study. PubMed links an erratum (PMID:35716695); correction details have not been independently reviewed. No causal-restoration or individual safety inference.",
+      "original_source_url": "https://pubmed.ncbi.nlm.nih.gov/35429480/",
+      "pmid": "35429480",
+      "doi": "10.1016/S1474-4422(22)00077-1",
+      "pmcid": null,
+      "title": "Safety and efficacy of ganaxolone in patients with CDKL5 deficiency disorder: results from the double-blind phase of a randomised, placebo-controlled, phase 3 trial.",
+      "journal": "The Lancet. Neurology",
+      "authors": [
+        "Elia M Pestana Knight",
+        "Sam Amin",
+        "Nadia Bahi-Buisson",
+        "Tim A Benke",
+        "J Helen Cross",
+        "Scott T Demarest",
+        "Heather E Olson",
+        "Nicola Specchio",
+        "Thomas R Fleming",
+        "Alex A Aimetti",
+        "Maciej Gasior",
+        "Orrin Devinsky",
+        "Marigold Trial Group"
+      ],
+      "publication_year": "2022",
+      "publication_types": [
+        "Clinical Trial, Phase III",
+        "Journal Article",
+        "Randomized Controlled Trial"
+      ],
+      "corrections": [
+        {
+          "type": "CommentIn",
+          "pmid": "35429468",
+          "note": null
+        },
+        {
+          "type": "ErratumIn",
+          "pmid": "35716695",
+          "note": null
+        },
+        {
+          "type": "CommentIn",
+          "pmid": "36426195",
+          "note": null
+        }
+      ],
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=35722745%2C33737904%2C22190039%2C25470045%2C23995680%2C28436452%2C38977672%2C35429480%2C26865513%2C20876107%2C25884337&retmode=xml&tool=MEDR5Atlas",
+      "metadata_retrieved_at": "2026-10-03",
+      "source_family": "PubMed / PMC",
+      "pmc_url": null,
+      "study_design": "Randomised, double-blind, placebo-controlled phase 3 trial; 17-week blinded phase; seizure endpoint.",
+      "sample_size": {
+        "reported": "101 randomised: 50 ganaxolone, 51 placebo; primary seizure-endpoint analysis n=100. Not causal CDKL5 restoration.",
+        "availability": "verified_context_specific",
+        "location": "PubMed abstract",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/35429480/"
+      }
     },
     {
       "id": "stxbp1-study",
@@ -155,7 +549,100 @@
       "publication_date": "2016",
       "identifier": "PMID:26865513",
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "A clinical study describes STXBP1 encephalopathy as a complex neurodevelopmental disorder including epilepsy.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "pubmed_metadata_verified_claim_reviewed",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "original_source_url": "https://pubmed.ncbi.nlm.nih.gov/26865513/",
+      "pmid": "26865513",
+      "doi": "10.1212/WNL.0000000000002457",
+      "pmcid": null,
+      "title": "STXBP1 encephalopathy: A neurodevelopmental disorder including epilepsy.",
+      "journal": "Neurology",
+      "authors": [
+        "Hannah Stamberger",
+        "Marina Nikanorova",
+        "Marjolein H Willemsen",
+        "Patrizia Accorsi",
+        "Marco Angriman",
+        "Hartmut Baier",
+        "Ira Benkel-Herrenbrueck",
+        "Valérie Benoit",
+        "Mauro Budetta",
+        "Almuth Caliebe",
+        "Gaetano Cantalupo",
+        "Giuseppe Capovilla",
+        "Gianluca Casara",
+        "Carolina Courage",
+        "Marie Deprez",
+        "Anne Destrée",
+        "Robertino Dilena",
+        "Corrie E Erasmus",
+        "Madeleine Fannemel",
+        "Roar Fjær",
+        "Lucio Giordano",
+        "Katherine L Helbig",
+        "Henrike O Heyne",
+        "Joerg Klepper",
+        "Gerhard J Kluger",
+        "Damien Lederer",
+        "Monica Lodi",
+        "Oliver Maier",
+        "Andreas Merkenschlager",
+        "Nina Michelberger",
+        "Carlo Minetti",
+        "Hiltrud Muhle",
+        "Judith Phalin",
+        "Keri Ramsey",
+        "Antonino Romeo",
+        "Jens Schallner",
+        "Ina Schanze",
+        "Marwan Shinawi",
+        "Kristel Sleegers",
+        "Katalin Sterbova",
+        "Steffen Syrbe",
+        "Monica Traverso",
+        "Andreas Tzschach",
+        "Peter Uldall",
+        "Rudy Van Coster",
+        "Helene Verhelst",
+        "Maurizio Viri",
+        "Susan Winter",
+        "Markus Wolff",
+        "Martin Zenker",
+        "Leonardo Zoccante",
+        "Peter De Jonghe",
+        "Ingo Helbig",
+        "Pasquale Striano",
+        "Johannes R Lemke",
+        "Rikke S Møller",
+        "Sarah Weckhuysen"
+      ],
+      "publication_year": "2016",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't",
+        "Review"
+      ],
+      "corrections": [
+        {
+          "type": "CommentIn",
+          "pmid": "31929717",
+          "note": null
+        }
+      ],
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=35722745%2C33737904%2C22190039%2C25470045%2C23995680%2C28436452%2C38977672%2C35429480%2C26865513%2C20876107%2C25884337&retmode=xml&tool=MEDR5Atlas",
+      "metadata_retrieved_at": "2026-10-03",
+      "source_family": "PubMed / PMC",
+      "pmc_url": null,
+      "study_design": "Clinical cohort combined with systematic review of previously reported patients.",
+      "sample_size": {
+        "reported": "147 patients total, including 45 previously unreported patients. Mixed cohort/literature ascertainment.",
+        "availability": "verified_context_specific",
+        "location": "PubMed abstract",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/26865513/"
+      }
     },
     {
       "id": "asf",
@@ -166,7 +653,13 @@
       "publication_date": null,
       "identifier": null,
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "Official patient foundation with family support, disease resources and research navigation.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "Verified official group site",
+      "study_design": "Official organization resource; not treatment-effect evidence."
     },
     {
       "id": "ifcr",
@@ -177,7 +670,13 @@
       "publication_date": null,
       "identifier": null,
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "Official CDKL5 organization offering family resources and the Connect CDKL5 platform.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "Verified official group site",
+      "study_design": "Official organization resource; not treatment-effect evidence."
     },
     {
       "id": "cacna1a-foundation",
@@ -188,7 +687,13 @@
       "publication_date": null,
       "identifier": null,
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "Official patient organization for CACNA1A-related disorders.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "Verified official group site",
+      "study_design": "Official organization resource; not treatment-effect evidence."
     },
     {
       "id": "stxbp1-foundation",
@@ -199,7 +704,13 @@
       "publication_date": null,
       "identifier": null,
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "Official patient foundation with family resources and research participation information.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "Verified official group site",
+      "study_design": "Official organization resource; not treatment-effect evidence."
     },
     {
       "id": "buffalo",
@@ -210,18 +721,60 @@
       "publication_date": null,
       "identifier": null,
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "Buffalo provides a patient-powered pipeline tracker and support for ultra-rare therapeutic development. No disease-specific Buffalo program is asserted in this dataset.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "Official programme resource",
+      "study_design": "Authoritative overview/navigation; not a candidate intervention experiment."
     },
     {
       "id": "paired-ipsc2010",
       "source": "Chamberlain et al.: iPSC models of Angelman and Prader-Willi imprinting disorders",
-      "source_url": "https://www.pnas.org/doi/10.1073/pnas.1004487107",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/20876107/",
       "evidence_type": "human_cellular",
       "summary": "The study generated iPSC models of Angelman and Prader-Willi syndromes and studied maintenance of genomic imprinting. It supplies a shared experimental approach, not evidence for a shared treatment.",
       "publication_date": "2010",
       "identifier": "PMID:20876107",
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "The study generated iPSC models of Angelman and Prader-Willi syndromes and studied maintenance of genomic imprinting. It supplies a shared experimental approach, not evidence for a shared treatment.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "pubmed_metadata_verified_claim_reviewed",
+      "uncertainty": "Preclinical/cellular context. Replicate counts depend on assay; no clinical efficacy or safety established by these experiments.",
+      "original_source_url": "https://www.pnas.org/doi/10.1073/pnas.1004487107",
+      "pmid": "20876107",
+      "doi": "10.1073/pnas.1004487107",
+      "pmcid": "PMC2955112",
+      "title": "Induced pluripotent stem cell models of the genomic imprinting disorders Angelman and Prader-Willi syndromes.",
+      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+      "authors": [
+        "Stormy J Chamberlain",
+        "Pin-Fang Chen",
+        "Khong Y Ng",
+        "Fany Bourgois-Rocha",
+        "Fouad Lemtiri-Chlieh",
+        "Eric S Levine",
+        "Marc Lalande"
+      ],
+      "publication_year": "2010",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "corrections": [],
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=35722745%2C33737904%2C22190039%2C25470045%2C23995680%2C28436452%2C38977672%2C35429480%2C26865513%2C20876107%2C25884337&retmode=xml&tool=MEDR5Atlas",
+      "metadata_retrieved_at": "2026-10-03",
+      "source_family": "PubMed / PMC",
+      "pmc_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2955112/",
+      "study_design": "Human patient-derived iPSC model study of imprint maintenance and neuronal differentiation.",
+      "sample_size": {
+        "reported": null,
+        "availability": "not_extracted_or_not_applicable",
+        "location": "Donor/assay denominator not verified; abstract does not report it",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/20876107/"
+      }
     },
     {
       "id": "pws-nlm",
@@ -232,7 +785,13 @@
       "publication_date": null,
       "identifier": null,
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "Prader-Willi syndrome involves loss of expression of paternal chromosome-15 genes, including the SNORD116 region. It is a complex imprinting disorder, not simply UBE3A loss of function.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "Official programme resource",
+      "study_design": "Authoritative overview/navigation; not a candidate intervention experiment."
     },
     {
       "id": "pwsa",
@@ -243,7 +802,13 @@
       "publication_date": null,
       "identifier": null,
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "Official Prader-Willi patient organization with family support and research-related resources.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "Verified official group site",
+      "study_design": "Official organization resource; not treatment-effect evidence."
     },
     {
       "id": "ube3a-dosage2015",
@@ -254,7 +819,52 @@
       "publication_date": "2015",
       "identifier": "PMID:25884337",
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "A reported maternal duplication encompassing UBE3A was associated with neurodevelopmental features. Increased UBE3A dosage provides a counterexample to transferring a UBE3A-restoration hypothesis. This case does not reduce all Dup15q biology to one gene.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "pubmed_metadata_verified_claim_reviewed",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "original_source_url": "https://pubmed.ncbi.nlm.nih.gov/25884337/",
+      "pmid": "25884337",
+      "doi": "10.1002/humu.22800",
+      "pmcid": null,
+      "title": "15q11.2 Duplication Encompassing Only the UBE3A Gene Is Associated with Developmental Delay and Neuropsychiatric Phenotypes.",
+      "journal": "Human mutation",
+      "authors": [
+        "Abdul Noor",
+        "Lucie Dupuis",
+        "Kirti Mittal",
+        "Anath C Lionel",
+        "Christian R Marshall",
+        "Stephen W Scherer",
+        "Tracy Stockley",
+        "John B Vincent",
+        "Roberto Mendoza-Londono",
+        "Dimitri J Stavropoulos"
+      ],
+      "publication_year": "2015",
+      "publication_types": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "corrections": [
+        {
+          "type": "CommentIn",
+          "pmid": "26088713",
+          "note": null
+        }
+      ],
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=35722745%2C33737904%2C22190039%2C25470045%2C23995680%2C28436452%2C38977672%2C35429480%2C26865513%2C20876107%2C25884337&retmode=xml&tool=MEDR5Atlas",
+      "metadata_retrieved_at": "2026-10-03",
+      "source_family": "PubMed / PMC",
+      "pmc_url": null,
+      "study_design": "Proband/family segregation case report with fibroblast expression analysis.",
+      "sample_size": {
+        "reported": "1 described proband; segregation examined across four generations. A complete participant denominator is not given in the abstract.",
+        "availability": "verified_context_specific",
+        "location": "PubMed abstract",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/25884337/"
+      }
     },
     {
       "id": "NCT05127226",
@@ -265,7 +875,18 @@
       "publication_date": "2026-08-20",
       "identifier": "NCT05127226",
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "Official registry snapshot; current eligibility and recruitment must be checked with the study team.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "ClinicalTrials.gov",
+      "study_design": "Registered clinical study; the registry record is not a peer-reviewed efficacy result.",
+      "sample_size": {
+        "reported": null,
+        "availability": "not_extracted",
+        "location": "See dated registry record; target enrolment differs from analysed sample."
+      }
     },
     {
       "id": "NCT03572933",
@@ -276,7 +897,575 @@
       "publication_date": "2023-04-14",
       "identifier": "NCT03572933",
       "retrieved_at": "2026-10-03",
-      "evidence_level": "source-specific; not a probability of treatment success"
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "extracted_claim": "Official registry snapshot; current eligibility and recruitment must be checked with the study team.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "ClinicalTrials.gov",
+      "study_design": "Registered clinical study; the registry record is not a peer-reviewed efficacy result.",
+      "sample_size": {
+        "reported": null,
+        "availability": "not_extracted",
+        "location": "See dated registry record; target enrolment differs from analysed sample."
+      }
+    },
+    {
+      "id": "MONDO:0007113",
+      "source": "Angelman syndrome — MONDO",
+      "title": "Angelman syndrome — MONDO",
+      "source_url": "https://www.ebi.ac.uk/ols4/ontologies/mondo/classes?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMONDO_0007113",
+      "evidence_type": "ontology_identifier",
+      "summary": "MONDO term MONDO:0007113 is labelled Angelman syndrome. Terminology identity does not establish a drug effect or disease association.",
+      "extracted_claim": "MONDO term MONDO:0007113 is labelled Angelman syndrome. Terminology identity does not establish a drug effect or disease association.",
+      "source_family": "MONDO",
+      "publication_date": null,
+      "identifier": "MONDO:0007113",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "Source-specific record; not a probability of treatment success",
+      "claim_kind": "direct_source_report",
+      "verification_status": "official_record_verified",
+      "uncertainty": "Record scope applies; no efficacy, safety, partnership or guaranteed asset access implied.",
+      "ontology_id": "MONDO:0007113",
+      "synonyms": [
+        "AS",
+        "Angelman syndrome (Type 1)",
+        "Angelman syndrome (Type 2)",
+        "Angelman syndrome",
+        "Angelman’s syndrome",
+        "happy puppet syndrome (formerly)",
+        "happy puppet syndrome, formerly"
+      ],
+      "cross_references": [
+        {
+          "database": "DECIPHER",
+          "id": "4",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "DECIPHER",
+          "id": "54",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "DOID",
+          "id": "1932",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "GARD",
+          "id": "0005810",
+          "mapping_context": "MONDO:GARD"
+        },
+        {
+          "database": "ICD10CM",
+          "id": "Q93.51",
+          "mapping_context": "https://www.angelmanbiomarkers.org/special-announcement-angelman-specific-icd-10-code-q93-51-is-finally-here/"
+        },
+        {
+          "database": "ICD9",
+          "id": "759.89",
+          "mapping_context": "MONDO:relatedTo"
+        },
+        {
+          "database": "MEDGEN",
+          "id": "58144",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "MESH",
+          "id": "C531619",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "MESH",
+          "id": "D017204",
+          "mapping_context": "Orphanet:72/e"
+        },
+        {
+          "database": "MedDRA",
+          "id": "10049004",
+          "mapping_context": "Orphanet:72/e"
+        },
+        {
+          "database": "NANDO",
+          "id": "1200686",
+          "mapping_context": "https://orcid.org/0000-0003-0011-764X"
+        },
+        {
+          "database": "NANDO",
+          "id": "2200960",
+          "mapping_context": "https://orcid.org/0000-0003-0011-764X"
+        },
+        {
+          "database": "NCIT",
+          "id": "C75462",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "NORD",
+          "id": "782",
+          "mapping_context": "MONDO:NORD"
+        },
+        {
+          "database": "OMIM",
+          "id": "105830",
+          "mapping_context": "Orphanet:72/e"
+        },
+        {
+          "database": "Orphanet",
+          "id": "72",
+          "mapping_context": "OMIM:105830"
+        },
+        {
+          "database": "SCTID",
+          "id": "76880004",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "UMLS",
+          "id": "C0162635",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "icd11.foundation",
+          "id": "1106558408",
+          "mapping_context": "Orphanet:72"
+        }
+      ],
+      "study_design": "Curated ontology term / identifier mapping, not clinical or experimental evidence.",
+      "metadata_source_url": "https://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms?obo_id=MONDO:0007113",
+      "record_scope": "terminology_only"
+    },
+    {
+      "id": "MONDO:0100039",
+      "source": "CDKL5 disorder — MONDO",
+      "title": "CDKL5 disorder — MONDO",
+      "source_url": "https://www.ebi.ac.uk/ols4/ontologies/mondo/classes?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMONDO_0100039",
+      "evidence_type": "ontology_identifier",
+      "summary": "MONDO term MONDO:0100039 is labelled CDKL5 disorder. Terminology identity does not establish a drug effect or disease association.",
+      "extracted_claim": "MONDO term MONDO:0100039 is labelled CDKL5 disorder. Terminology identity does not establish a drug effect or disease association.",
+      "source_family": "MONDO",
+      "publication_date": null,
+      "identifier": "MONDO:0100039",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "Source-specific record; not a probability of treatment success",
+      "claim_kind": "direct_source_report",
+      "verification_status": "official_record_verified",
+      "uncertainty": "Record scope applies; no efficacy, safety, partnership or guaranteed asset access implied.",
+      "ontology_id": "MONDO:0100039",
+      "synonyms": [
+        "CDKL5 Deficiency Disorder",
+        "CDKL5 disorder",
+        "CDKL5 inherited genetic disease",
+        "CDKL5",
+        "CDKL5-related disorder",
+        "inherited genetic disease caused by mutation in CDKL5"
+      ],
+      "cross_references": [
+        {
+          "database": "GARD",
+          "id": "0026021",
+          "mapping_context": "MONDO:GARD"
+        },
+        {
+          "database": "NORD",
+          "id": "904",
+          "mapping_context": "MONDO:NORD"
+        }
+      ],
+      "study_design": "Curated ontology term / identifier mapping, not clinical or experimental evidence.",
+      "metadata_source_url": "https://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms?obo_id=MONDO:0100039",
+      "record_scope": "terminology_only"
+    },
+    {
+      "id": "MONDO:0012812",
+      "source": "developmental and epileptic encephalopathy, 4 — MONDO",
+      "title": "developmental and epileptic encephalopathy, 4 — MONDO",
+      "source_url": "https://www.ebi.ac.uk/ols4/ontologies/mondo/classes?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMONDO_0012812",
+      "evidence_type": "ontology_identifier",
+      "summary": "MONDO term MONDO:0012812 is labelled developmental and epileptic encephalopathy, 4. Terminology identity does not establish a drug effect or disease association.",
+      "extracted_claim": "MONDO term MONDO:0012812 is labelled developmental and epileptic encephalopathy, 4. Terminology identity does not establish a drug effect or disease association.",
+      "source_family": "MONDO",
+      "publication_date": null,
+      "identifier": "MONDO:0012812",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "Source-specific record; not a probability of treatment success",
+      "claim_kind": "direct_source_report",
+      "verification_status": "official_record_verified",
+      "uncertainty": "Record scope applies; no efficacy, safety, partnership or guaranteed asset access implied.",
+      "ontology_id": "MONDO:0012812",
+      "synonyms": [
+        "epileptic encephalopathy, early infantile, type 4",
+        "DEE4",
+        "EIEE4",
+        "STXBP1 early infantile epileptic encephalopathy",
+        "STXBP1-related early-onset encephalopathy",
+        "STXBP1-related encephalopathy",
+        "developmental and epileptic encephalopathy 4",
+        "developmental and epileptic encephalopathy, 4",
+        "early infantile epileptic encephalopathy 4",
+        "early infantile epileptic encephalopathy caused by mutation in STXBP1",
+        "epileptic encephalopathy, early infantile, 4"
+      ],
+      "cross_references": [
+        {
+          "database": "DOID",
+          "id": "0080436",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "GARD",
+          "id": "0012900",
+          "mapping_context": "MONDO:GARD"
+        },
+        {
+          "database": "MEDGEN",
+          "id": "436917",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "MESH",
+          "id": "C567404",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "NCIT",
+          "id": "C162472",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "OMIM",
+          "id": "612164",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "Orphanet",
+          "id": "599373",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "SCTID",
+          "id": "768666006",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "UMLS",
+          "id": "C2677326",
+          "mapping_context": "MONDO:equivalentTo"
+        }
+      ],
+      "study_design": "Curated ontology term / identifier mapping, not clinical or experimental evidence.",
+      "metadata_source_url": "https://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms?obo_id=MONDO:0012812",
+      "record_scope": "terminology_only"
+    },
+    {
+      "id": "HP:0001251",
+      "source": "Ataxia — HPO",
+      "title": "Ataxia — HPO",
+      "source_url": "https://www.ebi.ac.uk/ols4/ontologies/hp/classes?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FHP_0001251",
+      "evidence_type": "ontology_identifier",
+      "summary": "HPO term HP:0001251 is labelled Ataxia. Terminology identity does not establish a drug effect or disease association.",
+      "extracted_claim": "HPO term HP:0001251 is labelled Ataxia. Terminology identity does not establish a drug effect or disease association.",
+      "source_family": "HPO",
+      "publication_date": null,
+      "identifier": "HP:0001251",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "Source-specific record; not a probability of treatment success",
+      "claim_kind": "direct_source_report",
+      "verification_status": "official_record_verified",
+      "uncertainty": "Record scope applies; no efficacy, safety, partnership or guaranteed asset access implied.",
+      "ontology_id": "HP:0001251",
+      "synonyms": [
+        "Cerebellar ataxia"
+      ],
+      "cross_references": [],
+      "study_design": "Curated ontology term / identifier mapping, not clinical or experimental evidence.",
+      "metadata_source_url": "https://www.ebi.ac.uk/ols4/api/ontologies/hp/terms?obo_id=HP:0001251",
+      "record_scope": "terminology_only"
+    },
+    {
+      "id": "HP:0001250",
+      "source": "Seizure — HPO",
+      "title": "Seizure — HPO",
+      "source_url": "https://www.ebi.ac.uk/ols4/ontologies/hp/classes?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FHP_0001250",
+      "evidence_type": "ontology_identifier",
+      "summary": "HPO term HP:0001250 is labelled Seizure. Terminology identity does not establish a drug effect or disease association.",
+      "extracted_claim": "HPO term HP:0001250 is labelled Seizure. Terminology identity does not establish a drug effect or disease association.",
+      "source_family": "HPO",
+      "publication_date": null,
+      "identifier": "HP:0001250",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "Source-specific record; not a probability of treatment success",
+      "claim_kind": "direct_source_report",
+      "verification_status": "official_record_verified",
+      "uncertainty": "Record scope applies; no efficacy, safety, partnership or guaranteed asset access implied.",
+      "ontology_id": "HP:0001250",
+      "synonyms": [
+        "Epileptic seizure",
+        "Epilepsy",
+        "Seizures"
+      ],
+      "cross_references": [],
+      "study_design": "Curated ontology term / identifier mapping, not clinical or experimental evidence.",
+      "metadata_source_url": "https://www.ebi.ac.uk/ols4/api/ontologies/hp/terms?obo_id=HP:0001250",
+      "record_scope": "terminology_only"
+    },
+    {
+      "id": "HP:0001263",
+      "source": "Global developmental delay — HPO",
+      "title": "Global developmental delay — HPO",
+      "source_url": "https://www.ebi.ac.uk/ols4/ontologies/hp/classes?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FHP_0001263",
+      "evidence_type": "ontology_identifier",
+      "summary": "HPO term HP:0001263 is labelled Global developmental delay. Terminology identity does not establish a drug effect or disease association.",
+      "extracted_claim": "HPO term HP:0001263 is labelled Global developmental delay. Terminology identity does not establish a drug effect or disease association.",
+      "source_family": "HPO",
+      "publication_date": null,
+      "identifier": "HP:0001263",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "Source-specific record; not a probability of treatment success",
+      "claim_kind": "direct_source_report",
+      "verification_status": "official_record_verified",
+      "uncertainty": "Record scope applies; no efficacy, safety, partnership or guaranteed asset access implied.",
+      "ontology_id": "HP:0001263",
+      "synonyms": [
+        "Cognitive delay",
+        "Delayed cognitive development",
+        "Delayed development",
+        "Delayed developmental milestones",
+        "Delayed intellectual development",
+        "Delayed milestones",
+        "Delayed psychomotor development",
+        "Developmental delay in early childhood",
+        "Developmental delay",
+        "Developmental delay, global",
+        "Developmental retardation",
+        "Lack of psychomotor development",
+        "Mental and motor retardation",
+        "Motor and developmental delay",
+        "Motormental retardation",
+        "Psychomotor delay",
+        "Psychomotor development deficiency",
+        "Psychomotor development failure",
+        "Psychomotor developmental delay",
+        "Retarded development",
+        "Retarded mental development",
+        "Retarded psychomotor development",
+        "GDD"
+      ],
+      "cross_references": [],
+      "study_design": "Curated ontology term / identifier mapping, not clinical or experimental evidence.",
+      "metadata_source_url": "https://www.ebi.ac.uk/ols4/api/ontologies/hp/terms?obo_id=HP:0001263",
+      "record_scope": "terminology_only"
+    },
+    {
+      "id": "HP:0000750",
+      "source": "Delayed speech and language development — HPO",
+      "title": "Delayed speech and language development — HPO",
+      "source_url": "https://www.ebi.ac.uk/ols4/ontologies/hp/classes?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FHP_0000750",
+      "evidence_type": "ontology_identifier",
+      "summary": "HPO term HP:0000750 is labelled Delayed speech and language development. Terminology identity does not establish a drug effect or disease association.",
+      "extracted_claim": "HPO term HP:0000750 is labelled Delayed speech and language development. Terminology identity does not establish a drug effect or disease association.",
+      "source_family": "HPO",
+      "publication_date": null,
+      "identifier": "HP:0000750",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "Source-specific record; not a probability of treatment success",
+      "claim_kind": "direct_source_report",
+      "verification_status": "official_record_verified",
+      "uncertainty": "Record scope applies; no efficacy, safety, partnership or guaranteed asset access implied.",
+      "ontology_id": "HP:0000750",
+      "synonyms": [
+        "Deficiency of speech development",
+        "Delayed language development",
+        "Delayed speech acquisition",
+        "Delayed speech and language development",
+        "Delayed speech development",
+        "Delayed speech",
+        "Impaired speech and language development",
+        "Impaired speech development",
+        "Language delay",
+        "Language delayed",
+        "Language development deficit",
+        "Late-onset speech development",
+        "Poor language development",
+        "Poor speech acquisition",
+        "Poor speech development",
+        "Speech and language delay",
+        "Speech and language difficulties",
+        "Speech delay",
+        "Speech difficulties"
+      ],
+      "cross_references": [],
+      "study_design": "Curated ontology term / identifier mapping, not clinical or experimental evidence.",
+      "metadata_source_url": "https://www.ebi.ac.uk/ols4/api/ontologies/hp/terms?obo_id=HP:0000750",
+      "record_scope": "terminology_only"
+    },
+    {
+      "id": "OMIM:105830",
+      "source": "OMIM Angelman syndrome identifier (cross-reference verified)",
+      "title": "OMIM Angelman syndrome identifier (cross-reference verified)",
+      "source_url": "https://omim.org/entry/105830",
+      "evidence_type": "identifier_cross_reference",
+      "summary": "OMIM:105830 identifies Angelman syndrome; the cross-reference was verified in MONDO and NCBI GeneReviews. Direct OMIM text was not retrieved (HTTP 403) and is not redistributed.",
+      "extracted_claim": "OMIM:105830 identifies Angelman syndrome; the cross-reference was verified in MONDO and NCBI GeneReviews. Direct OMIM text was not retrieved (HTTP 403) and is not redistributed.",
+      "source_family": "OMIM",
+      "publication_date": null,
+      "identifier": "OMIM:105830",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "Source-specific record; not a probability of treatment success",
+      "claim_kind": "direct_source_report",
+      "verification_status": "cross_reference_verified",
+      "uncertainty": "Direct OMIM page unavailable during retrieval. This citation supports identifier reconciliation only.",
+      "record_scope": "identifier_only",
+      "metadata_source_url": "https://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms?obo_id=MONDO:0007113",
+      "study_design": "Identifier cross-reference only; no licensed OMIM content ingestion."
+    },
+    {
+      "id": "clinvar-155984",
+      "source": "ClinVar UBE3A deletion / Angelman condition record",
+      "title": "ClinVar UBE3A deletion / Angelman condition record",
+      "source_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/155984/",
+      "evidence_type": "clinical_variant_assertion",
+      "summary": "ClinVar lists this UBE3A deletion with a Pathogenic Angelman-specific condition classification. Broader variant aggregation is Pathogenic/Likely pathogenic. This is a database assertion, not a measured rescue effect, patient diagnosis or treatment response.",
+      "extracted_claim": "ClinVar lists this UBE3A deletion with a Pathogenic Angelman-specific condition classification. Broader variant aggregation is Pathogenic/Likely pathogenic. This is a database assertion, not a measured rescue effect, patient diagnosis or treatment response.",
+      "source_family": "ClinVar",
+      "publication_date": null,
+      "identifier": "VCV000155984.20",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "Source-specific record; not a probability of treatment success",
+      "claim_kind": "direct_source_report",
+      "verification_status": "official_record_verified",
+      "uncertainty": "Check transcript, parent of origin, genotype and functional evidence. ClinVar pathogenicity is not automatically a gain/loss direction or treatment-fit score.",
+      "variant_name": "NM_130839.5(UBE3A):c.2567_2568del (p.Lys856fs)",
+      "record_updated_at": "2026-09-27",
+      "variant_aggregate_classification": "Pathogenic/Likely pathogenic",
+      "condition_record": "RCV000144307.20",
+      "condition": "Angelman syndrome",
+      "condition_classification": "Pathogenic",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "classification_evaluated_at": "2025-07-30",
+      "condition_submission_count": 7,
+      "study_design": "Submitted germline variant classifications; multiple submitters, no conflicts, not expert-panel review.",
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=clinvar&id=VCV000155984&rettype=vcv&retmode=xml"
+    },
+    {
+      "id": "nih:11353907",
+      "source": "Small Molecule Therapeutic Discovery for Angelman Syndrome",
+      "title": "Small Molecule Therapeutic Discovery for Angelman Syndrome",
+      "source_url": "https://reporter.nih.gov/project-details/11353907",
+      "evidence_type": "research_programme_registry",
+      "summary": "NIH RePORTER lists a small-molecule Angelman therapeutic-discovery project at UNC Chapel Hill, with aims involving phenotypic rescue, unsilencing mechanism and medicinal chemistry. A funded research plan is not completed evidence or a confirmed collaborator.",
+      "extracted_claim": "NIH RePORTER lists a small-molecule Angelman therapeutic-discovery project at UNC Chapel Hill, with aims involving phenotypic rescue, unsilencing mechanism and medicinal chemistry. A funded research plan is not completed evidence or a confirmed collaborator.",
+      "source_family": "NIH RePORTER",
+      "publication_date": null,
+      "identifier": "5R01NS131615-04",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "Source-specific record; not a probability of treatment success",
+      "claim_kind": "direct_source_report",
+      "verification_status": "official_record_verified",
+      "uncertainty": "Award-period dates contain the snapshot date; verify continuing activity and contact details. No programme participation, access or response is secured.",
+      "application_id": 11353907,
+      "principal_investigators": [
+        "Jeffrey Aube",
+        "BENJAMIN D PHILPOT"
+      ],
+      "organization": "UNIV OF NORTH CAROLINA CHAPEL HILL",
+      "fiscal_year": 2026,
+      "project_start_date": "2023-06-01",
+      "project_end_date": "2028-05-31",
+      "study_design": "Public NIH project/award record; research aims, not study results.",
+      "metadata_source_url": "https://api.reporter.nih.gov/v2/projects/search",
+      "retrieval_query": {
+        "criteria": {
+          "advanced_text_search": {
+            "operator": "and",
+            "search_field": "all",
+            "search_text": "Angelman UBE3A"
+          },
+          "fiscal_years": [
+            2025,
+            2026
+          ]
+        },
+        "offset": 0,
+        "limit": 8
+      }
+    },
+    {
+      "id": "nord-angelman",
+      "source": "NORD: Angelman syndrome",
+      "title": "NORD: Angelman syndrome",
+      "source_url": "https://rarediseases.org/rare-diseases/angelman-syndrome/",
+      "evidence_type": "official_patient_information",
+      "summary": "NORD has an Angelman disease information page with patient-organization navigation. It is not a committed collaborator or a verified research registry.",
+      "extracted_claim": "NORD has an Angelman disease information page with patient-organization navigation. It is not a committed collaborator or a verified research registry.",
+      "source_family": "NORD",
+      "publication_date": null,
+      "identifier": "nord-angelman",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "Source-specific record; not a probability of treatment success",
+      "claim_kind": "direct_source_report",
+      "verification_status": "official_record_verified",
+      "uncertainty": "Record scope applies; no efficacy, safety, partnership or guaranteed asset access implied.",
+      "study_design": "Official patient information / organization navigation."
+    },
+    {
+      "id": "eurordis",
+      "source": "EURORDIS-Rare Diseases Europe",
+      "title": "EURORDIS-Rare Diseases Europe",
+      "source_url": "https://www.eurordis.org/",
+      "evidence_type": "official_patient_network",
+      "summary": "EURORDIS is an official rare-disease patient-organization alliance and a community navigation resource; no Angelman-specific partnership or registry is inferred.",
+      "extracted_claim": "EURORDIS is an official rare-disease patient-organization alliance and a community navigation resource; no Angelman-specific partnership or registry is inferred.",
+      "source_family": "EURORDIS",
+      "publication_date": null,
+      "identifier": "eurordis",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "Source-specific record; not a probability of treatment success",
+      "claim_kind": "direct_source_report",
+      "verification_status": "official_record_verified",
+      "uncertainty": "Record scope applies; no efficacy, safety, partnership or guaranteed asset access implied.",
+      "study_design": "Official network navigation; not disease-specific research evidence."
+    },
+    {
+      "id": "globalgenes",
+      "source": "Global Genes",
+      "title": "Global Genes",
+      "source_url": "https://globalgenes.org/",
+      "evidence_type": "official_patient_network",
+      "summary": "Global Genes provides rare-disease advocacy and community resources. The public homepage was reviewed through browser search; no pilot-specific partnership or registry is inferred.",
+      "extracted_claim": "Global Genes provides rare-disease advocacy and community resources. The public homepage was reviewed through browser search; no pilot-specific partnership or registry is inferred.",
+      "source_family": "Global Genes",
+      "publication_date": null,
+      "identifier": "globalgenes",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "Source-specific record; not a probability of treatment success",
+      "claim_kind": "direct_source_report",
+      "verification_status": "official_site_browser_reviewed",
+      "uncertainty": "Record scope applies; no efficacy, safety, partnership or guaranteed asset access implied.",
+      "study_design": "Official network navigation; not disease-specific research evidence.",
+      "metadata_source_url": "https://globalgenes.org/"
+    },
+    {
+      "id": "ORPHA:72",
+      "source": "Orphanet Angelman identifier (cross-reference verified)",
+      "title": "Orphanet Angelman identifier (cross-reference verified)",
+      "source_url": "https://www.orpha.net/en/disease/detail/72",
+      "evidence_type": "identifier_cross_reference",
+      "summary": "ORPHA:72 is the Angelman syndrome cross-reference in MONDO. Direct Orphanet content was blocked by a browser-check page during retrieval; no registry or expert-centre availability is asserted.",
+      "extracted_claim": "ORPHA:72 is the Angelman syndrome cross-reference in MONDO. Direct Orphanet content was blocked by a browser-check page during retrieval; no registry or expert-centre availability is asserted.",
+      "source_family": "Orphanet",
+      "publication_date": null,
+      "identifier": "ORPHA:72",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "Source-specific record; not a probability of treatment success",
+      "claim_kind": "direct_source_report",
+      "verification_status": "cross_reference_verified",
+      "uncertainty": "Record scope applies; no efficacy, safety, partnership or guaranteed asset access implied.",
+      "record_scope": "identifier_only",
+      "metadata_source_url": "https://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms?obo_id=MONDO:0007113",
+      "study_design": "Identifier cross-reference only; direct directory content not reviewed."
     }
   ],
   "diseases": [
@@ -320,6 +1509,61 @@
         "Human neuronal functional rescue",
         "Broader deletion-associated biology",
         "Exposure, delivery and long-term tolerability"
+      ],
+      "ontology_identifiers": [
+        {
+          "identifier": "MONDO:0007113",
+          "source_ids": [
+            "MONDO:0007113"
+          ],
+          "mapping_scope": "equivalent disease label"
+        },
+        {
+          "identifier": "OMIM:105830",
+          "source_ids": [
+            "MONDO:0007113",
+            "OMIM:105830"
+          ],
+          "mapping_scope": "Cross-reference only; direct OMIM content not ingested"
+        },
+        {
+          "identifier": "ORPHA:72",
+          "source_ids": [
+            "MONDO:0007113",
+            "ORPHA:72"
+          ],
+          "mapping_scope": "Cross-reference only; direct Orphanet directory not ingested"
+        }
+      ],
+      "phenotype_identifiers": [
+        {
+          "label": "Ataxia",
+          "identifier": "HP:0001251",
+          "source_ids": [
+            "HP:0001251"
+          ],
+          "mapping_scope": "Feature terminology; not diagnostic or disease-specific evidence"
+        },
+        {
+          "label": "Seizures",
+          "identifier": "HP:0001250",
+          "source_ids": [
+            "HP:0001250"
+          ],
+          "mapping_scope": "Feature terminology; not diagnostic or disease-specific evidence"
+        }
+      ],
+      "variant_examples": [
+        {
+          "source_id": "clinvar-155984",
+          "name": "NM_130839.5(UBE3A):c.2567_2568del (p.Lys856fs)",
+          "scope": "Public illustrative variant record only; not a patient record or functional-direction assignment."
+        }
+      ],
+      "patient_resource_ids": [
+        "nord-angelman",
+        "eurordis",
+        "globalgenes"
       ]
     },
     {
@@ -357,6 +1601,20 @@
       "unresolved": [
         "No sourced causal CDKL5-restoring repurposed candidate in this pilot",
         "Seizure endpoints do not establish developmental rescue"
+      ],
+      "ontology_identifiers": [
+        {
+          "identifier": "MONDO:0100039",
+          "source_ids": [
+            "MONDO:0100039"
+          ],
+          "mapping_scope": "broader CDKL5 disorder term; not every CDKL5 phenotype"
+        }
+      ],
+      "phenotype_identifiers": [],
+      "patient_resource_ids": [
+        "eurordis",
+        "globalgenes"
       ]
     },
     {
@@ -395,6 +1653,29 @@
       "unresolved": [
         "Variant-specific electrophysiology",
         "Gain versus loss of function unresolved for a gene-only query"
+      ],
+      "ontology_identifiers": [],
+      "phenotype_identifiers": [
+        {
+          "label": "Ataxia",
+          "identifier": "HP:0001251",
+          "source_ids": [
+            "HP:0001251"
+          ],
+          "mapping_scope": "Feature terminology; not diagnostic or disease-specific evidence"
+        },
+        {
+          "label": "Seizures",
+          "identifier": "HP:0001250",
+          "source_ids": [
+            "HP:0001250"
+          ],
+          "mapping_scope": "Feature terminology; not diagnostic or disease-specific evidence"
+        }
+      ],
+      "patient_resource_ids": [
+        "eurordis",
+        "globalgenes"
       ]
     },
     {
@@ -430,6 +1711,29 @@
       "unresolved": [
         "No sourced causal STXBP1-restoring repurposed candidate in this pilot",
         "Variant and cell-type dependent rescue"
+      ],
+      "ontology_identifiers": [
+        {
+          "identifier": "MONDO:0012812",
+          "source_ids": [
+            "MONDO:0012812"
+          ],
+          "mapping_scope": "STXBP1 DEE4 term; narrower than the full STXBP1 disorder spectrum"
+        }
+      ],
+      "phenotype_identifiers": [
+        {
+          "label": "Epilepsy",
+          "identifier": "HP:0001250",
+          "source_ids": [
+            "HP:0001250"
+          ],
+          "mapping_scope": "Feature terminology; not diagnostic or disease-specific evidence"
+        }
+      ],
+      "patient_resource_ids": [
+        "eurordis",
+        "globalgenes"
       ]
     }
   ],
@@ -722,5 +2026,37 @@
       ],
       "claim": "Randomized trial seizure-frequency outcome; not causal CDKL5 restoration."
     }
-  ]
+  ],
+  "research_programmes": [
+    {
+      "id": "nih:11353907",
+      "disease_id": "angelman",
+      "gene": "UBE3A",
+      "source_ids": [
+        "nih:11353907"
+      ],
+      "principal_investigators": [
+        "Jeffrey Aube",
+        "BENJAMIN D PHILPOT"
+      ],
+      "project_title": "Small Molecule Therapeutic Discovery for Angelman Syndrome",
+      "organization": "UNIV OF NORTH CAROLINA CHAPEL HILL",
+      "availability": "Public project and investigators verified; collaboration, current capacity, contacts and asset access not verified."
+    }
+  ],
+  "source_policy": {
+    "literature": "PubMed / PMC indexed publications; no journal allowlist and no journal-prestige weighting.",
+    "biology": "OMIM identifiers, ClinVar classifications, HPO terms and MONDO disease identifiers with explicit mapping scope.",
+    "trials": "ClinicalTrials.gov records with dated status; target enrolment is distinct from analysed sample.",
+    "research_programmes": "NIH RePORTER public programme/investigator records; funding aims are not study results.",
+    "patient_resources": "NORD, Orphanet, Global Genes, EURORDIS and verified official disease-group sites; no inferred partnership or registry access.",
+    "supplemental": "NLM MedlinePlus / GeneReviews disease references and DailyMed regulatory warnings remain explicitly identified.",
+    "ovid": "No Ovid dependency, institutional login or journal-restricted ingestion.",
+    "not_ingested": [
+      "Direct OMIM licensed text",
+      "Direct Orphanet registry / expert-centre contents",
+      "Private patient records"
+    ],
+    "metadata_limits": "Unknown metadata and assay-specific sample sizes remain explicit; no sample-size or journal-prestige score is used."
+  }
 }
