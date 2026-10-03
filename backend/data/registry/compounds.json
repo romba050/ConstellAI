@@ -1,0 +1,156 @@
+[
+  {
+    "id": "c_curcumin",
+    "name": "curcumin",
+    "type": "natural_compound",
+    "targets": [
+      {
+        "gene": "creb1",
+        "direction": "activate",
+        "strength": 0.7,
+        "confidence": "preclinical"
+      },
+      {
+        "gene": "bdnf",
+        "direction": "activate",
+        "strength": 0.35,
+        "confidence": "preclinical"
+      },
+      {
+        "gene": "gsk3b",
+        "direction": "inhibit",
+        "strength": 0.2,
+        "confidence": "preclinical"
+      },
+      {
+        "gene": "akt1",
+        "direction": "inhibit",
+        "strength": 0.2,
+        "confidence": "preclinical"
+      },
+      {
+        "gene": "nfkb1",
+        "direction": "modulate",
+        "strength": 0.2,
+        "confidence": "preclinical",
+        "spillover": true
+      }
+    ],
+    "interaction_notes": [],
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "starter entry merged from inline engine constants and mock_compounds.json"
+  },
+  {
+    "id": "c_resveratrol",
+    "name": "resveratrol",
+    "type": "natural_compound",
+    "targets": [
+      {
+        "gene": "sirt1",
+        "direction": "activate",
+        "strength": 0.6,
+        "confidence": "preclinical"
+      },
+      {
+        "gene": "creb1",
+        "direction": "activate",
+        "strength": 0.2,
+        "confidence": "preclinical"
+      },
+      {
+        "gene": "akt1",
+        "direction": "modulate",
+        "strength": 0.2,
+        "confidence": "preclinical"
+      },
+      {
+        "gene": "ampk",
+        "direction": "activate",
+        "strength": 0.2,
+        "confidence": "preclinical",
+        "spillover": true
+      },
+      {
+        "gene": "ppargc1a",
+        "direction": "activate",
+        "strength": 0.2,
+        "confidence": "preclinical",
+        "spillover": true
+      },
+      {
+        "gene": "mtor",
+        "direction": "modulate",
+        "strength": 0.15,
+        "confidence": "preclinical",
+        "spillover": true
+      }
+    ],
+    "interaction_notes": [],
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "starter entry merged from inline engine constants and mock_compounds.json; includes indirect mtor-axis spillover mapping for frontend mimic alignment"
+  },
+  {
+    "id": "c_egcg",
+    "name": "egcg",
+    "type": "natural_compound",
+    "targets": [
+      {
+        "gene": "bcl2",
+        "direction": "modulate",
+        "strength": 0.25,
+        "confidence": "preclinical"
+      },
+      {
+        "gene": "casp3",
+        "direction": "modulate",
+        "strength": 0.25,
+        "confidence": "preclinical"
+      },
+      {
+        "gene": "dnmt1",
+        "direction": "modulate",
+        "strength": 0.2,
+        "confidence": "preclinical",
+        "spillover": true
+      }
+    ],
+    "interaction_notes": [],
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "starter entry migrated from mock_compounds.json"
+  },
+  {
+    "id": "c_nmn",
+    "name": "nmn",
+    "type": "natural_compound",
+    "targets": [
+      {
+        "gene": "nampt",
+        "direction": "activate",
+        "strength": 0.3,
+        "confidence": "preclinical"
+      },
+      {
+        "gene": "sirt1",
+        "direction": "activate",
+        "strength": 0.25,
+        "confidence": "preclinical"
+      },
+      {
+        "gene": "parp1",
+        "direction": "modulate",
+        "strength": 0.2,
+        "confidence": "preclinical",
+        "spillover": true
+      }
+    ],
+    "interaction_notes": [
+      "monitor overlap with other nad+ boosting stacks"
+    ],
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "starter entry migrated from mock_compounds.json"
+  }
+]

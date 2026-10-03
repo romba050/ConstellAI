@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+{'type': 'Hypothesis', 'description': 'Epigenetic modification of the miR-34a gene may suppress immune surveillance and facilitate cancer cell invasion.'}
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.5
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. miR-34a Epigenetic Methylation Inhibition in Cancer Cells (~€15,000, 6 weeks) — Cytotoxicity and cell invasion assays on miR-34a methylation inhibitor-treated cancer cells | kill if: miR-34a methylation does not correlate with increased cell survival and reduced invasion in treated cancer cells
+2. Human miR-34a Epigenetic Modulation and Immune Response (~€20,000, 8 weeks) — ELISA to detect inflammatory cytokines in human serum after miR-34a epigenetic modulation | kill if: No significant change in immune response is detected after miR-34a epigenetic modulation
+3. miR-34a Expression and Epigenetic Modification in Normal vs. Cancerous Tissues (~€18,000, 6 weeks) — RNA sequencing to compare miR-34a expression and epigenetic modification between normal and cancerous tissues | kill if: No significant difference is found in miR-34a expression or epigenetic modification between normal and cancerous tissues
+4. Epigenetic Modification of miR-34a in Cancer Stem Cells (~€12,000, 4 weeks) — Flow cytometry to detect cancer stem cell markers after miR-34a epigenetic modification | kill if: No significant change is detected in cancer stem cell markers after miR-34a epigenetic modification
+5. miR-34a Epigenetic Modulation and Cancer Cell Invasion In Vivo (~€22,000, 8 weeks) — In vivo xenograft model to assess cancer cell invasion after miR-34a epigenetic modulation | kill if: No significant increase in cancer cell invasion is detected after miR-34a epigenetic modification
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

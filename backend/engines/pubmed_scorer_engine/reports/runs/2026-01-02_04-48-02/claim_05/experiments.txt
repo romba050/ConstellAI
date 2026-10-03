@@ -1,0 +1,5 @@
+1. MicroRNA Knockdown in TNBC Cell Line (~€15,000, 6 weeks) — Cell viability, glycolytic enzyme expression, and miRNA target site accessibility | kill if: endpoint_not_clinical
+2. Glycolytic Enzyme Overexpression in TNBC Tissue Culture (~€18,000, 8 weeks) — Cell growth rate, lactate production, and angiogenesis factor secretion | kill if: endpoint_not_clinical
+3. MicroRNA-Target Site Blocking in TNBC Mouse Model (~€20,000, 7 weeks) — Tumor growth rate, angiogenesis factor expression, and tumor cell invasion | kill if: endpoint_not_clinical
+4. Human TNBC Cell Line Glycolytic Capacity Assay (~€12,000, 5 weeks) — Glycolytic enzyme activity, cell growth rate, and oxygen consumption rate | kill if: replication_gap
+5. TNBC Patient-Derived Organoid Glycolysis Assay (~€22,000, 8 weeks) — Glycolytic enzyme expression, lactate production, and cell growth rate in response to microRNA mimicry or inhibition | kill if: replication_gap

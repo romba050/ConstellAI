@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Tumor-derived osteopontin may inhibit natural killer cell activity and contribute to immune evasion in glioblastoma.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.5
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. NK Cell Activation Assay with Osteopontin Inhibition (~€15,000, 6 weeks) — NK cell activation markers (e.g., CD107a) by flow cytometry | kill if: NK cells show no significant decrease in activation markers when treated with osteopontin
+2. Osteopontin Knockdown in Glioblastoma Cells and Immune Response Analysis (~€20,000, 8 weeks) — Tumor growth, immune cell infiltration, and cytokine release in a co-culture model | kill if: osteopontin knockdown does not affect tumor growth or immune response
+3. Natural Killer Cell Depletion in Glioblastoma Xenografts and Osteopontin Expression Analysis (~€18,000, 7 weeks) — Tumor growth, osteopontin expression, and NK cell infiltration in xenograft models with depleted NK cells | kill if: NK depletion does not affect tumor growth or osteopontin expression
+4. Human Osteopontin Variants and NK Cell Activity Comparison (~€12,000, 5 weeks) — NK cell activation by flow cytometry using human osteopontin variants with different binding affinities to NK cells | kill if: osteopontin variants show no difference in NK cell activity
+5. Exosome-Mediated Transfer of Osteopontin and Immune Suppression Analysis (~€22,000, 8 weeks) — Immune suppression, osteopontin transfer, and NK cell activation in exosome-treated models | kill if: exosomes containing osteopontin do not suppress immune response
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

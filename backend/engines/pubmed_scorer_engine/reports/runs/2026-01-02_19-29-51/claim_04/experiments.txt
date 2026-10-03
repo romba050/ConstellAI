@@ -1,0 +1,5 @@
+1. Experiment 1: Nrf2 siRNA in ovarian cancer cells (~€10,000, 6 weeks) — Cell viability assay (MTT) after cisplatin treatment | kill if: no significant change in cell viability
+2. Experiment 2: Nrf2 inhibition in ovarian cancer xenografts (~€18,000, 8 weeks) — Tumor growth rate and cisplatin response in mice | kill if: no significant difference in tumor growth or drug response
+3. Experiment 3: Human ovarian cancer cell line selection for Nrf2 expression (~€5,000, 4 weeks) — Nrf2 mRNA expression levels and chemoresistance correlation | kill if: no significant correlation between Nrf2 expression and chemoresistance
+4. Experiment 4: Nrf2 activator treatment in ovarian cancer patient-derived organoids (~€12,000, 6 weeks) — Organoid viability after cisplatin exposure with/without Nrf2 activator | kill if: no significant difference in organoid viability
+5. Experiment 5: Nrf2 binding site analysis using chromatin immunoprecipitation sequencing (ChIP-seq) (~€20,000, 8 weeks) — Identification of ARE-containing genes and their relationship to chemoresistance | kill if: no significant enrichment of ARE-containing genes

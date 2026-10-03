@@ -1,0 +1,5 @@
+1. circRNA enrichment in colorectal cancer tissues (~€18,000, 6 weeks) — qPCR, sequencing validation | kill if: failed qPCR and sequencing validation
+2. WNT/β-catenin pathway activity in colorectal cancer cells (~€22,000, 7 weeks) — Western blot, luciferase reporter assay | kill if: failed Western blot and luciferase reporter assay
+3. in vivo mouse model of colorectal cancer recurrence (~€20,000, 8 weeks) — bioluminescence imaging, histology | kill if: failed bioluminescence imaging and histology
+4. circRNA knockdown in colorectal cancer cells using siRNA (~€15,000, 5 weeks) — cell viability assay, Western blot | kill if: failed cell viability assay and Western blot
+5. circRNA-microRNA interactions in colorectal cancer tissues (~€19,000, 7 weeks) — bioinformatic analysis, miRNA sequencing | kill if: failed bioinformatic analysis and miRNA sequencing

@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": "rd_demo_1",
+      "name": "spinal muscular atrophy (demo)",
+      "genes": [
+        "SMN1",
+        "SMN2",
+        "BCL2",
+        "CASP3",
+        "AKT1"
+      ],
+      "notes": "toy demo gene set"
+    },
+    {
+      "id": "rd_demo_2",
+      "name": "rett syndrome (demo)",
+      "genes": [
+        "MECP2",
+        "BDNF",
+        "CREB1",
+        "HDAC2",
+        "GSK3B"
+      ],
+      "notes": "toy demo gene set"
+    },
+    {
+      "id": "rd_demo_3",
+      "name": "familial hypercholesterolemia (demo)",
+      "genes": [
+        "LDLR",
+        "PCSK9",
+        "APOB",
+        "HMGCR",
+        "SREBF2"
+      ],
+      "notes": "toy demo gene set"
+    }
+  ]
+}

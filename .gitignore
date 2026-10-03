@@ -1,0 +1,31 @@
+# Local dependencies and generated files
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+dist/
+*.log
+
+# Local credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.pfx
+
+# Duplicate exports and backups
+/backups/
+/__EXPORT_SOURCES__/
+/__EXPORT_SOURCES__.zip
+/MANIFEST.json
+
+# Regenerated evidence cache and query history
+*.sqlite
+*.sqlite3
+*.db
+/backend/data/recent_evidence_queries.json
+/backend/engines/pubmed_scorer_engine/cache/pubmed_cache.json

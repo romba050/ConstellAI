@@ -1,0 +1,5 @@
+1. Experiment 1: Mitochondrial Function in TNBC Cells Under Chemotherapy (~€15,000, 6 weeks) — mtDNA copy number, mtDNA damage, and OXPHOS activity under docetaxel treatment in MDA-MB-436 cells | kill if: replication_gap
+2. Experiment 2: Human TNBC Patient-Derived Organoids and Chemotherapy (~€22,000, 8 weeks) — effect of docetaxel on organoid growth and mitochondrial function in patient-matched tumor and adjacent normal tissue organoids | kill if: endpoint_not_clinical
+3. Experiment 3: Mitochondrial Priming with Metformin and Chemotherapy in TNBC Cells (~€12,000, 5 weeks) — impact of metformin on mitochondrial function and docetaxel efficacy in MDA-MB-436 cells | kill if: replication_gap
+4. Experiment 4: Mitochondrial DNA Mutations and Chemotherapy Response in TNBC Patient Tumors (~€25,000, 8 weeks) — correlation of mtDNA mutations with docetaxel response in a cohort of TNBC patients | kill if: underpowered_human_data
+5. Experiment 5: Mitochondrial Function and Chemoresistance in TNBC Spheroids (~€18,000, 7 weeks) — effect of docetaxel on mitochondrial function and spheroid growth in 3D cultures of MDA-MB-436 cells | kill if: replication_gap

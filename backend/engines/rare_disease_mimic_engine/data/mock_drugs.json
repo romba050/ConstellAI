@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "id": "d_atorvastatin",
+      "name": "atorvastatin",
+      "targets": [
+        {
+          "gene": "HMGCR",
+          "effect": "inhibit"
+        },
+        {
+          "gene": "SREBF2",
+          "effect": "downstream"
+        }
+      ],
+      "source": "demo"
+    },
+    {
+      "id": "d_evolocumab",
+      "name": "evolocumab",
+      "targets": [
+        {
+          "gene": "PCSK9",
+          "effect": "inhibit"
+        }
+      ],
+      "source": "demo"
+    },
+    {
+      "id": "d_valproate",
+      "name": "valproate",
+      "targets": [
+        {
+          "gene": "HDAC2",
+          "effect": "inhibit"
+        },
+        {
+          "gene": "GSK3B",
+          "effect": "modulate"
+        },
+        {
+          "gene": "ABCB1",
+          "effect": "spillover"
+        }
+      ],
+      "source": "demo"
+    },
+    {
+      "id": "d_lithium",
+      "name": "lithium",
+      "targets": [
+        {
+          "gene": "GSK3B",
+          "effect": "inhibit"
+        },
+        {
+          "gene": "INPP1",
+          "effect": "spillover"
+        }
+      ],
+      "source": "demo"
+    },
+    {
+      "id": "d_rapamycin",
+      "name": "sirolimus (rapamycin)",
+      "targets": [
+        {
+          "gene": "MTOR",
+          "effect": "inhibit"
+        },
+        {
+          "gene": "AKT1",
+          "effect": "downstream"
+        },
+        {
+          "gene": "BCL2",
+          "effect": "downstream"
+        }
+      ],
+      "source": "demo"
+    },
+    {
+      "id": "d_riluzole",
+      "name": "riluzole",
+      "targets": [
+        {
+          "gene": "AKT1",
+          "effect": "modulate"
+        },
+        {
+          "gene": "CASP3",
+          "effect": "downstream"
+        },
+        {
+          "gene": "GRIN1",
+          "effect": "spillover"
+        }
+      ],
+      "source": "demo"
+    }
+  ]
+}

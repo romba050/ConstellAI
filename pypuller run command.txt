@@ -1,0 +1,3 @@
+python pypuller.py --ext .py .js .ts .tsx .css .html .jsx .json .md
+
+python pypuller.py

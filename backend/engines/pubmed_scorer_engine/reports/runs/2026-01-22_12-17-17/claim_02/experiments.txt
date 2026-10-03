@@ -1,0 +1,5 @@
+1. miRNA mimic experiment (~€15,000, 6 weeks) — Detect miR-155 levels in recipient cells after exosome uptake. | kill if: No detectable miR-155 increase after exosome treatment
+2. Immune cell activation assay (~€18,000, 7 weeks) — Evaluate T-cell proliferation and cytokine release in the presence of tumor-derived exosomes. | kill if: No significant decrease in immune cell activation after exosome treatment
+3. Exosome neutralization experiment (~€20,000, 8 weeks) — Block exosome uptake using a specific antibody and assess anti-tumor immune responses. | kill if: No significant improvement in anti-tumor immune responses after blocking exosome uptake
+4. miRNA profiling in human sera (~€12,000, 5 weeks) — Detect tumor-derived miRNAs in the sera of triple-negative breast cancer patients. | kill if: No detectable tumor-derived miRNAs in patient sera
+5. Exosome treatment of immunocompetent mice (~€25,000, 8 weeks) — Assess metastasis development and immune responses in mice treated with tumor-derived exosomes. | kill if: No significant increase in metastasis development after exosome treatment

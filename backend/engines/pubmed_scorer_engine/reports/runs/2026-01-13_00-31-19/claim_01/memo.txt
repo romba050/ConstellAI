@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+The presence of cancer-associated fibroblasts in the tumor microenvironment may enhance tumor aggressiveness and reduce patient survival.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.4
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Experiment: Cancer-Associated Fibroblasts and Tumor Aggressiveness in Zebrafish (~€18,000, 6 weeks) — Zebrafish xenografts, CA-Fib depletion, tumor growth measurement | kill if: CA-Fibs do not affect tumor growth or zebrafish survival
+2. Experiment: Inhibiting CA-Fib Secretion Reduces Tumor Growth in Human-derived Organoids (~€20,000, 8 weeks) — Human organoid cultures, secretome inhibition, qRT-PCR for fibroblast-associated genes | kill if: Inhibiting CA-Fib secretion does not reduce tumor growth or alter gene expression
+3. Experiment: Tumor Microenvironment Modulation by Cancer-Associated Fibroblasts in Human Blood-Derived Stem Cells (~€22,000, 7 weeks) — Human blood-derived stem cells, co-culture with CA-Fibs and cancer cells, immunofluorescence for fibroblast markers | kill if: CA-Fibs do not modulate the tumor microenvironment or alter stem cell behavior
+4. Experiment: Cancer-Associated Fibroblasts Enhance Tumor Metastasis in Mice (~€25,000, 8 weeks) — Mouse metastasis model, CA-Fib depletion, immunohistochemistry for metastatic cells | kill if: CA-Fibs do not enhance tumor metastasis or alter immune response
+5. Experiment: Reproducibility of Cancer-Associated Fibroblast Effects in Different Human Tumor Cell Lines (~€15,000, 6 weeks) — Human tumor cell lines, CA-Fib co-culture, qRT-PCR for fibroblast-associated genes and cellular markers | kill if: CA-Fibs do not affect gene expression or cellular behavior across multiple tumor cell lines
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+The gut microbiome composition may influence the efficacy of chemotherapy in colorectal cancer patients.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.4
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Microbiome Transplantation in Mice (~€15,000, 6 weeks) — Comparing chemosensitivity between mice with humanized gut microbiota and germ-free controls. | kill if: endpoint_not_clinical
+2. Antibiotic Treatment in Patients (~€20,000, 8 weeks) — Evaluating the effect of antibiotic treatment on gut microbiome composition and chemosensitivity in patients undergoing chemotherapy. | kill if: endpoint_not_clinical
+3. In Vitro Chemotherapy Assay with Gut Microbiota (~€10,000, 4 weeks) — Assessing the impact of gut microbiome composition on chemosensitivity using an in vitro assay. | kill if: endpoint_not_clinical
+4. Gut Microbiota Sampling in Patients with Different Chemotherapy Responses (~€15,000, 6 weeks) — Comparing gut microbiome composition between patients with good and poor responses to chemotherapy. | kill if: endpoint_not_clinical
+5. Fecal Microbiota Transplantation in a Patient with Poor Chemotherapy Response (~€22,000, 8 weeks) — Evaluating the effect of fecal microbiota transplantation on chemosensitivity in a patient with poor response to chemotherapy. | kill if: endpoint_not_clinical
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

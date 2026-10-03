@@ -1,0 +1,5 @@
+1. Experiment 1: Exosome isolation from non-cancerous human plasma (~€10,000, 4 weeks) — miR-145 expression in exosomes from healthy donors vs cancer-free controls | kill if: detectable levels of miR-145
+2. Experiment 2: Inhibition of miR-145 in cancer cells (~€15,000, 6 weeks) — effect of miR-145 inhibition on EMT markers and metastasis in lung adenocarcinoma cell lines | kill if: no change in EMT markers or metastasis
+3. Experiment 3: Exosome-mediated miR-145 transfer between cells (~€12,000, 5 weeks) — in vitro transfer of exosomal miR-145 to recipient cells and effect on EMT markers | kill if: no evidence of miR-145 transfer
+4. Experiment 4: In vivo delivery of miR-145 inhibitors in mice (~€20,000, 8 weeks) — effect of systemic delivery of miR-145 inhibitors on lung adenocarcinoma metastasis in a mouse model | kill if: no reduction in metastasis
+5. Experiment 5: Relationship between ctDNA levels and EMT markers in patient samples (~€18,000, 7 weeks) — correlation analysis of ctDNA levels, miR-145 expression, and EMT markers in lung adenocarcinoma patient samples | kill if: no correlation between variables

@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Tumor cell-derived microRNAs may regulate immune checkpoint protein expression and influence cancer treatment response.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.4
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. miRNA knockdown in cell line (~€15,000, 6 weeks) — qRT-PCR, Western blot | kill if: no miRNA knockdown effect on immune checkpoint protein expression
+2. human PBMC microRNA profiling (~€20,000, 8 weeks) — microarray or RNA-seq | kill if: no correlation between patient microRNA profiles and treatment response
+3. immunohistochemistry of human tumor biopsies (~€18,000, 7 weeks) — IHC staining, image analysis | kill if: no association between miRNA expression and immune checkpoint protein localization in tumors
+4. CRISPR-Cas9 mediated knockout of miRNA target genes (~€12,000, 5 weeks) — Western blot, qRT-PCR | kill if: no effect on immune checkpoint protein expression after knockout
+5. miRNA mimic transfection in cell line (~€10,000, 5 weeks) — Western blot, qRT-PCR | kill if: no upregulation of immune checkpoint protein expression after miRNA mimic transfection
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

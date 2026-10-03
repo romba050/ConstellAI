@@ -1,0 +1,47 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+{'claim': 'PI3K/AKT signaling pathway activation may influence cell proliferation'}
+
+EVIDENCE SUMMARY:
+- PubMed | pmid=41643193 | animal | 2026 | surrogate
+- PubMed | pmid=41642713 | animal | 2026 | surrogate
+- PubMed | pmid=41642345 | animal | 2026 | surrogate
+- PubMed | pmid=41641881 | animal | 2026 | surrogate
+- PubMed | pmid=41641808 | animal | 2026 | surrogate
+
+SOURCES:
+- PubMed | pmid=41643193 | animal | 2026 | surrogate
+- PubMed | pmid=41642713 | animal | 2026 | surrogate
+- PubMed | pmid=41642345 | animal | 2026 | surrogate
+- PubMed | pmid=41641881 | animal | 2026 | surrogate
+- PubMed | pmid=41641808 | animal | 2026 | surrogate
+
+DECISION SUPPORT SCORE: 0.25
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 75%
+
+RECOMMENDED ACTION: discarded
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+none. hypothesis discarded by hard gate (no experiments generated).
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+discarded — does not meet minimum evidence thresholds.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

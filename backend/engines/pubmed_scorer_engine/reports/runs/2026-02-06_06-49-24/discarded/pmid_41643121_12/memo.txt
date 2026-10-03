@@ -1,0 +1,34 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Family-Based Digital Lifestyle Intervention for Hispanic Adolescents and Their Parents: Iterative Co-Design and Development Study. may influence disease progression.
+
+EVIDENCE SUMMARY:
+- PubMed | pmid=41643121
+
+DECISION SUPPORT SCORE: 0.15
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 45%
+
+RECOMMENDED ACTION: discarded
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+none. below threshold.
+
+CONFIDENCE DRIVERS:
++ real literature
+
+CONFIDENCE PENALTIES:
+- weak translation
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+killed early
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+common failure class
+
+DECISION SENSITIVITY:
+discarded
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

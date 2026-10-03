@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Exosomes derived from tumor-associated macrophages may influence metastatic potential and survival in colorectal cancer patients.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.5
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Experiment 1: Exosome Isolation from Tumor-Associated Macrophages (~€15,000, 6 weeks) — qRT-PCR for specific exosomal miRNA markers | kill if: insufficient tumor-associated macrophage isolation
+2. Experiment 2: Exosome Uptake by Colorectal Cancer Cells (~€20,000, 7 weeks) — Flow cytometry for exosomal markers on cancer cells | kill if: no significant exosome uptake observed
+3. Experiment 3: Exosome-Mediated Signaling in Colorectal Cancer Cells (~€18,000, 6 weeks) — Western blot for downstream signaling proteins | kill if: no significant changes in downstream signaling observed
+4. Experiment 4: Exosome-Associated miRNA and Colorectal Cancer Metastasis (~€12,000, 5 weeks) — Bioinformatic analysis of miRNA expression profiles | kill if: no correlation between exosomal miRNAs and metastasis
+5. Experiment 5: Exosome-Based Therapy in a Colorectal Cancer Xenograft Model (~€25,000, 8 weeks) — Tumor growth inhibition by exosome-based therapy | kill if: no significant tumor growth inhibition observed
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

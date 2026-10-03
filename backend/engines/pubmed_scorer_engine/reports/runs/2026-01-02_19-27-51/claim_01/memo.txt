@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Microbiome composition may influence metastatic potential in triple-negative breast cancer patients.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.4
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Microbiome Sampling Post-Operative Care (~€18,000, 6 weeks) — Compare microbiome composition between patients receiving standard post-operative care and those receiving a probiotic-enriched diet | kill if: No significant difference in metastatic potential between groups
+2. Oral Microbiome Metastasis Correlation (~€20,000, 8 weeks) — Correlate oral microbiome composition with metastatic potential in triple-negative breast cancer patients and controls | kill if: No significant correlation between oral microbiome and metastatic potential
+3. Fecal Microbiota Transplantation (~€22,000, 7 weeks) — Assess the effect of fecal microbiota transplantation on metastatic potential in triple-negative breast cancer patients with altered gut microbiome composition | kill if: No significant reduction in metastatic potential post-transplantation
+4. Gut Microbiome Dynamics During Chemotherapy (~€15,000, 5 weeks) — Characterize changes in gut microbiome composition during chemotherapy in triple-negative breast cancer patients and investigate their association with metastatic potential | kill if: No significant correlation between gut microbiome dynamics and metastatic potential
+5. In Vitro Metastasis Assay with Microbiota (~€12,000, 4 weeks) — Use an in vitro metastasis assay to investigate the effect of specific microbiota on metastatic potential of triple-negative breast cancer cells | kill if: No significant impact of selected microbiota on metastatic potential
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

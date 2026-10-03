@@ -1,0 +1,3358 @@
+{
+  "KRAS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 11,
+    "oncology+immunotherapy": 8
+  },
+  "PDGFRA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "KIT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "BRAF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 13,
+    "oncology+immunotherapy": 8
+  },
+  "SDH": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ANO1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NTRK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 3
+  },
+  "KEY": {
+    "ONCOLOGY+IMMUNOTHERAPY": 7,
+    "oncology+immunotherapy": 7
+  },
+  "BICR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "AND": {
+    "ONCOLOGY+IMMUNOTHERAPY": 35
+  },
+  "POINTS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "METHODS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 128,
+    "oncology+immunotherapy": 76
+  },
+  "PFS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 39
+  },
+  "RECIST": {
+    "ONCOLOGY+IMMUNOTHERAPY": 7,
+    "oncology+immunotherapy": 6
+  },
+  "RESULTS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 125,
+    "oncology+immunotherapy": 79
+  },
+  "ORIENT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "OAK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "BCG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NMIBC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NIR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 4
+  },
+  "TLR2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GSDME": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LND": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MAPK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 6,
+    "oncology+immunotherapy": 2
+  },
+  "TME": {
+    "ONCOLOGY+IMMUNOTHERAPY": 52
+  },
+  "PEG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TAM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 2
+  },
+  "ECOG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 17,
+    "oncology+immunotherapy": 9
+  },
+  "BMI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EGFR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 19,
+    "oncology+immunotherapy": 15
+  },
+  "RBM10": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NGS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 3
+  },
+  "TMB": {
+    "ONCOLOGY+IMMUNOTHERAPY": 14,
+    "oncology+immunotherapy": 12
+  },
+  "MUC16": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HNSCC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 3
+  },
+  "TGF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 1
+  },
+  "ALI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HPV": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 6
+  },
+  "CITE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HEIST": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "KRONOS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DVP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MALDI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FUTURE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TNF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 6,
+    "oncology+immunotherapy": 4
+  },
+  "HER2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 20,
+    "oncology+immunotherapy": 11
+  },
+  "ARX788": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CDK4": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 2
+  },
+  "PARP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 9,
+    "oncology+immunotherapy": 4
+  },
+  "FDA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 10,
+    "oncology+immunotherapy": 5
+  },
+  "AMG757": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DLL3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "ORR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 15
+  },
+  "HPN328": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ALA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ALAS2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NRF2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "PURPOSE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 15,
+    "oncology+immunotherapy": 8
+  },
+  "DOX": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "BACH1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CNC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BTB": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MDT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "WDTC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IFN": {
+    "ONCOLOGY+IMMUNOTHERAPY": 9,
+    "oncology+immunotherapy": 7
+  },
+  "UAE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ADSCC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ACT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 4
+  },
+  "TIL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 4
+  },
+  "TCR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 9,
+    "oncology+immunotherapy": 6
+  },
+  "FSP1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ICC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 1
+  },
+  "RVT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "MSK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "POLE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "IMPACT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "COAD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "APC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 3
+  },
+  "CSF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 6,
+    "oncology+immunotherapy": 4
+  },
+  "LMD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "OPSCC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HCC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 12,
+    "oncology+immunotherapy": 9
+  },
+  "ESIRA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PIK3CA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "CRC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 16,
+    "oncology+immunotherapy": 8
+  },
+  "RAS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 2
+  },
+  "CLDN18": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GEJ": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MSI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 11,
+    "oncology+immunotherapy": 9
+  },
+  "EBV": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "TCGA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 14,
+    "oncology+immunotherapy": 10
+  },
+  "RCC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 7,
+    "oncology+immunotherapy": 1
+  },
+  "PTM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TRIAL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 6,
+    "oncology+immunotherapy": 3
+  },
+  "ETHICS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 2
+  },
+  "PCR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 2
+  },
+  "PRELUCA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NUMBER": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 2
+  },
+  "ROS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 8,
+    "oncology+immunotherapy": 4
+  },
+  "AMPA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CGRP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CINI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IIB": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "III": {
+    "ONCOLOGY+IMMUNOTHERAPY": 23,
+    "oncology+immunotherapy": 13
+  },
+  "GTM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "AJCC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "PET": {
+    "ONCOLOGY+IMMUNOTHERAPY": 7,
+    "oncology+immunotherapy": 3
+  },
+  "MRI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 10,
+    "oncology+immunotherapy": 6
+  },
+  "PRISMA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 2
+  },
+  "GPX4": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "VEGF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 13,
+    "oncology+immunotherapy": 7
+  },
+  "MEK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "NRG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RUBY": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SORAYA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DESTINY": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "NCCN": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 2
+  },
+  "DUO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "STAT3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 9,
+    "oncology+immunotherapy": 5
+  },
+  "HNC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 1
+  },
+  "CRISPR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 16,
+    "oncology+immunotherapy": 7
+  },
+  "BCL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "EGCG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "AMPK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "LKB1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SYVN1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ERAD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CTLA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 15,
+    "oncology+immunotherapy": 9
+  },
+  "CIP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EORTC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 2
+  },
+  "PRO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 1
+  },
+  "QLQ": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 2
+  },
+  "GHS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TTD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "IBD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IFNG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SLC38A1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CFRG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SOCS1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PTPN6": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SKCM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GEO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 3
+  },
+  "MSS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 2
+  },
+  "TACTIC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "XELOX": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CAT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CASE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 8,
+    "oncology+immunotherapy": 5
+  },
+  "WHO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 3
+  },
+  "REPORT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LVEF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TTE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TTS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EKG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CMR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SALT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EASI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PDT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 3
+  },
+  "ICB": {
+    "ONCOLOGY+IMMUNOTHERAPY": 7,
+    "oncology+immunotherapy": 5
+  },
+  "SUMMARY": {
+    "ONCOLOGY+IMMUNOTHERAPY": 8,
+    "oncology+immunotherapy": 5
+  },
+  "MASLD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PNPLA3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TM6SF2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MASH": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ECM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2
+  },
+  "FMT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 6,
+    "oncology+immunotherapy": 3
+  },
+  "ILICI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GLP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "AIMS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 1
+  },
+  "CTCAE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "SJS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TEN": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IDO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FIH": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TTK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ZIC2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PGK1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "POP1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LASSO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 8,
+    "oncology+immunotherapy": 5
+  },
+  "TIMER": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "WGCNA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "KDELR2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ROC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 6,
+    "oncology+immunotherapy": 4
+  },
+  "HOXC13": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BRCA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 2
+  },
+  "TNBC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 8,
+    "oncology+immunotherapy": 3
+  },
+  "BODIPY": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ICD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 2
+  },
+  "PIT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ALBI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MELD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SII": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "LDH": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 3
+  },
+  "NLR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 7,
+    "oncology+immunotherapy": 6
+  },
+  "PI3K": {
+    "ONCOLOGY+IMMUNOTHERAPY": 8,
+    "oncology+immunotherapy": 6
+  },
+  "AKT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 7,
+    "oncology+immunotherapy": 6
+  },
+  "NRAS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "PPS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "AFP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "ANXA6": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FPR1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BRCA1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 6,
+    "oncology+immunotherapy": 4
+  },
+  "HDAC7": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CXCL10": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "OLIG2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GBM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 3
+  },
+  "CRP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "PLR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "SHAP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "AUC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 15,
+    "oncology+immunotherapy": 10
+  },
+  "SVM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "RACC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HER3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SHAPE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DDR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 3
+  },
+  "EMPOWER": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "APOBEC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "TROP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "KEYNOTE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 6,
+    "oncology+immunotherapy": 5
+  },
+  "GLICO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TRM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LAG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 4
+  },
+  "PVT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SIERRA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "STRIDE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TKI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 7,
+    "oncology+immunotherapy": 4
+  },
+  "BCLC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "DMFS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "TTP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CCK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 2
+  },
+  "RRM2B": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GSVA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NME4": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TIM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "DLQI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NRS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NCI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EGR2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SLC16A3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LUAD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 3
+  },
+  "GDSC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "ZPLD1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CCLE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GSEA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "TPM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TKI258": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BLCA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "VIF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PPAR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HUC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CISH": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TIGIT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "HBV": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CEA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IIIB": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 2
+  },
+  "AIM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 3
+  },
+  "PBM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MHC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 4
+  },
+  "ROS1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HRAS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PTPRD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "OMM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IQR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 8,
+    "oncology+immunotherapy": 3
+  },
+  "FUNDING": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 1
+  },
+  "AGIHO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ESCMID": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DGHO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SOC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "VHL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EPAS1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ARNT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HIF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "EMT6": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CCR8": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SAS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "ASCO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 3
+  },
+  "KQE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ETV6": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RUNX1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LAR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CSPO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ISR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "REAL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TDM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SCTCT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TRUST": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PORTEC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ICON8B": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HGSC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IPS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ABT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "UVM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ATRA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TIME": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 3
+  },
+  "IDO1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "RSF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IGFBP1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PCK1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IHC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "FRS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FOXO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TCE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "EMT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 2
+  },
+  "COL5A1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MRPX": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ECE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CARS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CRS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "HIV": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "KYV": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NKT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BCMA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "UMT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DCR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 6,
+    "oncology+immunotherapy": 2
+  },
+  "HERO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ALK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 2
+  },
+  "PDAC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "PVR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ERK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "MOFA2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MDC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SMC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MOFA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NMA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "TPS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "REML": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HLA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 5
+  },
+  "MANA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NAT10": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DKK2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LRP6": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HDAC2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MDA5": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ARPI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RIG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "IKBKE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "STROBE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ESCC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 2
+  },
+  "IIIC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "POSS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CAP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SHP2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "STAT1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "CGP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "OSCC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "KIM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "VEGFR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "PROSPER": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TCF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TYK2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FGFR3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "ECT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "IGF1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IGF1R": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LAG3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HPD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CST7": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DESIGN": {
+    "ONCOLOGY+IMMUNOTHERAPY": 9,
+    "oncology+immunotherapy": 4
+  },
+  "IOPREDI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PDX": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "ASCT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "SGC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GSTM5": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PDGFB": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CPS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "GEJC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EAC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MMTV": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BAP1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "LMR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CASP9": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MLP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TPCDS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PCD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "SLC11A1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "METHOD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "SCCHNC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GJB3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CRG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MMR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 1
+  },
+  "KPS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IMDC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 1
+  },
+  "HPA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "AHNAK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SETTING": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 2
+  },
+  "MAIN": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 2
+  },
+  "CVD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CHIP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MBC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RECENT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 2
+  },
+  "REVIEW": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 2
+  },
+  "GABA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "OATP1A1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "OATP1B1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "OATP1B3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "OATP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CTL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DNP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "REO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "REP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "INO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TRAIL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "LPS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RFS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "LMS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RMS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NAIC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IPPI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HEV": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CXCL13": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TLS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "HEC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "AIRC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CONUT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CHT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RCT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FRET": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LUSC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ACE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ERS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HSPB8": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EPR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 2
+  },
+  "CXCR4": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "SPARC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "NOTCH1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "POPLAR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BRCA2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "ICANS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 1
+  },
+  "SAR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MET": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 1
+  },
+  "NRI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SER": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PINK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CHO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NKTCL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RCD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "STING": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 2
+  },
+  "HGSOC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CIPS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ATR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "ATM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "HVEM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BTLA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "BBB": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 3
+  },
+  "CDT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PTT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "INMC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TACE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MWA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "CRAFITY": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BDNF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NACT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HRD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MEDLINE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "ROME": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SANRA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ESMO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 2
+  },
+  "SCC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "PNI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HRQL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MTC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IVA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "H3K27M": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "DMG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EOCRC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TCM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "VISTA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GBSA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NPACT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ADMET": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MPD3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PIWI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "USA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "SDS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HDL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "NDDS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DSMIL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "AUROC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CLAM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "OPINION": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 4
+  },
+  "AREAS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 4
+  },
+  "COVERED": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 4
+  },
+  "EXPERT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 5,
+    "oncology+immunotherapy": 4
+  },
+  "CEPT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PPO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "VFT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CPET": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "WGS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "IASLC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MRD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "WCLC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MAVS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MTA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PAM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SPG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SATB2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BODY": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MSH2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "TMZ": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PMS2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MLH1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HGG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 1
+  },
+  "MSH6": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GPCR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PACIFIC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IVIG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "QOL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "APOC3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LOX": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GSTA1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GNAI1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "OCE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "COVID": {
+    "ONCOLOGY+IMMUNOTHERAPY": 4,
+    "oncology+immunotherapy": 4
+  },
+  "SPY": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ICTRP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LIPI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "OVID": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DOR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IIIA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "SIRT2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SIRT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NAMPT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SIRT6": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SIRT1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CCL5": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "MYC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "FOXP3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GATA3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TSA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RORC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TBX21": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HDAC1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "SWOG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "AXL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CALGB": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IFP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TCIA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IFV": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FKC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FLT3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BTK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "JAK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "ELISA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "LARC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SCRT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "VLP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GMP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IOTOX": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "INSERM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MTDH": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ITCH": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "COH34": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HECT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PARG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NOP2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NSUN": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SLC7A11": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CTRP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PRISM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HNE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ACSL4": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "AHCY": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ICU": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EFS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "PGC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FITT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GST": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TIM3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PLGA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LPC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "PANC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TREM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TEM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TRP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PKC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TUNEL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "XRD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BZT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IKK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SEM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PCNA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "XPS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SMI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EWGSOP2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ULA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SPSM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TEF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PATIENT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "LESSONS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "CTX": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MEG3": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MDR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ASPH": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MAGE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "C57BL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CCRT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CIT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "COX": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "FAERS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PRR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ROR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FFPE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ESTRO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ANZCTR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CLIN": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "USD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CTLA4": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "UMIN": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LARVOL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PAM50": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FSGS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MCD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EMBASE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 2
+  },
+  "DDS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "KMT2D": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "KDM6A": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IDH": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SNO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HDAC8": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MFD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TNFA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TCP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BNT122": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LNP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TNM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SMARCA4": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BRG1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SNF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SWI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FCER1G": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CART": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MENA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "AUBMC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EPO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ADT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PSMA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "PTEN": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BMP2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "VEGFA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "HGF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CSC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IGF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PEBP1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DQB1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TUBB": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PECAM1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CYP27A1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "STAT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 2
+  },
+  "FGFR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 2
+  },
+  "AGILE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PVSRIPO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DNX": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "LSD1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ZAP70": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SREBP1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TAKE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HOME": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ISSUE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "WORK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CMS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EBER": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PBC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ISH": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TBP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 1
+  },
+  "NPC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PLELC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RANO": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MCC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ACSM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SMILES": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "XAI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "MFS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SARS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "NER": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DCC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LLC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SMARCA2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "AACR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SPECT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TRT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "THP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NMPA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HSCT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CAIX": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RCCB6": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FAPI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NOTA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FDG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 3,
+    "oncology+immunotherapy": 3
+  },
+  "MAL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TNFSF10": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PDCD5": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ACS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "OVT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NIS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "THE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "AMC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DID": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "WHICH": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "WHAT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ARE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "WHY": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FOR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CDA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ZFX": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "KIRC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ISG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "METTL16": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CTNND1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MMP12": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ZDHHC13": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SETD2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PBRM1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SEOM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SOLTI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GEICAM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SUV": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "VAT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SAT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ASI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "OUTCOME": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "BAT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LDL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TSH": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RWE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DFS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1
+  },
+  "PFS2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "PRFS2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EFS2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ESC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "VEGFR2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MDSC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ATP6V0B": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "THBS1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HSP27": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HSP60": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HSP70": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HSP40": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HSP90": {
+    "ONCOLOGY+IMMUNOTHERAPY": 2,
+    "oncology+immunotherapy": 2
+  },
+  "HSP110": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HSP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SLE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FT1D": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DKA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GEP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NET": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TSP1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "AAA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IBSI": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GLCM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CAVE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EFT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DAMP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IRE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HMGB1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HIFU": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RFA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MCS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PTR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "REVEL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GDF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HLH": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "JAK2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GES": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NCD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "DCA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CSN5": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MDL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SBRT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IMRT": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LSKAA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LSKLL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "LCOR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MOGAD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MOG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "JAMA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "WOS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "JCR": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PARS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MRPD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MARPD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RET": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SMAD4": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PTGER4": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "UCSC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "AIL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CINAHL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IVSP": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "TNFSF": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CANTOS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "AFPGC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CAPEOX": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "MEASURE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RESUTLS": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GAD": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "IRAE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "NHMRC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GVL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "JEG": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "AMM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CIADM": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "PER": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BMAL1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "HDAC": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CRY": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "WEE1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "FBXW7": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "CLOCK": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RANKL": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "T4N3M1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "SAKK07": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "RNASE1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GRINA": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "BCL2A1": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "GDI2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "EVOLVE": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "ULBP2": {
+    "ONCOLOGY+IMMUNOTHERAPY": 1,
+    "oncology+immunotherapy": 1
+  },
+  "UGI": {
+    "oncology+immunotherapy": 1
+  },
+  "CNS": {
+    "oncology+immunotherapy": 2
+  },
+  "IIIC1": {
+    "oncology+immunotherapy": 1
+  },
+  "FIGO": {
+    "oncology+immunotherapy": 1
+  },
+  "SOT": {
+    "oncology+immunotherapy": 1
+  },
+  "HPV16": {
+    "oncology+immunotherapy": 1
+  },
+  "POPC": {
+    "oncology+immunotherapy": 1
+  },
+  "LCK": {
+    "oncology+immunotherapy": 1
+  },
+  "BIDDS": {
+    "oncology+immunotherapy": 1
+  },
+  "MYOD1": {
+    "oncology+immunotherapy": 1
+  },
+  "FUS": {
+    "oncology+immunotherapy": 1
+  },
+  "TFCP2": {
+    "oncology+immunotherapy": 1
+  },
+  "LATAM": {
+    "oncology+immunotherapy": 1
+  },
+  "EARLY": {
+    "oncology+immunotherapy": 1
+  },
+  "WOSCC": {
+    "oncology+immunotherapy": 1
+  },
+  "JAZF1": {
+    "oncology+immunotherapy": 1
+  },
+  "YWHAE": {
+    "oncology+immunotherapy": 1
+  },
+  "TSC2": {
+    "oncology+immunotherapy": 1
+  },
+  "ATRX": {
+    "oncology+immunotherapy": 1
+  },
+  "BCOR": {
+    "oncology+immunotherapy": 1
+  },
+  "ESS": {
+    "oncology+immunotherapy": 1
+  },
+  "UTROSCT": {
+    "oncology+immunotherapy": 1
+  },
+  "ZC3H7B": {
+    "oncology+immunotherapy": 1
+  },
+  "ITD": {
+    "oncology+immunotherapy": 1
+  },
+  "NUTM2": {
+    "oncology+immunotherapy": 1
+  },
+  "TSC1": {
+    "oncology+immunotherapy": 1
+  },
+  "SUZ12": {
+    "oncology+immunotherapy": 1
+  },
+  "DEG": {
+    "oncology+immunotherapy": 1
+  },
+  "PMML": {
+    "oncology+immunotherapy": 1
+  },
+  "SOX10": {
+    "oncology+immunotherapy": 1
+  },
+  "TP53BP1": {
+    "oncology+immunotherapy": 1
+  },
+  "NNMT": {
+    "oncology+immunotherapy": 1
+  },
+  "HSPB1": {
+    "oncology+immunotherapy": 1
+  },
+  "CDH13": {
+    "oncology+immunotherapy": 1
+  }
+}

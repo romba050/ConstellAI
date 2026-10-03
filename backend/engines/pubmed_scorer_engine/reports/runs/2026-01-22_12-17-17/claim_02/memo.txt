@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Tumor-derived exosomal microRNAs from triple-negative breast cancer may suppress anti-tumor immune responses, thereby promoting metastasis.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.5
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. miRNA mimic experiment (~€15,000, 6 weeks) — Detect miR-155 levels in recipient cells after exosome uptake. | kill if: No detectable miR-155 increase after exosome treatment
+2. Immune cell activation assay (~€18,000, 7 weeks) — Evaluate T-cell proliferation and cytokine release in the presence of tumor-derived exosomes. | kill if: No significant decrease in immune cell activation after exosome treatment
+3. Exosome neutralization experiment (~€20,000, 8 weeks) — Block exosome uptake using a specific antibody and assess anti-tumor immune responses. | kill if: No significant improvement in anti-tumor immune responses after blocking exosome uptake
+4. miRNA profiling in human sera (~€12,000, 5 weeks) — Detect tumor-derived miRNAs in the sera of triple-negative breast cancer patients. | kill if: No detectable tumor-derived miRNAs in patient sera
+5. Exosome treatment of immunocompetent mice (~€25,000, 8 weeks) — Assess metastasis development and immune responses in mice treated with tumor-derived exosomes. | kill if: No significant increase in metastasis development after exosome treatment
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

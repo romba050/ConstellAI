@@ -1,0 +1,34 @@
+here scan the folder and tell me what to do so it uses real pubmed data.
+
+if a field is chosen ie oncology->means it is looking through every relevant source.
+
+i dont really now the goal with this folder.
+
+but it somehow works.
+
+right now if u write ie oncology and then like a sub area too ie immunotherapy
+
+it gives like 5 claims u could run experiments on -> and has like rank of the claim how likely its going to work out etc and proposed action
+
+but problem is i know nothing boaut medicine bro and i need to develop this with medical researchers, they can clean the data and i provide the architecture.
+
+anyway so rn the folder i think if its going to level up u need to make so it used real pubmed data 
+
+and then does like if i put in 
+
+- oncology
+- immunotherapy as side area
+
+- then looks at exactly all papers about that on pubmed
+- then looks over gene crossover stuff which genes in oncology positively effect immunotherapy (ie one gene cures oncology better -> and is also same in immunotherapy)
+
+- then it like stores this as data u know for future research
+- and now it is the future 
+
+- and now it is still running, the research loop -> now it looks for random field ie cardiology and immunotherapy as sub area -> sub area always kept same
+
+- then it like looks maybe a gene in oncology that has positive effect on immunotherapy -> then it isnt yet researched if its good in cardiology -> then this becomes a proposed experiment with 5 different ways to tackle it -> and then also early killfor each experiment (1 way to experiment on the claim counts as one experiment proposal) 
+
+- then it wishes the user a good day and thanks them and puts out in pdf format this
+
+les go -> change all in the folder so it fits those words i just wrote and zip it to me and ill test it bro

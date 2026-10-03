@@ -1,0 +1,45 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Altered mitochondrial metabolism may influence chemoresistance in colorectal cancer.
+
+EVIDENCE SUMMARY:
+- PubMed | pmid=41629945 | human | 2026 | surrogate
+- PubMed | pmid=37248468 | animal | 2023 | surrogate
+- PubMed | pmid=32914752 | animal | 2020 | surrogate
+- PubMed | pmid=30909600 | animal | 2019 | surrogate
+
+SOURCES:
+- PubMed | pmid=41629945 | human | 2026 | surrogate
+- PubMed | pmid=37248468 | animal | 2023 | surrogate
+- PubMed | pmid=32914752 | animal | 2020 | surrogate
+- PubMed | pmid=30909600 | animal | 2019 | surrogate
+
+DECISION SUPPORT SCORE: 0.3
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: discarded
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+none. hypothesis discarded by hard gate (no experiments generated).
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+discarded — does not meet minimum evidence thresholds.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

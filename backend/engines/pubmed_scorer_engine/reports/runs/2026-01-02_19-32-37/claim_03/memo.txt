@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Dysregulation of the gut microbiome may influence systemic inflammation and poor prognosis in pancreatic ductal adenocarcinoma.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.3
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Experiment 1: Microbiome Profiling in Pancreatic Cancer Patients with Different Stages of the Disease (~€15,000, <6 weeks) — 16S rRNA gene sequencing of stool samples from pancreatic cancer patients at different stages | kill if: no significant differences in microbiome profiles between stages
+2. Experiment 2: Effect of Prebiotics on Systemic Inflammation in Pancreatic Cancer Patients (~€18,000, <8 weeks) — Measurement of systemic inflammation markers (e.g. CRP) in pancreatic cancer patients who received prebiotic supplements versus controls | kill if: no significant reduction in systemic inflammation markers with prebiotics
+3. Experiment 3: Gut Microbiome Transfer from Pancreatic Cancer Patients to Healthy Mice (~€22,000, <8 weeks) — Induction of pancreatic cancer in mice that received gut microbiome transfers from patients with different prognosis | kill if: no significant difference in tumor growth or survival between mouse groups
+4. Experiment 4: Fecal Microbiota Transplantation (FMT) as an Adjuvant Therapy for Pancreatic Cancer (~€20,000, <8 weeks) — Combination of FMT with standard chemotherapy in pancreatic cancer patients versus controls | kill if: no significant improvement in overall survival or response to chemotherapy
+5. Experiment 5: Role of Specific Gut Bacteria in Systemic Inflammation and Prognosis in Pancreatic Cancer (~€15,000, <6 weeks) — Depletion of specific gut bacteria (e.g. Faecalibacterium) using antibiotics in pancreatic cancer patients versus controls | kill if: no significant correlation between depletion of specific gut bacteria and prognosis
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

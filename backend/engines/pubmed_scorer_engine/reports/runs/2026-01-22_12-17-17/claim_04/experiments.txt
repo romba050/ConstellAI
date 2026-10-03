@@ -1,0 +1,5 @@
+1. LncRNA Expression Profiling in Glioblastoma Patient-Derived Xenografts (~€15,000, 6 weeks) — RT-qPCR, RNA sequencing | kill if: no significant correlation between lncRNA expression and disease progression
+2. Small Molecule-Based Inhibition of LncRNA-Mediated Epigenetic Silencing in Glioblastoma Cells (~€20,000, 8 weeks) — Cell viability assays, Western blotting | kill if: no significant decrease in epigenetic silencing or increase in tumor suppressor gene expression
+3. MicroRNA-Mediated Regulation of LncRNAs in Glioblastoma Pathogenesis (~€18,000, 7 weeks) — miRNA sequencing, Luciferase assays | kill if: no significant correlation between miRNA and lncRNA expression
+4. LncRNA-Targeting CRISPR-Cas9 Gene Editing in Glioblastoma Cells (~€22,000, 8 weeks) — Flow cytometry, Western blotting | kill if: no significant decrease in lncRNA expression or increase in tumor suppressor gene expression
+5. Epigenetic Reprogramming of Glioblastoma Cells by LncRNA Knockdown and Histone Modification Inhibitors (~€25,000, 8 weeks) — Chromatin immunoprecipitation sequencing, Cell cycle analysis | kill if: no significant change in epigenetic marks or cell cycle progression

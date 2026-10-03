@@ -1,0 +1,34 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Machine learning-assisted optimization of a terahertz photonic metamaterial absorber for blood cancer detection. may influence disease progression.
+
+EVIDENCE SUMMARY:
+- PubMed | pmid=41642889
+
+DECISION SUPPORT SCORE: 0.05
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 55%
+
+RECOMMENDED ACTION: discarded
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+none. below threshold.
+
+CONFIDENCE DRIVERS:
++ real literature
+
+CONFIDENCE PENALTIES:
+- weak translation
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+killed early
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+common failure class
+
+DECISION SENSITIVITY:
+discarded
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

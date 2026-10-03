@@ -1,0 +1,20 @@
+{
+  "trained": true,
+  "mode": "rare_disease",
+  "window": "1900-2025",
+  "cases_seen": 2,
+  "top_categories": [
+    "rare_disease"
+  ],
+  "top_genes": [
+    "CREB1",
+    "BDNF",
+    "GSK3B"
+  ],
+  "year_counts": {
+    "1966": 1,
+    "1969": 1
+  },
+  "summary": "trained on 2 historical rows across 1900-2025",
+  "updated_at_ms": 1778648417364
+}

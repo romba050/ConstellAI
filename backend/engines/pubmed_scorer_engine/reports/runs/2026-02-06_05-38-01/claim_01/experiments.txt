@@ -1,0 +1,5 @@
+1. miR-21 mimicry in colorectal cancer cells (~€15,000, 6 weeks) — cell viability and apoptosis assays | kill if: no significant change in cell viability
+2. miR-21 inhibitor effects on chemotherapy response (~€18,000, 7 weeks) — combination treatment with chemotherapeutic agents and miR-21 inhibition | kill if: no significant increase in chemotherapy sensitivity
+3. miR-21 expression in colorectal cancer patient-derived organoids (~€10,000, 5 weeks) — organoid culture and microRNA profiling | kill if: no correlation between miR-21 levels and chemotherapy resistance
+4. miR-21 target prediction using bioinformatics tools (~€5,000, 4 weeks) — in silico analysis of potential miR-21 targets in colorectal cancer genes | kill if: no statistically significant overlap between predicted and known miR-21 targets
+5. miR-21 knockdown in a colorectal cancer xenograft model (~€22,000, 8 weeks) — tumor growth and response to chemotherapy in nude mice | kill if: no significant reduction in tumor growth or increase in chemotherapy sensitivity

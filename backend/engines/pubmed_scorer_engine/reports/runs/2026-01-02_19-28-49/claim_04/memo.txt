@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+{'id': 'claim4', 'text': 'Tissue hypoxia levels may influence the growth and metastasis of triple-negative breast cancer cells'}
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.4
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Experiment 1: Tissue Oxygen Levels and TNBC Cell Growth (~€18,000, 6 weeks) — Measure tissue oxygen levels in triple-negative breast cancer cell cultures under varying conditions. | kill if: No significant correlation between tissue oxygen levels and TNBC cell growth.
+2. Experiment 2: In Vivo Imaging of Tumors in Nude Mice (~€22,000, 7 weeks) — Use in vivo imaging to track tumor growth and metastasis in nude mice with and without hypoxia-inducible factor (HIF) inhibitor treatment. | kill if: Tumor growth and metastasis are not significantly affected by HIF inhibition.
+3. Experiment 3: TNBC Cell Line Selection for Hypoxia Resistance (~€15,000, 5 weeks) — Select triple-negative breast cancer cell lines with varying levels of hypoxia resistance and perform gene expression analysis. | kill if: No significant correlation between gene expression and hypoxia resistance.
+4. Experiment 4: In Vitro Angiogenesis Assay with TNBC Cells (~€20,000, 6 weeks) — Use an in vitro angiogenesis assay to evaluate the effect of tissue hypoxia on triple-negative breast cancer cell-induced vessel formation. | kill if: TNBC cells do not promote significant vessel formation under hypoxic conditions.
+5. Experiment 5: Tumor Oxygen Levels in Patient-Derived Xenografts (PDX) (~€25,000, 8 weeks) — Measure tumor oxygen levels in PDX models of triple-negative breast cancer and correlate with patient outcome data. | kill if: No significant correlation between tumor oxygen levels and patient outcomes.
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

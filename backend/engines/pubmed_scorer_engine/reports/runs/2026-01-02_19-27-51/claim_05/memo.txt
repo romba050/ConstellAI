@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+The expression levels of circular RNAs (circRNAs) involved in the WNT/β-catenin signaling pathway may impact recurrence rates following surgery in colorectal cancer.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.5
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. circRNA enrichment in colorectal cancer tissues (~€18,000, 6 weeks) — qPCR, sequencing validation | kill if: failed qPCR and sequencing validation
+2. WNT/β-catenin pathway activity in colorectal cancer cells (~€22,000, 7 weeks) — Western blot, luciferase reporter assay | kill if: failed Western blot and luciferase reporter assay
+3. in vivo mouse model of colorectal cancer recurrence (~€20,000, 8 weeks) — bioluminescence imaging, histology | kill if: failed bioluminescence imaging and histology
+4. circRNA knockdown in colorectal cancer cells using siRNA (~€15,000, 5 weeks) — cell viability assay, Western blot | kill if: failed cell viability assay and Western blot
+5. circRNA-microRNA interactions in colorectal cancer tissues (~€19,000, 7 weeks) — bioinformatic analysis, miRNA sequencing | kill if: failed bioinformatic analysis and miRNA sequencing
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

@@ -1,0 +1,81 @@
+Updated step 1 – per program
+
+Problem
+
+Teams start experiments from “RCT-looking” papers without a strict filter for:
+
+true human relevance,
+
+clinical endpoints,
+
+recency,
+
+and translation risk.
+
+This creates protocol work and spend before the evidence is strong enough.
+
+Solution
+
+A literature-first gating layer that:
+
+auto-screens human RCT literature in a chosen field,
+
+scores evidence quality using metadata proxies,
+
+and enforces a policy:
+
+discard,
+
+cheap-test-only,
+
+or approve and stop.
+
+How it is different from what’s available
+
+Most systems:
+
+summarize,
+
+recommend,
+
+or surface “interesting” papers.
+
+This system:
+
+blocks action unless evidence meets thresholds,
+
+outputs discard decisions as a first-class artifact,
+
+and forces cheap tests instead of big experiments when borderline.
+
+Updated step 2 – per program
+
+Demand
+
+High in:
+
+translational groups,
+
+clinical research offices,
+
+innovation hubs in hospitals,
+
+grant reviewers / internal funding committees.
+
+Because it reduces:
+
+protocol churn,
+
+expensive follow-on studies,
+
+and “false-start” projects.
+
+Ask inside medicine (how it’s used)
+
+“Does any human RCT evidence justify touching this area right now?”
+
+“If not, what’s the cheapest falsification test to run?”
+
+“Which papers should we explicitly not build on, and why?”
+
+“What evidence threshold would flip this from discard → cheap-test → approved?”

@@ -1,0 +1,214 @@
+:root {
+  --bg: #f3f6fb;
+  --panel: rgba(255, 255, 255, 0.94);
+  --panel2: rgba(248, 250, 253, 0.96);
+  --border: rgba(17, 24, 39, 0.08);
+  --text: #111827;
+  --muted: #5b667a;
+  --good: #0f766e;
+  --warn: #b45309;
+  --bad: #b91c1c;
+  --glow: rgba(37, 99, 235, 0.08);
+  --shadow: rgba(15, 23, 42, 0.08);
+}
+
+html, body {
+  background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 100%);
+}
+
+body {
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.space-canvas {
+  opacity: 0.035;
+  filter: saturate(0.2) blur(1px);
+}
+
+.shell {
+  max-width: 1420px;
+  padding: 24px 22px 54px;
+}
+
+.topbar,
+.panel,
+.card,
+.subcard,
+.planet,
+.bubbleCard,
+.welcomeHero,
+.welcomePlanet,
+.softInput,
+.softTextarea,
+.softSelect,
+.searchBox,
+.registrySearchInput,
+.tableWrap,
+pre {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08) !important;
+}
+
+.topbar {
+  border-radius: 20px;
+  padding: 16px 18px;
+  background: rgba(255,255,255,0.94) !important;
+}
+
+.brand .title,
+.welcomeTitle {
+  color: #0f172a;
+  letter-spacing: 0.08em;
+}
+
+.brand .sub,
+.small,
+.cardSub,
+.panelTitle,
+.planetMeta,
+.welcomeEyebrow,
+.welcomeSub,
+.metricLabel,
+.metricSub,
+.kpiLabel,
+.kpiSub,
+.registryMiniLabel,
+.registryMiniSub {
+  color: #5b667a !important;
+}
+
+.tabbtn,
+.subtabbtn,
+.bubblePill,
+.crumb,
+.btnGhost {
+  background: #f8fafc !important;
+  color: #334155 !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: none !important;
+}
+
+.tabbtn.active,
+.subtabbtn.active,
+.bubblePill.on,
+.crumbStrong,
+.btn,
+button.btn,
+button.btnGhost:hover {
+  background: #e8f0ff !important;
+  color: #0f3d91 !important;
+  border-color: rgba(37, 99, 235, 0.22) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08) !important;
+}
+
+.btn,
+button,
+.tabbtn,
+.subtabbtn {
+  border-radius: 12px !important;
+  font-weight: 600;
+}
+
+.panelHead,
+.topbar {
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,250,252,0.94)) !important;
+}
+
+.panelTitle,
+.cardTitle,
+.sectionTitle,
+.registrySectionTitle,
+.metricValue,
+.kpiValue {
+  color: #0f172a !important;
+}
+
+.grid,
+.rareGrid,
+.rareSoloGrid {
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.panelBody {
+  padding: 18px;
+}
+
+.planetGrid,
+.welcomeOrbitGrid {
+  gap: 14px;
+}
+
+.planet,
+.welcomePlanet {
+  min-height: 98px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.97), rgba(246,248,252,0.94)) !important;
+}
+
+.planet::before,
+.welcomePlanet::before,
+.panelGlow,
+.orbitLine,
+.orbitGlow {
+  display: none !important;
+}
+
+input,
+textarea,
+select {
+  color: #0f172a !important;
+  background: #fbfdff !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.welcomeShell {
+  margin-top: 18px;
+  gap: 18px;
+}
+
+.welcomeHero {
+  padding: 24px;
+  border-radius: 20px;
+}
+
+.welcomeSub {
+  max-width: 72ch;
+  line-height: 1.55;
+}
+
+.list,
+.stackList,
+.metricGrid,
+.kpiGrid,
+.registryMiniGrid {
+  gap: 12px;
+}
+
+.statusGood { color: #0f766e !important; }
+.statusWarn { color: #b45309 !important; }
+.statusBad { color: #b91c1c !important; }
+
+.tableWrap table,
+.tableWrap th,
+.tableWrap td {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+.tableWrap th {
+  background: #f8fafc !important;
+  color: #334155 !important;
+}
+
+@media (max-width: 980px) {
+  .shell {
+    padding: 18px 14px 34px;
+  }
+}

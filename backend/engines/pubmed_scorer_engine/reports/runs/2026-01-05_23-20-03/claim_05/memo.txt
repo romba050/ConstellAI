@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+The presence of tumor-associated macrophages with high levels of CD163 expression may correlate with poor prognosis and reduced survival in glioblastoma patients.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.5
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Experiment 1: CD163 Inhibition in Glioblastoma Cells (~€15,000, 6 weeks) — Cell viability and proliferation assays with/without CD163 inhibitor treatment | kill if: CD163 inhibition does not affect cell viability or proliferation
+2. Experiment 2: Human Macrophage Isolation and CD163 Expression (~€18,000, 8 weeks) — Isolate macrophages from glioblastoma patient-derived blood samples, quantify CD163 expression by flow cytometry | kill if: No significant correlation between CD163 expression and patient survival
+3. Experiment 3: Mouse Model of Glioblastoma with Macrophage Depletion (~€20,000, 7 weeks) — Use macrophage-depleting antibodies or mice deficient in CSF1R, assess glioblastoma growth and progression | kill if: Macrophage depletion does not impact glioblastoma growth or progression
+4. Experiment 4: CD163 Expression in Glioblastoma Stem Cells (~€12,000, 5 weeks) — Isolate and culture glioblastoma stem cells, quantify CD163 expression by qRT-PCR or flow cytometry | kill if: CD163 expression is not elevated in glioblastoma stem cells
+5. Experiment 5: Tumor Microenvironment Analysis by Multiplex Immunohistochemistry (~€22,000, 8 weeks) — Perform multiplex immunohistochemistry on glioblastoma patient tissue samples to quantify CD163-positive macrophages and other immune cell types | kill if: No correlation between CD163+ macrophage density and patient survival
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

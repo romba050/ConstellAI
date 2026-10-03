@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+The gut microbiome's metabolic activity may influence the efficacy of immune checkpoint inhibitors in patients with non-small cell lung cancer (NSCLC).
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.5
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Experiment 1: Bacterial Metabolite Inhibitors (~€18,000, 6 weeks) — In vitro assay with immune checkpoint inhibitors and bacterial metabolite inhibitors | kill if: no change in inhibitor efficacy
+2. Experiment 2: Gut Microbiome Transplantation (~€22,000, 8 weeks) — Gut microbiome transplantation from healthy donors to NSCLC patients and assessment of immune response | kill if: no significant change in tumor growth rate
+3. Experiment 3: Antibiotic Treatment (~€15,000, 6 weeks) — Randomized controlled trial with antibiotic treatment in NSCLC patients and assessment of immune checkpoint inhibitor efficacy | kill if: no change in inhibitor response
+4. Experiment 4: Fecal Microbiota Analysis (~€10,000, 4 weeks) — Fecal microbiota analysis of NSCLC patients before and after immune checkpoint inhibitor treatment and correlation with clinical response | kill if: no association between gut microbiome and inhibitor efficacy
+5. Experiment 5: Germ-Free Mice (~€20,000, 6 weeks) — In vivo study using germ-free mice with implanted human NSCLC cells and assessment of immune checkpoint inhibitor response | kill if: no difference in tumor growth rate between control and inhibitor-treated groups
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

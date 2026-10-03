@@ -1,0 +1,5 @@
+1. Polyphenol Supplementation in MCF-7 Cells (~€15, < 4 weeks) — MTT assay, Western blot for ERK activation | kill if: no change in cell viability or ERK activation
+2. Polyphenol-Induced Ferroptosis in MCF-7 Cells (~€12, < 4 weeks) — MTT assay, flow cytometry for lipid peroxidation | kill if: no increase in lipid peroxidation or cell death
+3. Polyphenol Effects on Breast Cancer Stem Cells (~€18, < 6 weeks) — sphere-formation assay, flow cytometry for CD44/CD24 expression | kill if: no reduction in sphere formation or cancer stem cell population
+4. Polyphenol Impact on Tumor Microenvironment (~€20, < 6 weeks) — co-culture of MCF-7 cells with stromal cells, ELISA for IL-8/CXCL8 | kill if: no change in tumor-stromal interaction or IL-8/CXCL8 secretion
+5. Polyphenol Bioavailability and Metabolism in Human Plasma (~€15, < 4 weeks) — LC-MS/MS for polyphenol metabolites, HPLC for bioavailability | kill if: no detectable polyphenol or metabolite in plasma

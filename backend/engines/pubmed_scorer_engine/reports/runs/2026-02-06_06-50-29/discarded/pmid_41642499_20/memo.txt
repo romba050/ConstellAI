@@ -1,0 +1,34 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Prediction of remission in cushing's disease using artificial intelligence: A systematic review and meta-analysis. may influence disease progression.
+
+EVIDENCE SUMMARY:
+- PubMed | pmid=41642499
+
+DECISION SUPPORT SCORE: 0.0
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: discarded
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+none. below threshold.
+
+CONFIDENCE DRIVERS:
++ real literature
+
+CONFIDENCE PENALTIES:
+- weak translation
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+killed early
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+common failure class
+
+DECISION SENSITIVITY:
+discarded
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

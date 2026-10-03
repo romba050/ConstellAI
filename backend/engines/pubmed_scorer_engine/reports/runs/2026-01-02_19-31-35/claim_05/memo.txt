@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+{'type': 'Hypothesis', 'description': 'Microbiome dysbiosis in the gut-liver axis may exacerbate liver cancer progression through chronic inflammation and tissue damage.'}
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.5
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Liver Cancer Cell Line Study (~€15,000, < 6 weeks) —  Liver cancer cell line viability and growth rate in presence of human gut microbiome extracts vs. sterile controls | kill if: Results do not show a significant difference in cell line viability or growth rate
+2. Fecal Microbiota Transplantation (FMT) Pilot Study (~€20,000, < 8 weeks) — Clinical and histological outcomes of patients undergoing FMT for liver cancer with vs. without antibiotic pretreatment | kill if: Results do not show a significant improvement in clinical or histological outcomes after FMT
+3. Gut-Liver Axis Inflammation Model Study (~€10,000, < 6 weeks) — Inflammatory cytokine levels and liver enzyme activity in mice with induced gut-liver axis inflammation vs. controls | kill if: Results do not show a significant increase in inflammatory cytokines or liver enzyme activity
+4. Microbiome Profiling and Liver Cancer Correlation Study (~€18,000, < 8 weeks) — Correlation between gut microbiome profiles and liver cancer progression in human patient samples | kill if: Results do not show a significant correlation between gut microbiome profiles and liver cancer progression
+5. Cecal Ligation and Puncture (CLP) Model Study (~€12,000, < 6 weeks) — Liver enzyme activity and histological damage in mice with induced polymicrobial sepsis vs. controls | kill if: Results do not show a significant increase in liver enzyme activity or histological damage
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

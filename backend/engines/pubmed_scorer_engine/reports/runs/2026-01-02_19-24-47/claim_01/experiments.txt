@@ -1,0 +1,5 @@
+1. miRNA knockdown in cell line (~€15,000, 6 weeks) — qRT-PCR, Western blot | kill if: no miRNA knockdown effect on immune checkpoint protein expression
+2. human PBMC microRNA profiling (~€20,000, 8 weeks) — microarray or RNA-seq | kill if: no correlation between patient microRNA profiles and treatment response
+3. immunohistochemistry of human tumor biopsies (~€18,000, 7 weeks) — IHC staining, image analysis | kill if: no association between miRNA expression and immune checkpoint protein localization in tumors
+4. CRISPR-Cas9 mediated knockout of miRNA target genes (~€12,000, 5 weeks) — Western blot, qRT-PCR | kill if: no effect on immune checkpoint protein expression after knockout
+5. miRNA mimic transfection in cell line (~€10,000, 5 weeks) — Western blot, qRT-PCR | kill if: no upregulation of immune checkpoint protein expression after miRNA mimic transfection

@@ -1,0 +1,5 @@
+1. Experiment 1: Macrophage Depletion in Glioblastoma Mouse Model (~€18,000, 6 weeks) — Tumor growth rate, overall survival | kill if: Macrophage depletion does not affect tumor growth or survival
+2. Experiment 2: Tumor-Associated Macrophage Phenotyping in Patient-Derived Organoids (~€22,000, 8 weeks) — TAM phenotype, drug sensitivity | kill if: Patient-derived organoids do not recapitulate TAM phenotypes
+3. Experiment 3: In Vitro Macrophage-Tumor Interactions with Microfluidics (~€15,000, 4 weeks) — TAM-tumor interactions, cytokine secretion | kill if: Microfluidic platform does not accurately model TAM-tumor interactions
+4. Experiment 4: Macrophage Migration and Homing in Glioblastoma Patients (~€20,000, 6 weeks) — Macrophage migration, homing patterns | kill if: Macrophage migration and homing patterns do not correlate with clinical outcomes
+5. Experiment 5: Tumor-Associated Macrophages in Glioblastoma Stem Cell Niche (~€25,000, 8 weeks) — TAMs in stem cell niche, cancer stem cell maintenance | kill if: TAMs do not contribute to glioblastoma stem cell maintenance

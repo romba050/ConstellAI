@@ -1,0 +1,34 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Findings reported in this study may influence disease outcomes.
+
+EVIDENCE SUMMARY:
+- PubMed | pmid=41642921 | year=2026 | species=human | endpoint=surrogate
+
+DECISION SUPPORT SCORE: 0.15
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 45%
+
+RECOMMENDED ACTION: discarded
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+none. discarded at literature triage.
+
+CONFIDENCE DRIVERS:
++ real PubMed paper
+
+CONFIDENCE PENALTIES:
+- conservative extraction
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+literature-first triage
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+n/a
+
+DECISION SENSITIVITY:
+discarded
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

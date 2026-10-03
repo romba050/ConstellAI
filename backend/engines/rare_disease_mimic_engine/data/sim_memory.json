@@ -1,0 +1,214 @@
+{
+  "trained": true,
+  "window": "1970-2005",
+  "cases_seen": 74,
+  "hit_ratio": 0.581081081081081,
+  "pattern_summary": "trained on 74 simulated rare cases from 1970 to 2005; primary-first then deviation-fill bundle logic stored; historical replay bank engaged; observed hit ratio 0.5811",
+  "trace_sample": [
+    {
+      "year": 1970,
+      "disease_id": "friedreich_ataxia",
+      "disease_name": "friedreich ataxia",
+      "genes": [
+        "FXN",
+        "NFE2L2",
+        "PPARGC1A",
+        "CASP3",
+        "NFKB1"
+      ],
+      "best_primary_id": "d_evolocumab",
+      "best_primary_name": "evolocumab",
+      "coverage_hits": 0,
+      "spillover_count": 0,
+      "hit": false
+    },
+    {
+      "year": 1970,
+      "disease_id": "duchenne_muscular_dystrophy",
+      "disease_name": "duchenne muscular dystrophy",
+      "genes": [
+        "DMD",
+        "AKT1",
+        "MTOR",
+        "NFKB1",
+        "TGFB1"
+      ],
+      "best_primary_id": "d_sirolimus",
+      "best_primary_name": "sirolimus (rapamycin)",
+      "coverage_hits": 1,
+      "spillover_count": 0,
+      "hit": true
+    },
+    {
+      "year": 1970,
+      "disease_id": "wolfram_syndrome",
+      "disease_name": "wolfram syndrome",
+      "genes": [
+        "WFS1",
+        "ATF6",
+        "EIF2AK3",
+        "AKT1",
+        "CASP3"
+      ],
+      "best_primary_id": "d_evolocumab",
+      "best_primary_name": "evolocumab",
+      "coverage_hits": 0,
+      "spillover_count": 0,
+      "hit": false
+    },
+    {
+      "year": 1971,
+      "disease_id": "niemann_pick_c",
+      "disease_name": "niemann-pick disease type c",
+      "genes": [
+        "NPC1",
+        "NPC2",
+        "SREBF1",
+        "MTOR",
+        "ABCA1"
+      ],
+      "best_primary_id": "d_sirolimus",
+      "best_primary_name": "sirolimus (rapamycin)",
+      "coverage_hits": 1,
+      "spillover_count": 0,
+      "hit": true
+    },
+    {
+      "year": 1971,
+      "disease_id": "gaucher_disease",
+      "disease_name": "gaucher disease",
+      "genes": [
+        "GBA",
+        "MTOR",
+        "TNF",
+        "IL1B",
+        "NFKB1"
+      ],
+      "best_primary_id": "d_sirolimus",
+      "best_primary_name": "sirolimus (rapamycin)",
+      "coverage_hits": 1,
+      "spillover_count": 0,
+      "hit": true
+    },
+    {
+      "year": 1971,
+      "disease_id": "acute_intermittent_porphyria",
+      "disease_name": "acute intermittent porphyria",
+      "genes": [
+        "HMBS",
+        "ALAS1",
+        "CREB1",
+        "PPARA",
+        "NFKB1"
+      ],
+      "best_primary_id": "d_evolocumab",
+      "best_primary_name": "evolocumab",
+      "coverage_hits": 0,
+      "spillover_count": 0,
+      "hit": false
+    },
+    {
+      "year": 1972,
+      "disease_id": "fabry_disease",
+      "disease_name": "fabry disease",
+      "genes": [
+        "GLA",
+        "TNF",
+        "IL6",
+        "NFKB1",
+        "VCAM1"
+      ],
+      "best_primary_id": "d_evolocumab",
+      "best_primary_name": "evolocumab",
+      "coverage_hits": 0,
+      "spillover_count": 0,
+      "hit": false
+    },
+    {
+      "year": 1973,
+      "disease_id": "neurofibromatosis_type_1",
+      "disease_name": "neurofibromatosis type 1",
+      "genes": [
+        "NF1",
+        "MAPK1",
+        "MTOR",
+        "KIT",
+        "PDGFRA"
+      ],
+      "best_primary_id": "d_sirolimus",
+      "best_primary_name": "sirolimus (rapamycin)",
+      "coverage_hits": 1,
+      "spillover_count": 0,
+      "hit": true
+    },
+    {
+      "year": 1974,
+      "disease_id": "gaucher_disease",
+      "disease_name": "gaucher disease",
+      "genes": [
+        "GBA",
+        "MTOR",
+        "TNF",
+        "IL1B",
+        "NFKB1"
+      ],
+      "best_primary_id": "d_sirolimus",
+      "best_primary_name": "sirolimus (rapamycin)",
+      "coverage_hits": 1,
+      "spillover_count": 0,
+      "hit": true
+    },
+    {
+      "year": 1974,
+      "disease_id": "acute_intermittent_porphyria",
+      "disease_name": "acute intermittent porphyria",
+      "genes": [
+        "HMBS",
+        "ALAS1",
+        "CREB1",
+        "PPARA",
+        "NFKB1"
+      ],
+      "best_primary_id": "d_evolocumab",
+      "best_primary_name": "evolocumab",
+      "coverage_hits": 0,
+      "spillover_count": 0,
+      "hit": false
+    },
+    {
+      "year": 1975,
+      "disease_id": "spinal_bulbar_muscular_atrophy",
+      "disease_name": "spinal and bulbar muscular atrophy",
+      "genes": [
+        "AR",
+        "HSP90AA1",
+        "AKT1",
+        "CASP3",
+        "CREB1"
+      ],
+      "best_primary_id": "d_lithium",
+      "best_primary_name": "lithium",
+      "coverage_hits": 1,
+      "spillover_count": 1,
+      "hit": true
+    },
+    {
+      "year": 1975,
+      "disease_id": "pompe_disease",
+      "disease_name": "pompe disease",
+      "genes": [
+        "GAA",
+        "MTOR",
+        "TFEB",
+        "AKT1",
+        "MAP1LC3B"
+      ],
+      "best_primary_id": "d_sirolimus",
+      "best_primary_name": "sirolimus (rapamycin)",
+      "coverage_hits": 1,
+      "spillover_count": 0,
+      "hit": true
+    }
+  ],
+  "updated_at_ms": 1775343851214
+}

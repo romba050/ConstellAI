@@ -1,0 +1,22 @@
+/* midnight launch clinical override */
+:root {
+  --bg: #0f1720;
+  --panel: rgba(17, 24, 39, 0.95);
+  --panel2: rgba(17, 24, 39, 0.9);
+  --border: rgba(148, 163, 184, 0.18);
+  --text: rgba(236, 242, 248, 0.96);
+  --muted: rgba(160, 174, 192, 0.86);
+  --glow: rgba(0, 0, 0, 0);
+  --shadow: rgba(0, 0, 0, 0.28);
+}
+body { background: #0f1720; }
+.space-root { background: linear-gradient(180deg, #0f1720 0%, #111827 100%); }
+.topbar, .panel, .planet, .crumb, .metric, .miniStat, .noteBox, .listCard, .welcomeHero, .quickTile, .matrixCell, .targetChip, .compoundCard { box-shadow: none !important; backdrop-filter: none !important; }
+.topbar { background: rgba(20, 28, 38, 0.96); }
+.panel, .welcomeHero, .quickTile, .planet, .card, .metric, .miniStat, .listCard, .noteBox, .matrixCell, .compoundCard { background: rgba(17, 24, 39, 0.96) !important; border-color: rgba(148, 163, 184, 0.18) !important; }
+.panelHead, .institutionalStrip, .heroBand { background: rgba(15, 23, 32, 0.88) !important; }
+.tabbtn, .crumb, .btn, button, select, input, textarea { background: rgba(15, 23, 32, 0.9); border-color: rgba(148, 163, 184, 0.22); }
+.tabbtn.active, .crumbStrong, .btnPrimary { background: rgba(30, 41, 59, 0.98) !important; border-color: rgba(148, 163, 184, 0.32) !important; box-shadow: none !important; }
+.planet { min-height: 96px; background: rgba(17, 24, 39, 0.98) !important; }
+.planet:before, .planet:after { display: none !important; }
+.panelTitle, .brand .sub, .small, .cardSub, .muted, .metricLabel { color: rgba(160, 174, 192, 0.9) !important; }

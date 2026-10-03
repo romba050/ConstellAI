@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Mitochondrial dysfunction may influence tumor microenvironment remodeling and thereby impact cancer cell invasion.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.4
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Experiment 1: Mitochondrial Dysfunction and Tumor Microenvironment Remodeling in Colorectal Cancer Cell Line (~€18,000, 6 weeks) — MTG8 immunofluorescence, Western blot for OXPHOS complex subunits | kill if: endpoint_not_clinical
+2. Experiment 2: Effect of Mitochondrial Dysfunction on Cancer Cell Invasion in a Transwell Assay (~€20,000, 7 weeks) — Transwell invasion assay, qRT-PCR for MMPs and MT1-MMP | kill if: replication_gap
+3. Experiment 3: Mitochondrial Membrane Potential and Cancer Cell Invasion in a Mouse Model of Colorectal Cancer (~€22,000, 8 weeks) — MitoTracker staining, qRT-PCR for OXPHOS subunits | kill if: underpowered_human_data
+4. Experiment 4: Mitochondrial Dysfunction and Cancer Stem Cell Properties in a Breast Cancer Cell Line (~€16,000, 6 weeks) — Aldehyde dehydrogenase (ALDH) activity assay, flow cytometry for CD44 and CD24 | kill if: endpoint_not_clinical
+5. Experiment 5: Impact of Mitochondrial Dysfunction on the Epithelial-to-Mesenchymal Transition in a Lung Cancer Cell Line (~€18,000, 6 weeks) — qRT-PCR for EMT-related genes, Western blot for ZEB1 and Snail | kill if: replication_gap
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

@@ -1,0 +1,5 @@
+1. Histone Deacetylase Activity Assay with Inhibitor Treatment (~€15,000, 6 weeks) — histone deacetylase activity, cell viability after inhibitor treatment | kill if: endpoint_not_clinical
+2. Epigenetic Profiling of Pancreatic Ductal Adenocarcinoma Patient Tumors with Variable Histone Deacetylase Expression (~€20,000, 8 weeks) — epigenetic profiling, tumor histology, clinical outcome data | kill if: endpoint_not_clinical
+3. Histone Deacetylase Gene Silencing in Pancreatic Ductal Adenocarcinoma Cell Line with Chemoresistance Analysis (~€18,000, 5 weeks) — histone deacetylase expression, cell viability after chemotherapeutic agent treatment | kill if: endpoint_not_clinical
+4. In Vitro and In Silico Modeling of Histone Deacetylase Activity in Pancreatic Ductal Adenocarcinoma (~€12,000, 4 weeks) — histone deacetylase activity, computational modeling | kill if: endpoint_not_clinical
+5. Histone Deacetylase Activity Assay with Histone Variant Overexpression in Pancreatic Ductal Adenocarcinoma Cell Line (~€16,000, 5 weeks) — histone deacetylase activity, cell viability after histone variant overexpression | kill if: endpoint_not_clinical

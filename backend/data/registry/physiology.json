@@ -1,0 +1,7018 @@
+[
+  {
+    "id": "p_rna_splicing_tone",
+    "name": "RNA splicing tone",
+    "type": "physiology",
+    "category": "RNA biology",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "SF3B1",
+        "direction": "modulate",
+        "strength": 0.11,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SRSF2",
+        "direction": "modulate",
+        "strength": 0.09,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "HNRNPA1",
+        "direction": "modulate",
+        "strength": 0.08,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_splicing_integrity",
+    "name": "splicing integrity",
+    "type": "physiology",
+    "category": "RNA biology",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "SF3B1",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SRSF2",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "HNRNPA1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_foxo",
+    "name": "FOXO stress resistance program",
+    "type": "physiology",
+    "category": "aging pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "FOXO3",
+        "direction": "activate",
+        "strength": 0.8,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CAT",
+        "direction": "activate",
+        "strength": 0.21,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SOD2",
+        "direction": "activate",
+        "strength": 0.24,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_nad_salvage",
+    "name": "NAD salvage pathway",
+    "type": "physiology",
+    "category": "aging pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "NAMPT",
+        "direction": "activate",
+        "strength": 0.63,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SIRT1",
+        "direction": "activate",
+        "strength": 0.29,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "PARP1",
+        "direction": "modulate",
+        "strength": 0.18,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_sirt1",
+    "name": "SIRT1 longevity signaling",
+    "type": "physiology",
+    "category": "aging pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "SIRT1",
+        "direction": "activate",
+        "strength": 0.9,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "FOXO3",
+        "direction": "activate",
+        "strength": 0.32,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "PPARGC1A",
+        "direction": "activate",
+        "strength": 0.28,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_sirt3",
+    "name": "SIRT3 mitochondrial signaling",
+    "type": "physiology",
+    "category": "aging pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "SIRT3",
+        "direction": "activate",
+        "strength": 0.82,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SOD2",
+        "direction": "activate",
+        "strength": 0.29,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "IDH2",
+        "direction": "activate",
+        "strength": 0.23,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_senescence_program",
+    "name": "cellular senescence",
+    "type": "physiology",
+    "category": "aging pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "CDKN2A",
+        "direction": "activate",
+        "strength": 0.28,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "TP53",
+        "direction": "activate",
+        "strength": 0.19,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "IL6",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_mindfulness",
+    "name": "mindfulness practice",
+    "type": "physiology",
+    "category": "autonomic regulation",
+    "modalities": [
+      "mind_body",
+      "stress"
+    ],
+    "targets": [
+      {
+        "gene": "NR3C1",
+        "direction": "modulate",
+        "strength": 0.17,
+        "confidence": "human"
+      },
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.08,
+        "confidence": "human"
+      },
+      {
+        "gene": "TNF",
+        "direction": "modulate",
+        "strength": 0.07,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for stress-response regulation; not a treatment claim"
+  },
+  {
+    "id": "p_vagus_stimulation_noninvasive",
+    "name": "non-invasive vagal stimulation style input",
+    "type": "physiology",
+    "category": "autonomic regulation",
+    "modalities": [
+      "neuromodulation",
+      "mind_body"
+    ],
+    "targets": [
+      {
+        "gene": "CHRNA7",
+        "direction": "activate",
+        "strength": 0.19,
+        "confidence": "human"
+      },
+      {
+        "gene": "TNF",
+        "direction": "modulate",
+        "strength": 0.11,
+        "confidence": "human"
+      },
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.1,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for cholinergic anti-inflammatory pathway style support; not a treatment claim"
+  },
+  {
+    "id": "p_breathwork",
+    "name": "slow breathing practice",
+    "type": "physiology",
+    "category": "autonomic regulation",
+    "modalities": [
+      "breathing",
+      "mind_body"
+    ],
+    "targets": [
+      {
+        "gene": "NR3C1",
+        "direction": "modulate",
+        "strength": 0.21,
+        "confidence": "human"
+      },
+      {
+        "gene": "TNF",
+        "direction": "modulate",
+        "strength": 0.08,
+        "confidence": "human"
+      },
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.09,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for autonomic downshifting; not a treatment claim"
+  },
+  {
+    "id": "p_yoga",
+    "name": "yoga practice",
+    "type": "physiology",
+    "category": "autonomic regulation",
+    "modalities": [
+      "mind_body",
+      "movement"
+    ],
+    "targets": [
+      {
+        "gene": "NR3C1",
+        "direction": "modulate",
+        "strength": 0.16,
+        "confidence": "human"
+      },
+      {
+        "gene": "BDNF",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "human"
+      },
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.08,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for parasympathetic and mobility support; not a treatment claim"
+  },
+  {
+    "id": "p_hydration_regular",
+    "name": "regular hydration",
+    "type": "physiology",
+    "category": "basic support",
+    "modalities": [
+      "hydration",
+      "supportive"
+    ],
+    "targets": [
+      {
+        "gene": "AVP",
+        "direction": "modulate",
+        "strength": 0.11,
+        "confidence": "human"
+      },
+      {
+        "gene": "REN",
+        "direction": "modulate",
+        "strength": 0.09,
+        "confidence": "human"
+      },
+      {
+        "gene": "AQP2",
+        "direction": "modulate",
+        "strength": 0.08,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for fluid balance physiology; not a treatment claim"
+  },
+  {
+    "id": "p_mediterranean_pattern",
+    "name": "mediterranean-style diet",
+    "type": "physiology",
+    "category": "cardiometabolic support",
+    "modalities": [
+      "diet",
+      "whole_food"
+    ],
+    "targets": [
+      {
+        "gene": "NOS3",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "human"
+      },
+      {
+        "gene": "NFKB1",
+        "direction": "modulate",
+        "strength": 0.12,
+        "confidence": "human"
+      },
+      {
+        "gene": "SIRT1",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for dietary pattern physiology; not a treatment claim"
+  },
+  {
+    "id": "p_ferroptosis_tone",
+    "name": "ferroptosis tone",
+    "type": "physiology",
+    "category": "cell fate",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "GPX4",
+        "direction": "inhibit",
+        "strength": 0.15,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SLC7A11",
+        "direction": "modulate",
+        "strength": 0.17,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "ACSL4",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_apoptosis_intrinsic",
+    "name": "intrinsic apoptosis signaling",
+    "type": "physiology",
+    "category": "cell fate",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "BAX",
+        "direction": "activate",
+        "strength": 0.42,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CASP9",
+        "direction": "activate",
+        "strength": 0.36,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "BCL2",
+        "direction": "inhibit",
+        "strength": 0.22,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_pyroptosis_tone",
+    "name": "pyroptosis tone",
+    "type": "physiology",
+    "category": "cell fate",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "CASP1",
+        "direction": "activate",
+        "strength": 0.16,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "GSDMD",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "NLRP3",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_tfeb_program",
+    "name": "TFEB lysosomal program",
+    "type": "physiology",
+    "category": "cell maintenance",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "TFEB",
+        "direction": "activate",
+        "strength": 0.64,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "LAMP1",
+        "direction": "activate",
+        "strength": 0.22,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "BECN1",
+        "direction": "activate",
+        "strength": 0.17,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_autophagy",
+    "name": "autophagy program",
+    "type": "physiology",
+    "category": "cell maintenance",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "ULK1",
+        "direction": "activate",
+        "strength": 0.63,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "BECN1",
+        "direction": "activate",
+        "strength": 0.59,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "MTOR",
+        "direction": "inhibit",
+        "strength": 0.31,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_lysosome_biology",
+    "name": "lysosome biology",
+    "type": "physiology",
+    "category": "cell maintenance",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "LAMP1",
+        "direction": "activate",
+        "strength": 0.22,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CTSB",
+        "direction": "activate",
+        "strength": 0.19,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "TFEB",
+        "direction": "activate",
+        "strength": 0.33,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_mitophagy",
+    "name": "mitophagy program",
+    "type": "physiology",
+    "category": "cell maintenance",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "PINK1",
+        "direction": "activate",
+        "strength": 0.64,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "PRKN",
+        "direction": "activate",
+        "strength": 0.58,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SQSTM1",
+        "direction": "activate",
+        "strength": 0.26,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_circadian_core",
+    "name": "core circadian clock",
+    "type": "physiology",
+    "category": "circadian pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "CLOCK",
+        "direction": "activate",
+        "strength": 0.77,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "BMAL1",
+        "direction": "activate",
+        "strength": 0.76,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "PER2",
+        "direction": "modulate",
+        "strength": 0.22,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_melatonin_hygiene",
+    "name": "darkness and melatonin hygiene",
+    "type": "physiology",
+    "category": "circadian regulation",
+    "modalities": [
+      "sleep",
+      "light_control"
+    ],
+    "targets": [
+      {
+        "gene": "MTNR1A",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "human"
+      },
+      {
+        "gene": "CLOCK",
+        "direction": "modulate",
+        "strength": 0.12,
+        "confidence": "human"
+      },
+      {
+        "gene": "BMAL1",
+        "direction": "modulate",
+        "strength": 0.11,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for light-controlled circadian support; not a treatment claim"
+  },
+  {
+    "id": "p_sunlight_daytime",
+    "name": "daytime sunlight exposure",
+    "type": "physiology",
+    "category": "circadian regulation",
+    "modalities": [
+      "light",
+      "environment"
+    ],
+    "targets": [
+      {
+        "gene": "VDR",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "human"
+      },
+      {
+        "gene": "CLOCK",
+        "direction": "modulate",
+        "strength": 0.1,
+        "confidence": "human"
+      },
+      {
+        "gene": "BMAL1",
+        "direction": "modulate",
+        "strength": 0.09,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for circadian and light physiology; not a treatment claim"
+  },
+  {
+    "id": "p_light_morning",
+    "name": "morning bright light",
+    "type": "physiology",
+    "category": "circadian regulation",
+    "modalities": [
+      "light",
+      "circadian"
+    ],
+    "targets": [
+      {
+        "gene": "CLOCK",
+        "direction": "modulate",
+        "strength": 0.21,
+        "confidence": "human"
+      },
+      {
+        "gene": "PER1",
+        "direction": "activate",
+        "strength": 0.16,
+        "confidence": "human"
+      },
+      {
+        "gene": "PER2",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for circadian entrainment; not a treatment claim"
+  },
+  {
+    "id": "p_sleep_regular",
+    "name": "regular sleep timing",
+    "type": "physiology",
+    "category": "circadian regulation",
+    "modalities": [
+      "sleep",
+      "circadian"
+    ],
+    "targets": [
+      {
+        "gene": "CLOCK",
+        "direction": "modulate",
+        "strength": 0.19,
+        "confidence": "human"
+      },
+      {
+        "gene": "PER2",
+        "direction": "modulate",
+        "strength": 0.17,
+        "confidence": "human"
+      },
+      {
+        "gene": "CRY1",
+        "direction": "modulate",
+        "strength": 0.16,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for circadian phase stability; not a treatment claim"
+  },
+  {
+    "id": "p_system_circadian_amplitude",
+    "name": "circadian amplitude",
+    "type": "physiology",
+    "category": "circadian system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "CLOCK",
+        "direction": "activate",
+        "strength": 0.11,
+        "confidence": "seed"
+      },
+      {
+        "gene": "BMAL1",
+        "direction": "activate",
+        "strength": 0.11,
+        "confidence": "seed"
+      },
+      {
+        "gene": "PER2",
+        "direction": "modulate",
+        "strength": 0.07,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_sleep_pressure_regulation",
+    "name": "sleep pressure regulation",
+    "type": "physiology",
+    "category": "circadian system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "ADORA2A",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CLOCK",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "MTNR1A",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_collagen_turnover",
+    "name": "collagen turnover",
+    "type": "physiology",
+    "category": "connective tissue",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "MMP2",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "MMP9",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "COL1A1",
+        "direction": "modulate",
+        "strength": 0.09,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_connective_tissue_tone",
+    "name": "connective tissue tone",
+    "type": "physiology",
+    "category": "connective tissue",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "COL1A1",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ELN",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "FBN1",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_hedgehog",
+    "name": "Hedgehog signaling",
+    "type": "physiology",
+    "category": "developmental pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "SHH",
+        "direction": "activate",
+        "strength": 0.81,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SMO",
+        "direction": "activate",
+        "strength": 0.65,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "GLI1",
+        "direction": "activate",
+        "strength": 0.47,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_notch",
+    "name": "NOTCH signaling",
+    "type": "physiology",
+    "category": "developmental pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "NOTCH1",
+        "direction": "activate",
+        "strength": 0.86,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "HES1",
+        "direction": "activate",
+        "strength": 0.41,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "DLL1",
+        "direction": "activate",
+        "strength": 0.25,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_wnt_beta_catenin",
+    "name": "WNT / beta-catenin signaling",
+    "type": "physiology",
+    "category": "developmental pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "CTNNB1",
+        "direction": "activate",
+        "strength": 0.76,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "GSK3B",
+        "direction": "inhibit",
+        "strength": 0.34,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "MYC",
+        "direction": "activate",
+        "strength": 0.21,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_ciliary_function",
+    "name": "ciliary function",
+    "type": "physiology",
+    "category": "developmental system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "IFT88",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "KIF3A",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "BBS1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_growth_hormone_axis",
+    "name": "growth hormone axis",
+    "type": "physiology",
+    "category": "endocrine",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "GHR",
+        "direction": "activate",
+        "strength": 0.21,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "IGF1",
+        "direction": "activate",
+        "strength": 0.24,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "STAT5B",
+        "direction": "activate",
+        "strength": 0.17,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_sex_hormone_axis",
+    "name": "sex hormone axis",
+    "type": "physiology",
+    "category": "endocrine",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "ESR1",
+        "direction": "activate",
+        "strength": 0.19,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "AR",
+        "direction": "activate",
+        "strength": 0.17,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CYP19A1",
+        "direction": "modulate",
+        "strength": 0.12,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_thyroid_axis",
+    "name": "thyroid axis",
+    "type": "physiology",
+    "category": "endocrine",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "TSHR",
+        "direction": "activate",
+        "strength": 0.22,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "DIO2",
+        "direction": "modulate",
+        "strength": 0.13,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "THRB",
+        "direction": "activate",
+        "strength": 0.16,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_growth_signaling_tone",
+    "name": "growth signaling tone",
+    "type": "physiology",
+    "category": "endocrine system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "GHR",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "IGF1",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "STAT5B",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_hpa_axis_tone",
+    "name": "hpa axis tone",
+    "type": "physiology",
+    "category": "endocrine system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "CRH",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "NR3C1",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "POMC",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_sex_steroid_tone",
+    "name": "sex steroid tone",
+    "type": "physiology",
+    "category": "endocrine system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "ESR1",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "AR",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CYP19A1",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_thyroid_tone",
+    "name": "thyroid tone",
+    "type": "physiology",
+    "category": "endocrine system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "TSHR",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "DIO2",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "THRB",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_creatine_handling",
+    "name": "creatine handling",
+    "type": "physiology",
+    "category": "energy system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "SLC6A8",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CKM",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "GATM",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_lactate_shuttle",
+    "name": "lactate shuttle",
+    "type": "physiology",
+    "category": "energy system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "SLC16A1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "LDHB",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "PPARGC1A",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_dna_methylation_tone",
+    "name": "DNA methylation tone",
+    "type": "physiology",
+    "category": "epigenetic regulation",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "DNMT1",
+        "direction": "modulate",
+        "strength": 0.14,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "TET2",
+        "direction": "modulate",
+        "strength": 0.12,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "MECP2",
+        "direction": "modulate",
+        "strength": 0.11,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_histone_acetylation_tone",
+    "name": "histone acetylation tone",
+    "type": "physiology",
+    "category": "epigenetic regulation",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "HDAC1",
+        "direction": "modulate",
+        "strength": 0.16,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "EP300",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CREBBP",
+        "direction": "activate",
+        "strength": 0.11,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_epigenetic_flexibility",
+    "name": "epigenetic flexibility",
+    "type": "physiology",
+    "category": "epigenetic system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "MECP2",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "DNMT1",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "EP300",
+        "direction": "activate",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_dna_damage_response",
+    "name": "DNA damage response",
+    "type": "physiology",
+    "category": "genome stability",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "TP53",
+        "direction": "activate",
+        "strength": 0.52,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "ATM",
+        "direction": "activate",
+        "strength": 0.41,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CHEK2",
+        "direction": "activate",
+        "strength": 0.29,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_astrocyte_reactivity",
+    "name": "astrocyte reactivity",
+    "type": "physiology",
+    "category": "glial biology",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "GFAP",
+        "direction": "activate",
+        "strength": 0.24,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "STAT3",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "IL6",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_microglia_activation",
+    "name": "microglial activation",
+    "type": "physiology",
+    "category": "glial biology",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "AIF1",
+        "direction": "activate",
+        "strength": 0.22,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "NFKB1",
+        "direction": "activate",
+        "strength": 0.17,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "TNF",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_myelination_support",
+    "name": "myelination support",
+    "type": "physiology",
+    "category": "glial biology",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "MBP",
+        "direction": "activate",
+        "strength": 0.26,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "MOG",
+        "direction": "activate",
+        "strength": 0.21,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "ERBB3",
+        "direction": "activate",
+        "strength": 0.17,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_astrocyte_support",
+    "name": "astrocyte support",
+    "type": "physiology",
+    "category": "glial system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "GFAP",
+        "direction": "modulate",
+        "strength": 0.07,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SLC1A2",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "STAT3",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_microglial_restraint",
+    "name": "microglial restraint",
+    "type": "physiology",
+    "category": "glial system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "AIF1",
+        "direction": "modulate",
+        "strength": 0.07,
+        "confidence": "seed"
+      },
+      {
+        "gene": "TNF",
+        "direction": "inhibit",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "IL6",
+        "direction": "inhibit",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_myelin_support",
+    "name": "myelin support",
+    "type": "physiology",
+    "category": "glial system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "MBP",
+        "direction": "activate",
+        "strength": 0.07,
+        "confidence": "seed"
+      },
+      {
+        "gene": "MOG",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ERBB3",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_akt",
+    "name": "AKT signaling",
+    "type": "physiology",
+    "category": "growth pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "AKT1",
+        "direction": "activate",
+        "strength": 0.9,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "FOXO3",
+        "direction": "inhibit",
+        "strength": 0.3,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "MTOR",
+        "direction": "activate",
+        "strength": 0.25,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_egfr",
+    "name": "EGFR signaling",
+    "type": "physiology",
+    "category": "growth pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "EGFR",
+        "direction": "activate",
+        "strength": 0.9,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "MAPK1",
+        "direction": "activate",
+        "strength": 0.36,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "PIK3CA",
+        "direction": "activate",
+        "strength": 0.24,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_mapk",
+    "name": "MAPK/ERK signaling",
+    "type": "physiology",
+    "category": "growth pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "MAPK1",
+        "direction": "activate",
+        "strength": 0.9,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "MAPK3",
+        "direction": "activate",
+        "strength": 0.82,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "EGFR",
+        "direction": "activate",
+        "strength": 0.25,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_pi3k",
+    "name": "PI3K signaling",
+    "type": "physiology",
+    "category": "growth pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "PIK3CA",
+        "direction": "activate",
+        "strength": 0.9,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "AKT1",
+        "direction": "activate",
+        "strength": 0.46,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "MTOR",
+        "direction": "activate",
+        "strength": 0.22,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_mtor",
+    "name": "mTOR signaling",
+    "type": "physiology",
+    "category": "growth pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "MTOR",
+        "direction": "activate",
+        "strength": 0.9,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "AKT1",
+        "direction": "activate",
+        "strength": 0.44,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "ULK1",
+        "direction": "inhibit",
+        "strength": 0.26,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_gut_barrier",
+    "name": "gut barrier integrity",
+    "type": "physiology",
+    "category": "gut and inflammation",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "OCLN",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CLDN1",
+        "direction": "activate",
+        "strength": 0.16,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "TNF",
+        "direction": "inhibit",
+        "strength": 0.09,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_high_fiber_diet",
+    "name": "high fiber diet",
+    "type": "physiology",
+    "category": "gut and inflammation",
+    "modalities": [
+      "diet",
+      "fiber"
+    ],
+    "targets": [
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.13,
+        "confidence": "human"
+      },
+      {
+        "gene": "TNF",
+        "direction": "modulate",
+        "strength": 0.11,
+        "confidence": "human"
+      },
+      {
+        "gene": "PPARG",
+        "direction": "activate",
+        "strength": 0.17,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for gut-mediated immune and metabolic effects; not a treatment claim"
+  },
+  {
+    "id": "p_microbiome_fermentation",
+    "name": "microbiome fermentation",
+    "type": "physiology",
+    "category": "gut and inflammation",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "FFAR2",
+        "direction": "activate",
+        "strength": 0.16,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "PPARG",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "IL6",
+        "direction": "inhibit",
+        "strength": 0.07,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_gut_barrier_stability",
+    "name": "gut barrier stability",
+    "type": "physiology",
+    "category": "gut system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "OCLN",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CLDN1",
+        "direction": "activate",
+        "strength": 0.07,
+        "confidence": "seed"
+      },
+      {
+        "gene": "TNF",
+        "direction": "inhibit",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_microbiome_fermentation_tone",
+    "name": "microbiome fermentation tone",
+    "type": "physiology",
+    "category": "gut system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "FFAR2",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "PPARG",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "IL6",
+        "direction": "inhibit",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_erythropoiesis",
+    "name": "erythropoiesis",
+    "type": "physiology",
+    "category": "hematology",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "EPO",
+        "direction": "activate",
+        "strength": 0.41,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "EPOR",
+        "direction": "activate",
+        "strength": 0.29,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "GATA1",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_platelet_activation",
+    "name": "platelet activation",
+    "type": "physiology",
+    "category": "hematology",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "F2R",
+        "direction": "activate",
+        "strength": 0.24,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "ITGA2B",
+        "direction": "activate",
+        "strength": 0.22,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SELP",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_coagulation_tone",
+    "name": "coagulation tone",
+    "type": "physiology",
+    "category": "hematology system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "F2",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SERPINE1",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SELP",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_erythroid_support",
+    "name": "erythroid support",
+    "type": "physiology",
+    "category": "hematology system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "EPO",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "seed"
+      },
+      {
+        "gene": "EPOR",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "GATA1",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_heme_synthesis",
+    "name": "heme_synthesis",
+    "type": "physiology",
+    "category": "hematology system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "ALAS2",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "FECH",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "HMBS",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_platelet_tone",
+    "name": "platelet tone",
+    "type": "physiology",
+    "category": "hematology system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "ITGA2B",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SELP",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "F2R",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_lymphatic_movement",
+    "name": "lymphatic movement support",
+    "type": "physiology",
+    "category": "immune circulation",
+    "modalities": [
+      "movement",
+      "recovery"
+    ],
+    "targets": [
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "human"
+      },
+      {
+        "gene": "TNF",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "human"
+      },
+      {
+        "gene": "VEGFC",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for circulation-associated support; not a treatment claim"
+  },
+  {
+    "id": "p_b_cell_program",
+    "name": "B-cell activation program",
+    "type": "physiology",
+    "category": "immune pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "CD79A",
+        "direction": "activate",
+        "strength": 0.41,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "BLNK",
+        "direction": "activate",
+        "strength": 0.27,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SYK",
+        "direction": "activate",
+        "strength": 0.33,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_il6_jak_stat3",
+    "name": "IL6-JAK-STAT3 signaling",
+    "type": "physiology",
+    "category": "immune pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "IL6",
+        "direction": "activate",
+        "strength": 0.9,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "JAK2",
+        "direction": "activate",
+        "strength": 0.42,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "STAT3",
+        "direction": "activate",
+        "strength": 0.67,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_nfkb",
+    "name": "NF-kB inflammatory signaling",
+    "type": "physiology",
+    "category": "immune pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "NFKB1",
+        "direction": "activate",
+        "strength": 0.9,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "RELA",
+        "direction": "activate",
+        "strength": 0.78,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "TNF",
+        "direction": "activate",
+        "strength": 0.31,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_t_cell_program",
+    "name": "T-cell activation program",
+    "type": "physiology",
+    "category": "immune pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "CD3D",
+        "direction": "activate",
+        "strength": 0.44,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "LCK",
+        "direction": "activate",
+        "strength": 0.36,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "ZAP70",
+        "direction": "activate",
+        "strength": 0.34,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_tnf",
+    "name": "TNF signaling",
+    "type": "physiology",
+    "category": "immune pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "TNF",
+        "direction": "activate",
+        "strength": 0.9,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "NFKB1",
+        "direction": "activate",
+        "strength": 0.41,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CASP8",
+        "direction": "activate",
+        "strength": 0.22,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_antiviral_state",
+    "name": "antiviral state",
+    "type": "physiology",
+    "category": "immune pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "MX1",
+        "direction": "activate",
+        "strength": 0.17,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "OAS1",
+        "direction": "activate",
+        "strength": 0.15,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "IFIT1",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_cholinergic_antiinflammatory",
+    "name": "cholinergic anti-inflammatory axis",
+    "type": "physiology",
+    "category": "immune pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "CHRNA7",
+        "direction": "activate",
+        "strength": 0.38,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "TNF",
+        "direction": "inhibit",
+        "strength": 0.16,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "IL6",
+        "direction": "inhibit",
+        "strength": 0.14,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_complement",
+    "name": "complement cascade",
+    "type": "physiology",
+    "category": "immune pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "C3",
+        "direction": "activate",
+        "strength": 0.52,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "C5",
+        "direction": "activate",
+        "strength": 0.37,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CFH",
+        "direction": "modulate",
+        "strength": 0.19,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_eosinophil_program",
+    "name": "eosinophil program",
+    "type": "physiology",
+    "category": "immune pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "IL5",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CCR3",
+        "direction": "activate",
+        "strength": 0.13,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "EPX",
+        "direction": "activate",
+        "strength": 0.09,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_inflammasome",
+    "name": "inflammasome signaling",
+    "type": "physiology",
+    "category": "immune pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "NLRP3",
+        "direction": "activate",
+        "strength": 0.68,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CASP1",
+        "direction": "activate",
+        "strength": 0.46,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "IL1B",
+        "direction": "activate",
+        "strength": 0.41,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_interferon",
+    "name": "interferon signaling",
+    "type": "physiology",
+    "category": "immune pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "STAT1",
+        "direction": "activate",
+        "strength": 0.74,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "IRF7",
+        "direction": "activate",
+        "strength": 0.58,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "IFNG",
+        "direction": "activate",
+        "strength": 0.39,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_mast_cell_activation",
+    "name": "mast cell activation",
+    "type": "physiology",
+    "category": "immune pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "KIT",
+        "direction": "activate",
+        "strength": 0.19,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "HDC",
+        "direction": "activate",
+        "strength": 0.11,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "IL4",
+        "direction": "activate",
+        "strength": 0.09,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_adaptive_immune_support",
+    "name": "adaptive immune support",
+    "type": "physiology",
+    "category": "immune system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "CD3D",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "seed"
+      },
+      {
+        "gene": "STAT1",
+        "direction": "activate",
+        "strength": 0.07,
+        "confidence": "seed"
+      },
+      {
+        "gene": "IL2RA",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_complement_restraint",
+    "name": "complement restraint",
+    "type": "physiology",
+    "category": "immune system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "CFH",
+        "direction": "activate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "C3",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "C5",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_histamine_tone",
+    "name": "histamine tone",
+    "type": "physiology",
+    "category": "immune system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "HDC",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "HRH1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "KIT",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_immune_tone",
+    "name": "immune tone",
+    "type": "physiology",
+    "category": "immune system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.08,
+        "confidence": "seed"
+      },
+      {
+        "gene": "TNF",
+        "direction": "modulate",
+        "strength": 0.08,
+        "confidence": "seed"
+      },
+      {
+        "gene": "STAT3",
+        "direction": "modulate",
+        "strength": 0.07,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_immune_tolerance_tone",
+    "name": "immune_tolerance_tone",
+    "type": "physiology",
+    "category": "immune system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "FOXP3",
+        "direction": "activate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "IL10",
+        "direction": "activate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "TGFB1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_innate_immune_activation",
+    "name": "innate immune activation",
+    "type": "physiology",
+    "category": "immune system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "NFKB1",
+        "direction": "activate",
+        "strength": 0.1,
+        "confidence": "seed"
+      },
+      {
+        "gene": "IL1B",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "seed"
+      },
+      {
+        "gene": "TNF",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_omega3_intake",
+    "name": "omega-3 enriched intake",
+    "type": "physiology",
+    "category": "inflammation",
+    "modalities": [
+      "diet",
+      "lipid"
+    ],
+    "targets": [
+      {
+        "gene": "PPARG",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "human"
+      },
+      {
+        "gene": "NFKB1",
+        "direction": "modulate",
+        "strength": 0.12,
+        "confidence": "human"
+      },
+      {
+        "gene": "TNF",
+        "direction": "modulate",
+        "strength": 0.1,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for lipid-mediated inflammatory modulation; not a treatment claim"
+  },
+  {
+    "id": "p_system_calcium_buffering",
+    "name": "calcium buffering",
+    "type": "physiology",
+    "category": "ion handling",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "ATP2A2",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "RYR2",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CALM1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_calcium_homeostasis",
+    "name": "calcium homeostasis",
+    "type": "physiology",
+    "category": "ion handling",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "RYR1",
+        "direction": "modulate",
+        "strength": 0.13,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "ATP2A1",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CACNA1C",
+        "direction": "modulate",
+        "strength": 0.11,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_ion_channel_stability",
+    "name": "ion channel stability",
+    "type": "physiology",
+    "category": "ion handling",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "SCN1A",
+        "direction": "modulate",
+        "strength": 0.13,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "KCNQ2",
+        "direction": "modulate",
+        "strength": 0.11,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CACNA1A",
+        "direction": "modulate",
+        "strength": 0.1,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_cholesterol_balance",
+    "name": "cholesterol_balance",
+    "type": "physiology",
+    "category": "lipid metabolism",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "HMGCR",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "LDLR",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ABCA1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_peroxisome_function",
+    "name": "peroxisomal function",
+    "type": "physiology",
+    "category": "lipid metabolism",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "PEX5",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "PPARA",
+        "direction": "activate",
+        "strength": 0.17,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CAT",
+        "direction": "activate",
+        "strength": 0.11,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_peroxisomal_tone",
+    "name": "peroxisomal tone",
+    "type": "physiology",
+    "category": "lipid metabolism",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "PEX5",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ACOX1",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CAT",
+        "direction": "activate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_sphingolipid_balance",
+    "name": "sphingolipid_balance",
+    "type": "physiology",
+    "category": "lipid metabolism",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "SPTLC1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SGMS1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ASAH1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_bile_acid_signaling",
+    "name": "bile acid signaling",
+    "type": "physiology",
+    "category": "liver metabolism",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "FXR",
+        "direction": "activate",
+        "strength": 0.31,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "NR1H4",
+        "direction": "activate",
+        "strength": 0.29,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CYP7A1",
+        "direction": "inhibit",
+        "strength": 0.16,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_urea_cycle",
+    "name": "urea cycle support",
+    "type": "physiology",
+    "category": "liver metabolism",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "CPS1",
+        "direction": "activate",
+        "strength": 0.28,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "OTC",
+        "direction": "activate",
+        "strength": 0.25,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "ASS1",
+        "direction": "activate",
+        "strength": 0.22,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_ammonia_buffering",
+    "name": "ammonia buffering",
+    "type": "physiology",
+    "category": "liver system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "GLUL",
+        "direction": "activate",
+        "strength": 0.09,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CPS1",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "seed"
+      },
+      {
+        "gene": "OTC",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_bile_flow_support",
+    "name": "bile flow support",
+    "type": "physiology",
+    "category": "liver system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "NR1H4",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ABCB11",
+        "direction": "activate",
+        "strength": 0.09,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CYP7A1",
+        "direction": "modulate",
+        "strength": 0.08,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_urea_handling",
+    "name": "urea handling",
+    "type": "physiology",
+    "category": "liver system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "CPS1",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "seed"
+      },
+      {
+        "gene": "OTC",
+        "direction": "activate",
+        "strength": 0.1,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ARG1",
+        "direction": "activate",
+        "strength": 0.09,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_ampk",
+    "name": "AMPK signaling",
+    "type": "physiology",
+    "category": "metabolic pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "AMPK",
+        "direction": "activate",
+        "strength": 0.9,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "MTOR",
+        "direction": "inhibit",
+        "strength": 0.35,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SIRT1",
+        "direction": "activate",
+        "strength": 0.28,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_lipid_oxidation",
+    "name": "fatty acid oxidation",
+    "type": "physiology",
+    "category": "metabolic pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "PPARA",
+        "direction": "activate",
+        "strength": 0.62,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CPT1A",
+        "direction": "activate",
+        "strength": 0.46,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "AMPK",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_glucose_uptake",
+    "name": "glucose uptake program",
+    "type": "physiology",
+    "category": "metabolic pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "SLC2A4",
+        "direction": "activate",
+        "strength": 0.55,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "INSR",
+        "direction": "activate",
+        "strength": 0.34,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "AKT1",
+        "direction": "activate",
+        "strength": 0.27,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_glycolysis",
+    "name": "glycolysis flux",
+    "type": "physiology",
+    "category": "metabolic pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "HK2",
+        "direction": "activate",
+        "strength": 0.41,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "PFKM",
+        "direction": "activate",
+        "strength": 0.35,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "LDHA",
+        "direction": "activate",
+        "strength": 0.31,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_insulin_signaling",
+    "name": "insulin signaling",
+    "type": "physiology",
+    "category": "metabolic pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "INSR",
+        "direction": "activate",
+        "strength": 0.83,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "IRS1",
+        "direction": "activate",
+        "strength": 0.47,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "AKT1",
+        "direction": "activate",
+        "strength": 0.36,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_exercise_aerobic",
+    "name": "aerobic exercise",
+    "type": "physiology",
+    "category": "metabolic regulation",
+    "modalities": [
+      "exercise",
+      "aerobic"
+    ],
+    "targets": [
+      {
+        "gene": "AMPK",
+        "direction": "activate",
+        "strength": 0.78,
+        "confidence": "human"
+      },
+      {
+        "gene": "SIRT1",
+        "direction": "activate",
+        "strength": 0.46,
+        "confidence": "human"
+      },
+      {
+        "gene": "PPARGC1A",
+        "direction": "activate",
+        "strength": 0.67,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for non-pharmacologic pathway modulation; not a treatment claim"
+  },
+  {
+    "id": "p_walking",
+    "name": "daily walking",
+    "type": "physiology",
+    "category": "metabolic regulation",
+    "modalities": [
+      "exercise",
+      "low_intensity"
+    ],
+    "targets": [
+      {
+        "gene": "AMPK",
+        "direction": "activate",
+        "strength": 0.38,
+        "confidence": "human"
+      },
+      {
+        "gene": "NOS3",
+        "direction": "activate",
+        "strength": 0.29,
+        "confidence": "human"
+      },
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.19,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for low-intensity movement physiology; not a treatment claim"
+  },
+  {
+    "id": "p_interval_training",
+    "name": "high intensity interval training",
+    "type": "physiology",
+    "category": "metabolic regulation",
+    "modalities": [
+      "exercise",
+      "interval"
+    ],
+    "targets": [
+      {
+        "gene": "AMPK",
+        "direction": "activate",
+        "strength": 0.74,
+        "confidence": "human"
+      },
+      {
+        "gene": "PPARGC1A",
+        "direction": "activate",
+        "strength": 0.63,
+        "confidence": "human"
+      },
+      {
+        "gene": "SLC2A4",
+        "direction": "activate",
+        "strength": 0.41,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for energy stress signaling; not a treatment claim"
+  },
+  {
+    "id": "p_ketogenic_pattern",
+    "name": "ketogenic nutritional pattern",
+    "type": "physiology",
+    "category": "metabolic regulation",
+    "modalities": [
+      "diet",
+      "ketogenic"
+    ],
+    "targets": [
+      {
+        "gene": "PPARA",
+        "direction": "activate",
+        "strength": 0.39,
+        "confidence": "human"
+      },
+      {
+        "gene": "AMPK",
+        "direction": "activate",
+        "strength": 0.24,
+        "confidence": "human"
+      },
+      {
+        "gene": "MTOR",
+        "direction": "modulate",
+        "strength": 0.18,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for ketone-associated metabolic signaling; not a treatment claim"
+  },
+  {
+    "id": "p_low_glycemic_diet",
+    "name": "low glycemic diet",
+    "type": "physiology",
+    "category": "metabolic regulation",
+    "modalities": [
+      "diet",
+      "glucose_control"
+    ],
+    "targets": [
+      {
+        "gene": "INSR",
+        "direction": "activate",
+        "strength": 0.28,
+        "confidence": "human"
+      },
+      {
+        "gene": "AKT1",
+        "direction": "modulate",
+        "strength": 0.18,
+        "confidence": "human"
+      },
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.11,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for lower postprandial glycemic stress; not a treatment claim"
+  },
+  {
+    "id": "p_fasting_overnight",
+    "name": "overnight fasting",
+    "type": "physiology",
+    "category": "metabolic regulation",
+    "modalities": [
+      "nutrition_timing",
+      "fasting"
+    ],
+    "targets": [
+      {
+        "gene": "AMPK",
+        "direction": "activate",
+        "strength": 0.53,
+        "confidence": "human"
+      },
+      {
+        "gene": "MTOR",
+        "direction": "inhibit",
+        "strength": 0.28,
+        "confidence": "human"
+      },
+      {
+        "gene": "SIRT1",
+        "direction": "activate",
+        "strength": 0.33,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for fasting-state signaling; not a treatment claim"
+  },
+  {
+    "id": "p_time_restricted_feeding",
+    "name": "time restricted feeding",
+    "type": "physiology",
+    "category": "metabolic regulation",
+    "modalities": [
+      "nutrition_timing",
+      "fasting"
+    ],
+    "targets": [
+      {
+        "gene": "AMPK",
+        "direction": "activate",
+        "strength": 0.47,
+        "confidence": "human"
+      },
+      {
+        "gene": "SIRT1",
+        "direction": "activate",
+        "strength": 0.29,
+        "confidence": "human"
+      },
+      {
+        "gene": "MTOR",
+        "direction": "modulate",
+        "strength": 0.19,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for feeding-window physiology; not a treatment claim"
+  },
+  {
+    "id": "p_system_glycemic_stability",
+    "name": "glycemic stability",
+    "type": "physiology",
+    "category": "metabolic system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "INSR",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SLC2A4",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "seed"
+      },
+      {
+        "gene": "AKT1",
+        "direction": "modulate",
+        "strength": 0.1,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_glycogen_handling",
+    "name": "glycogen handling",
+    "type": "physiology",
+    "category": "metabolic system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "GYS1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "PYGL",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "PHKA1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_insulin_sensitivity",
+    "name": "insulin sensitivity",
+    "type": "physiology",
+    "category": "metabolic system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "INSR",
+        "direction": "activate",
+        "strength": 0.16,
+        "confidence": "seed"
+      },
+      {
+        "gene": "IRS1",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "seed"
+      },
+      {
+        "gene": "AMPK",
+        "direction": "activate",
+        "strength": 0.09,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_lipid_handling",
+    "name": "lipid handling",
+    "type": "physiology",
+    "category": "metabolic system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "PPARA",
+        "direction": "activate",
+        "strength": 0.15,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CPT1A",
+        "direction": "activate",
+        "strength": 0.11,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SREBF1",
+        "direction": "modulate",
+        "strength": 0.08,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_metabolic_flexibility",
+    "name": "metabolic flexibility",
+    "type": "physiology",
+    "category": "metabolic system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "AMPK",
+        "direction": "activate",
+        "strength": 0.21,
+        "confidence": "seed"
+      },
+      {
+        "gene": "PPARA",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "seed"
+      },
+      {
+        "gene": "INSR",
+        "direction": "modulate",
+        "strength": 0.13,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_metabolic_stress_response",
+    "name": "metabolic stress response",
+    "type": "physiology",
+    "category": "metabolic system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "AMPK",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ATF4",
+        "direction": "activate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "FOXO3",
+        "direction": "activate",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_purine_salvage_tone",
+    "name": "purine salvage tone",
+    "type": "physiology",
+    "category": "metabolic system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "HPRT1",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "PPAT",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "AMPK",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_mitochondrial_biogenesis",
+    "name": "mitochondrial biogenesis",
+    "type": "physiology",
+    "category": "mitochondrial pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "PPARGC1A",
+        "direction": "activate",
+        "strength": 0.76,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "NRF1",
+        "direction": "activate",
+        "strength": 0.39,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "TFAM",
+        "direction": "activate",
+        "strength": 0.35,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_hypoxia_mild",
+    "name": "mild intermittent hypoxia",
+    "type": "physiology",
+    "category": "mitochondrial signaling",
+    "modalities": [
+      "hypoxia",
+      "conditioning"
+    ],
+    "targets": [
+      {
+        "gene": "HIF1A",
+        "direction": "activate",
+        "strength": 0.49,
+        "confidence": "human"
+      },
+      {
+        "gene": "VEGFA",
+        "direction": "activate",
+        "strength": 0.33,
+        "confidence": "human"
+      },
+      {
+        "gene": "EPO",
+        "direction": "activate",
+        "strength": 0.26,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for oxygen-stress signaling; not a treatment claim"
+  },
+  {
+    "id": "p_system_coq10_biosynthesis",
+    "name": "coq10_biosynthesis",
+    "type": "physiology",
+    "category": "mitochondrial system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "COQ2",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "COQ8A",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "COQ9",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_mitochondrial_antioxidant_tone",
+    "name": "mitochondrial antioxidant tone",
+    "type": "physiology",
+    "category": "mitochondrial system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "SOD2",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "GPX1",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SIRT3",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_mitochondrial_fission_fusion",
+    "name": "mitochondrial fission_fusion",
+    "type": "physiology",
+    "category": "mitochondrial system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "DNM1L",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "MFN2",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "OPA1",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_mitochondrial_respiration",
+    "name": "mitochondrial respiration",
+    "type": "physiology",
+    "category": "mitochondrial system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "PPARGC1A",
+        "direction": "activate",
+        "strength": 0.19,
+        "confidence": "seed"
+      },
+      {
+        "gene": "TFAM",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SIRT3",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_mitochondrial_translation",
+    "name": "mitochondrial translation",
+    "type": "physiology",
+    "category": "mitochondrial system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "MRPL44",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "TSFM",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "GFM1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_oxidative_phosphorylation",
+    "name": "oxidative phosphorylation",
+    "type": "physiology",
+    "category": "mitochondrial system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "NDUFS1",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ATP5F1A",
+        "direction": "activate",
+        "strength": 0.11,
+        "confidence": "seed"
+      },
+      {
+        "gene": "PPARGC1A",
+        "direction": "activate",
+        "strength": 0.09,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_muscle_anabolism",
+    "name": "muscle anabolism",
+    "type": "physiology",
+    "category": "muscle and metabolism",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "IGF1",
+        "direction": "activate",
+        "strength": 0.38,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "MTOR",
+        "direction": "activate",
+        "strength": 0.31,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "MYOD1",
+        "direction": "activate",
+        "strength": 0.16,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_muscle_catabolism",
+    "name": "muscle catabolism",
+    "type": "physiology",
+    "category": "muscle and metabolism",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "FOXO3",
+        "direction": "activate",
+        "strength": 0.28,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "FBXO32",
+        "direction": "activate",
+        "strength": 0.23,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "TRIM63",
+        "direction": "activate",
+        "strength": 0.21,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_exercise_resistance",
+    "name": "resistance training",
+    "type": "physiology",
+    "category": "muscle and metabolism",
+    "modalities": [
+      "exercise",
+      "resistance"
+    ],
+    "targets": [
+      {
+        "gene": "IGF1",
+        "direction": "activate",
+        "strength": 0.62,
+        "confidence": "human"
+      },
+      {
+        "gene": "AKT1",
+        "direction": "activate",
+        "strength": 0.49,
+        "confidence": "human"
+      },
+      {
+        "gene": "MTOR",
+        "direction": "activate",
+        "strength": 0.31,
+        "confidence": "human",
+        "spillover": true
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for adaptive muscle signaling; not a treatment claim"
+  },
+  {
+    "id": "p_protein_repletion",
+    "name": "protein repletion",
+    "type": "physiology",
+    "category": "muscle and recovery",
+    "modalities": [
+      "diet",
+      "protein"
+    ],
+    "targets": [
+      {
+        "gene": "IGF1",
+        "direction": "activate",
+        "strength": 0.31,
+        "confidence": "human"
+      },
+      {
+        "gene": "MTOR",
+        "direction": "activate",
+        "strength": 0.22,
+        "confidence": "human"
+      },
+      {
+        "gene": "FOXO3",
+        "direction": "modulate",
+        "strength": 0.12,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for substrate sufficiency signaling; not a treatment claim"
+  },
+  {
+    "id": "p_system_muscle_endurance",
+    "name": "muscle endurance",
+    "type": "physiology",
+    "category": "muscle system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "PPARGC1A",
+        "direction": "activate",
+        "strength": 0.16,
+        "confidence": "seed"
+      },
+      {
+        "gene": "AMPK",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "seed"
+      },
+      {
+        "gene": "VEGFA",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_muscle_hypertrophy_tone",
+    "name": "muscle hypertrophy tone",
+    "type": "physiology",
+    "category": "muscle system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "MTOR",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "seed"
+      },
+      {
+        "gene": "IGF1",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "seed"
+      },
+      {
+        "gene": "AKT1",
+        "direction": "activate",
+        "strength": 0.1,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_muscle_recovery",
+    "name": "muscle recovery",
+    "type": "physiology",
+    "category": "muscle system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "IGF1",
+        "direction": "activate",
+        "strength": 0.13,
+        "confidence": "seed"
+      },
+      {
+        "gene": "MYOD1",
+        "direction": "activate",
+        "strength": 0.1,
+        "confidence": "seed"
+      },
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.07,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_stretching",
+    "name": "stretching and mobility",
+    "type": "physiology",
+    "category": "musculoskeletal support",
+    "modalities": [
+      "mobility",
+      "recovery"
+    ],
+    "targets": [
+      {
+        "gene": "TGFB1",
+        "direction": "modulate",
+        "strength": 0.18,
+        "confidence": "human"
+      },
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.12,
+        "confidence": "human"
+      },
+      {
+        "gene": "MMP9",
+        "direction": "modulate",
+        "strength": 0.11,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for mechanical loading and tissue response; not a treatment claim"
+  },
+  {
+    "id": "p_system_axon_maintenance",
+    "name": "axon maintenance",
+    "type": "physiology",
+    "category": "neural system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "NEFL",
+        "direction": "activate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "KIF5A",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "DYNC1H1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_dopamine_balance",
+    "name": "dopamine balance",
+    "type": "physiology",
+    "category": "neural system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "DRD2",
+        "direction": "modulate",
+        "strength": 0.07,
+        "confidence": "seed"
+      },
+      {
+        "gene": "TH",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SLC6A3",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_excitability_restraint",
+    "name": "excitability restraint",
+    "type": "physiology",
+    "category": "neural system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "GABRA1",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "seed"
+      },
+      {
+        "gene": "KCNQ2",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SCN1A",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_motor_neuron_support",
+    "name": "motor_neuron_support",
+    "type": "physiology",
+    "category": "neural system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "SMN1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CHAT",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "NEFH",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_neuromuscular_transmission",
+    "name": "neuromuscular transmission",
+    "type": "physiology",
+    "category": "neural system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "CHRNE",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ACHE",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "MUSK",
+        "direction": "activate",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_purkinje_support",
+    "name": "purkinje_support",
+    "type": "physiology",
+    "category": "neural system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "ITPR1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CACNA1A",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "GRID2",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_serotonin_balance",
+    "name": "serotonin balance",
+    "type": "physiology",
+    "category": "neural system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "HTR1A",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SLC6A4",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "TPH2",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_synapse_support",
+    "name": "synapse support",
+    "type": "physiology",
+    "category": "neural system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "BDNF",
+        "direction": "activate",
+        "strength": 0.1,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CREB1",
+        "direction": "activate",
+        "strength": 0.09,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CAMK2A",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_music_therapy",
+    "name": "music exposure and entrainment",
+    "type": "physiology",
+    "category": "neurobehavioral support",
+    "modalities": [
+      "sensory",
+      "behavioral"
+    ],
+    "targets": [
+      {
+        "gene": "BDNF",
+        "direction": "activate",
+        "strength": 0.1,
+        "confidence": "human"
+      },
+      {
+        "gene": "CREB1",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "human"
+      },
+      {
+        "gene": "NR3C1",
+        "direction": "modulate",
+        "strength": 0.07,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for sensory modulation; not a treatment claim"
+  },
+  {
+    "id": "p_social_engagement",
+    "name": "social engagement",
+    "type": "physiology",
+    "category": "neurobehavioral support",
+    "modalities": [
+      "behavioral",
+      "psychosocial"
+    ],
+    "targets": [
+      {
+        "gene": "OXTR",
+        "direction": "activate",
+        "strength": 0.15,
+        "confidence": "human"
+      },
+      {
+        "gene": "BDNF",
+        "direction": "activate",
+        "strength": 0.09,
+        "confidence": "human"
+      },
+      {
+        "gene": "NR3C1",
+        "direction": "modulate",
+        "strength": 0.11,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for social-environment physiology; not a treatment claim"
+  },
+  {
+    "id": "p_axon_guidance",
+    "name": "axon guidance",
+    "type": "physiology",
+    "category": "neurodevelopment",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "ROBO1",
+        "direction": "modulate",
+        "strength": 0.11,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "DCC",
+        "direction": "modulate",
+        "strength": 0.1,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SEMA3A",
+        "direction": "modulate",
+        "strength": 0.09,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_autonomic_balance",
+    "name": "autonomic balance",
+    "type": "physiology",
+    "category": "neuroendocrine system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "NR3C1",
+        "direction": "modulate",
+        "strength": 0.12,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CHRNA7",
+        "direction": "activate",
+        "strength": 0.1,
+        "confidence": "seed"
+      },
+      {
+        "gene": "TNF",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_parasympathetic_tone",
+    "name": "parasympathetic tone",
+    "type": "physiology",
+    "category": "neuroendocrine system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "CHRNA7",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "seed"
+      },
+      {
+        "gene": "OXTR",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "seed"
+      },
+      {
+        "gene": "TNF",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_sympathetic_tone",
+    "name": "sympathetic tone",
+    "type": "physiology",
+    "category": "neuroendocrine system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "ADRB2",
+        "direction": "activate",
+        "strength": 0.11,
+        "confidence": "seed"
+      },
+      {
+        "gene": "TH",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "seed"
+      },
+      {
+        "gene": "NR3C1",
+        "direction": "modulate",
+        "strength": 0.07,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_bdnf_trkb",
+    "name": "BDNF-TRKB neurotrophic signaling",
+    "type": "physiology",
+    "category": "neuroplasticity",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "BDNF",
+        "direction": "activate",
+        "strength": 0.72,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "NTRK2",
+        "direction": "activate",
+        "strength": 0.51,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CREB1",
+        "direction": "activate",
+        "strength": 0.34,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_cognitive_training",
+    "name": "cognitive training",
+    "type": "physiology",
+    "category": "neuroplasticity",
+    "modalities": [
+      "cognitive",
+      "behavioral"
+    ],
+    "targets": [
+      {
+        "gene": "BDNF",
+        "direction": "activate",
+        "strength": 0.13,
+        "confidence": "human"
+      },
+      {
+        "gene": "CREB1",
+        "direction": "activate",
+        "strength": 0.11,
+        "confidence": "human"
+      },
+      {
+        "gene": "ARC",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for neuroplastic practice effects; not a treatment claim"
+  },
+  {
+    "id": "p_speech_therapy",
+    "name": "speech therapy engagement",
+    "type": "physiology",
+    "category": "neuroplasticity",
+    "modalities": [
+      "rehabilitation",
+      "speech"
+    ],
+    "targets": [
+      {
+        "gene": "BDNF",
+        "direction": "activate",
+        "strength": 0.17,
+        "confidence": "human"
+      },
+      {
+        "gene": "FOXP2",
+        "direction": "modulate",
+        "strength": 0.13,
+        "confidence": "human"
+      },
+      {
+        "gene": "CREB1",
+        "direction": "activate",
+        "strength": 0.11,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for neural practice and language circuitry; not a treatment claim"
+  },
+  {
+    "id": "p_synaptic_plasticity",
+    "name": "synaptic plasticity",
+    "type": "physiology",
+    "category": "neuroplasticity",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "ARC",
+        "direction": "activate",
+        "strength": 0.15,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CAMK2A",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CREB1",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_balance_training",
+    "name": "balance training",
+    "type": "physiology",
+    "category": "neurorehabilitation",
+    "modalities": [
+      "rehabilitation",
+      "balance"
+    ],
+    "targets": [
+      {
+        "gene": "BDNF",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "human"
+      },
+      {
+        "gene": "CREB1",
+        "direction": "activate",
+        "strength": 0.1,
+        "confidence": "human"
+      },
+      {
+        "gene": "GABRA1",
+        "direction": "modulate",
+        "strength": 0.07,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for sensorimotor adaptation; not a treatment claim"
+  },
+  {
+    "id": "p_gaba_tone",
+    "name": "GABA tone",
+    "type": "physiology",
+    "category": "neurotransmission",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "GABRA1",
+        "direction": "activate",
+        "strength": 0.28,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "GAD1",
+        "direction": "activate",
+        "strength": 0.21,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SLC6A1",
+        "direction": "modulate",
+        "strength": 0.15,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_dopamine_tone",
+    "name": "dopamine tone",
+    "type": "physiology",
+    "category": "neurotransmission",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "DRD2",
+        "direction": "activate",
+        "strength": 0.34,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SLC6A3",
+        "direction": "modulate",
+        "strength": 0.22,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "TH",
+        "direction": "activate",
+        "strength": 0.19,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_glutamate_tone",
+    "name": "glutamate tone",
+    "type": "physiology",
+    "category": "neurotransmission",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "GRIN1",
+        "direction": "activate",
+        "strength": 0.3,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SLC1A2",
+        "direction": "modulate",
+        "strength": 0.18,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "CAMK2A",
+        "direction": "activate",
+        "strength": 0.16,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_serotonin_tone",
+    "name": "serotonin tone",
+    "type": "physiology",
+    "category": "neurotransmission",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "SLC6A4",
+        "direction": "modulate",
+        "strength": 0.33,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "HTR1A",
+        "direction": "activate",
+        "strength": 0.24,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "TPH2",
+        "direction": "activate",
+        "strength": 0.17,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_methyl_donor_balance",
+    "name": "methyl donor balance",
+    "type": "physiology",
+    "category": "one-carbon metabolism",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "MTHFR",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "MAT1A",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "BHMT",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_transsulfuration_tone",
+    "name": "transsulfuration tone",
+    "type": "physiology",
+    "category": "one-carbon metabolism",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "CBS",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CTH",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "GCLC",
+        "direction": "activate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_urea_buffering",
+    "name": "urea buffering",
+    "type": "physiology",
+    "category": "one-carbon metabolism",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "ASS1",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ASL",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ARG1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_hif1",
+    "name": "HIF-1 hypoxia signaling",
+    "type": "physiology",
+    "category": "oxygen pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "HIF1A",
+        "direction": "activate",
+        "strength": 0.9,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "VEGFA",
+        "direction": "activate",
+        "strength": 0.34,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "EPO",
+        "direction": "activate",
+        "strength": 0.29,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_hypoxia_adaptation",
+    "name": "hypoxia adaptation",
+    "type": "physiology",
+    "category": "oxygen system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "HIF1A",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "VEGFA",
+        "direction": "activate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "EPO",
+        "direction": "activate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_upr_er",
+    "name": "ER stress / unfolded protein response",
+    "type": "physiology",
+    "category": "proteostasis",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "ATF4",
+        "direction": "activate",
+        "strength": 0.55,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "XBP1",
+        "direction": "activate",
+        "strength": 0.51,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "HSPA5",
+        "direction": "activate",
+        "strength": 0.43,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_proteasome",
+    "name": "proteasome activity",
+    "type": "physiology",
+    "category": "proteostasis",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "PSMB5",
+        "direction": "activate",
+        "strength": 0.44,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "NFE2L2",
+        "direction": "activate",
+        "strength": 0.21,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "UBC",
+        "direction": "modulate",
+        "strength": 0.18,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_autophagic_tone",
+    "name": "autophagic tone",
+    "type": "physiology",
+    "category": "proteostasis system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "ULK1",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "seed"
+      },
+      {
+        "gene": "BECN1",
+        "direction": "activate",
+        "strength": 0.07,
+        "confidence": "seed"
+      },
+      {
+        "gene": "MTOR",
+        "direction": "inhibit",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_lysosomal_acidity",
+    "name": "lysosomal acidity",
+    "type": "physiology",
+    "category": "proteostasis system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "ATP6V1A",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CTSD",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "LAMP2",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_lysosomal_flux",
+    "name": "lysosomal flux",
+    "type": "physiology",
+    "category": "proteostasis system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "TFEB",
+        "direction": "activate",
+        "strength": 0.09,
+        "confidence": "seed"
+      },
+      {
+        "gene": "LAMP1",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CTSB",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_mitophagic_tone",
+    "name": "mitophagic tone",
+    "type": "physiology",
+    "category": "proteostasis system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "PINK1",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "seed"
+      },
+      {
+        "gene": "PRKN",
+        "direction": "activate",
+        "strength": 0.07,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SQSTM1",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_proteostasis_support",
+    "name": "proteostasis support",
+    "type": "physiology",
+    "category": "proteostasis system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "HSPA5",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "XBP1",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "PSMB5",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_hydrotherapy",
+    "name": "hydrotherapy",
+    "type": "physiology",
+    "category": "recovery",
+    "modalities": [
+      "rehabilitation",
+      "water"
+    ],
+    "targets": [
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.16,
+        "confidence": "human"
+      },
+      {
+        "gene": "TNF",
+        "direction": "modulate",
+        "strength": 0.12,
+        "confidence": "human"
+      },
+      {
+        "gene": "NOS3",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for water-based recovery physiology; not a treatment claim"
+  },
+  {
+    "id": "p_massage",
+    "name": "massage therapy",
+    "type": "physiology",
+    "category": "recovery",
+    "modalities": [
+      "manual",
+      "recovery"
+    ],
+    "targets": [
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.07,
+        "confidence": "human"
+      },
+      {
+        "gene": "TNF",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "human"
+      },
+      {
+        "gene": "BDNF",
+        "direction": "activate",
+        "strength": 0.09,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for recovery-associated signaling; not a treatment claim"
+  },
+  {
+    "id": "p_sleep_extension",
+    "name": "sleep extension",
+    "type": "physiology",
+    "category": "recovery",
+    "modalities": [
+      "sleep",
+      "circadian"
+    ],
+    "targets": [
+      {
+        "gene": "CLOCK",
+        "direction": "modulate",
+        "strength": 0.23,
+        "confidence": "human"
+      },
+      {
+        "gene": "BMAL1",
+        "direction": "modulate",
+        "strength": 0.21,
+        "confidence": "human"
+      },
+      {
+        "gene": "NR3C1",
+        "direction": "modulate",
+        "strength": 0.18,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for circadian restoration; not a treatment claim"
+  },
+  {
+    "id": "p_oxidative_stress",
+    "name": "oxidative stress response",
+    "type": "physiology",
+    "category": "redox pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "NFE2L2",
+        "direction": "activate",
+        "strength": 0.73,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "HMOX1",
+        "direction": "activate",
+        "strength": 0.49,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SOD2",
+        "direction": "activate",
+        "strength": 0.37,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_glutathione_tone",
+    "name": "glutathione tone",
+    "type": "physiology",
+    "category": "redox system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "GCLC",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "GCLM",
+        "direction": "activate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "GPX1",
+        "direction": "activate",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_redox_buffering",
+    "name": "redox buffering",
+    "type": "physiology",
+    "category": "redox system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "NFE2L2",
+        "direction": "activate",
+        "strength": 0.09,
+        "confidence": "seed"
+      },
+      {
+        "gene": "HMOX1",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SOD2",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_occupational_therapy",
+    "name": "occupational therapy load shaping",
+    "type": "physiology",
+    "category": "rehabilitation",
+    "modalities": [
+      "rehabilitation",
+      "functional"
+    ],
+    "targets": [
+      {
+        "gene": "BDNF",
+        "direction": "activate",
+        "strength": 0.19,
+        "confidence": "human"
+      },
+      {
+        "gene": "NR3C1",
+        "direction": "modulate",
+        "strength": 0.14,
+        "confidence": "human"
+      },
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.09,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for functional load adaptation; not a treatment claim"
+  },
+  {
+    "id": "p_physiotherapy",
+    "name": "structured physiotherapy",
+    "type": "physiology",
+    "category": "rehabilitation",
+    "modalities": [
+      "rehabilitation",
+      "motor"
+    ],
+    "targets": [
+      {
+        "gene": "BDNF",
+        "direction": "activate",
+        "strength": 0.26,
+        "confidence": "human"
+      },
+      {
+        "gene": "CREB1",
+        "direction": "activate",
+        "strength": 0.22,
+        "confidence": "human"
+      },
+      {
+        "gene": "TNF",
+        "direction": "modulate",
+        "strength": 0.12,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for guided rehabilitation physiology; not a treatment claim"
+  },
+  {
+    "id": "p_raas_axis",
+    "name": "RAAS axis",
+    "type": "physiology",
+    "category": "renal physiology",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "REN",
+        "direction": "activate",
+        "strength": 0.24,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "AGT",
+        "direction": "activate",
+        "strength": 0.17,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "ACE",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_renal_transport",
+    "name": "renal transport regulation",
+    "type": "physiology",
+    "category": "renal physiology",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "AQP2",
+        "direction": "activate",
+        "strength": 0.16,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SLC12A1",
+        "direction": "activate",
+        "strength": 0.11,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "REN",
+        "direction": "modulate",
+        "strength": 0.1,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_fluid_balance",
+    "name": "fluid balance",
+    "type": "physiology",
+    "category": "renal system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "AVP",
+        "direction": "modulate",
+        "strength": 0.07,
+        "confidence": "seed"
+      },
+      {
+        "gene": "AQP2",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "REN",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_renal_handling_tone",
+    "name": "renal handling tone",
+    "type": "physiology",
+    "category": "renal system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "AQP2",
+        "direction": "modulate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "REN",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SLC12A1",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_tgfb",
+    "name": "TGF-beta signaling",
+    "type": "physiology",
+    "category": "repair pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "TGFB1",
+        "direction": "activate",
+        "strength": 0.9,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SMAD3",
+        "direction": "activate",
+        "strength": 0.62,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "SMAD2",
+        "direction": "activate",
+        "strength": 0.58,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_fibrosis_program",
+    "name": "fibrosis program",
+    "type": "physiology",
+    "category": "repair pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "COL1A1",
+        "direction": "activate",
+        "strength": 0.31,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "TGFB1",
+        "direction": "activate",
+        "strength": 0.27,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "ACTA2",
+        "direction": "activate",
+        "strength": 0.23,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_fibrotic_pressure",
+    "name": "fibrotic pressure",
+    "type": "physiology",
+    "category": "repair system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "TGFB1",
+        "direction": "activate",
+        "strength": 0.07,
+        "confidence": "seed"
+      },
+      {
+        "gene": "COL1A1",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ACTA2",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_genome_stability_tone",
+    "name": "genome stability tone",
+    "type": "physiology",
+    "category": "repair system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "TP53",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ATM",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CHEK2",
+        "direction": "activate",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_repair_resolution",
+    "name": "repair resolution",
+    "type": "physiology",
+    "category": "repair system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "TGFB1",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "MMP2",
+        "direction": "activate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "IL10",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_wound_closure_tone",
+    "name": "wound_closure_tone",
+    "type": "physiology",
+    "category": "repair system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "TGFB1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "VEGFA",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "COL1A1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_auditory_support",
+    "name": "auditory support",
+    "type": "physiology",
+    "category": "sensory system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "OTOF",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "GJB2",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "KCNQ4",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_phototransduction_tone",
+    "name": "phototransduction_tone",
+    "type": "physiology",
+    "category": "sensory system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "RHO",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "GNAT1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "PDE6A",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_retinal_support",
+    "name": "retinal support",
+    "type": "physiology",
+    "category": "sensory system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "RHO",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "PDE6B",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ABCA4",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_bone_remodeling",
+    "name": "bone remodeling",
+    "type": "physiology",
+    "category": "skeletal biology",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "RANKL",
+        "direction": "activate",
+        "strength": 0.19,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "TNFRSF11B",
+        "direction": "modulate",
+        "strength": 0.12,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "RUNX2",
+        "direction": "activate",
+        "strength": 0.17,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_cartilage_homeostasis",
+    "name": "cartilage homeostasis",
+    "type": "physiology",
+    "category": "skeletal biology",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "SOX9",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "COL2A1",
+        "direction": "activate",
+        "strength": 0.14,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "MMP13",
+        "direction": "inhibit",
+        "strength": 0.1,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_bone_turnover_balance",
+    "name": "bone turnover balance",
+    "type": "physiology",
+    "category": "skeletal system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "RUNX2",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "RANKL",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "TNFRSF11B",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_cartilage_support",
+    "name": "cartilage support",
+    "type": "physiology",
+    "category": "skeletal system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "SOX9",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "COL2A1",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "MMP13",
+        "direction": "inhibit",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_cold_exposure",
+    "name": "cold exposure",
+    "type": "physiology",
+    "category": "stress adaptation",
+    "modalities": [
+      "cold",
+      "recovery"
+    ],
+    "targets": [
+      {
+        "gene": "UCP1",
+        "direction": "activate",
+        "strength": 0.36,
+        "confidence": "human"
+      },
+      {
+        "gene": "PPARGC1A",
+        "direction": "activate",
+        "strength": 0.27,
+        "confidence": "human"
+      },
+      {
+        "gene": "ADRB3",
+        "direction": "activate",
+        "strength": 0.24,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for thermogenic stress adaptation; not a treatment claim"
+  },
+  {
+    "id": "p_green_space",
+    "name": "green space exposure",
+    "type": "physiology",
+    "category": "stress adaptation",
+    "modalities": [
+      "environment",
+      "behavioral"
+    ],
+    "targets": [
+      {
+        "gene": "NR3C1",
+        "direction": "modulate",
+        "strength": 0.09,
+        "confidence": "human"
+      },
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "human"
+      },
+      {
+        "gene": "BDNF",
+        "direction": "activate",
+        "strength": 0.07,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for environmental stress reduction; not a treatment claim"
+  },
+  {
+    "id": "p_heat_sauna",
+    "name": "sauna / heat exposure",
+    "type": "physiology",
+    "category": "stress adaptation",
+    "modalities": [
+      "heat",
+      "recovery"
+    ],
+    "targets": [
+      {
+        "gene": "HSF1",
+        "direction": "activate",
+        "strength": 0.44,
+        "confidence": "human"
+      },
+      {
+        "gene": "HSPA1A",
+        "direction": "activate",
+        "strength": 0.41,
+        "confidence": "human"
+      },
+      {
+        "gene": "NOS3",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for heat-shock adaptation; not a treatment claim"
+  },
+  {
+    "id": "p_hpa_axis",
+    "name": "HPA axis",
+    "type": "physiology",
+    "category": "stress endocrine",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "CRH",
+        "direction": "activate",
+        "strength": 0.31,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "POMC",
+        "direction": "activate",
+        "strength": 0.18,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "NR3C1",
+        "direction": "modulate",
+        "strength": 0.2,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_system_stress_resilience",
+    "name": "stress resilience",
+    "type": "physiology",
+    "category": "stress system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "NR3C1",
+        "direction": "modulate",
+        "strength": 0.11,
+        "confidence": "seed"
+      },
+      {
+        "gene": "FOXO3",
+        "direction": "activate",
+        "strength": 0.08,
+        "confidence": "seed"
+      },
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_copper_handling",
+    "name": "copper handling",
+    "type": "physiology",
+    "category": "trace mineral system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "ATP7A",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ATP7B",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SLC31A1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_iron_handling",
+    "name": "iron handling",
+    "type": "physiology",
+    "category": "trace mineral system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "TFRC",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "FTH1",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SLC40A1",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_magnesium_handling",
+    "name": "magnesium handling",
+    "type": "physiology",
+    "category": "trace mineral system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "TRPM6",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "CNNM2",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ATP1A1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_selenoprotein_tone",
+    "name": "selenoprotein tone",
+    "type": "physiology",
+    "category": "trace mineral system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "GPX4",
+        "direction": "activate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "TXNRD1",
+        "direction": "activate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SELENOP",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_endosomal_sorting",
+    "name": "endosomal sorting",
+    "type": "physiology",
+    "category": "trafficking system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "CHMP2B",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "VPS4A",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "TSG101",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_retromer_function",
+    "name": "retromer function",
+    "type": "physiology",
+    "category": "trafficking system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "VPS35",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "VPS26A",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SNX27",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_vesicle_trafficking",
+    "name": "vesicle trafficking",
+    "type": "physiology",
+    "category": "trafficking system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "RAB7A",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "STXBP1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "SNAP25",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_ribosomal_biogenesis",
+    "name": "ribosomal biogenesis",
+    "type": "physiology",
+    "category": "translation system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "RPL3",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "RPS6",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "MTOR",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_translation_elongation",
+    "name": "translation elongation",
+    "type": "physiology",
+    "category": "translation system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "EEF2",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "EIF2S1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "RPS6KB1",
+        "direction": "modulate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_posture_variation",
+    "name": "posture variation",
+    "type": "physiology",
+    "category": "vascular and musculoskeletal",
+    "modalities": [
+      "ergonomics",
+      "movement"
+    ],
+    "targets": [
+      {
+        "gene": "NOS3",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "human"
+      },
+      {
+        "gene": "MMP9",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "human"
+      },
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for mechanical load variation; not a treatment claim"
+  },
+  {
+    "id": "p_vegf",
+    "name": "VEGF angiogenic signaling",
+    "type": "physiology",
+    "category": "vascular pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "VEGFA",
+        "direction": "activate",
+        "strength": 0.9,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "KDR",
+        "direction": "activate",
+        "strength": 0.66,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "FLT1",
+        "direction": "activate",
+        "strength": 0.51,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_angiogenesis_program",
+    "name": "angiogenesis program",
+    "type": "physiology",
+    "category": "vascular pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "VEGFA",
+        "direction": "activate",
+        "strength": 0.61,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "ANGPT1",
+        "direction": "activate",
+        "strength": 0.28,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "KDR",
+        "direction": "activate",
+        "strength": 0.23,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_endothelial_function",
+    "name": "endothelial function",
+    "type": "physiology",
+    "category": "vascular pathway",
+    "modalities": [
+      "pathway_signature"
+    ],
+    "targets": [
+      {
+        "gene": "NOS3",
+        "direction": "activate",
+        "strength": 0.44,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "KLF2",
+        "direction": "activate",
+        "strength": 0.21,
+        "confidence": "canonical"
+      },
+      {
+        "gene": "VCAM1",
+        "direction": "inhibit",
+        "strength": 0.13,
+        "confidence": "canonical"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded pathway signature entry for registry breadth and mechanism mapping; not a treatment claim"
+  },
+  {
+    "id": "p_compression_garments",
+    "name": "compression therapy",
+    "type": "physiology",
+    "category": "vascular support",
+    "modalities": [
+      "mechanical",
+      "recovery"
+    ],
+    "targets": [
+      {
+        "gene": "NOS3",
+        "direction": "modulate",
+        "strength": 0.08,
+        "confidence": "human"
+      },
+      {
+        "gene": "VEGFA",
+        "direction": "modulate",
+        "strength": 0.07,
+        "confidence": "human"
+      },
+      {
+        "gene": "IL6",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "human"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology entry for venous return support; not a treatment claim"
+  },
+  {
+    "id": "p_system_angiogenic_tone",
+    "name": "angiogenic tone",
+    "type": "physiology",
+    "category": "vascular system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "VEGFA",
+        "direction": "activate",
+        "strength": 0.09,
+        "confidence": "seed"
+      },
+      {
+        "gene": "KDR",
+        "direction": "activate",
+        "strength": 0.07,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ANGPT1",
+        "direction": "activate",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_nitric_oxide_tone",
+    "name": "nitric oxide tone",
+    "type": "physiology",
+    "category": "vascular system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "NOS3",
+        "direction": "activate",
+        "strength": 0.06,
+        "confidence": "seed"
+      },
+      {
+        "gene": "ARG1",
+        "direction": "inhibit",
+        "strength": 0.03,
+        "confidence": "seed"
+      },
+      {
+        "gene": "GCH1",
+        "direction": "activate",
+        "strength": 0.03,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_vascular_repair",
+    "name": "vascular repair",
+    "type": "physiology",
+    "category": "vascular system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "VEGFA",
+        "direction": "modulate",
+        "strength": 0.05,
+        "confidence": "seed"
+      },
+      {
+        "gene": "KDR",
+        "direction": "modulate",
+        "strength": 0.04,
+        "confidence": "seed"
+      },
+      {
+        "gene": "NOS3",
+        "direction": "activate",
+        "strength": 0.04,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  },
+  {
+    "id": "p_system_vascular_tone",
+    "name": "vascular tone",
+    "type": "physiology",
+    "category": "vascular system",
+    "modalities": [
+      "system_state"
+    ],
+    "targets": [
+      {
+        "gene": "NOS3",
+        "direction": "activate",
+        "strength": 0.12,
+        "confidence": "seed"
+      },
+      {
+        "gene": "KLF2",
+        "direction": "activate",
+        "strength": 0.07,
+        "confidence": "seed"
+      },
+      {
+        "gene": "VCAM1",
+        "direction": "inhibit",
+        "strength": 0.05,
+        "confidence": "seed"
+      }
+    ],
+    "status": "seeded",
+    "source": "institutional_seed",
+    "notes": "seeded physiology system-state entry for registry breadth and mechanism browsing; not a treatment claim"
+  }
+]

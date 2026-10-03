@@ -1,0 +1,5 @@
+1. Epigenetic Modifiers in Prostate Cancer Cells (~€15,000, 6 weeks) — Cytotoxicity assays on prostate cancer cells treated with epigenetic modifiers | kill if: cells show no significant change in cytotoxicity
+2. Epigenetic Marks and Cancer Aggressiveness (~€20,000, 8 weeks) — DNA methylation analysis of tumor suppressor gene promoters in aggressive vs. non-aggressive prostate cancer samples | kill if: methylation patterns do not correlate with aggressiveness
+3. Epigenetic Inhibition and Prostate Cancer Growth (~€22,000, 7 weeks) — In vivo growth of prostate cancer xenografts treated with epigenetic inhibitors | kill if: tumor growth is not significantly reduced
+4. Epigenetic Regulation and Gene Expression (~€18,000, 5 weeks) — RNA-seq analysis of tumor suppressor genes in prostate cancer cells with epigenetic modifications | kill if: gene expression does not change with epigenetic modifications
+5. Epigenetic Enzymes and Prostate Cancer Cell Lines (~€16,000, 6 weeks) — Cytotoxicity assays on prostate cancer cell lines treated with inhibitors of epigenetic enzymes | kill if: cells show no significant change in cytotoxicity

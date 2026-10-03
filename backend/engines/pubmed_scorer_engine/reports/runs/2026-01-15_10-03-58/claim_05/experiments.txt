@@ -1,0 +1,5 @@
+1. Experiment 1: Exosome Isolation from Tumor-Associated Macrophages (~€15,000, 6 weeks) — qRT-PCR for specific exosomal miRNA markers | kill if: insufficient tumor-associated macrophage isolation
+2. Experiment 2: Exosome Uptake by Colorectal Cancer Cells (~€20,000, 7 weeks) — Flow cytometry for exosomal markers on cancer cells | kill if: no significant exosome uptake observed
+3. Experiment 3: Exosome-Mediated Signaling in Colorectal Cancer Cells (~€18,000, 6 weeks) — Western blot for downstream signaling proteins | kill if: no significant changes in downstream signaling observed
+4. Experiment 4: Exosome-Associated miRNA and Colorectal Cancer Metastasis (~€12,000, 5 weeks) — Bioinformatic analysis of miRNA expression profiles | kill if: no correlation between exosomal miRNAs and metastasis
+5. Experiment 5: Exosome-Based Therapy in a Colorectal Cancer Xenograft Model (~€25,000, 8 weeks) — Tumor growth inhibition by exosome-based therapy | kill if: no significant tumor growth inhibition observed

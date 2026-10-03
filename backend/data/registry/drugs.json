@@ -1,0 +1,749 @@
+[
+  {
+    "id": "d_valproate",
+    "name": "valproate",
+    "class": "antiepileptic",
+    "targets": [
+      {
+        "gene": "hdac2",
+        "direction": "inhibit",
+        "strength": 0.85,
+        "confidence": "starter"
+      },
+      {
+        "gene": "gsk3b",
+        "direction": "inhibit",
+        "strength": 0.72,
+        "confidence": "starter"
+      },
+      {
+        "gene": "creb1",
+        "direction": "activate",
+        "strength": 0.22,
+        "confidence": "starter"
+      },
+      {
+        "gene": "abcb1",
+        "direction": "modulate",
+        "strength": 0.2,
+        "confidence": "starter",
+        "spillover": true
+      }
+    ],
+    "indications": [
+      "seizure disorders"
+    ],
+    "rare_relevant": true,
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "starter entry migrated from inline engine constants"
+  },
+  {
+    "id": "d_lithium",
+    "name": "lithium",
+    "class": "mood_stabilizer",
+    "targets": [
+      {
+        "gene": "gsk3b",
+        "direction": "inhibit",
+        "strength": 0.82,
+        "confidence": "starter"
+      },
+      {
+        "gene": "creb1",
+        "direction": "activate",
+        "strength": 0.3,
+        "confidence": "starter"
+      },
+      {
+        "gene": "inpp1",
+        "direction": "modulate",
+        "strength": 0.2,
+        "confidence": "starter",
+        "spillover": true
+      }
+    ],
+    "indications": [
+      "mood disorders"
+    ],
+    "rare_relevant": true,
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "starter entry migrated from inline engine constants"
+  },
+  {
+    "id": "d_evolocumab",
+    "name": "evolocumab",
+    "class": "pcsk9_inhibitor",
+    "targets": [
+      {
+        "gene": "pcsk9",
+        "direction": "inhibit",
+        "strength": 0.95,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "familial hypercholesterolemia",
+      "hyperlipidemia"
+    ],
+    "rare_relevant": true,
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "starter entry migrated from inline engine constants"
+  },
+  {
+    "id": "d_atorvastatin",
+    "name": "atorvastatin",
+    "class": "statin",
+    "targets": [
+      {
+        "gene": "hmgcr",
+        "direction": "inhibit",
+        "strength": 0.95,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "hyperlipidemia"
+    ],
+    "rare_relevant": true,
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "starter entry migrated from inline engine constants"
+  },
+  {
+    "id": "d_sirolimus",
+    "name": "sirolimus (rapamycin)",
+    "class": "mtor_inhibitor",
+    "targets": [
+      {
+        "gene": "mtor",
+        "direction": "inhibit",
+        "strength": 0.95,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "mTOR-pathway states"
+    ],
+    "rare_relevant": true,
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "starter entry migrated from inline engine constants"
+  },
+  {
+    "id": "d_riluzole",
+    "name": "riluzole",
+    "class": "glutamatergic_modulator",
+    "targets": [
+      {
+        "gene": "slc1a2",
+        "direction": "activate",
+        "strength": 0.5,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "motor neuron disease contexts"
+    ],
+    "rare_relevant": true,
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "starter entry migrated from inline engine constants"
+  },
+  {
+    "id": "metformin",
+    "name": "metformin",
+    "class": "ampk_activator",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "AMPK",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "ampk activator"
+    ],
+    "rare_relevant": false,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "metformin"
+    ],
+    "brand_name": "",
+    "generic_name": "metformin",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "fluoxetine",
+    "name": "fluoxetine",
+    "class": "ssri",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "SERT",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "ssri"
+    ],
+    "rare_relevant": false,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "fluoxetine"
+    ],
+    "brand_name": "",
+    "generic_name": "fluoxetine",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "nusinersen",
+    "name": "nusinersen",
+    "class": "antisense_oligonucleotide",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "SMN",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "antisense oligonucleotide"
+    ],
+    "rare_relevant": true,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "nusinersen"
+    ],
+    "brand_name": "",
+    "generic_name": "nusinersen",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "miglustat",
+    "name": "miglustat",
+    "class": "substrate_reduction_therapy",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "GLYCOSPHINGOLIPIDSYNTHESIS",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "substrate reduction therapy"
+    ],
+    "rare_relevant": true,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "miglustat"
+    ],
+    "brand_name": "",
+    "generic_name": "miglustat",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "semaglutide",
+    "name": "semaglutide",
+    "class": "glp-1_receptor_agonist",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "GLP1R",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "glp-1 receptor agonist"
+    ],
+    "rare_relevant": false,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "semaglutide"
+    ],
+    "brand_name": "",
+    "generic_name": "semaglutide",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "imatinib",
+    "name": "imatinib",
+    "class": "tyrosine_kinase_inhibitor",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "BCRABL",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      },
+      {
+        "gene": "KIT",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      },
+      {
+        "gene": "PDGFRA",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "tyrosine kinase inhibitor"
+    ],
+    "rare_relevant": true,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "imatinib"
+    ],
+    "brand_name": "",
+    "generic_name": "imatinib",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "osimertinib",
+    "name": "osimertinib",
+    "class": "egfr_inhibitor",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "EGFR",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "egfr inhibitor"
+    ],
+    "rare_relevant": false,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "osimertinib"
+    ],
+    "brand_name": "",
+    "generic_name": "osimertinib",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "tamoxifen",
+    "name": "tamoxifen",
+    "class": "serm",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "ESR1",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "serm"
+    ],
+    "rare_relevant": false,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "tamoxifen"
+    ],
+    "brand_name": "",
+    "generic_name": "tamoxifen",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "levetiracetam",
+    "name": "levetiracetam",
+    "class": "antiseizure",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "SV2A",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "antiseizure"
+    ],
+    "rare_relevant": false,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "levetiracetam"
+    ],
+    "brand_name": "",
+    "generic_name": "levetiracetam",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "donepezil",
+    "name": "donepezil",
+    "class": "acetylcholinesterase_inhibitor",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "ACHE",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "acetylcholinesterase inhibitor"
+    ],
+    "rare_relevant": false,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "donepezil"
+    ],
+    "brand_name": "",
+    "generic_name": "donepezil",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "everolimus",
+    "name": "everolimus",
+    "class": "mTOR_inhibitor",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "MTOR",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "mTOR inhibitor"
+    ],
+    "rare_relevant": false,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "everolimus"
+    ],
+    "brand_name": "",
+    "generic_name": "everolimus",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "acarbose",
+    "name": "acarbose",
+    "class": "alpha-glucosidase_inhibitor",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "GLUCOSEHANDLING",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "alpha-glucosidase inhibitor"
+    ],
+    "rare_relevant": false,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "acarbose"
+    ],
+    "brand_name": "",
+    "generic_name": "acarbose",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "bupropion",
+    "name": "bupropion",
+    "class": "ndri",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "DAT",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      },
+      {
+        "gene": "NET",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "ndri"
+    ],
+    "rare_relevant": false,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "bupropion"
+    ],
+    "brand_name": "",
+    "generic_name": "bupropion",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "canagliflozin",
+    "name": "canagliflozin",
+    "class": "sglt2_inhibitor",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "SGLT2",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "sglt2 inhibitor"
+    ],
+    "rare_relevant": false,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "canagliflozin"
+    ],
+    "brand_name": "",
+    "generic_name": "canagliflozin",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "empagliflozin",
+    "name": "empagliflozin",
+    "class": "sglt2_inhibitor",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "SGLT2",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "sglt2 inhibitor"
+    ],
+    "rare_relevant": false,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "empagliflozin"
+    ],
+    "brand_name": "",
+    "generic_name": "empagliflozin",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "pembrolizumab",
+    "name": "pembrolizumab",
+    "class": "pd-1_inhibitor",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "PDCD1",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "pd-1 inhibitor"
+    ],
+    "rare_relevant": false,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "pembrolizumab"
+    ],
+    "brand_name": "",
+    "generic_name": "pembrolizumab",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "rapamycin",
+    "name": "rapamycin",
+    "class": "mTOR_inhibitor",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "MTOR",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "mTOR inhibitor"
+    ],
+    "rare_relevant": false,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "rapamycin"
+    ],
+    "brand_name": "",
+    "generic_name": "rapamycin",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  },
+  {
+    "id": "sirolimus",
+    "name": "sirolimus",
+    "class": "mTOR_inhibitor",
+    "kind": "drug",
+    "targets": [
+      {
+        "gene": "MTOR",
+        "direction": "modulate",
+        "strength": 0.6,
+        "confidence": "starter"
+      }
+    ],
+    "indications": [
+      "mTOR inhibitor"
+    ],
+    "rare_relevant": true,
+    "status": "starter",
+    "approval_status": "listed",
+    "source": "starter_registry",
+    "active_ingredients": [
+      "sirolimus"
+    ],
+    "brand_name": "",
+    "generic_name": "sirolimus",
+    "application_number": "",
+    "routes": [
+      "oral"
+    ],
+    "notes": "curated starter mapping derived from shipped frontend drug library",
+    "xrefs": []
+  }
+]

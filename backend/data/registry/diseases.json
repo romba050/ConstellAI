@@ -1,0 +1,631 @@
+[
+  {
+    "id": "rett_demo",
+    "name": "rett syndrome",
+    "category": "neurology",
+    "rare": true,
+    "aliases": [],
+    "genes": [
+      "mecp2",
+      "bdnf",
+      "creb1",
+      "hdac2",
+      "gsk3b"
+    ],
+    "directions": {
+      "mecp2": "down",
+      "bdnf": "down",
+      "creb1": "down",
+      "hdac2": "up",
+      "gsk3b": "up"
+    },
+    "status": "starter",
+    "notes": "starter rare registry entry migrated out of inline engine constants"
+  },
+  {
+    "id": "fragilex_demo",
+    "name": "fragile x syndrome",
+    "category": "neurology",
+    "rare": true,
+    "aliases": [
+      "fragile x"
+    ],
+    "genes": [
+      "fmr1",
+      "creb1",
+      "erk1",
+      "gsk3b",
+      "mmp9"
+    ],
+    "directions": {
+      "fmr1": "down",
+      "creb1": "down",
+      "erk1": "up",
+      "gsk3b": "up",
+      "mmp9": "up"
+    },
+    "status": "starter",
+    "notes": "starter rare registry entry migrated out of inline engine constants"
+  },
+  {
+    "id": "angelman_demo",
+    "name": "angelman syndrome",
+    "category": "neurology",
+    "rare": true,
+    "aliases": [],
+    "genes": [
+      "ube3a",
+      "bdnf",
+      "creb1",
+      "gsk3b",
+      "hdac2"
+    ],
+    "directions": {
+      "ube3a": "down",
+      "bdnf": "down",
+      "creb1": "down",
+      "gsk3b": "up",
+      "hdac2": "up"
+    },
+    "status": "starter",
+    "notes": "starter rare registry entry migrated out of inline engine constants"
+  },
+  {
+    "id": "huntington_demo",
+    "name": "huntington disease",
+    "category": "neurology",
+    "rare": true,
+    "aliases": [],
+    "genes": [
+      "htt",
+      "bdnf",
+      "creb1",
+      "casp3",
+      "gsk3b"
+    ],
+    "directions": {
+      "htt": "up",
+      "bdnf": "down",
+      "creb1": "down",
+      "casp3": "up",
+      "gsk3b": "up"
+    },
+    "status": "starter",
+    "notes": "starter rare registry entry migrated out of inline engine constants"
+  },
+  {
+    "id": "rd_demo_1",
+    "name": "spinal muscular atrophy",
+    "category": "neurology",
+    "rare": true,
+    "aliases": [
+      "sma"
+    ],
+    "genes": [
+      "smn1",
+      "smn2",
+      "bcl2",
+      "casp3",
+      "akt1"
+    ],
+    "directions": {
+      "smn1": "down",
+      "smn2": "down",
+      "bcl2": "down",
+      "casp3": "up",
+      "akt1": "down"
+    },
+    "status": "starter",
+    "notes": "starter rare registry entry migrated from mock_diseases.json"
+  },
+  {
+    "id": "rd_demo_3",
+    "name": "familial hypercholesterolemia",
+    "category": "cardiology",
+    "rare": true,
+    "aliases": [
+      "fh"
+    ],
+    "genes": [
+      "ldlr",
+      "pcsk9",
+      "apob",
+      "hmgcr",
+      "srebf2"
+    ],
+    "directions": {
+      "ldlr": "down",
+      "pcsk9": "up",
+      "apob": "up",
+      "hmgcr": "up",
+      "srebf2": "up"
+    },
+    "status": "starter",
+    "notes": "starter rare registry entry migrated from mock_diseases.json"
+  },
+  {
+    "id": "tuberous_sclerosis_complex",
+    "name": "tuberous sclerosis complex",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "tsc"
+    ],
+    "genes": [
+      "TSC1",
+      "TSC2",
+      "MTOR",
+      "AKT1",
+      "RHEB"
+    ],
+    "directions": {
+      "TSC1": "down",
+      "TSC2": "down",
+      "MTOR": "up",
+      "AKT1": "up",
+      "RHEB": "up"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for pathway-driven launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "dravet_syndrome",
+    "name": "dravet syndrome",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "severe myoclonic epilepsy of infancy"
+    ],
+    "genes": [
+      "SCN1A",
+      "GABRA1",
+      "CREB1",
+      "BDNF",
+      "HDAC2"
+    ],
+    "directions": {
+      "SCN1A": "down",
+      "GABRA1": "down",
+      "CREB1": "down",
+      "BDNF": "down",
+      "HDAC2": "up"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "cdkl5_deficiency",
+    "name": "cdkl5 deficiency disorder",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "cdd"
+    ],
+    "genes": [
+      "CDKL5",
+      "BDNF",
+      "CREB1",
+      "GSK3B",
+      "HDAC2"
+    ],
+    "directions": {
+      "CDKL5": "down",
+      "BDNF": "down",
+      "CREB1": "down",
+      "GSK3B": "up",
+      "HDAC2": "up"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "phelan_mcdermid",
+    "name": "phelan-mcdermid syndrome",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "22q13 deletion syndrome"
+    ],
+    "genes": [
+      "SHANK3",
+      "IGF1",
+      "MTOR",
+      "AKT1",
+      "BDNF"
+    ],
+    "directions": {
+      "SHANK3": "down",
+      "IGF1": "down",
+      "MTOR": "up",
+      "AKT1": "down",
+      "BDNF": "down"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "wolfram_syndrome",
+    "name": "wolfram syndrome",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "didmoad"
+    ],
+    "genes": [
+      "WFS1",
+      "ATF6",
+      "EIF2AK3",
+      "AKT1",
+      "CASP3"
+    ],
+    "directions": {
+      "WFS1": "down",
+      "ATF6": "up",
+      "EIF2AK3": "up",
+      "AKT1": "down",
+      "CASP3": "up"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "niemann_pick_c",
+    "name": "niemann-pick disease type c",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "npc"
+    ],
+    "genes": [
+      "NPC1",
+      "NPC2",
+      "SREBF1",
+      "MTOR",
+      "ABCA1"
+    ],
+    "directions": {
+      "NPC1": "down",
+      "NPC2": "down",
+      "SREBF1": "up",
+      "MTOR": "up",
+      "ABCA1": "down"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "gaucher_disease",
+    "name": "gaucher disease",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "gba deficiency"
+    ],
+    "genes": [
+      "GBA",
+      "MTOR",
+      "TNF",
+      "IL1B",
+      "NFKB1"
+    ],
+    "directions": {
+      "GBA": "down",
+      "MTOR": "up",
+      "TNF": "up",
+      "IL1B": "up",
+      "NFKB1": "up"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "fabry_disease",
+    "name": "fabry disease",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "gla deficiency"
+    ],
+    "genes": [
+      "GLA",
+      "TNF",
+      "IL6",
+      "NFKB1",
+      "VCAM1"
+    ],
+    "directions": {
+      "GLA": "down",
+      "TNF": "up",
+      "IL6": "up",
+      "NFKB1": "up",
+      "VCAM1": "up"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "pompe_disease",
+    "name": "pompe disease",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "gaa deficiency"
+    ],
+    "genes": [
+      "GAA",
+      "MTOR",
+      "TFEB",
+      "AKT1",
+      "MAP1LC3B"
+    ],
+    "directions": {
+      "GAA": "down",
+      "MTOR": "up",
+      "TFEB": "down",
+      "AKT1": "up",
+      "MAP1LC3B": "down"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "adpkd",
+    "name": "autosomal dominant polycystic kidney disease",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "adpkd"
+    ],
+    "genes": [
+      "PKD1",
+      "PKD2",
+      "MTOR",
+      "EGFR",
+      "STAT3"
+    ],
+    "directions": {
+      "PKD1": "down",
+      "PKD2": "down",
+      "MTOR": "up",
+      "EGFR": "up",
+      "STAT3": "up"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "neurofibromatosis_type_1",
+    "name": "neurofibromatosis type 1",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "nf1"
+    ],
+    "genes": [
+      "NF1",
+      "MAPK1",
+      "MTOR",
+      "KIT",
+      "PDGFRA"
+    ],
+    "directions": {
+      "NF1": "down",
+      "MAPK1": "up",
+      "MTOR": "up",
+      "KIT": "up",
+      "PDGFRA": "up"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "friedreich_ataxia",
+    "name": "friedreich ataxia",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "frda"
+    ],
+    "genes": [
+      "FXN",
+      "NFE2L2",
+      "PPARGC1A",
+      "CASP3",
+      "NFKB1"
+    ],
+    "directions": {
+      "FXN": "down",
+      "NFE2L2": "down",
+      "PPARGC1A": "down",
+      "CASP3": "up",
+      "NFKB1": "up"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "duchenne_muscular_dystrophy",
+    "name": "duchenne muscular dystrophy",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "dmd"
+    ],
+    "genes": [
+      "DMD",
+      "AKT1",
+      "MTOR",
+      "NFKB1",
+      "TGFB1"
+    ],
+    "directions": {
+      "DMD": "down",
+      "AKT1": "down",
+      "MTOR": "up",
+      "NFKB1": "up",
+      "TGFB1": "up"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "spinal_bulbar_muscular_atrophy",
+    "name": "spinal and bulbar muscular atrophy",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "kennedy disease"
+    ],
+    "genes": [
+      "AR",
+      "HSP90AA1",
+      "AKT1",
+      "CASP3",
+      "CREB1"
+    ],
+    "directions": {
+      "AR": "up",
+      "HSP90AA1": "up",
+      "AKT1": "down",
+      "CASP3": "up",
+      "CREB1": "down"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "ataxia_telangiectasia",
+    "name": "ataxia telangiectasia",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "a-t"
+    ],
+    "genes": [
+      "ATM",
+      "TP53",
+      "AKT1",
+      "CASP3",
+      "MTOR"
+    ],
+    "directions": {
+      "ATM": "down",
+      "TP53": "up",
+      "AKT1": "down",
+      "CASP3": "up",
+      "MTOR": "up"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "acute_intermittent_porphyria",
+    "name": "acute intermittent porphyria",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "aip"
+    ],
+    "genes": [
+      "HMBS",
+      "ALAS1",
+      "CREB1",
+      "PPARA",
+      "NFKB1"
+    ],
+    "directions": {
+      "HMBS": "down",
+      "ALAS1": "up",
+      "CREB1": "up",
+      "PPARA": "down",
+      "NFKB1": "up"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "alport_syndrome",
+    "name": "alport syndrome",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [],
+    "genes": [
+      "COL4A3",
+      "COL4A4",
+      "COL4A5",
+      "TGFB1",
+      "IL6"
+    ],
+    "directions": {
+      "COL4A3": "down",
+      "COL4A4": "down",
+      "COL4A5": "down",
+      "TGFB1": "up",
+      "IL6": "up"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  },
+  {
+    "id": "x_linked_adrenoleukodystrophy",
+    "name": "x-linked adrenoleukodystrophy",
+    "category": "rare_disease",
+    "rare": true,
+    "aliases": [
+      "x-ald",
+      "ald"
+    ],
+    "genes": [
+      "ABCD1",
+      "PPARA",
+      "NFKB1",
+      "IL6",
+      "TNF"
+    ],
+    "directions": {
+      "ABCD1": "down",
+      "PPARA": "down",
+      "NFKB1": "up",
+      "IL6": "up",
+      "TNF": "up"
+    },
+    "status": "starter",
+    "source": "starter_registry",
+    "notes": "curated rare-disease starter for launch breadth",
+    "xrefs": []
+  }
+]

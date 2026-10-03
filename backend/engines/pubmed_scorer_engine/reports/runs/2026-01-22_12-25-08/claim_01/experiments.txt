@@ -1,0 +1,5 @@
+1. MicroRNA-21 knockdown in triple-negative breast cancer cells (~€15,000, 6 weeks) — Cell proliferation and invasion assays | kill if: No significant reduction in cell aggressiveness upon microRNA-21 knockdown
+2. MicroRNA-21 overexpression in non-cancerous breast epithelial cells (~€18,000, 8 weeks) — Cell transformation and tumorigenesis assays | kill if: No increased susceptibility to cancer upon microRNA-21 overexpression
+3. Analysis of microRNA-21 expression in human triple-negative breast cancer tissues (~€20,000, 4 weeks) — qRT-PCR and immunohistochemistry | kill if: No correlation between microRNA-21 expression levels and clinical outcomes
+4. miR-21 inhibitor treatment in a triple-negative breast cancer xenograft mouse model (~€22,000, 6 weeks) — Tumor growth and metastasis assays | kill if: No significant inhibition of tumor aggressiveness upon miR-21 inhibitor treatment
+5. Comparison of microRNA-21 expression profiles in different triple-negative breast cancer subtypes (~€25,000, 8 weeks) — Next-generation sequencing and bioinformatics analysis | kill if: No distinct microRNA-21 expression signatures associated with specific subtypes

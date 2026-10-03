@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "text": "PRINT LABELS FROM LIMS, DO NOT HANDWRITE.",
+      "tags": [
+        "CELL_STORAGE",
+        "HYPOTHESIS_RISK"
+      ],
+      "ts": 1772172546
+    },
+    {
+      "text": "REQUIRE PHOTO LOG OF TUBE LABELS BEFORE FREEZE.",
+      "tags": [
+        "CELL_STORAGE",
+        "HYPOTHESIS_RISK"
+      ],
+      "ts": 1772172546
+    },
+    {
+      "text": "SPLIT INTO 5 EARLY-KILL CHECKPOINTS WITH GO/NO-GO.",
+      "tags": [
+        "CELL_STORAGE",
+        "HYPOTHESIS_RISK"
+      ],
+      "ts": 1772172546
+    },
+    {
+      "text": "REQUIRE 2 INDEPENDENT LINES OF EVIDENCE BEFORE SCALE-UP.",
+      "tags": [
+        "CELL_STORAGE",
+        "HYPOTHESIS_RISK"
+      ],
+      "ts": 1772172554
+    },
+    {
+      "text": "DAILY HUMIDITY/TEMP CHECK SIGNOFF.",
+      "tags": [
+        "CELL_STORAGE",
+        "HYPOTHESIS_RISK"
+      ],
+      "ts": 1772172554
+    },
+    {
+      "text": "ALARM THRESHOLDS SET + WEEKLY CALIBRATION.",
+      "tags": [
+        "CELL_STORAGE",
+        "HYPOTHESIS_RISK"
+      ],
+      "ts": 1772172560
+    },
+    {
+      "text": "we will freeze cells for long-term storage using dmso and ln2.",
+      "tags": [
+        "CELL_STORAGE"
+      ],
+      "count": 1,
+      "protocol_used": true,
+      "estimated_savings_eur": 30000.0,
+      "failure_reduction_pct": 3.0,
+      "outcome_text": "we freezed cells but x happened so we lost this amount of cost"
+    },
+    {
+      "text": "we will freeze cells for long-term storage using dmso and ln2.",
+      "tags": [
+        "CELL_STORAGE"
+      ],
+      "count": 1,
+      "protocol_used": true,
+      "estimated_savings_eur": 30000.0,
+      "failure_reduction_pct": 3.0,
+      "outcome_text": "we freezed cells but x happened so we lost this amount of cost"
+    }
+  ]
+}

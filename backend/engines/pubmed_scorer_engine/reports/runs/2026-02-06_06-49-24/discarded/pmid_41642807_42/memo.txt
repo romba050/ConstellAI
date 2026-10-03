@@ -1,0 +1,34 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Hidden risks associated with occupational pesticide exposure in women with breast cancer: High frequency of the Luminal B molecular subtype and occurrence of poor prognostic features. may influence disease progression.
+
+EVIDENCE SUMMARY:
+- PubMed | pmid=41642807
+
+DECISION SUPPORT SCORE: 0.15
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 45%
+
+RECOMMENDED ACTION: discarded
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+none. below threshold.
+
+CONFIDENCE DRIVERS:
++ real literature
+
+CONFIDENCE PENALTIES:
+- weak translation
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+killed early
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+common failure class
+
+DECISION SENSITIVITY:
+discarded
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

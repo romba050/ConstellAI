@@ -1,0 +1,41 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Target B may influence survival-related pathways in oncology
+
+EVIDENCE SUMMARY:
+- pubmed_123 | human | 2021 | surrogate | cohort=120
+- pubmed_456 | animal | 2019 | tumor_size | cohort=n/a
+
+DECISION SUPPORT SCORE: 0.342
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: run-experiment: Target B siRNA-Mediated Knockdown in Human Cancer Cells
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+Target B siRNA-Mediated Knockdown in Human Cancer Cells (~€15,000, 5 weeks)
+Tests: qRT-PCR and Western blot analysis of human cancer cells treated with Target B siRNA
+Kill condition: No significant reduction in target B expression is observed after treatment
+
+CONFIDENCE DRIVERS:
++ presence of human data
++ recent publication
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- small cohort size
+- lack of independent human replication
+- reliance on animal efficacy models
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+This experiment targets a dominant failure mode driving the hypothesis into the bottom ~35% of oncology targets.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Comparable hypotheses were terminated early when similar risk factors were falsified, avoiding €180k–€250k in follow-on studies.
+
+DECISION SENSITIVITY:
+If this experiment succeeds (qRT-PCR and Western blot analysis of human cancer cells treated with Target B siRNA), the hypothesis upgrades to pursue-worthy pending confirmation. If it fails (No significant reduction in target B expression is observed after treatment), the hypothesis should be terminated.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

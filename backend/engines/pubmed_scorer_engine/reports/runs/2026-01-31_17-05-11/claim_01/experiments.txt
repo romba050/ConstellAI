@@ -1,0 +1,5 @@
+1. HIF-1α Inhibition in TNBC Cells (~€15,000, 6 weeks) — Cell viability and apoptosis assays after HIF-1α inhibition | kill if: TNBC cells show no decrease in resistance to chemotherapy
+2. Tumor Hypoxia Mimicry (~€18,000, 7 weeks) — Cell viability and metabolic assays under hypoxic conditions | kill if: TNBC cells do not exhibit metabolic reprogramming in response to hypoxia
+3. HIF-1α siRNA Transfection in TNBC Xenografts (~€20,000, 8 weeks) — Tumor growth and chemotherapy response in HIF-1α knocked-down TNBC xenografts | kill if: Knocked-down HIF-1α tumors do not show enhanced resistance to chemotherapy
+4. Tumor Metabolic Profiling (~€10,000, 5 weeks) — Mass spectrometry-based metabolic profiling of TNBC cells and patient-derived xenografts | kill if: TNBC cells do not exhibit altered metabolism in response to HIF-1α activation
+5. HIF-1α ChIP-Seq Analysis (~€22,000, 7 weeks) — Chromatin immunoprecipitation sequencing to identify HIF-1α-bound genes and pathways in TNBC cells | kill if: No significant enrichment of HIF-1α-bound genes associated with chemotherapy resistance

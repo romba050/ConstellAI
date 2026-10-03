@@ -1,0 +1,34 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Prognostic Value of the Ratio of Interleukin-2 and Interleukin-10 in Patients with Hepatocellular Carcinoma Treated with Anti-PD-1 Therapy. may influence disease progression.
+
+EVIDENCE SUMMARY:
+- PubMed | pmid=41642855
+
+DECISION SUPPORT SCORE: 0.15
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 45%
+
+RECOMMENDED ACTION: discarded
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+none. below threshold.
+
+CONFIDENCE DRIVERS:
++ real literature
+
+CONFIDENCE PENALTIES:
+- weak translation
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+killed early
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+common failure class
+
+DECISION SENSITIVITY:
+discarded
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

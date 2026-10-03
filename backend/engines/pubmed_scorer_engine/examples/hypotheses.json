@@ -1,0 +1,10 @@
+[
+  {
+    "hypothesis_id":"MG001",
+    "claim":"Target B may influence survival-related pathways in oncology",
+    "target":"Target B",
+    "indication":"Oncology",
+    "priors":{},
+    "falsifiers":[]
+  }
+]

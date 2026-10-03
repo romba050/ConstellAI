@@ -1,0 +1,34 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+See One, B1, Treat One: Identifying and Managing Thiamine Deficiency in a Patient With Altered Mental Status. may influence disease progression.
+
+EVIDENCE SUMMARY:
+- PubMed | pmid=41640937
+
+DECISION SUPPORT SCORE: 0.15
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 45%
+
+RECOMMENDED ACTION: discarded
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+none. below threshold.
+
+CONFIDENCE DRIVERS:
++ real literature
+
+CONFIDENCE PENALTIES:
+- weak translation
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+killed early
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+common failure class
+
+DECISION SENSITIVITY:
+discarded
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

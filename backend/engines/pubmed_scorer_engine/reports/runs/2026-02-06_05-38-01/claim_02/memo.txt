@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+The presence of tumor-associated macrophages may influence the progression and metastasis of triple-negative breast cancer.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.5
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Microarray Analysis of Tumor-Associated Macrophages in Triple-Negative Breast Cancer (~€20,000, <6 weeks) — Differential gene expression between tumor-associated macrophages and non-tumor-associated macrophages in TNBC patient samples. | kill if: no significant difference in gene expression profiles
+2. Macrophage Depletion in a Triple-Negative Breast Cancer Xenograft Model (~€18,000, <7 weeks) — Tumor growth rate and metastasis formation in mice treated with clodronate liposomes to deplete macrophages. | kill if: no significant decrease in tumor growth rate or metastasis formation
+3. Phenotypic Analysis of Tumor-Associated Macrophages in Triple-Negative Breast Cancer Cell Lines (~€10,000, <4 weeks) — Flow cytometry and immunofluorescence staining to characterize surface markers and intracellular signaling pathways in TNBC cell line-derived macrophages. | kill if: no significant difference in macrophage phenotype between TNBC cell lines
+4. Macrophage-Mediated Chemotherapy Resistance in Triple-Negative Breast Cancer (~€12,000, <5 weeks) — In vitro chemotherapy resistance assay using macrophages from TNBC patient samples or cell lines. | kill if: no significant correlation between macrophage presence and chemotherapy resistance
+5. Tumor-Associated Macrophages in Triple-Negative Breast Cancer Patient-Derived Xenografts (PDX) (~€25,000, <8 weeks) — Histological analysis of PDX tumors for macrophage infiltration and correlation with clinical data. | kill if: no significant association between macrophage infiltration and patient outcome
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

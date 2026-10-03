@@ -1,0 +1,34 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+{claim}
+
+EVIDENCE SUMMARY:
+{evidence}
+
+DECISION SUPPORT SCORE: {score}
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): {risk_pct}
+
+RECOMMENDED ACTION: {action}
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+{experiments_block}
+
+CONFIDENCE DRIVERS:
+{confidence_drivers}
+
+CONFIDENCE PENALTIES:
+{confidence_penalties}
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+{portfolio_position}
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+{historical_examples}
+
+DECISION SENSITIVITY:
+{decision_sensitivity}
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

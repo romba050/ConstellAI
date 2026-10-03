@@ -1,0 +1,1 @@
+none. hypothesis discarded by hard gate (no experiments generated).

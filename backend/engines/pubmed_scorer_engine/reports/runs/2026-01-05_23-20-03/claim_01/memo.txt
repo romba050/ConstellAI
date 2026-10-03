@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+The gut microbiome composition may influence the effectiveness of immunotherapy in non-small cell lung cancer patients.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.4
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Experiment 1: Microbiome transplantation in immunotherapy-resistant mice (~€20,000, 6 weeks) — Comparing survival rates and tumor growth between microbiome-transplanted and control mice | kill if: No significant difference in survival rates or tumor growth between groups
+2. Experiment 2: Fecal microbiota transplantation in patients with stable disease on immunotherapy (~€25,000, 8 weeks) — Monitoring changes in tumor markers and immune cell profiles after fecal microbiota transplantation | kill if: No significant changes in tumor markers or immune cell profiles
+3. Experiment 3: Microbiome analysis in patients with complete response to immunotherapy (~€18,000, 4 weeks) — Comparing gut microbiome composition between responders and non-responders to immunotherapy | kill if: No significant differences in gut microbiome composition between groups
+4. Experiment 4: Impact of prebiotics on immunotherapy efficacy in mice (~€15,000, 6 weeks) — Assessing the effect of prebiotic supplementation on survival rates and tumor growth in immunotherapy-treated mice | kill if: No significant improvement in survival rates or reduction in tumor growth
+5. Experiment 5: Correlation between gut microbiome diversity and response to immunotherapy in patients (~€20,000, 8 weeks) — Analyzing the relationship between gut microbiome diversity and overall survival, progression-free survival, and immune-related adverse events in patients treated with immunotherapy | kill if: No significant correlation between gut microbiome diversity and clinical outcomes
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

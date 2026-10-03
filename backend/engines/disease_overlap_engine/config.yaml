@@ -1,0 +1,27 @@
+
+mode: exploratory   # exploratory | decision
+
+sources:
+  pubmed:
+    retmax: 40
+
+query:
+  term: "(AMPK OR mTOR OR ULK1 OR Sestrin2 OR PI3K OR AKT) AND (diabetes OR metabolic OR immunology OR cardiology OR cancer)"
+
+llm:
+  enabled: true
+  provider: llamacpp
+  model: "llama-3.1-8b-instruct"
+  llamacpp_url: "http://localhost:1234/v1/chat/completions"
+  timeout_sec: 60
+
+
+extraction:
+  min_confidence: 0.55
+  max_mechanisms_per_paper: 8
+
+proposal_gate:
+  exploratory_min_weighted_evidence: 1.4
+  decision_min_weighted_evidence: 2.6
+  max_direction_conflict: 0.45
+  max_negative_hits: 1

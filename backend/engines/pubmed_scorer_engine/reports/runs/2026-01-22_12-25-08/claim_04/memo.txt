@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+The gut microbiome composition may influence the efficacy of immunotherapy in melanoma patients.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.4
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Microbiome Transplantation in Melanoma Mice (~€20,000, 6 weeks) — Mice survival, tumor growth, and immunotherapy response after microbiome transplantation | kill if: No significant difference in survival or tumor growth between groups
+2. Fecal Microbiota Transfer in Human Immunotherapy Patients (~€25,000, 8 weeks) — Clinical response, adverse events, and microbiome composition in patients receiving fecal microbiota transfer before immunotherapy | kill if: No significant improvement in clinical response or reduction in adverse events
+3. Microbiome Modulation by Prebiotics and Probiotics in Melanoma Mice (~€18,000, 5 weeks) — Mice survival, tumor growth, and immunotherapy response after prebiotic and probiotic treatment | kill if: No significant improvement in survival or reduction in tumor growth
+4. Antibiotics Before Immunotherapy in Melanoma Patients (~€22,000, 7 weeks) — Clinical response, adverse events, and microbiome composition in patients receiving antibiotics before immunotherapy | kill if: No significant difference in clinical response or reduction in adverse events
+5. Gut-Associated Lymphoid Tissue (GALT) Dissection in Melanoma Mice (~€15,000, 4 weeks) — Immune cell infiltration and function in GALT of mice with different microbiomes | kill if: No significant difference in immune cell infiltration or function
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

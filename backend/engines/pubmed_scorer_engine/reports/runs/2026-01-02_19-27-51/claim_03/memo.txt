@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Epigenetic silencing of the PTEN gene promoter region may contribute to resistance against targeted therapies in non-small cell lung cancer.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.3
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Epigenetic silencing validation using ChIP-seq in NSCLC patient-derived xenografts (~€18,000, 6 weeks) — ChIP-seq analysis of PTEN promoter region on PDX models treated with targeted therapies | kill if: no significant epigenetic modification detected in PTEN promoter region
+2. PTEN promoter methylation analysis in NSCLC patient samples (~€12,000, 4 weeks) — Quantitative pyrosequencing of PTEN promoter methylation levels on human NSCLC tissue samples | kill if: no correlation between PTEN promoter methylation and resistance to targeted therapies
+3. miR-21-mediated PTEN silencing in NSCLC cell lines (~€15,000, 6 weeks) — Transfection of miR-21 mimics in NSCLC cell lines followed by analysis of PTEN expression and sensitivity to targeted therapies | kill if: no reduction in PTEN expression and increased resistance to targeted therapies observed
+4. PTEN promoter luciferase reporter assay in NSCLC cell lines (~€10,000, 4 weeks) — Luciferase reporter assay to assess PTEN promoter activity on treated NSCLC cells | kill if: no epigenetic silencing of the PTEN promoter region detected
+5. PTEN restoration using CRISPR-Cas9 in resistant NSCLC cell lines (~€20,000, 8 weeks) — CRISPR-Cas9-mediated PTEN gene editing followed by analysis of sensitivity to targeted therapies | kill if: no restored sensitivity to targeted therapies observed
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

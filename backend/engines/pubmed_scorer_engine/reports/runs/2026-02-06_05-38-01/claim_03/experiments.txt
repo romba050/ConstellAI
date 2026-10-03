@@ -1,0 +1,5 @@
+1. SOX2 siRNA treatment in human PDAC cell lines (~€18,000, 6 weeks) — Gene expression and cell viability assays | kill if: no significant change in gene expression or cell viability
+2. Pharmacokinetic analysis of SOX2-targeting small molecule inhibitors (~€20,000, 8 weeks) — LC-MS/MS and cellular uptake assays | kill if: no significant difference in drug concentrations or cellular uptake
+3. In vitro co-culture of PDAC cells with bone marrow-derived SOX2+ stem cells (~€15,000, 6 weeks) — Immunofluorescence and live cell imaging | kill if: no significant interaction between cell types
+4. RNA-seq analysis of SOX2-overexpressing PDAC cells under chemotherapy (~€25,000, 8 weeks) — Next-generation sequencing and bioinformatic analysis | kill if: no significant changes in gene expression profiles
+5. In silico modeling of SOX2-driven PDAC relapse and resistance networks (~€10,000, 4 weeks) — Computational simulations and network analysis | kill if: no significant correlations between model outputs and clinical data

@@ -1,0 +1,65 @@
+Step 1 – per program
+
+Problem
+
+Researchers intuitively guess “natural mimics” of drugs without structured mapping.
+
+This leads to:
+
+hand-wavy supplement logic,
+
+mechanistic overclaims,
+
+and unsafe substitution thinking.
+
+Solution
+
+A drug-anchored mechanistic decomposition engine:
+
+start from a known drug,
+
+extract its signaling footprint,
+
+identify non-drug compounds that hit overlapping downstream programs.
+
+Explicitly frames results as mechanistic comparison, not treatment.
+
+How it is different from what’s available
+
+Most tools either:
+
+list targets, or
+
+list supplements.
+
+This tool:
+
+forces a drug-first anchor,
+
+reasons at pathway convergence level,
+
+and produces a structured memo, not advice.
+
+Step 2 – per program
+
+Demand
+
+Medium–high in:
+
+mechanism-centric oncology research,
+
+nutraceutical R&D (preclinical only),
+
+academic hypothesis framing.
+
+Low for direct clinical use (by design).
+
+Ask inside medicine
+
+“What parts of a drug’s effect are pathway-driven vs molecule-specific?”
+
+“Are there non-drug compounds that stress the same signaling programs?”
+
+“Which mechanisms are shared, and which are unique to the drug?”
+
+“Where does mechanistic similarity clearly stop?”

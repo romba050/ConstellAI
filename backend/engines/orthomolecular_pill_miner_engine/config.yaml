@@ -1,0 +1,6 @@
+drug: "Imatinib"  # overridden by --drug anyway
+pubmed_email: "your.email@example.com"
+max_papers: 50
+min_frequency: 3
+output_dir: "data/outputs"
+risk_threshold: 30

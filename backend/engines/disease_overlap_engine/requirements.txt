@@ -1,0 +1,6 @@
+
+streamlit
+biopython
+pydantic>=2.0
+requests
+pyyaml

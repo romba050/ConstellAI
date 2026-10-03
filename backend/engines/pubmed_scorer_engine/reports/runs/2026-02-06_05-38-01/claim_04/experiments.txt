@@ -1,0 +1,5 @@
+1. Experiment 1: HIF-1α Inhibition in Glioblastoma Stem Cells (~€15,000, 6 weeks) — RNAi, Western Blot | kill if: HIF-1α knockdown does not affect glioblastoma stem cell viability
+2. Experiment 2: Tissue Engineered HIF-1α Expressing Spheroids (~€20,000, 8 weeks) — Live Imaging, qRT-PCR | kill if: HIF-1α expressing spheroids do not exhibit increased invasion in vitro
+3. Experiment 3: HIF-1α Inhibition in Combination with Chemotherapy (~€18,000, 6 weeks) — Cell Viability Assay, Flow Cytometry | kill if: Combination treatment does not increase survival of glioblastoma cells in vitro
+4. Experiment 4: HIF-1α Overexpression in Primary Human Astrocytes (~€22,000, 7 weeks) — Western Blot, Immunofluorescence | kill if: HIF-1α overexpression does not increase angiogenic factor secretion by human astrocytes
+5. Experiment 5: HIF-1α Activation and Invasion Assay in Zebrafish Model (~€25,000, 8 weeks) — Microscopy, qRT-PCR | kill if: HIF-1α activation does not increase invasion of glioblastoma cells in zebrafish model

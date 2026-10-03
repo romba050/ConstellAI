@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+{'type': 'Hypothesis', 'description': 'Inflammation-induced production of IL-6 may enhance tumor aggressiveness by promoting angiogenesis.'}
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.4
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. IL-6 Neutralization in Mouse Model (~€18,000, 6 weeks) — In vitro neutralization of IL-6 on endothelial cell tube formation and in vivo tumor growth with or without IL-6 neutralizing antibody. | kill if: IL-6 neutralization does not reduce angiogenesis
+2. Human Tumor Biopsy Analysis (~€15,000, 4 weeks) — Quantify IL-6 and vascular endothelial growth factor (VEGF) levels in human tumor biopsies. | kill if: IL-6 levels are not correlated with VEGF or angiogenesis
+3. In Silico Modeling of IL-6 and Angiogenesis (~€10,000, 2 weeks) — Use computational models to predict the effects of IL-6 on tumor angiogenesis. | kill if: IL-6 does not enhance predicted angiogenesis
+4. Ex Vivo Human Endothelial Cell Isolation and Treatment (~€20,000, 8 weeks) — Isolate human endothelial cells from umbilical cords, treat with IL-6, and measure tube formation. | kill if: IL-6 does not increase tube formation
+5. Statistical Analysis of Public Tumor Datasets (~€5,000, 2 weeks) — Analyze public tumor datasets for correlations between IL-6 levels and patient survival or angiogenesis. | kill if: IL-6 levels are not associated with reduced survival
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

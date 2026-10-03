@@ -1,0 +1,47 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+DNA damage response signaling may influence sensitivity to radiotherapy in lung cancer.
+
+EVIDENCE SUMMARY:
+- PubMed | pmid=41635813 | animal | 2026 | surrogate
+- PubMed | pmid=40262716 | animal | 2025 | surrogate
+- PubMed | pmid=39103908 | animal | 2024 | surrogate
+- PubMed | pmid=37468052 | animal | 2023 | surrogate
+- PubMed | pmid=31287365 | animal | 2019 | surrogate
+
+SOURCES:
+- PubMed | pmid=41635813 | animal | 2026 | surrogate
+- PubMed | pmid=40262716 | animal | 2025 | surrogate
+- PubMed | pmid=39103908 | animal | 2024 | surrogate
+- PubMed | pmid=37468052 | animal | 2023 | surrogate
+- PubMed | pmid=31287365 | animal | 2019 | surrogate
+
+DECISION SUPPORT SCORE: 0.25
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 75%
+
+RECOMMENDED ACTION: discarded
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+none. hypothesis discarded by hard gate (no experiments generated).
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+discarded — does not meet minimum evidence thresholds.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+The gut microbiome may influence the progression of pancreatic cancer through modulation of the immune response.
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.5
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Microbiome Transfer Experiment (~€18,000, 6 weeks) — Germ-free mouse model with human gut microbiota transfer | kill if: No difference in tumor growth between control and transferred mice
+2. Antibiotics Intervention Study (~€20,000, 8 weeks) — Short-term antibiotics intervention in pancreatic cancer patients | kill if: Increased tumor progression or decreased survival post-antibiotic treatment
+3. Microbiome Enrichment Analysis (~€15,000, 4 weeks) — Deep sequencing of microbiome in pancreatic cancer patients and controls | kill if: No significant differences in microbiome composition between groups
+4. Gut Microbiota Composition Manipulation (~€22,000, 8 weeks) — Fecal microbiota transplantation to modulate gut microbiota in pancreatic cancer patients | kill if: No improvement or worsening of clinical outcomes post-transplantation
+5. Immune Cell Phenotyping Study (~€12,000, 4 weeks) — Flow cytometry analysis of immune cell populations in pancreatic cancer patients and controls | kill if: No correlation between gut microbiota composition and immune cell phenotypes
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

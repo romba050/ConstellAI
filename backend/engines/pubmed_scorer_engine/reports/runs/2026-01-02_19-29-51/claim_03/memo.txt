@@ -1,0 +1,40 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+{'title': 'Mitochondrial dysfunction may influence the metastatic potential of breast cancer cells via enhanced glycolysis and lactate production.', 'description': 'Hypothesize that mitochondrial defects promote glycolytic metabolism in breast cancer, contributing to increased metastasis.'}
+
+EVIDENCE SUMMARY:
+- pubmed_stub | human | 2022 | surrogate | cohort=150
+
+DECISION SUPPORT SCORE: 0.3
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 60%
+
+RECOMMENDED ACTION: cheap-test-only
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+1. Experiment 1: Mitochondrial DNA Depletion in Breast Cancer Cells (~€18,000, 6 weeks) — MitoTracker staining, qRT-PCR for mitochondrial genes, MTT assay for cell viability and proliferation | kill if: if mitochondrial DNA depletion does not lead to enhanced glycolysis and lactate production
+2. Experiment 2: Inhibiting Pyruvate Kinase in Breast Cancer Cells (~€12,000, 4 weeks) — Western blot for PKM2 expression, qRT-PCR for glycolytic genes, glucose consumption assay | kill if: if inhibiting pyruvate kinase does not reduce glycolysis and lactate production
+3. Experiment 3: CRISPR-mediated Knockout of PDK1 in Breast Cancer Cells (~€22,000, 7 weeks) — Western blot for PDK1 expression, qRT-PCR for glycolytic genes, lactate production assay | kill if: if knocking out PDK1 does not reduce enhanced glycolysis and lactate production
+4. Experiment 4: In Vivo Metastasis Assay with Mitochondrial Dysfunction-Induced Breast Cancer Cells in NOD/SCID Mice (~€25,000, 8 weeks) — bioluminescence imaging, qRT-PCR for glycolytic genes, histopathological analysis of lungs and livers | kill if: if mitochondrial dysfunction-induced breast cancer cells do not exhibit increased metastasis
+5. Experiment 5: Time-lapse Microscopy to Investigate the Effect of Mitochondrial Dysfunction on Breast Cancer Cell Migration and Invasion (~€18,000, 6 weeks) — time-lapse microscopy, qRT-PCR for glycolytic genes, wound healing assay | kill if: if mitochondrial dysfunction does not enhance breast cancer cell migration and invasion
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+If ≥1 experiment succeeds, escalate. If all fail, terminate this claim.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

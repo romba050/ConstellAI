@@ -1,0 +1,84 @@
+Step 1 – per program
+
+
+Problem
+
+
+-Researchers waste time and money chasing cross-disease hypotheses that look promising but fail late.
+
+
+-Literature volume hides weak or contradictory signals.
+
+
+-Failure happens after months or years instead of being killed early.
+
+
+
+
+Solution
+
+
+-Automatically triage and downgrade weak ideas early.
+
+
+-Surface why something is risky before experiments start.
+
+
+-Provide a fast “do not proceed yet” filter.
+
+
+
+
+How it is different
+
+
+-Most tools surface positive signals only.
+
+
+-This system explicitly models negative evidence and conflict.
+
+
+-It is a kill-first engine, not a discovery hype engine.
+
+
+
+
+
+Step 2 – per program
+
+
+Demand
+
+
+High in:
+
+
+-Academic labs with limited budgets.
+
+
+-Pharma early discovery teams.
+
+
+-Translational medicine units.
+
+
+
+
+-Especially valuable where early kill saves millions.
+
+
+
+
+Ask inside medicine
+
+
+-“Is this idea worth touching at all?”
+
+
+-“Where will this fail if we try?”
+
+
+-“What evidence must exist before we even design an experiment?”
+
+
+

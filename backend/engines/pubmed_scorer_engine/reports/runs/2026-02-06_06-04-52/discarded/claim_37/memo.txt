@@ -1,0 +1,47 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+TGF-beta signaling may influence epithelial-to-mesenchymal transition in breast cancer.
+
+EVIDENCE SUMMARY:
+- PubMed | pmid=41496180 | animal | 2026 | surrogate
+- PubMed | pmid=41489532 | animal | 2026 | surrogate
+- PubMed | pmid=41340210 | animal | 2025 | surrogate
+- PubMed | pmid=41105878 | animal | 2025 | surrogate
+- PubMed | pmid=40837013 | animal | 2025 | surrogate
+
+SOURCES:
+- PubMed | pmid=41496180 | animal | 2026 | surrogate
+- PubMed | pmid=41489532 | animal | 2026 | surrogate
+- PubMed | pmid=41340210 | animal | 2025 | surrogate
+- PubMed | pmid=41105878 | animal | 2025 | surrogate
+- PubMed | pmid=40837013 | animal | 2025 | surrogate
+
+DECISION SUPPORT SCORE: 0.25
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 75%
+
+RECOMMENDED ACTION: discarded
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+none. hypothesis discarded by hard gate (no experiments generated).
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+discarded — does not meet minimum evidence thresholds.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.

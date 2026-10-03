@@ -1,0 +1,47 @@
+DECISION SUPPORT MEMO – RESEARCH PRIORITIZATION ONLY
+
+CLAIM UNDER REVIEW:
+Angiogenic signaling may affect metastatic potential in ovarian cancer.
+
+EVIDENCE SUMMARY:
+- PubMed | pmid=39835210 | animal | 2025 | surrogate
+- PubMed | pmid=36082856 | human | 2022 | surrogate
+- PubMed | pmid=35638868 | animal | 2022 | surrogate
+- PubMed | pmid=22200669 | human | 2012 | surrogate
+- PubMed | pmid=21646863 | animal | 2011 | surrogate
+
+SOURCES:
+- PubMed | pmid=39835210 | animal | 2025 | surrogate
+- PubMed | pmid=36082856 | human | 2022 | surrogate
+- PubMed | pmid=35638868 | animal | 2022 | surrogate
+- PubMed | pmid=22200669 | human | 2012 | surrogate
+- PubMed | pmid=21646863 | animal | 2011 | surrogate
+
+DECISION SUPPORT SCORE: 0.45
+ESTIMATED NON-TRANSLATION RISK (PRECLINICAL → HUMAN): 55%
+
+RECOMMENDED ACTION: discarded
+
+PRIORITIZED CHEAP FALSIFICATION EXPERIMENTS:
+none. hypothesis discarded by hard gate (no experiments generated).
+
+CONFIDENCE DRIVERS:
++ biologically plausible
++ human relevance
+
+CONFIDENCE PENALTIES:
+- surrogate endpoint
+- limited replication
+
+RELATIVE POSITIONING (PORTFOLIO CONTEXT):
+One of several candidate claims generated in this run.
+
+HISTORICAL TRIAGE EXAMPLES (SYSTEM VALIDATION):
+Similar claims frequently fail late without early falsification.
+
+DECISION SENSITIVITY:
+discarded — does not meet minimum evidence thresholds.
+
+BOUNDARIES:
+Not a treatment recommendation.
+Research portfolio decision support only.
