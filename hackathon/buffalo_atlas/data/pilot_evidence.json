@@ -1,0 +1,726 @@
+{
+  "schema_version": 1,
+  "retrieved_at": "2026-10-03",
+  "sources": [
+    {
+      "id": "angelman-nlm",
+      "source": "MedlinePlus Genetics: Angelman syndrome",
+      "source_url": "https://medlineplus.gov/genetics/condition/angelman-syndrome/",
+      "evidence_type": "authoritative_disease_reference",
+      "summary": "Loss of maternal UBE3A activity in neurons is central to Angelman syndrome. Developmental delay, severe speech impairment, ataxia and seizures are characteristic. Large deletions may involve additional genes.",
+      "publication_date": "2022-05-17",
+      "identifier": null,
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "cdkl5-nlm",
+      "source": "MedlinePlus Genetics: CDKL5 deficiency disorder",
+      "source_url": "https://medlineplus.gov/genetics/condition/cdkl5-deficiency-disorder/",
+      "evidence_type": "authoritative_disease_reference",
+      "summary": "Pathogenic CDKL5 variants cause a neurodevelopmental disorder with early seizures and severe developmental impairment. CDKL5 is on the X chromosome.",
+      "publication_date": null,
+      "identifier": null,
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "cdkl5-genereviews",
+      "source": "GeneReviews: CDKL5 deficiency disorder",
+      "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK602610/",
+      "evidence_type": "expert_review",
+      "summary": "CDKL5 deficiency involves loss of function. Neurological features include epilepsy, developmental impairment and cortical visual impairment.",
+      "publication_date": null,
+      "identifier": null,
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "stxbp1-genereviews",
+      "source": "GeneReviews: STXBP1 encephalopathy with epilepsy",
+      "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK396561/",
+      "evidence_type": "expert_review",
+      "summary": "STXBP1 loss of function impairs neurotransmitter release. Developmental impairment, epilepsy and movement abnormalities occur. Inheritance is autosomal dominant, usually de novo.",
+      "publication_date": "2023-09-28",
+      "identifier": null,
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "cacna1a-study",
+      "source": "Lipman et al.: Clinical and genetic characterization of CACNA1A-related disease",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/35722745/",
+      "evidence_type": "human_observational",
+      "summary": "A clinical cohort describes heterogeneous CACNA1A-related neurological phenotypes. Gene-level association does not establish the functional direction of an individual variant.",
+      "publication_date": "2022",
+      "identifier": "PMID:35722745",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "cacna1a-review",
+      "source": "From genotype to phenotype: CACNA1A variants",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7960780/",
+      "evidence_type": "review",
+      "summary": "CACNA1A disorders include gain- and loss-of-function mechanisms, with hemiplegic migraine, episodic ataxia and developmental epileptic phenotypes. Variant-specific direction is required.",
+      "publication_date": "2021",
+      "identifier": "PMID:33737904",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "huang2012",
+      "source": "Huang et al.: Topoisomerase inhibitors unsilence the dormant allele of Ube3a in neurons",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/22190039/",
+      "evidence_type": "preclinical_animal",
+      "summary": "Topotecan restored paternal Ube3a expression in neuronal models by reducing an antisense transcript. This is experimental unsilencing evidence, not clinical efficacy.",
+      "publication_date": "2012",
+      "identifier": "PMID:22190039",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success",
+      "excerpt": "These results indicate that topotecan unsilences Ube3a in cis by reducing transcription of an imprinted antisense RNA."
+    },
+    {
+      "id": "meng2015",
+      "source": "Meng et al.: Towards a therapy for Angelman syndrome by targeting a long non-coding RNA",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4351819/",
+      "evidence_type": "preclinical_animal",
+      "summary": "UBE3A-ATS antisense perturbations restored paternal UBE3A in mouse models. The authors compared selective antisense effects with topotecan effects on long-gene transcription; phenotypic rescue was incomplete.",
+      "publication_date": "2015",
+      "identifier": "PMID:25470045",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "king2013",
+      "source": "King et al.: Topoisomerases facilitate transcription of long genes linked to autism",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/23995680/",
+      "evidence_type": "preclinical_cellular",
+      "summary": "Topotecan reduced transcription of long neuronal genes in mouse and human models. This broad transcriptional effect is a spillover concern when probing UBE3A unsilencing.",
+      "publication_date": "2013",
+      "identifier": "PMID:23995680",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "fink2017",
+      "source": "Fink et al.: Disrupted neuronal maturation in Angelman syndrome-derived induced pluripotent stem cells",
+      "source_url": "https://www.nature.com/articles/ncomms15038",
+      "evidence_type": "human_cellular",
+      "summary": "Angelman-derived neuronal models showed electrophysiological maturation deficits; topotecan increased synaptic-event frequency in this in-vitro setting.",
+      "publication_date": "2017",
+      "identifier": "PMID:28436452",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "pha2024",
+      "source": "Ube3a unsilencer for the potential treatment of Angelman syndrome",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/38977672/",
+      "evidence_type": "preclinical_animal",
+      "summary": "(S)-PHA533533 unsilenced paternal Ube3a in models. The effect was independent of its known CDK2/CDK5 targets and TOP1 inhibition. It is a research compound, not an approved repurposed drug.",
+      "publication_date": "2024",
+      "identifier": "PMID:38977672",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "topotecan-label",
+      "source": "DailyMed: Topotecan injection prescribing information",
+      "source_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d4e1cce-c57e-4a8b-be96-f95a2778e221",
+      "evidence_type": "regulatory_label",
+      "summary": "Oncology labeling warns of severe myelosuppression and identifies renal impairment as relevant to exposure. It supplies no validated organ-burden number for Angelman research.",
+      "publication_date": null,
+      "identifier": null,
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "ganaxolone-trial",
+      "source": "Knight et al.: Ganaxolone phase 3 trial in CDKL5 deficiency disorder",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/35429480/",
+      "evidence_type": "human_randomized_trial",
+      "summary": "A randomized trial assessed ganaxolone for seizures in CDKL5 deficiency disorder. Symptom-directed clinical evidence does not show restoration of the causal CDKL5 deficit.",
+      "publication_date": "2022",
+      "identifier": "PMID:35429480",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "stxbp1-study",
+      "source": "Stamberger et al.: STXBP1 encephalopathy",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/26865513/",
+      "evidence_type": "human_observational",
+      "summary": "A clinical study describes STXBP1 encephalopathy as a complex neurodevelopmental disorder including epilepsy.",
+      "publication_date": "2016",
+      "identifier": "PMID:26865513",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "asf",
+      "source": "Angelman Syndrome Foundation",
+      "source_url": "https://angelman.org/",
+      "evidence_type": "official_patient_organization",
+      "summary": "Official patient foundation with family support, disease resources and research navigation.",
+      "publication_date": null,
+      "identifier": null,
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "ifcr",
+      "source": "International Foundation for CDKL5 Research",
+      "source_url": "https://cdkl5.com/",
+      "evidence_type": "official_patient_organization",
+      "summary": "Official CDKL5 organization offering family resources and the Connect CDKL5 platform.",
+      "publication_date": null,
+      "identifier": null,
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "cacna1a-foundation",
+      "source": "CACNA1A Foundation",
+      "source_url": "https://www.cacna1a.org/",
+      "evidence_type": "official_patient_organization",
+      "summary": "Official patient organization for CACNA1A-related disorders.",
+      "publication_date": null,
+      "identifier": null,
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "stxbp1-foundation",
+      "source": "STXBP1 Foundation",
+      "source_url": "https://www.stxbp1disorders.org/",
+      "evidence_type": "official_patient_organization",
+      "summary": "Official patient foundation with family resources and research participation information.",
+      "publication_date": null,
+      "identifier": null,
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "buffalo",
+      "source": "Buffalo Initiative",
+      "source_url": "https://buffaloinitiative.org/",
+      "evidence_type": "official_program_resource",
+      "summary": "Buffalo provides a patient-powered pipeline tracker and support for ultra-rare therapeutic development. No disease-specific Buffalo program is asserted in this dataset.",
+      "publication_date": null,
+      "identifier": null,
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "paired-ipsc2010",
+      "source": "Chamberlain et al.: iPSC models of Angelman and Prader-Willi imprinting disorders",
+      "source_url": "https://www.pnas.org/doi/10.1073/pnas.1004487107",
+      "evidence_type": "human_cellular",
+      "summary": "The study generated iPSC models of Angelman and Prader-Willi syndromes and studied maintenance of genomic imprinting. It supplies a shared experimental approach, not evidence for a shared treatment.",
+      "publication_date": "2010",
+      "identifier": "PMID:20876107",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "pws-nlm",
+      "source": "MedlinePlus Genetics: Prader-Willi syndrome",
+      "source_url": "https://medlineplus.gov/genetics/condition/prader-willi-syndrome/",
+      "evidence_type": "authoritative_disease_reference",
+      "summary": "Prader-Willi syndrome involves loss of expression of paternal chromosome-15 genes, including the SNORD116 region. It is a complex imprinting disorder, not simply UBE3A loss of function.",
+      "publication_date": null,
+      "identifier": null,
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "pwsa",
+      "source": "Prader-Willi Syndrome Association USA",
+      "source_url": "https://www.pwsausa.org/",
+      "evidence_type": "official_patient_organization",
+      "summary": "Official Prader-Willi patient organization with family support and research-related resources.",
+      "publication_date": null,
+      "identifier": null,
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "ube3a-dosage2015",
+      "source": "UBE3A-only duplication and neurodevelopmental phenotypes",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/25884337/",
+      "evidence_type": "human_observational",
+      "summary": "A reported maternal duplication encompassing UBE3A was associated with neurodevelopmental features. Increased UBE3A dosage provides a counterexample to transferring a UBE3A-restoration hypothesis. This case does not reduce all Dup15q biology to one gene.",
+      "publication_date": "2015",
+      "identifier": "PMID:25884337",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "NCT05127226",
+      "source": "HALOS: A Safety, Tolerability, Pharmacokinetics and Pharmacodynamics Study of Multiple Ascending Doses of ION582 in Participants With Angelman Syndrome",
+      "source_url": "https://clinicaltrials.gov/study/NCT05127226",
+      "evidence_type": "clinical_trial_registry",
+      "summary": "Official registry snapshot; current eligibility and recruitment must be checked with the study team.",
+      "publication_date": "2026-08-20",
+      "identifier": "NCT05127226",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    },
+    {
+      "id": "NCT03572933",
+      "source": "Study of Adjunctive Ganaxolone Treatment in Children and Young Adults With CDKL5 Deficiency Disorder",
+      "source_url": "https://clinicaltrials.gov/study/NCT03572933",
+      "evidence_type": "clinical_trial_registry",
+      "summary": "Official registry snapshot; current eligibility and recruitment must be checked with the study team.",
+      "publication_date": "2023-04-14",
+      "identifier": "NCT03572933",
+      "retrieved_at": "2026-10-03",
+      "evidence_level": "source-specific; not a probability of treatment success"
+    }
+  ],
+  "diseases": [
+    {
+      "id": "angelman",
+      "name": "Angelman syndrome",
+      "gene": "UBE3A",
+      "direction": "loss_of_function",
+      "mechanism": "Loss of maternal neuronal UBE3A; paternal allele is normally silenced. Demo scope: UBE3A deficiency, not all deletion biology.",
+      "inheritance": "Imprinting / maternal allele; often sporadic",
+      "phenotypes": [
+        "Developmental delay",
+        "Severe speech impairment",
+        "Ataxia",
+        "Seizures"
+      ],
+      "source_ids": [
+        "angelman-nlm"
+      ],
+      "organization": "asf",
+      "study_ids": [
+        "huang2012",
+        "meng2015",
+        "king2013",
+        "fink2017",
+        "pha2024"
+      ],
+      "evidence_depth": "Deep mechanistic demo",
+      "signature": [
+        {
+          "target": "UBE3A",
+          "direction": "loss_of_function",
+          "weight": 1.0,
+          "source_ids": [
+            "angelman-nlm"
+          ]
+        }
+      ],
+      "unresolved": [
+        "Developmental timing of rescue",
+        "Human neuronal functional rescue",
+        "Broader deletion-associated biology",
+        "Exposure, delivery and long-term tolerability"
+      ]
+    },
+    {
+      "id": "cdkl5",
+      "name": "CDKL5 deficiency disorder",
+      "gene": "CDKL5",
+      "direction": "loss_of_function",
+      "mechanism": "CDKL5 loss of function; symptom control is distinct from causal restoration.",
+      "inheritance": "X-linked; usually de novo",
+      "phenotypes": [
+        "Early-onset seizures",
+        "Developmental impairment",
+        "Cortical visual impairment"
+      ],
+      "source_ids": [
+        "cdkl5-nlm",
+        "cdkl5-genereviews"
+      ],
+      "organization": "ifcr",
+      "study_ids": [
+        "ganaxolone-trial"
+      ],
+      "evidence_depth": "Curated navigation; causal ranking withheld",
+      "signature": [
+        {
+          "target": "CDKL5",
+          "direction": "loss_of_function",
+          "weight": 1.0,
+          "source_ids": [
+            "cdkl5-nlm",
+            "cdkl5-genereviews"
+          ]
+        }
+      ],
+      "unresolved": [
+        "No sourced causal CDKL5-restoring repurposed candidate in this pilot",
+        "Seizure endpoints do not establish developmental rescue"
+      ]
+    },
+    {
+      "id": "cacna1a",
+      "name": "CACNA1A-related disorders",
+      "gene": "CACNA1A",
+      "direction": "variant_dependent",
+      "mechanism": "Gain and loss of function both occur. A gene name alone cannot determine an intervention direction.",
+      "inheritance": "Autosomal dominant; variant dependent",
+      "phenotypes": [
+        "Ataxia",
+        "Hemiplegic migraine",
+        "Seizures",
+        "Developmental impairment"
+      ],
+      "source_ids": [
+        "cacna1a-review",
+        "cacna1a-study"
+      ],
+      "organization": "cacna1a-foundation",
+      "study_ids": [
+        "cacna1a-study"
+      ],
+      "evidence_depth": "Curated navigation; variant direction required",
+      "signature": [
+        {
+          "target": "CACNA1A",
+          "direction": "variant_dependent",
+          "weight": 1.0,
+          "source_ids": [
+            "cacna1a-review",
+            "cacna1a-study"
+          ]
+        }
+      ],
+      "unresolved": [
+        "Variant-specific electrophysiology",
+        "Gain versus loss of function unresolved for a gene-only query"
+      ]
+    },
+    {
+      "id": "stxbp1",
+      "name": "STXBP1-related disorder",
+      "gene": "STXBP1",
+      "direction": "loss_of_function",
+      "mechanism": "STXBP1 loss of function disrupts synaptic vesicle release.",
+      "inheritance": "Autosomal dominant; usually de novo",
+      "phenotypes": [
+        "Developmental impairment",
+        "Epilepsy",
+        "Movement abnormalities"
+      ],
+      "source_ids": [
+        "stxbp1-genereviews"
+      ],
+      "organization": "stxbp1-foundation",
+      "study_ids": [
+        "stxbp1-study"
+      ],
+      "evidence_depth": "Curated navigation; causal ranking withheld",
+      "signature": [
+        {
+          "target": "STXBP1",
+          "direction": "loss_of_function",
+          "weight": 1.0,
+          "source_ids": [
+            "stxbp1-genereviews"
+          ]
+        }
+      ],
+      "unresolved": [
+        "No sourced causal STXBP1-restoring repurposed candidate in this pilot",
+        "Variant and cell-type dependent rescue"
+      ]
+    }
+  ],
+  "interventions": [
+    {
+      "id": "topotecan",
+      "name": "Topotecan",
+      "kind": "drug",
+      "role": "repurposing_hypothesis",
+      "disease_ids": [
+        "angelman"
+      ],
+      "effects": [
+        {
+          "target": "UBE3A",
+          "effect": "restore",
+          "source_ids": [
+            "huang2012",
+            "fink2017"
+          ],
+          "evidence_type": "human_cellular",
+          "context": "Indirect paternal unsilencing, not direct UBE3A agonism"
+        }
+      ],
+      "source_ids": [
+        "huang2012",
+        "fink2017",
+        "king2013",
+        "topotecan-label"
+      ],
+      "spillover": [
+        {
+          "target": "Long-gene transcription",
+          "effect": "reduce",
+          "source_ids": [
+            "king2013"
+          ]
+        }
+      ],
+      "risk": [
+        {
+          "domain": "Hematologic",
+          "label": "Severe myelosuppression warning in oncology label",
+          "source_ids": [
+            "topotecan-label"
+          ]
+        },
+        {
+          "domain": "Renal exposure",
+          "label": "Renal impairment affects labeled exposure/dosing; no dose advice here",
+          "source_ids": [
+            "topotecan-label"
+          ]
+        }
+      ],
+      "summary": "Existing oncology drug with experimental paternal UBE3A unsilencing. A cellular research hypothesis; no established Angelman efficacy."
+    },
+    {
+      "id": "ube3a-ats-aso",
+      "name": "UBE3A-ATS antisense perturbation",
+      "kind": "intervention",
+      "role": "mechanistic_comparator",
+      "disease_ids": [
+        "angelman"
+      ],
+      "effects": [
+        {
+          "target": "UBE3A",
+          "effect": "restore",
+          "source_ids": [
+            "meng2015"
+          ],
+          "evidence_type": "preclinical_animal",
+          "context": "Paternal expression via targeted antisense transcript reduction"
+        }
+      ],
+      "source_ids": [
+        "meng2015"
+      ],
+      "spillover": [],
+      "spillover_unknown": true,
+      "risk": [],
+      "summary": "Experimental comparator to probe selective unsilencing. Mouse-model ASOs in this paper are not assumed equivalent to ION582."
+    },
+    {
+      "id": "pha533533",
+      "name": "(S)-PHA533533",
+      "kind": "compound",
+      "role": "mechanistic_comparator",
+      "disease_ids": [
+        "angelman"
+      ],
+      "effects": [
+        {
+          "target": "UBE3A",
+          "effect": "restore",
+          "source_ids": [
+            "pha2024"
+          ],
+          "evidence_type": "preclinical_animal",
+          "context": "Unsilencing mechanism remains incompletely defined"
+        }
+      ],
+      "source_ids": [
+        "pha2024"
+      ],
+      "spillover": [
+        {
+          "target": "CDK2",
+          "effect": "inhibit",
+          "source_ids": [
+            "pha2024"
+          ]
+        },
+        {
+          "target": "CDK5",
+          "effect": "inhibit",
+          "source_ids": [
+            "pha2024"
+          ]
+        }
+      ],
+      "risk": [],
+      "summary": "Research compound. Published unsilencing was independent of known CDK2/CDK5 inhibition; further mechanism work is needed."
+    },
+    {
+      "id": "ganaxolone-reference",
+      "name": "Ganaxolone (clinical reference)",
+      "kind": "drug",
+      "role": "clinical_reference",
+      "disease_ids": [
+        "cdkl5"
+      ],
+      "effects": [],
+      "spillover": [],
+      "spillover_unknown": true,
+      "risk": [],
+      "source_ids": [
+        "ganaxolone-trial"
+      ],
+      "summary": "Clinical symptom-evidence reference from the CDKL5 randomized trial. No curated CDKL5-restoring effect; causal ranking withheld."
+    }
+  ],
+  "trials": [
+    {
+      "id": "NCT05127226",
+      "disease": "angelman",
+      "title": "HALOS: A Safety, Tolerability, Pharmacokinetics and Pharmacodynamics Study of Multiple Ascending Doses of ION582 in Participants With Angelman Syndrome",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "last_updated": "2026-08-20",
+      "source_ids": [
+        "NCT05127226"
+      ],
+      "intervention": "ION582"
+    },
+    {
+      "id": "NCT03572933",
+      "disease": "cdkl5",
+      "title": "Study of Adjunctive Ganaxolone Treatment in Children and Young Adults With CDKL5 Deficiency Disorder",
+      "status": "COMPLETED",
+      "last_updated": "2023-04-14",
+      "source_ids": [
+        "NCT03572933"
+      ],
+      "intervention": "Ganaxolone"
+    }
+  ],
+  "ai_drafts": [
+    {
+      "source_id": "huang2012",
+      "subject": "topotecan",
+      "predicate": "INTERVENTION_INCREASES_GENE_EXPRESSION",
+      "object": "gene:UBE3A",
+      "source_span": "topotecan unsilences Ube3a in cis by reducing transcription of an imprinted antisense RNA",
+      "explanation": "AI-assisted extraction draft from the cited abstract. Human review remains required; this does not mutate the curated graph."
+    }
+  ],
+  "hero_journey": {
+    "anchor": "angelman",
+    "cluster_name": "15q11–q13 imprinting: shared assays, distinct therapeutic directions",
+    "family_explanation": "Angelman syndrome can leave a key brain-cell protein, UBE3A, missing or reduced. Another community studies how nearby genes are switched on depending on which parent they came from. Their published cell-model work offers a starting point for sharing research methods, not medicines.",
+    "neighbor": {
+      "id": "prader-willi",
+      "name": "Prader-Willi syndrome",
+      "mechanism": "Loss of paternal gene expression at the imprinted chromosome-15 region; different causal targets from Angelman.",
+      "relationship": "Shared genomic-imprinting model / assay cluster",
+      "source_ids": [
+        "paired-ipsc2010",
+        "pws-nlm"
+      ],
+      "organization": "pwsa",
+      "caveat": "A complex, often multigene imprinting disorder. A research-asset neighbor, not an assertion of monogenic disease or transferable treatment."
+    },
+    "asset": {
+      "id": "asset:paired-ipsc",
+      "name": "Published paired Angelman / Prader-Willi iPSC model approach",
+      "source_ids": [
+        "paired-ipsc2010"
+      ],
+      "type": "Published model methodology",
+      "availability": "Protocol evidence verified; cell-line access, licensing and present researcher availability not verified.",
+      "why_reusable": "Both communities can discuss parent-of-origin expression and imprint maintenance readouts using the published paired model approach.",
+      "researcher": "Chamberlain et al. (publication team; current availability not verified)"
+    },
+    "counterexample": {
+      "id": "ube3a-duplication",
+      "name": "UBE3A dosage-gain neurodevelopmental phenotype",
+      "direction": "increased_dosage",
+      "source_ids": [
+        "ube3a-dosage2015"
+      ],
+      "explanation": "A shared gene name is not a shared intervention direction. A restoration effect aligned with UBE3A deficiency should not be transferred to a dosage-gain context.",
+      "distinction": "Not included in the UBE3A-restoration therapeutic cluster. Broader Dup15q is multigenic; this is a direction counterexample, not a treatment model."
+    },
+    "collaboration": {
+      "status": "hypothesis",
+      "title": "Co-design an imprinting-model validation brief",
+      "action": "Prepare a joint question for the Angelman and Prader-Willi research communities: can the published paired iPSC approach validate allele-specific expression and preserve neighboring imprinted transcripts?",
+      "deliverables": [
+        "Agree genotype and imprinting quality-control criteria",
+        "Compare allele-specific expression and neighboring transcripts",
+        "Define a functional-rescue readout and early-kill threshold",
+        "Confirm model access and ethics before any experiment"
+      ],
+      "limitation": "No collaborator has agreed, no cell access is secured, and no outreach is sent by this app.",
+      "source_ids": [
+        "paired-ipsc2010",
+        "meng2015",
+        "pws-nlm"
+      ]
+    },
+    "acceleration": {
+      "label": "10x acceleration hypothesis — not a measured result",
+      "milestone": "Decision on which therapeutic hypothesis should receive experimental validation",
+      "current": [
+        "Manual literature review",
+        "Find publication teams",
+        "Identify mechanistic neighbors",
+        "Find model and registry resources",
+        "Review candidate medicines",
+        "Define the next experiment"
+      ],
+      "atlas": [
+        "Search once",
+        "Inspect cited mechanistic paths",
+        "Find a related community",
+        "Reuse a published model approach",
+        "Compare direction-aware hypotheses",
+        "Export a falsifiable shared research brief"
+      ],
+      "assumption": "Sources and relationships are already curated and cached. The workflow may reduce repeated navigation; curation, biological validation and collaboration still take work.",
+      "measurement_plan": "A future paired task study should measure time and decision quality to produce a cited research brief against manual review. No ratio or precise time saving is claimed."
+    }
+  },
+  "known_relationships": [
+    {
+      "candidate_id": "topotecan",
+      "disease_id": "angelman",
+      "kind": "preclinical_mechanism",
+      "source_ids": [
+        "huang2012",
+        "fink2017"
+      ],
+      "claim": "Source-reported neuronal UBE3A restoration; no clinical efficacy established."
+    },
+    {
+      "candidate_id": "ube3a-ats-aso",
+      "disease_id": "angelman",
+      "kind": "preclinical_mechanism",
+      "source_ids": [
+        "meng2015"
+      ],
+      "claim": "Source-reported mouse-model expression restoration with incomplete phenotype rescue."
+    },
+    {
+      "candidate_id": "pha533533",
+      "disease_id": "angelman",
+      "kind": "preclinical_mechanism",
+      "source_ids": [
+        "pha2024"
+      ],
+      "claim": "Experimental unsilencing observation; research compound, not established therapy."
+    },
+    {
+      "candidate_id": "ganaxolone-reference",
+      "disease_id": "cdkl5",
+      "kind": "clinical_symptom_evidence",
+      "source_ids": [
+        "ganaxolone-trial"
+      ],
+      "claim": "Randomized trial seizure-frequency outcome; not causal CDKL5 restoration."
+    }
+  ]
+}
