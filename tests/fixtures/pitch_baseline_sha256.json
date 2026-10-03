@@ -1,0 +1,18 @@
+{
+  "commit": "19c417faace73f0eb32a2f05aa1cf565d8052533",
+  "sha256": {
+    "web/index.html": "c3a917b90f531454027876c61f41613b4ffa88891dc3bff88abef4cd87f17638",
+    "web/app.js": "006e1985e4c7aa97cbced2db9b8d2be1d6775113e1435629d5ece963422ff25a",
+    "web/style.css": "732060a169373b92137edbea446f03b3e6dec9eb863ddd103adbe76a3960c0da",
+    "web/vendor/d3.min.js": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539",
+    "data/atlas.json.gz": "31c98e05591648124b84b22f3ce4d7420f21c2b478fe1271a0f7dd33c7879da9",
+    "data/curated/patient_orgs.json": "1b0b247bca39756ace0fecf533c48b3053143208dbbce2c419f3a5d42671cffc",
+    "atlas/build.py": "e0cd4b8f1e9ffb364671424dd8bbbbe1bfde779e3bb1a21fa9bc89d1a76e5972",
+    "atlas/config.py": "4204f3ac2ba4dc16054c91e7ae76b5a6015da55f1677f821a3bdf0aefb6de3d3",
+    "atlas/connect.py": "fed8bcb68e964e0b890910d961533e98cc2609b61d72d22f677a0c22b0554e35",
+    "atlas/enrich.py": "7f6d2d2526524c5fb290e2e3ba86e74c3f6e0f4978a701383b504d6509b3fb1a",
+    "atlas/llm.py": "99a75c60fb23f4a270fcc03fe4044aa8ce9f8637f906ecda0fa40fc75830a569",
+    "atlas/store.py": "93eff3eb135a67eac4a4ab3c3c242965f992ce51789f57417dc503e0f1afcbc8",
+    "atlas/sources.py": "6c5ea38d650a19a827789464b528814eb1014949ea25234de569d9c7fe522d46"
+  }
+}

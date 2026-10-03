@@ -7,7 +7,7 @@ import json
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
@@ -15,6 +15,8 @@ from pydantic import BaseModel, Field
 from . import connect, enrich, llm
 from .config import ATLAS_FILE, CONTRIBUTIONS_FILE, WEB
 from .store import Atlas, load_contributions
+from .therapeutics import opportunities
+from .therapeutics.service import UI_ROOT, ui_enabled
 
 if not ATLAS_FILE.exists():
     raise SystemExit("data/atlas.json.gz not found. Build it first:  uv run python -m atlas.build")
@@ -61,6 +63,26 @@ def disease_evidence(did: str, refresh: bool = False):
     d = disease_or_404(did)
     enr = enrich.enrich(d, force=refresh)
     return {**enr, "effect": connect.effect_profile(atlas, d, enr)}
+
+
+@app.get("/api/disease/{did}/therapeutics")
+def disease_therapeutics(did: str, variant: str = Query(default="", max_length=200),
+                         mechanism: str = Query(default="", max_length=100)):
+    return opportunities(disease_or_404(did), variant=variant.strip() or None, mechanism=mechanism.strip() or None)
+
+
+@app.get("/therapeutics")
+def therapeutics_panel():
+    if not ui_enabled():
+        raise HTTPException(404, "Therapeutic Opportunities is disabled")
+    return FileResponse(UI_ROOT / "index.html")
+
+
+@app.get("/therapeutics/assets/{filename}")
+def therapeutics_asset(filename: str):
+    if not ui_enabled() or filename not in {"panel.css", "panel.js"}:
+        raise HTTPException(404, "Unknown therapeutic panel asset")
+    return FileResponse(UI_ROOT / filename)
 
 
 @app.get("/api/disease/{did}/network")

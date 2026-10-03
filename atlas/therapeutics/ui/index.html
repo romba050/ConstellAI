@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ConstellAI · Therapeutic Opportunities</title>
+  <link rel="stylesheet" href="/therapeutics/assets/panel.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">✦ ConstellAI</a>
+    <span class="preview">MEDR5 · research preview</span>
+    <a class="atlas-link" href="/">Open disease atlas ↗</a>
+  </header>
+  <main>
+    <div class="intro">
+      <p class="eyebrow">From disease biology to a testable intervention hypothesis</p>
+      <h1>Therapeutic Opportunities</h1>
+      <p class="muted">Direction first. Cover the desired mechanism, inspect spillover, then ask what remains.</p>
+    </div>
+    <form id="context-form">
+      <div>
+        <label for="disease">ConstellAI disease</label>
+        <select id="disease" name="disease">
+          <option value="MONDO:0007113">Angelman syndrome · UBE3A</option>
+          <option value="MONDO:0033372">DEE 63 · CPLX1</option>
+          <option value="MONDO:0012812">DEE 4 · STXBP1</option>
+        </select>
+      </div>
+      <div>
+        <label for="mechanism">Mechanistic context</label>
+        <select id="mechanism" name="mechanism">
+          <option value="">Reviewed disease-level mechanism</option>
+          <option value="unknown">Direction not established</option>
+        </select>
+      </div>
+      <div>
+        <label for="variant">Research variant ID <span class="muted">(optional)</span></label>
+        <input id="variant" name="variant" maxlength="200" placeholder="e.g. VCV000155984.20" autocomplete="off">
+      </div>
+      <button type="submit">Evaluate mechanism →</button>
+    </form>
+    <p id="status" role="status" aria-live="polite">Loading reviewed mechanism…</p>
+    <div id="results" hidden></div>
+    <noscript>This panel requires JavaScript. Read the JSON at /api/disease/MONDO:0007113/therapeutics.</noscript>
+  </main>
+  <footer>Limited, sourced research pilot · Clinical risk, treatment benefit and mechanistic fit require separate evidence.</footer>
+  <script src="/therapeutics/assets/panel.js" defer></script>
+</body>
+</html>

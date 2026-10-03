@@ -1,0 +1,552 @@
+{
+  "version": 1,
+  "scope": "Selected sourced MEDR5 Angelman pilot; no disease expansion.",
+  "sources": [
+    {
+      "id": "angelman-nlm",
+      "source": "MedlinePlus Genetics: Angelman syndrome",
+      "source_url": "https://medlineplus.gov/genetics/condition/angelman-syndrome/",
+      "evidence_type": "authoritative_disease_reference",
+      "publication_date": "2022-05-17",
+      "identifier": null,
+      "retrieved_at": "2026-10-03",
+      "extracted_claim": "Loss of maternal UBE3A activity in neurons is central to Angelman syndrome. Developmental delay, severe speech impairment, ataxia and seizures are characteristic. Large deletions may involve additional genes.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "Official programme resource",
+      "study_design": "Authoritative overview/navigation; not a candidate intervention experiment.",
+      "integration_reviewed_at": "2026-10-04"
+    },
+    {
+      "id": "huang2012",
+      "source": "Huang et al.: Topoisomerase inhibitors unsilence the dormant allele of Ube3a in neurons",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/22190039/",
+      "evidence_type": "preclinical_animal",
+      "publication_date": "2011",
+      "identifier": "PMID:22190039",
+      "retrieved_at": "2026-10-03",
+      "extracted_claim": "Topotecan restored paternal Ube3a expression in neuronal models by reducing an antisense transcript. This is experimental unsilencing evidence, not clinical efficacy.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "pubmed_metadata_verified_claim_reviewed",
+      "uncertainty": "Preclinical/cellular context. Replicate counts depend on assay; no clinical efficacy or safety established by these experiments.",
+      "pmid": "22190039",
+      "doi": "10.1038/nature10726",
+      "pmcid": "PMC3257422",
+      "title": "Topoisomerase inhibitors unsilence the dormant allele of Ube3a in neurons.",
+      "journal": "Nature",
+      "authors": [
+        "Hsien-Sung Huang",
+        "John A Allen",
+        "Angela M Mabb",
+        "Ian F King",
+        "Jayalakshmi Miriyala",
+        "Bonnie Taylor-Blake",
+        "Noah Sciaky",
+        "J Walter Dutton",
+        "Hyeong-Min Lee",
+        "Xin Chen",
+        "Jian Jin",
+        "Arlene S Bridges",
+        "Mark J Zylka",
+        "Bryan L Roth",
+        "Benjamin D Philpot"
+      ],
+      "publication_year": "2011",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, N.I.H., Extramural",
+        "Research Support, Non-U.S. Gov't",
+        "Research Support, U.S. Gov't, Non-P.H.S."
+      ],
+      "corrections": [
+        {
+          "type": "CommentIn",
+          "pmid": "22190038",
+          "note": null
+        },
+        {
+          "type": "CommentIn",
+          "pmid": "22270025",
+          "note": null
+        }
+      ],
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=22190039&retmode=xml",
+      "metadata_retrieved_at": "2026-10-03",
+      "source_family": "PubMed / PMC",
+      "pmc_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3257422/",
+      "study_design": "Small-molecule screening and experimental neuronal/mouse unsilencing assays.",
+      "sample_size": {
+        "reported": "Figure 2a: n=4 per dose-response point; 2h: n=4–5 cultures per point. Assay-level counts, not patients or a study-wide N.",
+        "availability": "verified_context_specific",
+        "location": "PMC Figure 2",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3257422/"
+      },
+      "integration_reviewed_at": "2026-10-04"
+    },
+    {
+      "id": "meng2015",
+      "source": "Meng et al.: Towards a therapy for Angelman syndrome by targeting a long non-coding RNA",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/25470045/",
+      "evidence_type": "preclinical_animal",
+      "publication_date": "2015",
+      "identifier": "PMID:25470045",
+      "retrieved_at": "2026-10-03",
+      "extracted_claim": "UBE3A-ATS antisense perturbations restored paternal UBE3A in mouse models. The authors compared selective antisense effects with topotecan effects on long-gene transcription; phenotypic rescue was incomplete.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "pubmed_metadata_verified_claim_reviewed",
+      "uncertainty": "Preclinical/cellular context. Replicate counts depend on assay; no clinical efficacy or safety established by these experiments.",
+      "pmid": "25470045",
+      "doi": "10.1038/nature13975",
+      "pmcid": "PMC4351819",
+      "title": "Towards a therapy for Angelman syndrome by targeting a long non-coding RNA.",
+      "journal": "Nature",
+      "authors": [
+        "Linyan Meng",
+        "Amanda J Ward",
+        "Seung Chun",
+        "C Frank Bennett",
+        "Arthur L Beaudet",
+        "Frank Rigo"
+      ],
+      "publication_year": "2015",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, N.I.H., Extramural",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "corrections": [
+        {
+          "type": "CommentIn",
+          "pmid": "25511900",
+          "note": null
+        }
+      ],
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=25470045&retmode=xml",
+      "metadata_retrieved_at": "2026-10-03",
+      "source_family": "PubMed / PMC",
+      "pmc_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4351819/",
+      "study_design": "Experimental antisense perturbations in neuronal and mouse models; expression and phenotype readouts.",
+      "sample_size": {
+        "reported": "Extended Data Figure 1b: n=2 per group for the nascent-transcript assay. Other assays have different counts; not a study-wide N.",
+        "availability": "verified_context_specific",
+        "location": "PMC Extended Data Figure 1",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4351819/"
+      },
+      "integration_reviewed_at": "2026-10-04"
+    },
+    {
+      "id": "king2013",
+      "source": "King et al.: Topoisomerases facilitate transcription of long genes linked to autism",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/23995680/",
+      "evidence_type": "preclinical_cellular",
+      "publication_date": "2013",
+      "identifier": "PMID:23995680",
+      "retrieved_at": "2026-10-03",
+      "extracted_claim": "Topotecan reduced transcription of long neuronal genes in mouse and human models. This broad transcriptional effect is a spillover concern when probing UBE3A unsilencing.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "pubmed_metadata_verified_claim_reviewed",
+      "uncertainty": "Preclinical/cellular context. Replicate counts depend on assay; no clinical efficacy or safety established by these experiments.",
+      "pmid": "23995680",
+      "doi": "10.1038/nature12504",
+      "pmcid": "PMC3767287",
+      "title": "Topoisomerases facilitate transcription of long genes linked to autism.",
+      "journal": "Nature",
+      "authors": [
+        "Ian F King",
+        "Chandri N Yandava",
+        "Angela M Mabb",
+        "Jack S Hsiao",
+        "Hsien-Sung Huang",
+        "Brandon L Pearson",
+        "J Mauro Calabrese",
+        "Joshua Starmer",
+        "Joel S Parker",
+        "Terry Magnuson",
+        "Stormy J Chamberlain",
+        "Benjamin D Philpot",
+        "Mark J Zylka"
+      ],
+      "publication_year": "2013",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, N.I.H., Extramural",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "corrections": [
+        {
+          "type": "CommentIn",
+          "pmid": "23995684",
+          "note": null
+        },
+        {
+          "type": "CommentIn",
+          "pmid": "25100484",
+          "note": null
+        },
+        {
+          "type": "CommentIn",
+          "pmid": "25100485",
+          "note": null
+        }
+      ],
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=23995680&retmode=xml",
+      "metadata_retrieved_at": "2026-10-03",
+      "source_family": "PubMed / PMC",
+      "pmc_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3767287/",
+      "study_design": "Experimental TOP1 perturbation with neuronal transcriptomics and knockdown controls.",
+      "sample_size": {
+        "reported": "Figure 1: n=5 mouse neuronal biological replicates; n=2 human iPSC-neuron biological replicates. Not patients.",
+        "availability": "verified_context_specific",
+        "location": "PMC Figure 1",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3767287/"
+      },
+      "integration_reviewed_at": "2026-10-04"
+    },
+    {
+      "id": "fink2017",
+      "source": "Fink et al.: Disrupted neuronal maturation in Angelman syndrome-derived induced pluripotent stem cells",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/28436452/",
+      "evidence_type": "human_cellular",
+      "publication_date": "2017",
+      "identifier": "PMID:28436452",
+      "retrieved_at": "2026-10-03",
+      "extracted_claim": "Topotecan increased UBE3A expression and improved selected electrophysiological readouts in Angelman-derived neuronal cultures. This is cellular evidence, not a patient treatment result.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "pubmed_metadata_verified_claim_reviewed",
+      "uncertainty": "Preclinical/cellular context. Replicate counts depend on assay; no clinical efficacy or safety established by these experiments.",
+      "pmid": "28436452",
+      "doi": "10.1038/ncomms15038",
+      "pmcid": "PMC5413969",
+      "title": "Disrupted neuronal maturation in Angelman syndrome-derived induced pluripotent stem cells.",
+      "journal": "Nature communications",
+      "authors": [
+        "James J Fink",
+        "Tiwanna M Robinson",
+        "Noelle D Germain",
+        "Carissa L Sirois",
+        "Kaitlyn A Bolduc",
+        "Amanda J Ward",
+        "Frank Rigo",
+        "Stormy J Chamberlain",
+        "Eric S Levine"
+      ],
+      "publication_year": "2017",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, N.I.H., Extramural",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "corrections": [],
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=28436452&retmode=xml",
+      "metadata_retrieved_at": "2026-10-03",
+      "source_family": "PubMed / PMC",
+      "pmc_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5413969/",
+      "study_design": "Human iPSC-derived neuronal experiments with unaffected controls, UBE3A perturbations and cellular rescue readouts.",
+      "sample_size": {
+        "reported": "3 Angelman donors and 4 unrelated control donors. Figure 2c topotecan RMP assay: 2–4 coverslips per condition, 15 cells per coverslip. Cells/coverslips are not independent patient counts.",
+        "availability": "verified_context_specific",
+        "location": "PMC Methods / Figure 2c",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5413969/"
+      },
+      "integration_reviewed_at": "2026-10-04"
+    },
+    {
+      "id": "topotecan-label",
+      "source": "DailyMed: Topotecan injection prescribing information",
+      "source_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d4e1cce-c57e-4a8b-be96-f95a2778e221",
+      "evidence_type": "regulatory_label",
+      "publication_date": null,
+      "identifier": null,
+      "retrieved_at": "2026-10-03",
+      "extracted_claim": "Oncology labeling warns of severe myelosuppression and identifies renal impairment as relevant to exposure. It supplies no validated organ-burden number for Angelman research.",
+      "claim_kind": "direct_source_report",
+      "verification_status": "curated_source_review",
+      "uncertainty": "Source-specific context; no systematic contradiction review or independent clinical validation.",
+      "source_family": "DailyMed",
+      "study_design": "Regulatory drug label; oncology indications and warnings.",
+      "integration_reviewed_at": "2026-10-04"
+    },
+    {
+      "id": "MONDO:0007113",
+      "source": "Angelman syndrome — MONDO",
+      "title": "Angelman syndrome — MONDO",
+      "source_url": "https://www.ebi.ac.uk/ols4/ontologies/mondo/classes?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMONDO_0007113",
+      "evidence_type": "ontology_identifier",
+      "extracted_claim": "MONDO term MONDO:0007113 is labelled Angelman syndrome. Terminology identity does not establish a drug effect or disease association.",
+      "source_family": "MONDO",
+      "publication_date": null,
+      "identifier": "MONDO:0007113",
+      "retrieved_at": "2026-10-03",
+      "claim_kind": "direct_source_report",
+      "verification_status": "official_record_verified",
+      "uncertainty": "Record scope applies; no efficacy, safety, partnership or guaranteed asset access implied.",
+      "ontology_id": "MONDO:0007113",
+      "synonyms": [
+        "AS",
+        "Angelman syndrome (Type 1)",
+        "Angelman syndrome (Type 2)",
+        "Angelman syndrome",
+        "Angelman’s syndrome",
+        "happy puppet syndrome (formerly)",
+        "happy puppet syndrome, formerly"
+      ],
+      "cross_references": [
+        {
+          "database": "DECIPHER",
+          "id": "4",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "DECIPHER",
+          "id": "54",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "DOID",
+          "id": "1932",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "GARD",
+          "id": "0005810",
+          "mapping_context": "MONDO:GARD"
+        },
+        {
+          "database": "ICD10CM",
+          "id": "Q93.51",
+          "mapping_context": "https://www.angelmanbiomarkers.org/special-announcement-angelman-specific-icd-10-code-q93-51-is-finally-here/"
+        },
+        {
+          "database": "ICD9",
+          "id": "759.89",
+          "mapping_context": "MONDO:relatedTo"
+        },
+        {
+          "database": "MEDGEN",
+          "id": "58144",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "MESH",
+          "id": "C531619",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "MESH",
+          "id": "D017204",
+          "mapping_context": "Orphanet:72/e"
+        },
+        {
+          "database": "MedDRA",
+          "id": "10049004",
+          "mapping_context": "Orphanet:72/e"
+        },
+        {
+          "database": "NANDO",
+          "id": "1200686",
+          "mapping_context": "https://orcid.org/0000-0003-0011-764X"
+        },
+        {
+          "database": "NANDO",
+          "id": "2200960",
+          "mapping_context": "https://orcid.org/0000-0003-0011-764X"
+        },
+        {
+          "database": "NCIT",
+          "id": "C75462",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "NORD",
+          "id": "782",
+          "mapping_context": "MONDO:NORD"
+        },
+        {
+          "database": "OMIM",
+          "id": "105830",
+          "mapping_context": "Orphanet:72/e"
+        },
+        {
+          "database": "Orphanet",
+          "id": "72",
+          "mapping_context": "OMIM:105830"
+        },
+        {
+          "database": "SCTID",
+          "id": "76880004",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "UMLS",
+          "id": "C0162635",
+          "mapping_context": "MONDO:equivalentTo"
+        },
+        {
+          "database": "icd11.foundation",
+          "id": "1106558408",
+          "mapping_context": "Orphanet:72"
+        }
+      ],
+      "study_design": "Curated ontology term / identifier mapping, not clinical or experimental evidence.",
+      "metadata_source_url": "https://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms?obo_id=MONDO:0007113",
+      "record_scope": "terminology_only",
+      "integration_reviewed_at": "2026-10-04"
+    },
+    {
+      "id": "clinvar-155984",
+      "source": "ClinVar UBE3A deletion / Angelman condition record",
+      "title": "ClinVar UBE3A deletion / Angelman condition record",
+      "source_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/155984/",
+      "evidence_type": "clinical_variant_assertion",
+      "extracted_claim": "ClinVar lists this UBE3A deletion with a Pathogenic Angelman-specific condition classification. Broader variant aggregation is Pathogenic/Likely pathogenic. This is a database assertion, not a measured rescue effect, patient diagnosis or treatment response.",
+      "source_family": "ClinVar",
+      "publication_date": null,
+      "identifier": "VCV000155984.20",
+      "retrieved_at": "2026-10-03",
+      "claim_kind": "direct_source_report",
+      "verification_status": "official_record_verified",
+      "uncertainty": "Check transcript, parent of origin, genotype and functional evidence. ClinVar pathogenicity is not automatically a gain/loss direction or treatment-fit score.",
+      "variant_name": "NM_130839.5(UBE3A):c.2567_2568del (p.Lys856fs)",
+      "record_updated_at": "2026-09-27",
+      "variant_aggregate_classification": "Pathogenic/Likely pathogenic",
+      "condition_record": "RCV000144307.20",
+      "condition": "Angelman syndrome",
+      "condition_classification": "Pathogenic",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "classification_evaluated_at": "2025-07-30",
+      "condition_submission_count": 7,
+      "study_design": "Submitted germline variant classifications; multiple submitters, no conflicts, not expert-panel review.",
+      "metadata_source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=clinvar&id=VCV000155984&rettype=vcv&retmode=xml",
+      "integration_reviewed_at": "2026-10-04"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "ube3a-deficiency",
+      "disease_id": "MONDO:0007113",
+      "genes": [
+        "UBE3A"
+      ],
+      "scope": "Disease-level UBE3A-deficiency research model only. Not a genotype-specific treatment match or all deletion-associated biology.",
+      "assumptions": [
+        "Maternal neuronal UBE3A deficiency is the modeled deviation.",
+        "Functional paternal UBE3A is present and its unsilencing is biologically relevant; this is not verified for an individual."
+      ],
+      "targets": [
+        {
+          "id": "gene:UBE3A",
+          "label": "UBE3A",
+          "disease_direction": "loss_of_function",
+          "weight": 1.0,
+          "source_ids": [
+            "angelman-nlm",
+            "huang2012"
+          ],
+          "context": "Loss of maternal neuronal UBE3A activity; desired increase of functional expression."
+        }
+      ],
+      "unresolved": [
+        "Developmental timing of rescue",
+        "Human neuronal functional rescue beyond measured cellular readouts",
+        "Broader deletion-associated biology is outside the modeled axis",
+        "Exposure, delivery and long-term tolerability"
+      ]
+    }
+  ],
+  "interventions": [
+    {
+      "id": "topotecan",
+      "name": "Topotecan",
+      "kind": "existing_drug",
+      "profile_ids": [
+        "ube3a-deficiency"
+      ],
+      "summary": "Existing oncology drug with experimental paternal UBE3A unsilencing. A cellular research hypothesis; no established Angelman efficacy.",
+      "inventory_complete": false,
+      "effects": [
+        {
+          "id": "topotecan:ube3a-expression",
+          "target": "gene:UBE3A",
+          "label": "UBE3A",
+          "direction": "increase",
+          "source_ids": [
+            "huang2012",
+            "fink2017"
+          ],
+          "relation": "INDIRECTLY_INCREASES_EXPRESSION",
+          "claim_kind": "direct_source_report",
+          "context": "Indirect paternal unsilencing, not direct UBE3A agonism; experimental neuronal context, not direct protein binding or agonism."
+        }
+      ],
+      "spillover": [
+        {
+          "id": "topotecan:long-gene-transcription",
+          "target": "mechanism:long-gene-transcription",
+          "label": "Long-gene transcription",
+          "direction": "reduce",
+          "source_ids": [
+            "king2013"
+          ],
+          "relation": "REDUCES_TRANSCRIPTION",
+          "claim_kind": "direct_source_report",
+          "context": "Reduced long-gene transcription in experimental neurons; one correlated mechanism, not an invented count of affected genes."
+        }
+      ],
+      "warnings": [
+        {
+          "domain": "Hematologic",
+          "label": "Severe myelosuppression warning in oncology label",
+          "source_ids": [
+            "topotecan-label"
+          ]
+        },
+        {
+          "domain": "Renal exposure",
+          "label": "Renal impairment affects labeled exposure/dosing; no dose advice here",
+          "source_ids": [
+            "topotecan-label"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ube3a-ats-aso",
+      "name": "UBE3A-ATS antisense perturbation",
+      "kind": "research_comparator",
+      "profile_ids": [
+        "ube3a-deficiency"
+      ],
+      "summary": "Experimental comparator to probe selective unsilencing. Mouse-model ASOs in this paper are not assumed equivalent to ION582.",
+      "inventory_complete": false,
+      "effects": [
+        {
+          "id": "ube3a-ats-aso:ube3a-expression",
+          "target": "gene:UBE3A",
+          "label": "UBE3A",
+          "direction": "increase",
+          "source_ids": [
+            "meng2015"
+          ],
+          "relation": "INDIRECTLY_INCREASES_EXPRESSION",
+          "claim_kind": "direct_source_report",
+          "context": "Paternal expression via targeted antisense transcript reduction; experimental neuronal context, not direct protein binding or agonism."
+        }
+      ],
+      "spillover": [],
+      "warnings": []
+    }
+  ],
+  "variant_examples": [
+    {
+      "id": "VCV000155984.20",
+      "disease_id": "MONDO:0007113",
+      "gene": "UBE3A",
+      "source_ids": [
+        "clinvar-155984"
+      ],
+      "direction": "unknown",
+      "scope": "Public record identifier; pathogenicity is not functional direction or rescue evidence."
+    }
+  ]
+}
