@@ -199,6 +199,10 @@ def connection(atlas, aid, bid):
         thin = a if a["sparse"] else b
         checks.append({"level": "warn", "text": f"{thin['name']} has only {len(thin['phenotypes'])} recorded symptoms, so the overlap is "
                        "measured on thin data. Deep phenotyping of a few patients would firm this up."})
+    for d, enr in ((a, ea), (b, eb)):
+        if enr["pubmed"]["count"] < 100:
+            checks.append({"level": "warn", "text": f"The evidence base for {'/'.join(d['genes'])} is small: {enr['pubmed']['count']} papers in PubMed. "
+                           "Treat this link as a hypothesis to validate with an expert, not as proof."})
     if not shared_pa:
         checks.append({"level": "warn", "text": "No shared curated pathway: the link rests on symptoms alone, which can arise from different causes."
                        if a["has_pathway"] and b["has_pathway"] else

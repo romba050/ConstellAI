@@ -219,3 +219,19 @@ def screen_trials(focus, batch):
                 r["quote"] = ""
             results[r["nct"]] = r
     return results
+
+
+def summarise_updates(gene, items):
+    """One plain sentence per new item saying why it may matter to the patient group. Titles only."""
+    schema = _obj({"summaries": {"type": "array", "items": _obj({"id": {"type": "string"}, "summary": {"type": "string"}})}})
+    system = (
+        f"Maria leads the patient group for {gene}-related disorders. For each newly published or updated item, "
+        "write ONE plain-language sentence (max 25 words) saying what it is about and why it might matter to her "
+        "families. You only see the title and type: do not invent results, numbers or conclusions, and say "
+        "'appears to' when the title is ambiguous. If an item is not really about this gene's disease, say so."
+    )
+    out = _json(system, json.dumps(items), "pulse", schema, max_wait=70)
+    if not out:
+        return None
+    ids = {i["id"] for i in items}
+    return {x["id"]: x["summary"] for x in out["summaries"] if x["id"] in ids}

@@ -7,24 +7,9 @@ const S = { points: [], byId: new Map(), groups: [], meta: null, llm: null, focu
   profile: { age: "", country: "" } };
 try { Object.assign(S.profile, JSON.parse(localStorage.getItem("profile") || "{}")); } catch (e) { /* private mode */ }
 
-const $ = (s, el = document) => el.querySelector(s);
 const panel = $("#panel");
-const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const api = async (path) => {
-  const r = await fetch(path);
-  if (!r.ok) throw new Error((await r.json().catch(() => ({}))).detail || r.statusText);
-  return r.json();
-};
 const color = (g) => (g >= 0 && g < COLORS.length ? COLORS[g] : OTHER);
-const plural = (n, w) => `${n} ${n === 1 ? w : w.endsWith("y") ? w.slice(0, -1) + "ies" : w + "s"}`;
 const lay = (p) => p.name;
-const link = (url, text) => (url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>` : esc(text));
-const refLink = (ref) => {
-  const [db, id] = ref.split(":");
-  const url = db === "PMID" ? `https://pubmed.ncbi.nlm.nih.gov/${id}/` : db === "OMIM" ? `https://omim.org/entry/${id}`
-    : db === "ORPHA" ? `https://www.orpha.net/en/disease/detail/${id}` : "";
-  return link(url, ref);
-};
 const diseaseHref = (id) => (id === S.focus ? "#" : `#d/${id}`);
 const geneChip = (g) => `<a class="chip gene" href="#e/gene/${esc(g)}">${esc(g)}</a>`;
 
@@ -187,14 +172,10 @@ $("#legend").addEventListener("click", (ev) => {
 });
 
 /* ------------------------------------------------------------------ disease */
-const GRADE_TEXT = { viable: "Viable lead", speculative: "Speculative", thin: "Thin data", unsupported: "Unsupported" };
+const GRADE_TEXT = { viable: "Lead to validate", speculative: "Speculative", thin: "Thin data", unsupported: "Unsupported" };
 
 async function openDisease(id) {
   panel.innerHTML = `<div class="loading">Opening the atlas</div>`;
-  if (id === S.focus && !S.trials[id]) {
-    api(`/api/disease/${id}/trials`).then((t) => { S.trials[id] = t; if (S.selected === id && !S.conn) renderDisease(); })
-      .catch((err) => { S.trials[id] = { error: err.message }; if (S.selected === id && !S.conn) renderDisease(); });
-  }
   const d = await api("/api/disease/" + id);
   S.selected = id; S.neighbors = d.neighbors; S.highlight = null; S.conn = null; S.detail = d;
   focus([id, ...d.neighbors.map((n) => n.id)]);
@@ -208,12 +189,11 @@ async function openDisease(id) {
 
 function renderDisease() {
   const d = S.detail, e = S.evidence[d.id], isFocus = d.id === S.focus;
-  const tabs = (isFocus ? [["trials", "Trials to join"]] : [])
-    .concat([["connections", `Connections ${d.neighbors.length}`], ["community", "Community"], ["biology", "Biology"], ["people", "People"]]);
+  const tabs = [["connections", `Connections ${d.neighbors.length}`], ["community", "Community"], ["biology", "Biology"], ["people", "People"]];
   const tab = tabs.some(([k]) => k === S.tab) ? S.tab : tabs[0][0];
   const focusName = S.byId.get(S.focus).genes;
   panel.innerHTML = `
-    ${isFocus ? `<p class="label">For Maria · STXBP1 patient-group leader</p>` : `<a class="back" href="#">← Back to ${esc(focusName)}</a>`}
+    ${isFocus ? `<a class="back" href="/">← Maria's dashboard</a>` : `<a class="back" href="#">← Back to ${esc(focusName)}</a>`}
     <h1>${isFocus ? "STXBP1-related disorders" : esc(d.name)}</h1>
     ${isFocus ? `<p class="small muted">${esc(d.name)} · one gene, one community, every open trial checked</p>`
       : `<p class="small"><a href="#c/${S.focus}/${d.id}">See how it connects to ${esc(focusName)} →</a></p>`}
@@ -226,7 +206,7 @@ function renderDisease() {
     <p class="small">Constellation: <a href="#k/${esc(d.cluster.id)}"><span style="color:${color(d.group)}">●</span> ${esc(d.cluster.label)}</a>
       <span class="muted">· ${plural(d.cluster.size, "disease")}</span></p>
     <div class="tabs">${tabs.map(([k, l]) => `<button data-tab="${k}" class="${k === tab ? "on" : ""}">${l}</button>`).join("")}</div>
-    <div id="tab">${{ trials: tabTrials, connections: tabConnections, biology: tabBiology, community: tabCommunity, people: tabPeople }[tab](d, e)}</div>`;
+    <div id="tab">${{ connections: tabConnections, biology: tabBiology, community: tabCommunity, people: tabPeople }[tab](d, e)}</div>`;
 }
 panel.addEventListener("click", (ev) => {
   if (ev.target.classList.contains("def")) ev.target.classList.toggle("open");
@@ -397,109 +377,6 @@ panel.addEventListener("click", async (ev) => {
   if (S.selected === id && !S.conn) renderDisease();
 });
 
-/* ------------------------------------------------------------------ trials */
-const VERDICT = {
-  names_disease: { label: "Made for STXBP1", cls: "viable" },
-  could_include: { label: "Could include your child", cls: "speculative" },
-  excludes: { label: "Likely excludes STXBP1", cls: "thin" },
-  other_gene_only: { label: "Other gene only", cls: "unsupported" },
-};
-const ageFits = (t, age) => age === "" || ((t.min_age == null || age >= t.min_age) && (t.max_age == null || age <= t.max_age));
-
-function trialCard(t) {
-  const sc = t.screen, country = S.profile.country;
-  const sites = country ? t.sites.filter((x) => x.country === country) : [];
-  const countries = [...new Set(t.sites.map((x) => x.country).filter(Boolean))];
-  const phase = t.phases.filter((p) => p !== "NA").map((p) => p.replace("EARLY_PHASE1", "Early phase 1").replace("PHASE", "Phase ")).join("/");
-  const contact = t.contacts[0];
-  return `<div class="card trial">
-    <div class="meta"><span class="badge ${VERDICT[sc.verdict].cls}">${VERDICT[sc.verdict].label}</span>
-      ${esc(t.kind)}${phase ? " · " + esc(phase) : ""} · ${esc(t.status.replace(/_/g, " ").toLowerCase())}</div>
-    <div class="title" style="margin-top:6px">${link(t.url, t.title)}</div>
-    <p class="small" style="margin:6px 0">${esc(sc.reason)}</p>
-    ${sc.quote ? `<blockquote>“${esc(sc.quote)}” <span class="muted">— eligibility criteria, ${esc(t.nct)}</span></blockquote>` : ""}
-    ${sc.requirements && sc.requirements.length ? `<div class="chips">${sc.requirements.map((r) => `<span class="chip">${esc(r)}</span>`).join("")}</div>` : ""}
-    <div class="meta">Ages ${esc(t.ages)}${t.interventions.length ? " · " + t.interventions.slice(0, 2).map((i) => esc(i.name)).join(", ") : ""} · ${esc(t.sponsor)}</div>
-    <div class="meta">${sites.length ? `<span style="color:var(--ok)">${plural(sites.length, "site")} in ${esc(country)}</span>: ${sites.slice(0, 3).map((x) => esc(x.city || x.facility)).join(", ")}`
-      : countries.length ? `${country ? `No site in ${esc(country)} · ` : ""}Sites in ${countries.slice(0, 4).map(esc).join(", ")}${countries.length > 4 ? ` +${countries.length - 4}` : ""}` : "Sites not listed yet"}</div>
-    ${contact ? `<div class="meta">Contact: ${esc(contact.name)}${contact.email ? ` · <a href="mailto:${esc(contact.email)}">${esc(contact.email)}</a>` : ""}${contact.phone ? " · " + esc(contact.phone) : ""}</div>` : ""}
-    <div style="margin-top:8px"><button class="chip" data-enquiry="${esc(t.nct)}">Draft an enquiry to the study team</button></div>
-  </div>`;
-}
-
-function tabTrials(d) {
-  const r = S.trials[d.id];
-  if (!r) return `<div class="loading">Checking every open study on ClinicalTrials.gov against STXBP1 — the first time takes about a minute</div>`;
-  if (r.error) return `<div class="note stop">Could not load trials: ${esc(r.error)}</div>`;
-  const age = S.profile.age === "" ? "" : +S.profile.age;
-  const all = r.trials, country = S.profile.country;
-  const countries = [...new Set(all.flatMap((t) => t.sites.map((x) => x.country)).filter(Boolean))].sort();
-  const usable = all.filter((t) => ["names_disease", "could_include"].includes(t.screen.verdict));
-  const fits = usable.filter((t) => ageFits(t, age));
-  const near = (t) => (country && t.sites.some((x) => x.country === country) ? 0 : 1);
-  const sorted = (list) => [...list].sort((a, b) => near(a) - near(b));
-  const experimental = sorted(fits.filter((t) => t.type === "INTERVENTIONAL"));
-  const named = sorted(fits.filter((t) => t.screen.verdict === "names_disease" && t.type !== "INTERVENTIONAL"));
-  const groups = {};
-  for (const t of experimental) (groups[t.kind] = groups[t.kind] || []).push(t);
-  const notFor = all.filter((t) => !usable.includes(t));
-  const tooOld = usable.length - fits.length;
-  const noStxbp1Drug = !all.some((t) => t.screen.verdict === "names_disease" && t.type === "INTERVENTIONAL");
-  return `
-    <p class="small muted" style="margin-top:12px">Every open study that mentions STXBP1, plus children's interventional trials for the epilepsies STXBP1 patients have,
-      read and screened by ${esc(r.model)}. Only the study team can confirm eligibility.</p>
-    <form class="profile">
-      <label>Child's age (years)<input name="age" type="number" min="0" max="80" step="0.5" value="${esc(S.profile.age)}" placeholder="any"></label>
-      <label>Country<select name="country"><option value="">Any</option>${countries.map((c) => `<option ${c === country ? "selected" : ""}>${esc(c)}</option>`).join("")}</select></label>
-    </form>
-    ${tooOld ? `<p class="small muted">${plural(tooOld, "study")} hidden because a ${esc(S.profile.age)}-year-old is outside the age range.</p>` : ""}
-    ${noStxbp1Drug ? `<div class="note warn"><strong>No open drug or gene-therapy trial names STXBP1 today.</strong> The experimental trials below are for broader epilepsies your families may qualify for. Joining a natural-history study keeps them trial-ready for when an STXBP1 therapy reaches the clinic.</div>` : ""}
-    <h2>Experimental trials your families could ask about <span class="muted small">· ${experimental.length}</span></h2>
-    ${Object.keys(groups).length ? Object.entries(groups).map(([k, ts]) => `<p class="label" style="margin-top:14px">${esc(k)} · ${ts.length}</p>${ts.map(trialCard).join("")}`).join("")
-      : `<p class="muted small">None match the filters.</p>`}
-    <h2>STXBP1 studies to join now <span class="muted small">· ${named.length}</span></h2>
-    <p class="small muted">Registries and natural-history studies. They test no treatment, but they build the data every future STXBP1 trial will need.</p>
-    ${named.map(trialCard).join("") || `<p class="muted small">None match the filters.</p>`}
-    <details><summary>Not suitable for STXBP1 <span>${notFor.length} studies</span></summary><div>
-      ${notFor.map((t) => `<div class="small" style="margin:8px 0"><span class="badge ${VERDICT[t.screen.verdict].cls}">${VERDICT[t.screen.verdict].label}</span> ${link(t.url, t.title)}<div class="muted">${esc(t.screen.reason)}</div></div>`).join("")}
-    </div></details>
-    <details><summary>Search coverage <span>fetched ${esc(r.fetched.slice(0, 16).replace("T", " "))}</span></summary><div>
-      <p class="small">${all.length} open studies (recruiting, not yet recruiting, or by invitation) from ClinicalTrials.gov:</p>
-      <ul class="small">${r.queries.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
-      <p class="small muted">Trials restricted to another gene are filtered by rules; all others are read by ${esc(r.model)}, which must quote the deciding criterion verbatim or the quote is dropped.</p>
-      ${r.errors.length ? `<div class="note warn">Queries that failed: ${esc(r.errors.join(", "))}</div>` : ""}
-    </div></details>`;
-}
-
-panel.addEventListener("change", (ev) => {
-  const f = ev.target.closest("form.profile");
-  if (!f) return;
-  S.profile = { age: f.age.value, country: f.country.value };
-  try { localStorage.setItem("profile", JSON.stringify(S.profile)); } catch (e) { /* ignore */ }
-  renderDisease();
-});
-panel.addEventListener("click", (ev) => {
-  const b = ev.target.closest("[data-enquiry]");
-  if (!b) return;
-  const t = S.trials[S.focus].trials.find((x) => x.nct === b.dataset.enquiry);
-  const who = t.contacts[0] ? t.contacts[0].name : "study team";
-  const text = `Subject: Enquiry about ${t.nct} for a child with STXBP1-related disorder
-
-Dear ${who},
-
-I lead the STXBP1 patient group and am writing on behalf of our families. We found your study "${t.title}" (${t.nct}, ${t.url}).
-
-Our children have a confirmed pathogenic STXBP1 variant, usually with early-onset epilepsy and developmental delay${S.profile.age !== "" ? `; the child I am asking for is ${S.profile.age} years old` : ""}${S.profile.country ? `, based in ${S.profile.country}` : ""}.
-
-Could you tell us whether children with STXBP1-related disorder can be considered, which of the inclusion criteria usually rule them out, and which site is closest to us?
-
-Thank you,
-Maria
-`;
-  $("#brief").textContent = text; $("#modal").hidden = false;
-  S.connection = { brief: text };
-});
-
 /* ------------------------------------------------------------------ connection */
 async function openConnection(a, b) {
   if (S.selected !== a) await openDisease(a);
@@ -607,23 +484,37 @@ function renderConnection(c) {
     </div></details>`;
 }
 
+const TENX = [
+  ["Find a mechanistically related community", 9, 0.1, "conferences and cold e-mail", "ranked, evidence-backed neighbours"],
+  ["Registry and data model", 15, 1, "fund and build from scratch", "join the partner's or an open registry"],
+  ["Protocol and outcome measures", 10, 1.5, "draft and validate", "adapt an existing protocol to the shared symptoms"],
+  ["First patient enrolled", 4.5, 1.5, "site start-up", "an amendment at existing sites"],
+];
 function tenX() {
-  const seg = (w, c, t) => `<i style="width:${w}%;background:${c}" title="${t}">${t}</i>`;
-  return `<p class="small">Milestone: two communities enrolling into one natural-history protocol with shared outcome measures — the baseline any trial needs.</p>
-    <div class="timeline">
-      <div class="t"><span>Today · ~40 mo</span><div class="track">${seg(22, "#9fb8d8", "find partners")}${seg(38, "#8f9cf7", "build registry")}${seg(25, "#c59bf5", "design protocol")}${seg(15, "#e58fc8", "first enrolment")}</div></div>
-      <div class="t"><span>Atlas · ~4 mo</span><div class="track" style="width:10%">${seg(100, "#f6c453", "")}</div></div>
-    </div>
-    <table>
-      <tr><th>Step</th><th>Alone</th><th>With the atlas</th></tr>
-      <tr><td>Find a mechanistically related community</td><td>6–12 months of conferences and cold e-mail</td><td>Minutes: ranked, evidence-backed neighbours</td></tr>
-      <tr><td>Registry and data model</td><td>12–18 months to fund and build</td><td>Weeks: join the partner's or an open registry</td></tr>
-      <tr><td>Protocol and outcome measures</td><td>9–12 months to draft and validate</td><td>4–8 weeks: adapt an existing protocol to the shared symptoms</td></tr>
-      <tr><td>First patient enrolled</td><td>3–6 months of site start-up</td><td>4–8 weeks as an amendment at existing sites</td></tr>
-    </table>
+  const row = ([step, alone, atlas, a, b], i) => `<tr><td>${step}<div class="muted">${a} → ${b}</div></td>
+    <td><input type="range" data-tenx="${i}:1" min="0" max="24" step="0.5" value="${alone}"> <output>${alone}</output></td>
+    <td><input type="range" data-tenx="${i}:2" min="0" max="12" step="0.1" value="${atlas}"> <output>${atlas}</output></td></tr>`;
+  return `<p class="small">Milestone: two communities enrolling into one natural-history protocol with shared outcome measures — the baseline any trial needs.
+    Move the sliders to test the assumptions (months per step).</p>
+    <table class="tenx"><tr><th>Step</th><th>Alone</th><th>With the atlas</th></tr>${TENX.map(row).join("")}</table>
+    <div id="tenx-result">${tenXResult()}</div>
     <p class="small muted">Assumptions to validate: the partner agrees to share its protocol; outcome measures are valid in both diseases (the shared informative symptoms are the candidates);
-      ethics boards accept an amendment rather than a new study; the variant-effect check above passes. Durations are planning estimates, not measured data.</p>`;
+      ethics boards accept an amendment rather than a new study; the variant-effect check above passes. Starting values are planning estimates, not measured data.</p>`;
 }
+function tenXResult() {
+  const alone = d3.sum(TENX, (r) => r[1]), atlas = d3.sum(TENX, (r) => r[2]), ratio = atlas > 0 ? alone / atlas : 0;
+  return `<div class="timeline">
+      <div class="t"><span>Alone · ${alone.toFixed(1)} mo</span><div class="track"><i style="width:100%;background:#8f9cf7"></i></div></div>
+      <div class="t"><span>Atlas · ${atlas.toFixed(1)} mo</span><div class="track" style="width:${Math.min(100, alone ? (atlas / alone) * 100 : 0)}%"><i style="width:100%;background:#f6c453"></i></div></div>
+    </div><p><strong>${ratio ? ratio.toFixed(1) + "× faster" : "—"}</strong> <span class="muted">under these assumptions</span></p>`;
+}
+panel.addEventListener("input", (ev) => {
+  const el = ev.target.closest("[data-tenx]");
+  if (!el) return;
+  const [i, col] = el.dataset.tenx.split(":").map(Number);
+  TENX[i][col] = +el.value; el.nextElementSibling.textContent = el.value;
+  $("#tenx-result").innerHTML = tenXResult();
+});
 
 panel.addEventListener("click", (ev) => {
   const b = ev.target.closest(".ev");
@@ -638,16 +529,8 @@ panel.addEventListener("click", (ev) => {
       · ${link(e.url, e.source)}${e.date ? " · " + esc(e.date) : ""}</div></div>`;
     if (!b.closest(".path")) card.scrollIntoView({ block: "nearest", behavior: "smooth" });
   }
-  if (ev.target.id === "openbrief") { $("#brief").textContent = S.connection.brief; $("#modal").hidden = false; }
+  if (ev.target.id === "openbrief") openSheet(S.connection.brief, "Sourced proposal");
 });
-$("#close").onclick = () => ($("#modal").hidden = true);
-$("#modal").addEventListener("click", (ev) => { if (ev.target.id === "modal") $("#modal").hidden = true; });
-$("#copy").onclick = async () => { await navigator.clipboard.writeText(S.connection.brief); $("#copy").textContent = "Copied"; setTimeout(() => ($("#copy").textContent = "Copy"), 1500); };
-$("#download").onclick = () => {
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(new Blob([S.connection.brief], { type: "text/markdown" }));
-  a.download = "proposal.md"; a.click(); URL.revokeObjectURL(a.href);
-};
 
 /* ------------------------------------------------------------------ entity + cluster */
 function clusterRows(clusters) {

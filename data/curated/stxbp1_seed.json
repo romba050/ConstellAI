@@ -1,0 +1,113 @@
+{
+ "about": "Seed evidence curated by the team's biomedical member. PMIDs, journals and years come from PubMed; the one-line claims are the team's summaries and should be checked against the papers.",
+ "verified": "2026-10-04",
+ "papers": [
+  {
+   "pmid": "18469812",
+   "title": "De novo mutations in the gene encoding STXBP1 (MUNC18-1) cause early infantile epileptic encephalopathy",
+   "journal": "Nat Genet",
+   "year": "2008",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18469812/",
+   "label": "Saitsu 2008",
+   "supports": "d:focus",
+   "relation": "first reported the gene–disease link",
+   "claim": "Original report that de novo STXBP1 variants cause early infantile epileptic encephalopathy."
+  },
+  {
+   "pmid": "29538625",
+   "title": "Protein instability, haploinsufficiency, and cortical hyper-excitability underlie STXBP1 encephalopathy",
+   "journal": "Brain",
+   "year": "2018",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29538625/",
+   "label": "Kovacevic 2018",
+   "supports": "m:haploinsufficiency",
+   "relation": "supports the mechanism",
+   "claim": "Patient variants make the Munc18-1 protein unstable and lower its cellular level."
+  },
+  {
+   "pmid": "32073399",
+   "title": "Stxbp1/Munc18-1 haploinsufficiency impairs inhibition and mediates key neurological features of STXBP1 encephalopathy",
+   "journal": "Elife",
+   "year": "2020",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32073399/",
+   "label": "Chen 2020",
+   "supports": "a:mouse",
+   "relation": "describes the mouse model",
+   "claim": "Mice with one working Stxbp1 copy show seizures and cognitive, psychiatric and motor problems."
+  },
+  {
+   "pmid": "32559416",
+   "title": "SNAREopathies: Diversity in Mechanisms and Symptoms",
+   "journal": "Neuron",
+   "year": "2020",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32559416/",
+   "label": "Verhage & Sørensen 2020",
+   "supports": "m:snare",
+   "relation": "reviews the shared mechanism",
+   "claim": "Reviews diseases of the synaptic vesicle fusion machinery together, including STXBP1 and CPLX1."
+  },
+  {
+   "pmid": "26539891",
+   "title": "Genes that Affect Brain Structure and Function Identified by Rare Variant Analyses of Mendelian Neurologic Disease",
+   "journal": "Neuron",
+   "year": "2015",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26539891/",
+   "label": "Karaca 2015",
+   "supports": "g:CPLX1",
+   "relation": "first reported CPLX1 variants",
+   "claim": "First report of homozygous loss-of-function CPLX1 variants in families with neurologic disease."
+  },
+  {
+   "pmid": "28422131",
+   "title": "Variants in CPLX1 in two families with autosomal-recessive severe infantile myoclonic epilepsy and ID",
+   "journal": "Eur J Hum Genet",
+   "year": "2017",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28422131/",
+   "label": "Redler 2017",
+   "supports": "g:CPLX1",
+   "relation": "second independent report",
+   "claim": "Homozygous CPLX1 variants in two unrelated families; recessive inheritance."
+  },
+  {
+   "pmid": "26865513",
+   "title": "STXBP1 encephalopathy: A neurodevelopmental disorder including epilepsy",
+   "journal": "Neurology",
+   "year": "2016",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26865513/",
+   "label": "Stamberger 2016",
+   "supports": "d:focus",
+   "relation": "describes the patient cohort",
+   "claim": "Cohort study of the symptoms and seizure types in STXBP1 encephalopathy."
+  },
+  {
+   "pmid": "30266908",
+   "title": "Mechanism-based rescue of Munc18-1 dysfunction in varied encephalopathies by chemical chaperones",
+   "journal": "Nat Commun",
+   "year": "2018",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30266908/",
+   "label": "Guiberson 2018",
+   "supports": "m:dominant_negative",
+   "relation": "reports a second mechanism and a chaperone approach",
+   "claim": "Some variants act dominant-negatively; chemical chaperones restored protein levels in models."
+  }
+ ],
+ "unresolved": [],
+ "snare_genes": [
+  "CPLX1",
+  "STX1B",
+  "SNAP25",
+  "VAMP2",
+  "SYT1",
+  "STX1A",
+  "UNC13A",
+  "RIMS1",
+  "STXBP6"
+ ],
+ "studies": [
+  "NCT06555965",
+  "NCT06625112",
+  "NCT05462054",
+  "NCT06983158",
+  "NCT04937062"
+ ]
+}

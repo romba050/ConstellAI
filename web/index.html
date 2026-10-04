@@ -3,29 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ConstellAI — an atlas for the world's rare diseases</title>
+<title>ConstellAI — STXBP1 dashboard</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dashboard">
 <header>
-  <a class="brand" href="#">
+  <a class="brand" href="/">
     <svg viewBox="0 0 28 28" width="22" height="22" aria-hidden="true"><g stroke="currentColor" stroke-width="1" opacity=".55"><path d="M5 20 13 13 22 16M13 13 17 5"/></g><g fill="currentColor"><circle cx="5" cy="20" r="2"/><circle cx="13" cy="13" r="2.8"/><circle cx="22" cy="16" r="2"/><circle cx="17" cy="5" r="1.6"/></g></svg>
     ConstellAI
   </a>
-  <div class="focus">STXBP1-related disorders <span>· for patient-group leaders</span></div>
+  <div class="focus">STXBP1-related disorders <span>· Maria's dashboard</span></div>
+  <nav><a class="on" href="/">Dashboard</a><a href="/atlas">Atlas</a></nav>
 </header>
-<main>
-  <aside id="legend"></aside>
-  <section id="mapwrap">
-    <canvas id="map"></canvas>
-    <div id="tip" hidden></div>
-    <div class="mapkey">
-      <span><i class="line"></i> same constellation</span>
-      <span><i class="line dashed"></i> bridge across constellations</span>
-      <button id="reset">Reset view</button>
+<main class="dash">
+  <section class="tiles" id="tiles"></section>
+  <section class="row kg-row">
+    <div class="panel" id="kg-card">
+      <div class="panel-head">
+        <h2>What is known about STXBP1, and how we know it</h2>
+        <div id="kg-legend"></div>
+      </div>
+      <div id="kg"><div class="loading">Building the knowledge graph</div></div>
     </div>
+    <aside class="panel" id="drawer"></aside>
   </section>
-  <aside id="panel"></aside>
+  <section class="row two">
+    <div class="panel" id="actions"></div>
+    <div class="panel" id="pulse"><div class="loading">Checking what is new</div></div>
+  </section>
+  <section class="row two">
+    <div class="panel" id="trials"><div class="loading">Checking every open study against STXBP1 — the first time takes about a minute</div></div>
+    <div class="panel" id="ledger"></div>
+  </section>
 </main>
 <div id="modal" hidden>
   <div class="sheet">
@@ -41,6 +50,7 @@
   </div>
 </div>
 <script src="vendor/d3.min.js"></script>
-<script src="app.js"></script>
+<script src="common.js"></script>
+<script src="dashboard.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
 import datetime
 import json
 import threading
+import time
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 
@@ -13,7 +14,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from . import connect, enrich, llm, trials
+from . import connect, dashboard, enrich, llm, pulse, trials
 from .config import ATLAS_FILE, CONTRIBUTIONS_FILE, FOCUS_DISEASE, WEB
 from .store import Atlas, load_contributions
 
@@ -22,6 +23,7 @@ if not ATLAS_FILE.exists():
 
 atlas = Atlas()
 app = FastAPI(title="ConstellAI")
+PULSE_HOURS = 6
 
 
 @app.on_event("startup")
@@ -29,11 +31,18 @@ def warm_focus():
     """Fetch the focus disease's evidence and trials in the background so the first visitor doesn't wait."""
     def run():
         d = atlas.diseases[FOCUS_DISEASE]
-        for job in (enrich.enrich, trials.find):
+        jobs = (lambda: enrich.enrich(d), lambda: dashboard.build(atlas, FOCUS_DISEASE), lambda: trials.find(d))
+        for job in jobs:
             try:
-                job(d)
+                job()
             except Exception as e:
-                print(f"[warm] {job.__name__} failed: {e}")
+                print(f"[warm] failed: {e}")
+        while True:  # the scheduled fetcher behind the Pulse feed
+            try:
+                pulse.get(d["genes"][0], max_age_hours=PULSE_HOURS)
+            except Exception as e:
+                print(f"[pulse] failed: {e}")
+            time.sleep(PULSE_HOURS * 3600)
     threading.Thread(target=run, daemon=True).start()
 
 
@@ -48,6 +57,17 @@ def get_atlas():
     return {"meta": atlas.meta, "llm": llm.status(), "focus": FOCUS_DISEASE, "points": atlas.map_points(), "edges": atlas.map_edges(),
             "groups": sorted(atlas.groups.values(), key=lambda g: (g["id"] < 0, g["id"])),
             "organizations": len(enrich.curated()["organizations"])}
+
+
+@app.get("/api/dashboard")
+def get_dashboard(refresh: bool = False):
+    """Knowledge graph, study status and search ledger for the focus disease."""
+    return {**dashboard.build(atlas, FOCUS_DISEASE, force=refresh), "llm": llm.status(), "meta": atlas.meta}
+
+
+@app.get("/api/pulse")
+def get_pulse(refresh: bool = False):
+    return pulse.get(atlas.diseases[FOCUS_DISEASE]["genes"][0], max_age_hours=PULSE_HOURS, force=refresh)
 
 
 @app.get("/api/search")
@@ -150,6 +170,11 @@ def contribute(c: Contribution):
 @app.get("/")
 def index():
     return FileResponse(WEB / "index.html")
+
+
+@app.get("/atlas")
+def atlas_page():
+    return FileResponse(WEB / "atlas.html")
 
 
 app.mount("/", StaticFiles(directory=WEB), name="web")

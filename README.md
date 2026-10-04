@@ -51,17 +51,23 @@ Optional: copy `.env.example` to `.env` and set `CEREBRAS_API_KEY` (gpt-oss-120b
 the AI steps (see below). Without a key everything still works in deterministic "template mode", and the interface
 says which mode is active.
 
-## A one-minute walkthrough
+## Two pages
 
-1. The app opens on **STXBP1-related disorders**, Trials tab. Enter a child's age (4) and country (United States).
-2. A warning comes first: **no open drug or gene-therapy trial names STXBP1**. Below it, 13 experimental trials that
-   could include the child, grouped as medicine, diet or device. Each shows the model's one-line reason, the
-   eligibility criterion it is based on (quoted verbatim), extra requirements, nearby sites and the contact.
-3. **Draft an enquiry to the study team** produces an email Maria can send as-is.
-4. **STXBP1 studies to join now**: five registries and natural-history studies that keep families trial-ready.
-5. Open **Connections** and choose *Developmental and epileptic encephalopathy, 63* (CPLX1), or click any star on
-   the map. The path *STXBP1 → pathway → CPLX1 → disease* has a numbered evidence tag on every step, a plain-language
-   explanation by gpt-oss-120b, what must be checked before joining forces, and a sourced proposal to send.
+- **Dashboard (`/`)** — Maria's landing page for STXBP1:
+  - **Knowledge graph**: diseases, genes, variants, mechanisms, symptoms, patient groups, papers, treatment studies
+    and research assets around STXBP1. Click a dot for everything linked to it, or a line for the evidence behind
+    that link. Each link sits on an evidence ladder: *observed* (database, registry or published statement),
+    *inferred* (computed by ConstellAI), *hypothesis* (team curation not confirmed by a source we query) or
+    *no data* (searched, nothing found).
+  - **What to do this week**, with draft e-mails, and **every STXBP1 study as registered**: status, last update and
+    enrolment, with a warning on records that are withdrawn, stopped, empty or not updated for a year.
+  - **Pulse**: papers, preprints and study-record changes from the last 60 days, re-checked every 6 hours, with a
+    one-line note per item by gpt-oss-120b (titles only, unreviewed).
+  - **Trials your families could ask to join**, screened against eligibility text and filtered by age and country.
+  - **What we searched**: each search, where, the count and the date. A zero means "none found in these sources".
+- **Atlas (`/atlas`)** — the map of 6,457 monogenic diseases with STXBP1 selected. Click any star to open its
+  connection to STXBP1: evidence path, what must be checked, reusable assets, a sourced proposal, and sliders to
+  test the assumptions behind the 10× case.
 
 ## Architecture
 
@@ -71,11 +77,14 @@ atlas/
   build.py     Module 1 — reconcile → connect → score → cluster → layout → data/atlas.json.gz
   enrich.py    live evidence per disease: PubMed, ClinVar, ClinicalTrials.gov, NIH RePORTER, patient groups
   connect.py   Module 2+3 — evidence ledger, contradictions, checks, assets, actions, proposal
-  trials.py    open trials for the focus disease, screened for eligibility and grouped for families
+  trials.py    open trials for the focus disease, screened for eligibility; status flags for every study
+  dashboard.py typed knowledge graph around the focus disease, evidence ladder, search ledger
+  pulse.py     self-updating feed: fetchers, change detector, AI one-line notes
+  seed.py      verifies the team's hand-curated papers against PubMed → data/curated/stxbp1_seed.json
   llm.py       AI steps: Extract, Reconcile, Explain, Screen (each with verification and a fallback)
   store.py     in-memory graph, global search with synonym resolution, entity views
   server.py    FastAPI: JSON API + static frontend
-web/           no-build frontend: canvas constellation map (D3 zoom/quadtree) + evidence panel
+web/           no-build frontend: index.html + dashboard.js (dashboard), atlas.html + app.js (map), common.js
 data/curated/patient_orgs.json   hand-curated patient organisations and cross-disease registries
 ```
 

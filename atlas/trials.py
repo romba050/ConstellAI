@@ -15,7 +15,8 @@ from .enrich import HTTP
 OPEN = "RECRUITING,NOT_YET_RECRUITING,ENROLLING_BY_INVITATION"
 FIELDS = ("NCTId,BriefTitle,BriefSummary,OverallStatus,StudyType,Phase,Condition,InterventionType,InterventionName,"
           "LeadSponsorName,EligibilityCriteria,MinimumAge,MaximumAge,Sex,LocationFacility,LocationCity,"
-          "LocationCountry,LocationStatus,CentralContactName,CentralContactPhone,CentralContactEMail,LastUpdatePostDate")
+          "LocationCountry,LocationStatus,CentralContactName,CentralContactPhone,CentralContactEMail,LastUpdatePostDate,"
+          "EnrollmentCount,EnrollmentType,WhyStopped,StatusVerifiedDate")
 CACHE_HOURS = 24
 FOCUS_SUMMARY = ("early-onset epilepsy, often infantile spasms or drug-resistant seizures, developmental delay and "
                  "intellectual disability, movement disorders; usually de novo loss-of-function variants")
@@ -57,9 +58,29 @@ KIND_ORDER = ["Medicine or gene therapy", "Diet or supplement", "Registry or nat
               "Device or brain stimulation", "Surgery or procedure", "Other research study"]
 
 
-def search(params):
+STOPPED = ("WITHDRAWN", "TERMINATED", "SUSPENDED")
+STALE_DAYS = 365
+
+
+def status_flags(t):
+    """Warnings a family should see before trusting a registry status ("recruiting" is self-reported)."""
+    flags = []
+    if t["status"] in STOPPED:
+        flags.append(f"{t['status'].title()}" + (f": {t['why_stopped']}" if t["why_stopped"] else ""))
+    if t["enrollment_type"] == "ACTUAL" and t["enrollment"] == 0:
+        flags.append("No participants were enrolled")
+    if t["updated"] and t["status"] not in STOPPED + ("COMPLETED",):
+        age = (datetime.date.today() - datetime.date.fromisoformat(t["updated"][:10])).days
+        if age > STALE_DAYS:
+            flags.append(f"Record not updated since {t['updated'][:7]} — status may be out of date")
+    return flags
+
+
+def search(params, open_only=True):
+    if open_only:
+        params = {**params, "filter.overallStatus": OPEN}
     r = HTTP.get("https://clinicaltrials.gov/api/v2/studies",
-                 params={**params, "filter.overallStatus": OPEN, "fields": FIELDS, "pageSize": 100})
+                 params={**params, "fields": FIELDS, "pageSize": 100})
     r.raise_for_status()
     return r.json().get("studies", [])
 
@@ -69,7 +90,7 @@ def parse(s, found_by):
     ident, design = p["identificationModule"], p.get("designModule", {})
     elig, cl = p.get("eligibilityModule", {}), p.get("contactsLocationsModule", {})
     arms = p.get("armsInterventionsModule", {}).get("interventions", [])
-    return {
+    t = {
         "nct": ident["nctId"], "title": ident.get("briefTitle", ""),
         "summary": p.get("descriptionModule", {}).get("briefSummary", "")[:600],
         "status": p.get("statusModule", {}).get("overallStatus", ""),
@@ -87,8 +108,27 @@ def parse(s, found_by):
         "contacts": [{"name": c.get("name", ""), "phone": c.get("phone", ""), "email": c.get("email", "")}
                      for c in cl.get("centralContacts", [])][:2],
         "found_by": found_by,
+        "enrollment": design.get("enrollmentInfo", {}).get("count"),
+        "enrollment_type": design.get("enrollmentInfo", {}).get("type", ""),
+        "why_stopped": p.get("statusModule", {}).get("whyStopped", ""),
         "url": f"https://clinicaltrials.gov/study/{ident['nctId']}",
     }
+    t["flags"] = status_flags(t)
+    return t
+
+
+def all_studies(gene, ids=()):
+    """Every registered study that mentions the gene, whatever its status, plus named studies."""
+    found = {}
+    for params in ({"query.term": gene}, {"filter.ids": ",".join(ids)} if ids else None):
+        if params:
+            for s in search(params, open_only=False):
+                t = parse(s, "all statuses")
+                t.pop("criteria")
+                t["kind"] = kind(t)
+                found.setdefault(t["nct"], t)
+    return sorted(found.values(), key=lambda t: t["updated"], reverse=True)
+
 
 
 GENE_RESTRICTED = re.compile(r"\b(SCN1A|SCN2A|SCN8A|KCNT1|KCNQ2|CDKL5|SLC6A1|SLC13A5|GNAO1|PCDH19|SYNGAP1|FOXG1|"
