@@ -1,0 +1,403 @@
+{
+  "$defs": {
+    "DraftClaim": {
+      "additionalProperties": false,
+      "properties": {
+        "statement": {
+          "title": "Statement",
+          "type": "string"
+        },
+        "quote": {
+          "title": "Quote",
+          "type": "string"
+        },
+        "evidence_type": {
+          "enum": [
+            "human_clinical",
+            "preclinical",
+            "mechanistic_inference",
+            "unknown"
+          ],
+          "title": "Evidence Type",
+          "type": "string"
+        },
+        "review_status": {
+          "const": "unreviewed",
+          "default": "unreviewed",
+          "title": "Review Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "statement",
+        "quote",
+        "evidence_type"
+      ],
+      "title": "DraftClaim",
+      "type": "object"
+    },
+    "ProviderStatus": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "enum": [
+            "europe_pmc",
+            "clinicaltrials_gov"
+          ],
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "pending",
+            "ok",
+            "partial",
+            "error"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "last_attempt_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Last Attempt At"
+        },
+        "last_success_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Last Success At"
+        },
+        "record_count": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Record Count",
+          "type": "integer"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        },
+        "coverage": {
+          "title": "Coverage",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "state",
+        "coverage"
+      ],
+      "title": "ProviderStatus",
+      "type": "object"
+    },
+    "PulseItem": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "provider": {
+          "enum": [
+            "europe_pmc",
+            "clinicaltrials_gov"
+          ],
+          "title": "Provider",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "paper",
+            "trial"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "matched_genes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Matched Genes",
+          "type": "array"
+        },
+        "source_updated_on": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Updated On"
+        },
+        "first_seen_at": {
+          "title": "First Seen At",
+          "type": "string"
+        },
+        "last_seen_at": {
+          "title": "Last Seen At",
+          "type": "string"
+        },
+        "changed_at": {
+          "title": "Changed At",
+          "type": "string"
+        },
+        "change_type": {
+          "enum": [
+            "discovered",
+            "updated"
+          ],
+          "title": "Change Type",
+          "type": "string"
+        },
+        "review_status": {
+          "const": "unreviewed",
+          "default": "unreviewed",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "changes": {
+          "items": {
+            "$ref": "#/$defs/RecordChange"
+          },
+          "title": "Changes",
+          "type": "array"
+        },
+        "excerpt": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Excerpt"
+        },
+        "draft_claims": {
+          "items": {
+            "$ref": "#/$defs/DraftClaim"
+          },
+          "title": "Draft Claims",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "provider",
+        "kind",
+        "title",
+        "url",
+        "matched_genes",
+        "first_seen_at",
+        "last_seen_at",
+        "changed_at",
+        "change_type",
+        "summary"
+      ],
+      "title": "PulseItem",
+      "type": "object"
+    },
+    "RecordChange": {
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "title": "Field",
+          "type": "string"
+        },
+        "before": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Before"
+        },
+        "after": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "After"
+        }
+      },
+      "required": [
+        "field",
+        "before",
+        "after"
+      ],
+      "title": "RecordChange",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "constellai-pulse-v1",
+      "default": "constellai-pulse-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "state": {
+      "enum": [
+        "pending",
+        "running",
+        "ok",
+        "partial",
+        "error",
+        "disabled"
+      ],
+      "title": "State",
+      "type": "string"
+    },
+    "scheduler_enabled": {
+      "title": "Scheduler Enabled",
+      "type": "boolean"
+    },
+    "scheduler_running": {
+      "title": "Scheduler Running",
+      "type": "boolean"
+    },
+    "interval_hours": {
+      "default": 6,
+      "title": "Interval Hours",
+      "type": "integer"
+    },
+    "last_attempt_at": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Last Attempt At"
+    },
+    "last_success_at": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Last Success At"
+    },
+    "next_check_at": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Next Check At"
+    },
+    "watchlist": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Watchlist",
+      "type": "array"
+    },
+    "providers": {
+      "items": {
+        "$ref": "#/$defs/ProviderStatus"
+      },
+      "title": "Providers",
+      "type": "array"
+    },
+    "unreviewed_count": {
+      "minimum": 0,
+      "title": "Unreviewed Count",
+      "type": "integer"
+    },
+    "total_records": {
+      "minimum": 0,
+      "title": "Total Records",
+      "type": "integer"
+    },
+    "items": {
+      "items": {
+        "$ref": "#/$defs/PulseItem"
+      },
+      "title": "Items",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "state",
+    "scheduler_enabled",
+    "scheduler_running",
+    "watchlist",
+    "providers",
+    "unreviewed_count",
+    "total_records",
+    "items",
+    "limitations"
+  ],
+  "title": "PulseResponse",
+  "type": "object"
+}

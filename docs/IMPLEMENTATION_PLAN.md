@@ -42,5 +42,30 @@ and Responses request behavior. Live OpenAI verification requires an available s
 Upload a new branch only after the complete software and delivery verification are finished.
 The revised judging prompt adds an inspectable therapeutic graph before prioritisation,
 downstream validation resources, an expandable literature-to-claim review, and an honest
-unmeasured acceleration thesis. Optional Pulse, eligibility and outreach ideas from the
-reference tab remain outside this focused therapeutic prototype.
+unmeasured acceleration thesis. A subsequent explicit user request adds the six-hour
+Pulse scope below. Eligibility and outreach ideas from the reference tab remain outside
+the implementation.
+
+Six-hour Pulse extension:
+- atlas/pulse/models.py freezes constellai-pulse-v1 separately from reviewed analysis.
+- atlas/pulse/service.py provides bounded public Europe PMC and ClinicalTrials.gov
+  discovery, record diffs, source-specific attempt/success/error status and persistent cache.
+- atlas/pulse/sources.py implements bounded JSON adapters and pagination;
+  atlas/pulse/__main__.py offers explicit one-shot checks and discovery-snapshot export.
+- atlas/server.py runs the due-time scheduler during server lifespan and serves cached
+  GET /api/v1/pulse responses, optionally filtered by gene.
+- web/research.* provides a dark unreviewed discovery feed, source links and provider dates.
+- docs/PULSE.md and README document runtime, coverage and review boundaries.
+
+Watch STXBP1, CPLX1, MUNC18-1 and complexin-1, including exact historical study identifiers
+NCT05462054 and NCT06983158. The paper search uses a rolling 90-day publication window;
+bounded pagination is not a comprehensive literature or trial monitor. The server must
+remain running and awake for six-hour checks. Saved cache supports a truthful prior
+snapshot when a provider fails; source-specific dates/errors remain visible.
+
+Discoveries and optional quote-checked AI drafts remain unreviewed. They never update
+reviewed evidence, graph claims, score inputs or ranks automatically. Pulse AI is disabled
+by default, requires its separate opt-in plus a server-side key, and is limited to three
+paper abstracts per run. No foundation/news fetchers, grants, standalone preprint feeds,
+monthly ontology refresh, eligibility screening, weekly emails or external messaging
+are added by this extension. Final verification and screenshots are recorded separately.

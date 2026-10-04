@@ -2,13 +2,15 @@
 
     uv run uvicorn atlas.server:app --port 8000
 """
+import asyncio
 import datetime
 import json
 import logging
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
+from contextlib import asynccontextmanager, suppress
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
@@ -17,15 +19,59 @@ from . import connect, enrich, llm
 from .analysis.models import AnalyzeRequest, AnalyzeResponse
 from .analysis.service import AnalysisService, EvidenceIntegrityError, SCHEMA_VERSION
 from .config import ATLAS_FILE, CONTRIBUTIONS_FILE, WEB
+from .pulse.models import PulseResponse
+from .pulse.service import PulseService
 from .store import Atlas, load_contributions
 
 if not ATLAS_FILE.exists():
     raise SystemExit("data/atlas.json.gz not found. Build it first:  uv run python -m atlas.build")
 
 atlas = Atlas()
-app = FastAPI(title="ConstellAI")
 analysis_service = AnalysisService(atlas=atlas)
+pulse_service = PulseService()
 logger = logging.getLogger(__name__)
+
+
+async def _pulse_loop():
+    """The service persists its six-hour due time and excludes duplicate workers."""
+    while True:
+        try:
+            await asyncio.to_thread(pulse_service.tick)
+        except Exception as exc:
+            # A discovery outage must not interrupt reviewed research analysis.
+            logger.warning("Pulse check unavailable (%s)", type(exc).__name__)
+        await asyncio.sleep(60)
+
+
+@asynccontextmanager
+async def lifespan(app):
+    task = None
+    if pulse_service.enabled:
+        pulse_service.scheduler_running = True
+        task = asyncio.create_task(_pulse_loop(), name="constellai-pulse")
+    try:
+        yield
+    finally:
+        pulse_service.scheduler_running = False
+        if task is not None:
+            task.cancel()
+            with suppress(asyncio.CancelledError):
+                await task
+
+
+app = FastAPI(title="ConstellAI", lifespan=lifespan)
+
+
+@app.get("/api/v1/pulse", response_model=PulseResponse)
+def pulse(gene: str | None = Query(default=None, min_length=1, max_length=40,
+                                 pattern=r"^[A-Za-z0-9_-]+$"),
+          limit: int = Query(default=50, ge=1, le=200)):
+    """Read the saved discovery feed. Browsing never starts source or model calls."""
+    try:
+        return pulse_service.snapshot(gene=gene, limit=limit)
+    except Exception as exc:
+        logger.warning("Pulse snapshot unavailable (%s)", type(exc).__name__)
+        raise HTTPException(503, "Pulse is temporarily unavailable. Reviewed research analysis remains available.")
 
 
 @app.get("/api/v1/health")

@@ -104,4 +104,10 @@ On the reviewed build, actual Atlas-backed AnalysisService responses validated a
 
 Phenotype projections are inherited HPO annotations whose original PMID resolves to the reviewed source ledger: 13 in the STXBP1 response and 31 in CPLX1. These are labelled disease-level atlas annotations, not newly adjudicated patient observations or curator-validated prevalence estimates. Graph checks reject dangling provenance and cross-disease drug-response transfer.
 
-The graph is a deterministic projection of reviewed records, not new clinical discovery. Ongoing registry/paper ingestion, exhaustive investigator/funding search, broader disease curation, material procurement, independent biological replication and clinical validation remain outside this snapshot. No measured 10× improvement is claimed.
+The graph is a deterministic projection of reviewed records, not new clinical discovery.
+The separate six-hour Pulse now discovers bounded public paper/trial records while the
+server runs; those items remain unreviewed and do not advance this therapeutic ledger's
+review date or alter graph claims, scores or ranks. Exhaustive investigator/funding
+search, broader disease curation, material procurement, independent biological
+replication and clinical validation remain outside the reviewed snapshot. No measured
+10× improvement is claimed. See [Pulse operation and coverage](PULSE.md).

@@ -25,7 +25,8 @@ STXBP1; CPLX1 demonstrates sourced biology with an explicit therapeutic evidence
 Broad atlas coverage does not imply broad therapeutic validation.
 
 Run `START_DEMO.cmd` on Windows, or `uv run uvicorn atlas.server:app --port 8800` and open
-http://127.0.0.1:8800. The included evidence snapshot runs without a key or fresh API calls.
+http://127.0.0.1:8800. The reviewed evidence snapshot runs without a key or fresh API calls;
+Pulse separately checks public sources in the background while the server runs.
 For the small cached-demo runtime only: `python -m pip install -r requirements-demo.txt`, then
 `python -m uvicorn atlas.server:app --port 8800`. Full graph-building dependencies remain in
 `pyproject.toml` and `uv.lock`; the included graph avoids rebuilding for the demo.
@@ -72,6 +73,39 @@ and [engineering verification](docs/VERIFICATION.md). [Mandatory challenge cover
 maps all six PDF pages to concrete capabilities and remaining submission actions. [Judging readiness](docs/JUDGING_READINESS.md)
 maps the implemented journey and its limits to the challenge criteria. Run tests with
 `python -m unittest discover -s tests -v`.
+
+## Six-hour Pulse
+
+Pulse checks a bounded STXBP1/CPLX1 watchlist through public Europe PMC and
+ClinicalTrials.gov APIs every six hours while the server is running and the host is awake.
+The dark discovery feed shows source links, record changes and source-specific fetch dates
+or failures. New records mean **new to this watchlist**, not necessarily newly published.
+Every discovery stays **unreviewed** and never changes the reviewed graph, evidence,
+research scores or ranks automatically.
+
+Use `START_DEMO.cmd` or the server command above; no provider API key is needed.
+`GET /api/v1/pulse` returns the saved snapshot, with optional `?gene=STXBP1` or
+`?gene=CPLX1` and a bounded `limit`. Browsing the feed does not trigger provider or model
+calls. Keep the server running for scheduled checks; shutdown, sleep or a stopped hosting
+instance pauses them. The reviewed ledger date and the latest Pulse fetch are separate.
+
+Set `CONSTELLAI_PULSE_ENABLED=0` in the server environment or `.env` and restart to disable
+scheduled checks. Optional AI drafts require `CONSTELLAI_PULSE_AI_ENABLED=1` plus the
+server-side `OPENAI_API_KEY`; this is disabled by default and handles at most three paper
+abstracts per run. Accepted literal quotes still require human review.
+
+The paper search covers a rolling 90-day publication window with capped pagination.
+The watchlist includes STXBP1, CPLX1, MUNC18-1, complexin-1 and exact historical study IDs.
+This is discovery assistance, not exhaustive monitoring, trial eligibility or a weekly email.
+See [Pulse operation and coverage](docs/PULSE.md) for the separate contract, timestamp
+semantics, provider limits and recovery behavior.
+
+Operator one-shot: `python -m atlas.pulse --once` obeys the saved interval;
+`--export <path>` saves up to 5,000 discovery items. Explicit `--once --force` bypasses
+timing/enablement for bootstrap or recovery while retaining the process lease.
+Runtime state is `data/cache/pulse/state.sqlite3` and is ignored by Git. A valid
+`data/curated/pulse-bootstrap.json` can seed a fresh cache with its original dates
+and unreviewed status; it does not imply a new fetch.
 
 ## Existing atlas
 

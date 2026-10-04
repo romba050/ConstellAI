@@ -556,6 +556,7 @@
       $("#graph-node-browser").innerHTML = graphNodeBrowser(data);
     });
     updateMode(data);
+    if (typeof window !== "undefined") window.dispatchEvent(new CustomEvent("constellai:analysis", { detail: { gene: data.gene } }));
   }
 
   results.addEventListener("click", (event) => {

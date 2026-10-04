@@ -29,6 +29,12 @@ header { display: flex; align-items: center; gap: 20px; padding: 10px 18px; bord
 .brand { display: flex; align-items: center; gap: 8px; color: var(--accent); font-weight: 650; font-size: 16px;
   letter-spacing: .01em; white-space: nowrap; flex: none; }
 .brand:hover { text-decoration: none; }
+.brand { color: var(--text); }
+.brand-ai { color: #4bd4e1; }
+.brand-mark { background: #fff; border-radius: 5px; overflow: hidden; padding: 2px; }
+.atlas-footer { flex: none; min-height: 36px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px; padding: 5px 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; }
+.partner-art { display: inline-flex; align-items: center; gap: 9px; flex: none; }
+.partner-art svg { background: #fff; border-radius: 3px; overflow: hidden; }
 .research-return { font-size: 12.5px; white-space: nowrap; flex: none; }
 .search { position: relative; flex: 1; max-width: 720px; min-width: 0; }
 #q { width: 100%; padding: 9px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel);

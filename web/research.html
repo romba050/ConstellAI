@@ -7,13 +7,15 @@
   <meta name="description" content="Explore source-grounded therapeutic hypotheses for rare disease research, with a connected evidence graph, literature review and proposed next experiment.">
   <title>ConstellAI — therapeutic research</title>
   <link rel="stylesheet" href="/research.css">
+  <link rel="stylesheet" href="/pulse.css">
   <script src="/research.js" defer></script>
+  <script src="/pulse.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#analysis-form">Skip to disease search</a>
   <header class="site-header">
     <a class="brand" href="/" aria-label="ConstellAI therapeutic research home">
-      <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="m5 24 10-10 11 6M15 14l5-10" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".6"/><g fill="currentColor"><circle cx="5" cy="24" r="2.2"/><circle cx="15" cy="14" r="3.2"/><circle cx="26" cy="20" r="2.2"/><circle cx="20" cy="4" r="1.8"/></g></svg>
+      <svg class="brand-mark" viewBox="424 337 199 191" width="30" height="30" aria-hidden="true"><image href="/branding/brand-board.png" width="1920" height="1080"/></svg>
       <span>Constell<span class="brand-ai">AI</span></span>
     </a>
     <nav aria-label="Main navigation">
@@ -65,8 +67,18 @@
     <div id="query-status" class="query-status" role="status" aria-live="polite">Preparing the STXBP1 example…</div>
     <div id="query-error" class="query-error" role="alert" hidden></div>
     <section id="analysis-results" class="analysis-results" aria-label="Disease research analysis" aria-busy="true"></section>
+    <details id="pulse-panel" class="pulse-panel">
+      <summary><span class="pulse-summary-title"><span class="pulse-orbit" aria-hidden="true">✦</span> ConstellAI Pulse</span><span id="pulse-summary-state">Saved research watchlist</span></summary>
+      <div class="pulse-panel-body">
+        <div class="pulse-heading"><div><p class="card-eyebrow">Keep the research watchlist in view</p><h2 id="pulse-title">What has changed in the research?</h2><p class="pulse-intro">New records and source changes await curator review before entering therapeutic evidence.</p></div><span id="pulse-gene" class="gene-chip">STXBP1</span></div>
+        <p id="pulse-status" class="pulse-status" role="status" aria-live="polite">Loading saved Pulse status…</p>
+        <div id="pulse-error" class="pulse-error" role="alert" hidden></div>
+        <div id="pulse-content" class="pulse-content" aria-busy="true"><p class="pulse-muted">The research analysis is available while Pulse loads independently.</p></div>
+        <div class="pulse-actions"><button id="pulse-refresh" class="secondary-button" type="button">Refresh saved feed</button><button id="pulse-download" class="secondary-button" type="button" disabled>Download review feed JSON</button><p>Feed items remain unreviewed. Download the source record for curator adjudication.</p></div>
+      </div>
+    </details>
     <noscript><p class="query-error">Enable JavaScript to search diseases and read the interactive analysis. <a href="/atlas">The atlas is available here.</a></p></noscript>
   </main>
-  <footer class="site-footer"><a class="footer-brand" href="/">ConstellAI</a><p>Connecting rare disease biology to testable research questions.</p><a href="/atlas">Explore the disease atlas <span aria-hidden="true">↗</span></a></footer>
+  <footer class="site-footer"><a class="footer-brand" href="/">ConstellAI</a><p>Connecting rare disease biology to testable research questions.</p><a href="/atlas">Explore the disease atlas <span aria-hidden="true">↗</span></a><div class="footer-partners"><span>Buffalo challenge · OpenAI integration</span><span class="partner-art" aria-hidden="true"><svg class="partner-openai" viewBox="681 436 391 83" width="85" height="18"><image href="/branding/brand-board.png" width="1920" height="1080"/></svg><svg class="partner-buffalo" viewBox="1100 353 428 246" width="46" height="27"><image href="/branding/brand-board.png" width="1920" height="1080"/></svg></span></div></footer>
 </body>
 </html>

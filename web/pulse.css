@@ -1,0 +1,122 @@
+.pulse-panel { border: 1px solid #3c3b58; border-radius: 13px; background: linear-gradient(135deg, #181b30, #101626 68%); margin: 4px 0 37px; padding: 0 24px; }
+.pulse-panel > summary { padding: 19px 0; align-items: center; }
+.pulse-panel > summary::before { margin-right: 1px; }
+.pulse-panel > summary .pulse-summary-title { color: var(--text); font-weight: 550; font-size: 1rem; margin: 0; display: inline-flex; align-items: center; gap: 8px; flex: 1; min-width: 0; }
+.pulse-panel > summary .pulse-orbit { color: var(--purple); margin: 0; font-size: 1.1rem; }
+.pulse-panel > summary #pulse-summary-state { color: var(--muted); font-size: .73rem; margin-left: auto; max-width: 42%; overflow-wrap: anywhere; }
+.pulse-panel-body { padding: 4px 0 25px; }
+.pulse-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-bottom: 12px; }
+.pulse-heading > div { flex: 1; min-width: 0; }
+.pulse-heading h2 { font-size: clamp(1.35rem, 2vw, 1.8rem); }
+.pulse-heading .gene-chip { margin-top: 6px; flex: none; max-width: 170px; overflow-wrap: anywhere; }
+.pulse-intro { color: var(--muted); font-size: .84rem; margin-top: 12px; max-width: 730px; }
+.pulse-status { color: var(--dim); font-size: .74rem; margin: 13px 0 17px; min-height: 20px; }
+.pulse-error { border: 1px solid #70414d; background: #291a23; border-radius: 8px; padding: 12px 15px; color: #f0c1c9; font-size: .81rem; margin-bottom: 18px; overflow-wrap: anywhere; }
+.pulse-content { min-width: 0; }
+.pulse-muted { color: var(--dim); font-size: .78rem; }
+.pulse-schedule { display: flex; gap: 20px; justify-content: space-between; align-items: flex-start; border: 1px solid var(--line); border-radius: 10px; padding: 19px 21px; background: #131c2e; }
+.pulse-schedule > div:first-child { min-width: 0; flex: 1; }
+.pulse-schedule h3 { font-size: 1rem; color: #dbd1ee; }
+.pulse-schedule p { color: var(--muted); font-size: .79rem; margin-top: 8px; max-width: 790px; }
+.pulse-worker-states { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; max-width: 260px; }
+.pulse-state { display: inline-block; border: 1px solid #3a465d; border-radius: 5px; background: #1b253a; color: #c1cce0; padding: 3px 8px; font-size: .68rem; white-space: nowrap; }
+.pulse-state.ok { color: #a7dfbe; background: #193127; border-color: #365443; }
+.pulse-state.running { color: #cbb9ef; background: #2a223e; border-color: #584471; }
+.pulse-state.error { color: #f1b6bf; background: #321d29; border-color: #68404f; }
+.pulse-state.partial { color: #edc99a; background: #322618; border-color: #665032; }
+.pulse-state.disabled, .pulse-state.pending { color: #b8c2d8; }
+.pulse-times { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 19px 0 15px; }
+.pulse-times dt { color: var(--dim); font-size: .72rem; }
+.pulse-times dd { margin: 4px 0 0; color: #c8d0e1; font-size: .81rem; overflow-wrap: anywhere; }
+.pulse-schedule-note { color: #ceb992; font-size: .75rem; margin: 0 0 16px; }
+.pulse-retrieval-state { display: flex; align-items: center; flex-wrap: wrap; gap: 11px; font-size: .73rem; color: var(--muted); padding-bottom: 15px; }
+.pulse-source-status, .pulse-watchlist { border-top: 1px solid var(--line); }
+.pulse-source-status > summary, .pulse-watchlist > summary { font-size: .79rem; color: #c8d1e5; }
+.pulse-providers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; padding: 2px 0 18px; }
+.pulse-provider { min-width: 0; border: 1px solid var(--line); border-radius: 9px; background: #11192b; padding: 16px; }
+.pulse-provider-heading { display: flex; align-items: center; gap: 10px; justify-content: space-between; margin-bottom: 11px; }
+.pulse-provider-heading h4 { font-size: .85rem; min-width: 0; overflow-wrap: anywhere; }
+.pulse-provider dl { display: grid; grid-template-columns: 1fr 1.2fr; gap: 6px 13px; font-size: .73rem; margin: 0; }
+.pulse-provider dt { color: var(--dim); }
+.pulse-provider dd { margin: 0; color: #bfcbdf; overflow-wrap: anywhere; }
+.pulse-provider-error { color: #f0b4bc; font-size: .76rem; border-left: 2px solid #9a5c66; padding-left: 10px; margin-top: 13px; }
+.pulse-coverage { color: var(--muted); font-size: .75rem; line-height: 1.7; margin-top: 15px; overflow-wrap: anywhere; }
+.pulse-coverage strong { display: block; color: #cab9e4; font-weight: 550; font-size: .74rem; margin-bottom: 4px; }
+.pulse-watch-terms { display: flex; flex-wrap: wrap; gap: 7px; padding: 0 0 17px; }
+.pulse-watch-terms span { border: 1px solid #4c3d60; background: #211b30; border-radius: 5px; color: #d2bcee; font-size: .73rem; padding: 4px 9px; max-width: 100%; overflow-wrap: anywhere; }
+.pulse-feed-heading { border-top: 1px solid var(--line); padding-top: 25px; margin-top: 1px; margin-bottom: 17px; }
+.pulse-feed-heading h3 { font-size: 1.1rem; }
+.pulse-feed-heading p { color: var(--muted); font-size: .8rem; margin-top: 7px; }
+.pulse-feed-count { color: var(--dim); font-size: .74rem; margin-bottom: 15px; }
+.pulse-feed { display: grid; gap: 14px; }
+.pulse-item { min-width: 0; border: 1px solid var(--line); border-radius: 10px; background: #11192b; padding: 19px 21px 0; }
+.pulse-item-meta { display: flex; flex-wrap: wrap; gap: 7px 9px; align-items: center; color: var(--dim); font-size: .67rem; margin-bottom: 11px; }
+.pulse-change { display: inline-block; color: #c6b1ef; border: 1px solid #584573; background: #2a213c; border-radius: 5px; padding: 3px 7px; font-size: .66rem; }
+.pulse-change.updated { color: #a8ccec; border-color: #3d5773; background: #1b2d42; }
+.pulse-unreviewed { border: 1px solid #605033; color: #dfc394; border-radius: 5px; padding: 3px 7px; background: #2a2218; font-size: .66rem; }
+.pulse-item h4 { font-size: .97rem; line-height: 1.6; overflow-wrap: anywhere; }
+.pulse-item h4 a { color: #c0cfe9; }
+.pulse-link-unavailable { display: block; color: var(--dim); font-size: .7rem; font-weight: 400; margin-top: 4px; }
+.pulse-detected { color: var(--dim); font-size: .7rem; margin-top: 8px; }
+.pulse-source-date { color: #aab8cf; font-size: .7rem; margin-top: 4px; }
+.pulse-item-summary { color: #bbc6dc; font-size: .81rem; margin-top: 14px; }
+.pulse-record-note { color: var(--dim); font-size: .73rem; margin-top: 13px; }
+.pulse-item-details { border-top: 1px solid var(--line); margin-top: 17px; }
+.pulse-item-details > summary { color: #c3b1df; font-size: .77rem; }
+.pulse-item-details > div { padding: 0 0 18px; }
+.pulse-item-times { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5px 12px; font-size: .73rem; margin: 0 0 19px; }
+.pulse-item-times dt { color: var(--dim); }
+.pulse-item-times dd { margin: 0; color: #b4c4dd; overflow-wrap: anywhere; }
+.pulse-item-details h4 { color: #c5b2e3; font-size: .79rem; margin: 16px 0 7px; }
+.pulse-excerpt { border-left: 2px solid #4d456a; padding-left: 13px; color: var(--muted); font-size: .78rem; white-space: pre-wrap; line-height: 1.75; }
+.pulse-draft { border: 1px solid #554333; background: #211e20; border-radius: 8px; padding: 13px 15px; margin-top: 17px; }
+.pulse-draft-label { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; color: #e0c39a; font-size: .71rem; font-weight: 550; }
+.pulse-draft-label span { color: var(--dim); font-weight: 400; font-size: .68rem; }
+.pulse-draft p { color: #c4c4ce; font-size: .79rem; margin-top: 9px; }
+.pulse-draft blockquote { color: #baa6d6; border-left: 2px solid #6c537c; padding-left: 12px; margin: 12px 0 0; font-size: .77rem; overflow-wrap: anywhere; }
+.pulse-draft .pulse-quote-state { color: var(--dim); font-size: .71rem; margin-top: 11px; }
+.pulse-diff-wrap { margin-top: 15px; min-width: 0; }
+.pulse-diff { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: .73rem; color: #bdc8dc; }
+.pulse-diff caption { text-align: left; color: #c4b2e5; font-size: .72rem; margin-bottom: 6px; }
+.pulse-diff th, .pulse-diff td { text-align: left; padding: 8px 10px; border: 1px solid var(--line); vertical-align: top; overflow-wrap: anywhere; }
+.pulse-diff thead th { background: #1b2338; color: #c4cce0; font-weight: 550; }
+.pulse-diff tbody th { background: #151d30; font-weight: 400; color: var(--muted); }
+.pulse-raw-value { display: block; color: var(--dim); font-size: .66rem; margin-top: 3px; }
+.pulse-empty { border: 1px solid var(--line); border-radius: 9px; background: #11192b; padding: 21px; }
+.pulse-empty h4 { color: #cdbce9; font-size: .92rem; }
+.pulse-empty p { color: var(--muted); font-size: .8rem; margin-top: 8px; max-width: 830px; }
+.pulse-more { margin-top: 16px; }
+.pulse-more > summary { color: #c9b4ec; }
+.pulse-more > div { padding: 4px 0 0; }
+.pulse-limitations { border-top: 1px solid var(--line); margin-top: 24px; }
+.pulse-limitations > summary { color: var(--muted); font-size: .78rem; }
+.pulse-limitations ul { color: var(--muted); font-size: .76rem; padding-left: 19px; margin: 1px 0 8px; }
+.pulse-limitations li + li { margin-top: 7px; }
+.pulse-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; border-top: 1px solid var(--line); margin-top: 15px; padding-top: 20px; }
+.pulse-actions p { color: var(--dim); font-size: .74rem; flex-basis: 100%; margin-top: 3px; }
+@media (max-width: 760px) {
+  .pulse-panel { padding: 0 18px; }
+  .pulse-panel > summary { align-items: flex-start; }
+  .pulse-panel > summary #pulse-summary-state { max-width: 110px; text-align: right; font-size: .65rem; }
+  .pulse-panel > summary .pulse-summary-title { font-size: .87rem; gap: 5px; }
+  .pulse-heading { flex-wrap: wrap; gap: 10px; }
+  .pulse-heading > div { flex-basis: 100%; }
+  .pulse-heading .gene-chip { margin: 0; }
+  .pulse-schedule { flex-direction: column; padding: 16px; gap: 12px; }
+  .pulse-worker-states { justify-content: flex-start; max-width: none; }
+  .pulse-times { grid-template-columns: 1fr; gap: 12px; }
+  .pulse-times dd { margin-top: 2px; font-size: .78rem; }
+  .pulse-providers { grid-template-columns: 1fr; }
+  .pulse-provider dl { grid-template-columns: 1fr; gap: 3px; }
+  .pulse-provider dd { margin-bottom: 6px; }
+  .pulse-item { padding: 16px 15px 0; }
+  .pulse-item h4 { font-size: .88rem; }
+  .pulse-item-times { grid-template-columns: 1fr; gap: 3px; }
+  .pulse-item-times dd { margin-bottom: 6px; }
+  .pulse-diff th, .pulse-diff td { padding: 7px 6px; }
+  .pulse-diff { font-size: .69rem; }
+  .pulse-diff th:first-child { width: 28%; }
+  .pulse-raw-value { font-size: .6rem; }
+  .pulse-empty { padding: 17px; }
+  .pulse-actions .secondary-button { width: 100%; text-align: left; }
+}
