@@ -1,0 +1,853 @@
+{
+  "request": {
+    "additionalProperties": false,
+    "properties": {
+      "disease": {
+        "maxLength": 200,
+        "minLength": 1,
+        "title": "Disease",
+        "type": "string"
+      },
+      "gene": {
+        "anyOf": [
+          {
+            "maxLength": 40,
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Gene"
+      },
+      "variant": {
+        "anyOf": [
+          {
+            "maxLength": 200,
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Variant"
+      },
+      "use_openai": {
+        "default": false,
+        "title": "Use Openai",
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "disease"
+    ],
+    "title": "AnalyzeRequest",
+    "type": "object"
+  },
+  "response": {
+    "$defs": {
+      "Assessment": {
+        "additionalProperties": false,
+        "properties": {
+          "summary": {
+            "title": "Summary",
+            "type": "string"
+          },
+          "evidence_type": {
+            "enum": [
+              "human_clinical",
+              "human_observational",
+              "preclinical",
+              "mechanistic_inference",
+              "regulatory_label",
+              "trial_registry",
+              "disease_reference",
+              "official_resource",
+              "unknown"
+            ],
+            "title": "Evidence Type",
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Source Ids",
+            "type": "array"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "maximum": 1,
+                "minimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value"
+          }
+        },
+        "required": [
+          "summary",
+          "evidence_type",
+          "source_ids",
+          "value"
+        ],
+        "title": "Assessment",
+        "type": "object"
+      },
+      "Candidate": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "compound_name": {
+            "title": "Compound Name",
+            "type": "string"
+          },
+          "therapeutic_role": {
+            "enum": [
+              "mechanism_targeting",
+              "symptom_targeting",
+              "research_tool"
+            ],
+            "title": "Therapeutic Role",
+            "type": "string"
+          },
+          "mechanism_of_action": {
+            "$ref": "#/$defs/Claim"
+          },
+          "mechanism_alignment": {
+            "$ref": "#/$defs/Assessment"
+          },
+          "variant_effect_compatibility": {
+            "$ref": "#/$defs/Assessment"
+          },
+          "human_evidence": {
+            "$ref": "#/$defs/Assessment"
+          },
+          "preclinical_evidence": {
+            "$ref": "#/$defs/Assessment"
+          },
+          "phenotype_relevance": {
+            "$ref": "#/$defs/Assessment"
+          },
+          "evidence_quality": {
+            "$ref": "#/$defs/Assessment"
+          },
+          "toxicity": {
+            "$ref": "#/$defs/Assessment"
+          },
+          "organ_burden": {
+            "$ref": "#/$defs/Assessment"
+          },
+          "drug_interactions": {
+            "$ref": "#/$defs/Assessment"
+          },
+          "off_target_spillover": {
+            "$ref": "#/$defs/Assessment"
+          },
+          "uncertainty": {
+            "$ref": "#/$defs/Assessment"
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/$defs/Source"
+            },
+            "title": "Sources",
+            "type": "array"
+          },
+          "final_score": {
+            "maximum": 100,
+            "minimum": 0,
+            "title": "Final Score",
+            "type": "number"
+          },
+          "status": {
+            "enum": [
+              "supported_candidate",
+              "research_hypothesis",
+              "rejected",
+              "insufficient_evidence"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "rationale": {
+            "title": "Rationale",
+            "type": "string"
+          },
+          "next_validation_step": {
+            "title": "Next Validation Step",
+            "type": "string"
+          },
+          "score_breakdown": {
+            "$ref": "#/$defs/ScoreBreakdown"
+          },
+          "rank": {
+            "anyOf": [
+              {
+                "minimum": 1,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rank"
+          }
+        },
+        "required": [
+          "id",
+          "compound_name",
+          "therapeutic_role",
+          "mechanism_of_action",
+          "mechanism_alignment",
+          "variant_effect_compatibility",
+          "human_evidence",
+          "preclinical_evidence",
+          "phenotype_relevance",
+          "evidence_quality",
+          "toxicity",
+          "organ_burden",
+          "drug_interactions",
+          "off_target_spillover",
+          "uncertainty",
+          "sources",
+          "final_score",
+          "status",
+          "rationale",
+          "next_validation_step",
+          "score_breakdown",
+          "rank"
+        ],
+        "title": "Candidate",
+        "type": "object"
+      },
+      "Claim": {
+        "additionalProperties": false,
+        "properties": {
+          "summary": {
+            "title": "Summary",
+            "type": "string"
+          },
+          "evidence_type": {
+            "enum": [
+              "human_clinical",
+              "human_observational",
+              "preclinical",
+              "mechanistic_inference",
+              "regulatory_label",
+              "trial_registry",
+              "disease_reference",
+              "official_resource",
+              "unknown"
+            ],
+            "title": "Evidence Type",
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Source Ids",
+            "type": "array"
+          }
+        },
+        "required": [
+          "summary",
+          "evidence_type",
+          "source_ids"
+        ],
+        "title": "Claim",
+        "type": "object"
+      },
+      "CollaboratorAsset": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "patient_group",
+              "study",
+              "investigator",
+              "published_model",
+              "resource"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "description": {
+            "title": "Description",
+            "type": "string"
+          },
+          "url": {
+            "title": "Url",
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Source Ids",
+            "type": "array"
+          },
+          "access_status": {
+            "title": "Access Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "kind",
+          "description",
+          "url",
+          "source_ids",
+          "access_status"
+        ],
+        "title": "CollaboratorAsset",
+        "type": "object"
+      },
+      "Disease": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Source Ids",
+            "type": "array"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "source_ids"
+        ],
+        "title": "Disease",
+        "type": "object"
+      },
+      "Experiment": {
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "question": {
+            "title": "Question",
+            "type": "string"
+          },
+          "design": {
+            "title": "Design",
+            "type": "string"
+          },
+          "readouts": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Readouts",
+            "type": "array"
+          },
+          "falsification": {
+            "title": "Falsification",
+            "type": "string"
+          },
+          "prerequisites": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Prerequisites",
+            "type": "array"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Source Ids",
+            "type": "array"
+          },
+          "status": {
+            "enum": [
+              "proposed_research",
+              "expert_review_required"
+            ],
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "question",
+          "design",
+          "readouts",
+          "falsification",
+          "prerequisites",
+          "source_ids",
+          "status"
+        ],
+        "title": "Experiment",
+        "type": "object"
+      },
+      "LLMProvenance": {
+        "additionalProperties": false,
+        "properties": {
+          "mode": {
+            "enum": [
+              "cached_evidence",
+              "openai_verified",
+              "fallback"
+            ],
+            "title": "Mode",
+            "type": "string"
+          },
+          "model": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model"
+          },
+          "detail": {
+            "title": "Detail",
+            "type": "string"
+          },
+          "verified_claims": {
+            "items": {
+              "$ref": "#/$defs/Claim"
+            },
+            "title": "Verified Claims",
+            "type": "array"
+          }
+        },
+        "required": [
+          "mode",
+          "model",
+          "detail",
+          "verified_claims"
+        ],
+        "title": "LLMProvenance",
+        "type": "object"
+      },
+      "RelatedDisease": {
+        "additionalProperties": false,
+        "properties": {
+          "disease": {
+            "$ref": "#/$defs/Disease"
+          },
+          "gene": {
+            "title": "Gene",
+            "type": "string"
+          },
+          "shared_mechanism": {
+            "$ref": "#/$defs/Claim"
+          },
+          "key_difference": {
+            "$ref": "#/$defs/Claim"
+          },
+          "research_use": {
+            "title": "Research Use",
+            "type": "string"
+          },
+          "atlas_url": {
+            "title": "Atlas Url",
+            "type": "string"
+          }
+        },
+        "required": [
+          "disease",
+          "gene",
+          "shared_mechanism",
+          "key_difference",
+          "research_use",
+          "atlas_url"
+        ],
+        "title": "RelatedDisease",
+        "type": "object"
+      },
+      "ScoreBreakdown": {
+        "additionalProperties": false,
+        "properties": {
+          "positive_components": {
+            "items": {
+              "$ref": "#/$defs/ScoreTerm"
+            },
+            "title": "Positive Components",
+            "type": "array"
+          },
+          "risk_penalties": {
+            "items": {
+              "$ref": "#/$defs/ScoreTerm"
+            },
+            "title": "Risk Penalties",
+            "type": "array"
+          },
+          "positive_total": {
+            "title": "Positive Total",
+            "type": "number"
+          },
+          "penalty_total": {
+            "title": "Penalty Total",
+            "type": "number"
+          },
+          "unclamped_score": {
+            "title": "Unclamped Score",
+            "type": "number"
+          },
+          "final_score": {
+            "maximum": 100,
+            "minimum": 0,
+            "title": "Final Score",
+            "type": "number"
+          },
+          "formula": {
+            "title": "Formula",
+            "type": "string"
+          },
+          "config_version": {
+            "title": "Config Version",
+            "type": "string"
+          },
+          "interpretation": {
+            "title": "Interpretation",
+            "type": "string"
+          }
+        },
+        "required": [
+          "positive_components",
+          "risk_penalties",
+          "positive_total",
+          "penalty_total",
+          "unclamped_score",
+          "final_score",
+          "formula",
+          "config_version",
+          "interpretation"
+        ],
+        "title": "ScoreBreakdown",
+        "type": "object"
+      },
+      "ScoreTerm": {
+        "additionalProperties": false,
+        "properties": {
+          "component": {
+            "title": "Component",
+            "type": "string"
+          },
+          "weight": {
+            "title": "Weight",
+            "type": "number"
+          },
+          "input_value": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Input Value"
+          },
+          "used_value": {
+            "title": "Used Value",
+            "type": "number"
+          },
+          "contribution": {
+            "title": "Contribution",
+            "type": "number"
+          },
+          "missing_policy": {
+            "title": "Missing Policy",
+            "type": "string"
+          }
+        },
+        "required": [
+          "component",
+          "weight",
+          "input_value",
+          "used_value",
+          "contribution",
+          "missing_policy"
+        ],
+        "title": "ScoreTerm",
+        "type": "object"
+      },
+      "Source": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "url": {
+            "title": "Url",
+            "type": "string"
+          },
+          "evidence_type": {
+            "enum": [
+              "human_clinical",
+              "human_observational",
+              "preclinical",
+              "mechanistic_inference",
+              "regulatory_label",
+              "trial_registry",
+              "disease_reference",
+              "official_resource",
+              "unknown"
+            ],
+            "title": "Evidence Type",
+            "type": "string"
+          },
+          "reviewed_on": {
+            "title": "Reviewed On",
+            "type": "string"
+          },
+          "scope": {
+            "title": "Scope",
+            "type": "string"
+          },
+          "excerpt": {
+            "default": "",
+            "title": "Excerpt",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "url",
+          "evidence_type",
+          "reviewed_on",
+          "scope"
+        ],
+        "title": "Source",
+        "type": "object"
+      },
+      "VariantEffect": {
+        "additionalProperties": false,
+        "properties": {
+          "summary": {
+            "title": "Summary",
+            "type": "string"
+          },
+          "evidence_type": {
+            "enum": [
+              "human_clinical",
+              "human_observational",
+              "preclinical",
+              "mechanistic_inference",
+              "regulatory_label",
+              "trial_registry",
+              "disease_reference",
+              "official_resource",
+              "unknown"
+            ],
+            "title": "Evidence Type",
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Source Ids",
+            "type": "array"
+          },
+          "effect": {
+            "enum": [
+              "variant_dependent",
+              "loss_of_function",
+              "gain_of_function",
+              "dominant_negative",
+              "unknown"
+            ],
+            "title": "Effect",
+            "type": "string"
+          },
+          "scope": {
+            "enum": [
+              "disease_context",
+              "variant_specific",
+              "unresolved"
+            ],
+            "title": "Scope",
+            "type": "string"
+          }
+        },
+        "required": [
+          "summary",
+          "evidence_type",
+          "source_ids",
+          "effect",
+          "scope"
+        ],
+        "title": "VariantEffect",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "schema_version": {
+        "const": "constellai-analysis-v1",
+        "title": "Schema Version",
+        "type": "string"
+      },
+      "disease": {
+        "$ref": "#/$defs/Disease"
+      },
+      "gene": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Gene"
+      },
+      "variant": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Variant"
+      },
+      "variant_effect": {
+        "$ref": "#/$defs/VariantEffect"
+      },
+      "functional_mechanism": {
+        "$ref": "#/$defs/Claim"
+      },
+      "pathway": {
+        "$ref": "#/$defs/Claim"
+      },
+      "candidate_treatments": {
+        "items": {
+          "$ref": "#/$defs/Candidate"
+        },
+        "title": "Candidate Treatments",
+        "type": "array"
+      },
+      "related_disease_evidence": {
+        "items": {
+          "$ref": "#/$defs/RelatedDisease"
+        },
+        "title": "Related Disease Evidence",
+        "type": "array"
+      },
+      "recommended_next_experiment": {
+        "$ref": "#/$defs/Experiment"
+      },
+      "collaborators_or_assets": {
+        "items": {
+          "$ref": "#/$defs/CollaboratorAsset"
+        },
+        "title": "Collaborators Or Assets",
+        "type": "array"
+      },
+      "sources": {
+        "items": {
+          "$ref": "#/$defs/Source"
+        },
+        "title": "Sources",
+        "type": "array"
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "type": "string"
+      },
+      "best_hypothesis_id": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Best Hypothesis Id"
+      },
+      "analysis_status": {
+        "enum": [
+          "research_hypotheses_found",
+          "insufficient_evidence"
+        ],
+        "title": "Analysis Status",
+        "type": "string"
+      },
+      "limitations": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Limitations",
+        "type": "array"
+      },
+      "evidence_reviewed_on": {
+        "title": "Evidence Reviewed On",
+        "type": "string"
+      },
+      "llm": {
+        "$ref": "#/$defs/LLMProvenance"
+      }
+    },
+    "required": [
+      "schema_version",
+      "disease",
+      "gene",
+      "variant",
+      "variant_effect",
+      "functional_mechanism",
+      "pathway",
+      "candidate_treatments",
+      "related_disease_evidence",
+      "recommended_next_experiment",
+      "collaborators_or_assets",
+      "sources",
+      "conclusion",
+      "best_hypothesis_id",
+      "analysis_status",
+      "limitations",
+      "evidence_reviewed_on",
+      "llm"
+    ],
+    "title": "AnalyzeResponse",
+    "type": "object"
+  }
+}

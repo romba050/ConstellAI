@@ -97,7 +97,7 @@ requires-dist = [
     { name = "httpx", specifier = ">=0.27" },
     { name = "igraph", specifier = ">=0.11" },
     { name = "numpy", specifier = ">=1.26" },
-    { name = "openai", specifier = ">=1.50" },
+    { name = "openai", specifier = ">=2.26.0" },
     { name = "python-dotenv", specifier = ">=1.0" },
     { name = "scipy", specifier = ">=1.13" },
     { name = "umap-learn", specifier = ">=0.5.12" },

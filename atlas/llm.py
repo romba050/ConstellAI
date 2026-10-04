@@ -6,11 +6,15 @@ Model output is never trusted blindly: quotes must appear verbatim in the
 source abstract, and citations must point at evidence ids we supplied.
 """
 import json
+import logging
+import math
 import re
 
 from .config import OPENAI_API_KEY, OPENAI_MODEL
 
 _client = None
+_logger = logging.getLogger(__name__)
+REQUEST_TIMEOUT_SECONDS = 25.0
 
 
 def available():
@@ -22,23 +26,77 @@ def status():
 
 
 def _json(system, user, name, schema):
+    """A stateless, bounded Responses request; reject incomplete or invalid output.
+
+    Error logs contain only the operation and exception class. Provider messages
+    can contain request text or secrets and must never be printed.
+    """
     global _client
     if not available():
         return None
     try:
         if _client is None:
             from openai import OpenAI
-            _client = OpenAI(api_key=OPENAI_API_KEY, timeout=60)
-        r = _client.chat.completions.create(
+            _client = OpenAI(api_key=OPENAI_API_KEY, timeout=REQUEST_TIMEOUT_SECONDS, max_retries=0)
+        r = _client.responses.create(
             model=OPENAI_MODEL,
-            messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
-            response_format={"type": "json_schema",
-                             "json_schema": {"name": name, "strict": True, "schema": schema}},
+            input=[{"role": "system", "content": system}, {"role": "user", "content": user}],
+            text={"format": {"type": "json_schema", "name": name, "strict": True, "schema": schema}},
+            store=False,
+            timeout=REQUEST_TIMEOUT_SECONDS,
         )
-        return json.loads(r.choices[0].message.content)
+        if (_field(r, "status") != "completed" or _field(r, "error")
+                or _field(r, "incomplete_details")):
+            return None
+        for item in _field(r, "output", []) or []:
+            for part in _field(item, "content", []) or []:
+                if _field(part, "type") == "refusal":
+                    return None
+        payload = json.loads(_field(r, "output_text", ""))
+        return payload if _matches_schema(payload, schema) else None
     except Exception as e:  # network, quota, bad model name: degrade to template mode
-        print(f"[llm] {name} failed: {e}")
+        _logger.warning("OpenAI operation %s unavailable (%s)", name, type(e).__name__)
         return None
+
+
+def _field(value, name, default=None):
+    return value.get(name, default) if isinstance(value, dict) else getattr(value, name, default)
+
+
+def _matches_schema(value, schema):
+    """Validate the small closed JSON-schema subset used by this module.
+
+    Strict provider output still crosses a trust boundary, and local mocks,
+    refusals or SDK changes do not get to bypass it. Unknown schema constructs
+    fail closed rather than silently accepting an unvalidated structure.
+    """
+    if set(schema) - {"type", "properties", "required", "additionalProperties", "items", "enum"}:
+        return False
+    if "enum" in schema and value not in schema["enum"]:
+        return False
+    typ = schema.get("type")
+    if typ == "object":
+        if not isinstance(value, dict):
+            return False
+        props = schema.get("properties", {})
+        if not set(schema.get("required", [])) <= set(value):
+            return False
+        if schema.get("additionalProperties") is False and not set(value) <= set(props):
+            return False
+        return all(k in props and _matches_schema(v, props[k]) for k, v in value.items())
+    if typ == "array":
+        return isinstance(value, list) and all(_matches_schema(x, schema["items"]) for x in value)
+    if typ == "string":
+        return isinstance(value, str)
+    if typ == "integer":
+        return isinstance(value, int) and not isinstance(value, bool)
+    if typ == "number":
+        return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)
+    if typ == "boolean":
+        return isinstance(value, bool)
+    if typ == "null":
+        return value is None
+    return False
 
 
 def _obj(props):
@@ -80,10 +138,10 @@ def extract_claims(gene, abstracts):
     out = _json(system, user, "claims", schema)
     if out is None:
         return None
-    texts = {a["pmid"]: _norm(a["text"]) for a in abstracts}
+    texts = {a["pmid"]: a["text"] for a in abstracts}
     verified = []
     for c in out["claims"]:
-        if c["pmid"] in texts and _norm(c["quote"]) and _norm(c["quote"]) in texts[c["pmid"]]:
+        if c["pmid"] in texts and c["quote"].strip() and c["quote"] in texts[c["pmid"]]:
             verified.append(c)
     return verified
 

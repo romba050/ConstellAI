@@ -9,11 +9,48 @@ pinned: false
 short_description: An AI atlas for the world's rare diseases
 ---
 
-# ConstellAI — an AI atlas for the world's rare diseases
+# ConstellAI — sourced therapeutic research hypotheses
 
 *Hack-Nation 7th Global AI Hackathon · Challenge 05 (OpenAI × Buffalo Initiative)*
 
-**Live demo:** https://romba050-constellai.hf.space (source: https://huggingface.co/spaces/romba050/ConstellAI)
+**Existing public atlas:** https://romba050-constellai.hf.space (source: https://huggingface.co/spaces/romba050/ConstellAI).
+This branch adds the therapeutic journey below; deploy this branch to the Space to publish it.
+
+## Therapeutic journey (this branch)
+
+**Disease → gene/variant → mechanism → evidence and safety ranking → research hypothesis
+→ related disease/community evidence → next experiment.** The default screen is a dark,
+plain-language journey for Maria, a patient-organisation leader. The deep reviewed hero is
+STXBP1; broad atlas coverage does not imply broad therapeutic validation.
+
+Run `START_DEMO.cmd` on Windows, or `uv run uvicorn atlas.server:app --port 8800` and open
+http://127.0.0.1:8800. The included evidence snapshot runs without a key or fresh API calls.
+For the small cached-demo runtime only: `python -m pip install -r requirements-demo.txt`, then
+`python -m uvicorn atlas.server:app --port 8800`. Full graph-building dependencies remain in
+`pyproject.toml` and `uv.lock`; the included graph avoids rebuilding for the demo.
+
+`POST /api/v1/analyze_disease` accepts `disease`, optional `gene`, optional `variant` and
+`use_openai`. The frozen schema is in `docs/analyze-disease.schema.json`. The frontend mock
+at `/?data=mock` uses the same contract. The original map and CPLX1/STXBP1 journey remain
+available at `/atlas`, downstream from the therapeutic analysis.
+
+Six configurable positive components minus four risk penalties determine the 0-100 research
+priority index. Every component, missing-data policy and source is inspectable. Unknown
+variants withhold rank; unsupported cases can return **“No defensible therapeutic candidate found.”**
+This index is a disclosed curator heuristic, not an efficacy probability or prescribing tool.
+Mechanism targeting, symptom targeting, human evidence and preclinical models stay distinct.
+
+Optional OpenAI support uses the **Responses API** with strict Structured Outputs, server-side
+`OPENAI_API_KEY`, verified source excerpts and deterministic ranking. A teammate can add the
+key in `.env` or the deployment environment and restart the server after upload. The key
+must never enter frontend code. Transport tests do not establish a successful live paid API call.
+
+See [the one-minute demo and deployment handoff](docs/THERAPEUTIC_DEMO.md),
+[primary evidence and draft corrections](docs/EVIDENCE_REVIEW.md),
+and [engineering verification](docs/VERIFICATION.md). Run tests with
+`python -m unittest discover -s tests -v`.
+
+## Existing atlas
 
 Five thousand scattered points of light, one map to see the constellations. ConstellAI places **6,457 monogenic
 diseases** on one map, grouped by shared symptoms and shared pathways rather than by name. A patient-group leader

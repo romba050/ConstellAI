@@ -1,0 +1,21 @@
+{
+  "config_version": "therapeutic-priority-1",
+  "positive": {
+    "mechanism_alignment": 30,
+    "variant_effect_compatibility": 15,
+    "human_evidence": 20,
+    "preclinical_evidence": 10,
+    "phenotype_relevance": 10,
+    "evidence_quality": 15
+  },
+  "risk": {
+    "toxicity_organ_burden": 15,
+    "drug_interactions": 10,
+    "off_target_spillover": 10,
+    "uncertainty": 15
+  },
+  "unknown_positive_value": 0,
+  "unknown_risk_value": 1,
+  "research_threshold": 20,
+  "supported_threshold": 60
+}

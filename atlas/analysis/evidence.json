@@ -1,0 +1,607 @@
+{
+  "reviewed_on": "2026-10-04",
+  "sources": [
+    {
+      "id": "guiberson2018",
+      "title": "Guiberson et al. (2018): Mechanism-based rescue of Munc18-1 dysfunction in varied encephalopathies by chemical chaperones",
+      "url": "https://www.nature.com/articles/s41467-018-06507-4",
+      "evidence_type": "preclinical",
+      "reviewed_on": "2026-10-04",
+      "scope": "Selected missense models; primary mouse neurons and worms. DOI 10.1038/s41467-018-06507-4; PMID 30266908. No human efficacy test.",
+      "excerpt": "Three chemical chaperones stabilized the levels of mutant and wild-type Munc18-1 in transfected HEK293T cells: 4-phenylbutyrate, sorbitol, and trehalose"
+    },
+    {
+      "id": "abramov2021",
+      "title": "Abramov et al. (2021): Targeted stabilization of Munc18-1 function via pharmacological chaperones",
+      "url": "https://link.springer.com/article/10.15252/emmm.202012354",
+      "evidence_type": "preclinical",
+      "reviewed_on": "2026-10-04",
+      "scope": "Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+      "excerpt": "We found compounds 9 and 13 to significantly increase mean firing frequency in G544D Munc18‐1 neurons"
+    },
+    {
+      "id": "lammertse2020",
+      "title": "Lammertse et al. (2020): Homozygous STXBP1 variant causes encephalopathy and gain-of-function in synaptic transmission",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7009479/",
+      "evidence_type": "preclinical",
+      "reviewed_on": "2026-10-04",
+      "scope": "Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+      "excerpt": "the homozygous L446F mutation causes a gain-of-function phenotype regarding release probability and synaptic transmission"
+    },
+    {
+      "id": "wang2022",
+      "title": "Wang et al. (2022): Efficacy of levetiracetam in STXBP1 encephalopathy with different phenotypic and genetic spectra",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35007884/",
+      "evidence_type": "human_observational",
+      "reviewed_on": "2026-10-04",
+      "scope": "Non-randomized cohort: 40 enrolled, medication histories in 37. DOI 10.1016/j.seizure.2021.12.006; no treatment-assignment intervention.",
+      "excerpt": "LEV was effective in improving the partial remission rate but did not achieve seizure freedom."
+    },
+    {
+      "id": "xian2023",
+      "title": "Xian et al. (2023): Delineating clinical and developmental outcomes in STXBP1-related disorders",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10689925/",
+      "evidence_type": "human_observational",
+      "reviewed_on": "2026-10-04",
+      "scope": "Published Brain cohort, not its preprint. PMID 38015929; DOI 10.1093/brain/awad287. Medication-response reconstruction in 61 individuals.",
+      "excerpt": "we did not find a superior effect of levetiracetam in seizure reduction in STXBP1"
+    },
+    {
+      "id": "barbour2026",
+      "title": "Barbour et al. (2026): Parent-Reported Improvement in Seizure Control and Development After Phenylbutyrate Treatment in Children With STXBP1 and SLC6A1",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13405358/",
+      "evidence_type": "human_observational",
+      "reviewed_on": "2026-10-04",
+      "scope": "Uncontrolled interviews: 18 children, 13 STXBP1. Primarily glycerol formulation; one sodium exposure. PMID 42447769; DOI 10.1016/j.pediatrneurol.2026.06.012; online 2026-06-20.",
+      "excerpt": "One child (1/18) had severe toxicity, with metabolic acidosis and aspiration pneumonia requiring intubation."
+    },
+    {
+      "id": "ravicti-label",
+      "title": "DailyMed: RAVICTI (glycerol phenylbutyrate) prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=900e7dc0-9afe-4f50-80de-90567bb78519",
+      "evidence_type": "regulatory_label",
+      "reviewed_on": "2026-10-04",
+      "scope": "Label revised September 2025; urea-cycle indication, metabolism, warnings and interactions. Approval does not establish STXBP1 benefit.",
+      "excerpt": "RAVICTI is a weak inducer of CYP3A4 in humans."
+    },
+    {
+      "id": "keppra-label",
+      "title": "DailyMed: KEPPRA (levetiracetam) prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ca9df05-a506-4ec8-a4fe-320f1219ab21",
+      "evidence_type": "regulatory_label",
+      "reviewed_on": "2026-10-04",
+      "scope": "Immediate-release label: SV2A pharmacology, behavioral/serious adverse effects, renal clearance, studied interactions. Does not establish disease modification.",
+      "excerpt": "KEPPRA may cause behavioral abnormalities and psychotic symptoms."
+    },
+    {
+      "id": "redler2017",
+      "title": "Redler et al. (2017): Variants in CPLX1 in two families with autosomal-recessive severe infantile myoclonic epilepsy and ID",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5520065/",
+      "evidence_type": "human_observational",
+      "reviewed_on": "2026-10-04",
+      "scope": "Three affected individuals with homozygous CPLX1 variants; mechanistic background is contextual, not a treatment study. DOI 10.1038/ejhg.2017.52; PMID 28422131.",
+      "excerpt": "identified homozygous CPLX1 variants in three patients with ID from two unrelated families."
+    },
+    {
+      "id": "stxbp1-foundation",
+      "title": "STXBP1 Foundation: Clinical Trials and Observational Studies",
+      "url": "https://www.stxbp1disorders.org/clinicaltrialsandresearch",
+      "evidence_type": "official_resource",
+      "reviewed_on": "2026-10-04",
+      "scope": "Official research directory identifies STARR and ESCO; resource availability does not establish collaboration or access.",
+      "excerpt": "The STARR study is a prospective, multi-site natural history study for STXBP1-Related Disorders (STXBP1-RD)."
+    },
+    {
+      "id": "nct04937062",
+      "title": "ClinicalTrials.gov NCT04937062: Phenylbutyrate for Monogenetic Developmental and Epileptic Encephalopathy",
+      "url": "https://clinicaltrials.gov/study/NCT04937062",
+      "evidence_type": "trial_registry",
+      "reviewed_on": "2026-10-04",
+      "scope": "Official API checked 2026-10-04; last update posted 2026-01-22. ACTIVE_NOT_RECRUITING; early phase 1, open label; hasResults=false. Published observations are separate.",
+      "excerpt": "Glycerol Phenylbutyrate 1100 MG/ML [Ravicti]"
+    },
+    {
+      "id": "nct06555965",
+      "title": "ClinicalTrials.gov NCT06555965: STXBP1 and SYNGAP1 Related Disorders Natural History Study",
+      "url": "https://clinicaltrials.gov/study/NCT06555965",
+      "evidence_type": "trial_registry",
+      "reviewed_on": "2026-10-04",
+      "scope": "Official API checked 2026-10-04; last update posted 2025-10-29. RECRUITING; observational; hasResults=false. Status is a dated registry entry.",
+      "excerpt": "There is no planned intervention in this study"
+    },
+    {
+      "id": "nct06625112",
+      "title": "ClinicalTrials.gov NCT06625112: A Multicentric European Study to Promote Clinical Trial Readiness for STXBP1-related Disorders",
+      "url": "https://clinicaltrials.gov/study/NCT06625112",
+      "evidence_type": "trial_registry",
+      "reviewed_on": "2026-10-04",
+      "scope": "Official API checked 2026-10-04; last update posted 2026-02-06. RECRUITING; observational registry; hasResults=false. Sponsor: European STXBP1 Consortium.",
+      "excerpt": "A Multicentric European Study to Promote Clinical Trial Readiness for STXBP1-related Disorders"
+    }
+  ],
+  "profiles": [
+    {
+      "aliases": [
+        "STXBP1",
+        "STXBP1-related disorder",
+        "STXBP1-related disorders",
+        "STXBP1-related neurodevelopmental disorder",
+        "STXBP1 encephalopathy",
+        "developmental and epileptic encephalopathy 4",
+        "developmental and epileptic encephalopathy, 4",
+        "DEE4",
+        "DEE 4",
+        "EIEE4",
+        "MONDO:0012812"
+      ],
+      "disease": {
+        "id": "MONDO:0012812",
+        "name": "STXBP1-related disorders",
+        "source_ids": [
+          "xian2023"
+        ]
+      },
+      "gene": "STXBP1",
+      "variant_effect": {
+        "summary": "Effects depend on the variant and genotype. Selected missense variants destabilize Munc18-1; homozygous L446F instead increased evoked transmission in a model. No individual functional classification is inferred.",
+        "evidence_type": "mechanistic_inference",
+        "source_ids": [
+          "guiberson2018",
+          "lammertse2020"
+        ],
+        "effect": "variant_dependent",
+        "scope": "disease_context"
+      },
+      "functional_mechanism": {
+        "summary": "STXBP1 encodes Munc18-1, a regulator of synaptic vesicle release. Different disturbances can converge on neurodevelopmental and epilepsy phenotypes.",
+        "evidence_type": "preclinical",
+        "source_ids": [
+          "lammertse2020"
+        ]
+      },
+      "pathway": {
+        "summary": "Presynaptic vesicle exocytosis and SNARE-mediated neurotransmitter release.",
+        "evidence_type": "preclinical",
+        "source_ids": [
+          "lammertse2020"
+        ]
+      },
+      "candidate_treatments": [
+        {
+          "id": "stxbp1-phenylbutyrate",
+          "compound_name": "Phenylbutyrate: preclinical 4-PBA; clinical glycerol formulation",
+          "therapeutic_role": "mechanism_targeting",
+          "mechanism_of_action": {
+            "summary": "Chemical-chaperone strategy to stabilize available Munc18-1. Glycerol phenylbutyrate releases phenylbutyrate after intestinal hydrolysis; the formulations are distinct.",
+            "evidence_type": "preclinical",
+            "source_ids": [
+              "guiberson2018",
+              "ravicti-label"
+            ]
+          },
+          "mechanism_alignment": {
+            "summary": "Protein-stabilization fits the selected missense model's proteostasis deficit.",
+            "evidence_type": "preclinical",
+            "source_ids": [
+              "guiberson2018"
+            ],
+            "value": 0.9
+          },
+          "variant_effect_compatibility": {
+            "summary": "Disease-context hypothesis for destabilized protein; homozygous L446F shows why transfer across variants needs testing.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "guiberson2018",
+              "lammertse2020"
+            ],
+            "value": 0.5
+          },
+          "human_evidence": {
+            "summary": "Parent reports in a mixed-gene uncontrolled cohort suggest benefit; mainly glycerol formulation. This does not establish causal efficacy or disease modification.",
+            "evidence_type": "human_observational",
+            "source_ids": [
+              "barbour2026"
+            ],
+            "value": 0.25
+          },
+          "preclinical_evidence": {
+            "summary": "4-PBA improved protein solubility and synaptic readouts in selected neuronal and worm models.",
+            "evidence_type": "preclinical",
+            "source_ids": [
+              "guiberson2018"
+            ],
+            "value": 0.8
+          },
+          "phenotype_relevance": {
+            "summary": "Synaptic assays and reported clinical changes motivate validation; objective developmental benefit remains unresolved.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "guiberson2018",
+              "barbour2026"
+            ],
+            "value": 0.65
+          },
+          "evidence_quality": {
+            "summary": "Curator judgment: mechanistic experiments plus uncontrolled observations support investigation; formulation translation and independent replication remain requirements.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "guiberson2018",
+              "barbour2026"
+            ],
+            "value": 0.6
+          },
+          "toxicity": {
+            "summary": "The observational report includes severe toxicity requiring intubation and seizure worsening; the glycerol label warns of metabolite-related neurotoxicity.",
+            "evidence_type": "human_observational",
+            "source_ids": [
+              "barbour2026",
+              "ravicti-label"
+            ],
+            "value": 0.8
+          },
+          "organ_burden": {
+            "summary": "Glycerol formulation relies on intestinal hydrolysis, phenylacetate metabolism and renal metabolite excretion. Hepatic impairment and malabsorption are material considerations.",
+            "evidence_type": "regulatory_label",
+            "source_ids": [
+              "ravicti-label"
+            ],
+            "value": 0.6
+          },
+          "drug_interactions": {
+            "summary": "Glycerol label describes ammonia-related interactions, probenecid and reduced exposure of CYP3A4 substrates including midazolam.",
+            "evidence_type": "regulatory_label",
+            "source_ids": [
+              "ravicti-label"
+            ],
+            "value": 0.5
+          },
+          "off_target_spillover": {
+            "summary": "Chemical chaperones lack Munc18-1 specificity; model exposures may not translate to tolerable human exposure.",
+            "evidence_type": "preclinical",
+            "source_ids": [
+              "abramov2021"
+            ],
+            "value": 0.7
+          },
+          "uncertainty": {
+            "summary": "Curator judgment: uncontrolled reports, mixed genes, formulation differences, concomitant treatment and untested variants leave major uncertainty.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "barbour2026",
+              "lammertse2020"
+            ],
+            "value": 0.8
+          },
+          "status": "research_hypothesis",
+          "rationale": "In studied models, 4-PBA helped stabilize Munc18-1, the protein involved in releasing nerve-cell signals. A laboratory test can check whether this holds for the exact variant and preparation; human benefit remains uncertain.",
+          "next_validation_step": "Confirm variant biology, formulation identity and measured exposure; independently replicate functional rescue with toxicity readouts before expert translational review."
+        },
+        {
+          "id": "stxbp1-levetiracetam",
+          "compound_name": "Levetiracetam",
+          "therapeutic_role": "symptom_targeting",
+          "mechanism_of_action": {
+            "summary": "Binds synaptic vesicle protein SV2A; the exact antiepileptic mechanism is incompletely understood. This is a seizure-targeting hypothesis, not established Munc18-1 repair.",
+            "evidence_type": "regulatory_label",
+            "source_ids": [
+              "keppra-label"
+            ]
+          },
+          "mechanism_alignment": {
+            "summary": "Shared synaptic context supports limited symptomatic relevance, not protein stabilization.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "keppra-label",
+              "lammertse2020"
+            ],
+            "value": 0.45
+          },
+          "variant_effect_compatibility": {
+            "summary": "Disease-context seizure hypothesis; evidence does not establish compatibility for an individual variant or all functional classes.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "wang2022",
+              "lammertse2020"
+            ],
+            "value": 0.45
+          },
+          "human_evidence": {
+            "summary": "Wang's observational cohort associated levetiracetam with partial remission; Xian's published cohort did not find superior seizure reduction. Response is heterogeneous.",
+            "evidence_type": "human_observational",
+            "source_ids": [
+              "wang2022",
+              "xian2023"
+            ],
+            "value": 0.45
+          },
+          "preclinical_evidence": {
+            "summary": "No STXBP1-specific preclinical rescue study curated for this candidate.",
+            "evidence_type": "unknown",
+            "source_ids": [],
+            "value": null
+          },
+          "phenotype_relevance": {
+            "summary": "Seizure outcomes are relevant; these cohorts do not establish correction of the developmental disorder.",
+            "evidence_type": "human_observational",
+            "source_ids": [
+              "wang2022",
+              "xian2023"
+            ],
+            "value": 0.75
+          },
+          "evidence_quality": {
+            "summary": "Curator judgment: primary human cohorts support evaluation, with non-randomized treatment and conflicting comparative results.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "wang2022",
+              "xian2023"
+            ],
+            "value": 0.6
+          },
+          "toxicity": {
+            "summary": "Behavioral symptoms, somnolence and serious hypersensitivity warnings warrant safety review.",
+            "evidence_type": "regulatory_label",
+            "source_ids": [
+              "keppra-label"
+            ],
+            "value": 0.45
+          },
+          "organ_burden": {
+            "summary": "Primarily renal clearance; impaired renal function reduces clearance.",
+            "evidence_type": "regulatory_label",
+            "source_ids": [
+              "keppra-label"
+            ],
+            "value": 0.4
+          },
+          "drug_interactions": {
+            "summary": "Several studied pharmacokinetic interactions were limited; co-medication review remains necessary and a low rating does not imply safety.",
+            "evidence_type": "regulatory_label",
+            "source_ids": [
+              "keppra-label"
+            ],
+            "value": 0.2
+          },
+          "off_target_spillover": {
+            "summary": "SV2A binding concerns vesicle function broadly; this is not STXBP1-specific targeting.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "keppra-label"
+            ],
+            "value": 0.3
+          },
+          "uncertainty": {
+            "summary": "Curator judgment: seizure trajectory and non-randomized co-treatment complicate causal attribution; comparative findings differ.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "wang2022",
+              "xian2023"
+            ],
+            "value": 0.65
+          },
+          "status": "research_hypothesis",
+          "rationale": "Levetiracetam binds a nerve-cell signalling protein called SV2A. It is a seizure-focused comparison hypothesis, with mixed patient observations; it has not been shown to repair Munc18-1.",
+          "next_validation_step": "Review the contrasting cohorts and pre-specify seizure endpoints, concomitant-treatment accounting and adverse-event capture with clinical experts."
+        },
+        {
+          "id": "stxbp1-compound-13",
+          "compound_name": "Compound 13 (Abramov research compound)",
+          "therapeutic_role": "research_tool",
+          "mechanism_of_action": {
+            "summary": "Experimental pharmacological chaperone binds Munc18-1 and stabilizes selected mutant protein in preclinical models.",
+            "evidence_type": "preclinical",
+            "source_ids": [
+              "abramov2021"
+            ]
+          },
+          "mechanism_alignment": {
+            "summary": "Direct Munc18-1 binding offers a mechanistic laboratory comparator.",
+            "evidence_type": "preclinical",
+            "source_ids": [
+              "abramov2021"
+            ],
+            "value": 0.9
+          },
+          "variant_effect_compatibility": {
+            "summary": "Selected R406H/G544D models support testing; other variants and human compatibility remain unestablished.",
+            "evidence_type": "preclinical",
+            "source_ids": [
+              "abramov2021"
+            ],
+            "value": 0.5
+          },
+          "human_evidence": {
+            "summary": "Human efficacy not evaluated in this curated set.",
+            "evidence_type": "unknown",
+            "source_ids": [],
+            "value": null
+          },
+          "preclinical_evidence": {
+            "summary": "Selected neuronal and worm assays reported rescue; independent translational validation remains necessary.",
+            "evidence_type": "preclinical",
+            "source_ids": [
+              "abramov2021"
+            ],
+            "value": 0.7
+          },
+          "phenotype_relevance": {
+            "summary": "Neuronal function is relevant but does not establish clinical seizure or developmental benefit.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "abramov2021"
+            ],
+            "value": 0.5
+          },
+          "evidence_quality": {
+            "summary": "Curator judgment: a primary experimental report supports a tool hypothesis, with substantial translation gaps.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "abramov2021"
+            ],
+            "value": 0.6
+          },
+          "toxicity": {
+            "summary": "Human toxicology is unreviewed; unknown receives full penalty.",
+            "evidence_type": "unknown",
+            "source_ids": [],
+            "value": null
+          },
+          "organ_burden": {
+            "summary": "Human metabolism and organ burden are unreviewed.",
+            "evidence_type": "unknown",
+            "source_ids": [],
+            "value": null
+          },
+          "drug_interactions": {
+            "summary": "Human interaction profile is unreviewed.",
+            "evidence_type": "unknown",
+            "source_ids": [],
+            "value": null
+          },
+          "off_target_spillover": {
+            "summary": "A complete selectivity profile is unreviewed; unknown receives full penalty.",
+            "evidence_type": "unknown",
+            "source_ids": [],
+            "value": null
+          },
+          "uncertainty": {
+            "summary": "Curator judgment: identity/procurement, selectivity, human exposure and safety require verification before translation.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "abramov2021"
+            ],
+            "value": 1
+          },
+          "status": "insufficient_evidence",
+          "rationale": "Keep as an experimental assay comparator. Unknown human safety and exposure prevent a defensible therapeutic candidate classification.",
+          "next_validation_step": "Verify the publication's exact chemical identity and supplier records; review selectivity, exposure and toxicology before considering any translational work."
+        }
+      ],
+      "related_disease_evidence": [
+        {
+          "disease": {
+            "id": "MONDO:0033372",
+            "name": "CPLX1-related developmental and epileptic encephalopathy",
+            "source_ids": [
+              "redler2017"
+            ]
+          },
+          "gene": "CPLX1",
+          "shared_mechanism": {
+            "summary": "Complexin-1 and Munc18-1 both participate in presynaptic SNARE/vesicle-release regulation; this is a pathway connection.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "redler2017",
+              "lammertse2020"
+            ]
+          },
+          "key_difference": {
+            "summary": "The CPLX1 report concerns recessive homozygous variants; STXBP1 commonly involves heterozygous/de novo disease and has functional exceptions.",
+            "evidence_type": "human_observational",
+            "source_ids": [
+              "redler2017",
+              "lammertse2020"
+            ]
+          },
+          "research_use": "Compare assay methods and outcome concepts; shared pathways do not establish shared treatment response, dosing or eligibility.",
+          "atlas_url": "/atlas#d/MONDO:0033372"
+        }
+      ],
+      "recommended_next_experiment": {
+        "title": "Test variant-dependent rescue of Munc18-1 and synaptic function",
+        "question": "Does phenylbutyrate rescue function in a defined STXBP1 model at measured, non-cytotoxic exposure?",
+        "design": "Proposed adaptation of published neuronal assays: compare a characterized STXBP1 variant with wild-type and an isogenic control, using blinded independent preparations. Document exact transcript, zygosity and baseline functional direction. Specify the chemical/formulation, a measured exposure series and vehicle controls before analysis. Test protein solubility alongside evoked vesicle release and viability; a laboratory specialist must determine exposures from methods and model pharmacology.",
+        "readouts": [
+          "Munc18-1 abundance and soluble/insoluble fraction",
+          "Evoked synaptic-vesicle recycling or synaptopHluorin signal",
+          "Spontaneous activity and evoked transmission considered separately",
+          "Viability and general cell stress",
+          "Prespecified comparison with corrected/wild-type control"
+        ],
+        "falsification": "Reject the rescue hypothesis for that model if protein stabilization does not improve the prespecified functional endpoint, if activity moves farther from control, or if apparent benefit appears only with cytotoxic exposure.",
+        "prerequisites": [
+          "Expert review of assay validity and statistical design",
+          "Verified variant, transcript, zygosity and functional classification",
+          "Verified chemical identity, formulation and measured exposure",
+          "Available models under appropriate consent and approvals; availability is not assumed",
+          "Independent biological preparations and prespecified endpoints"
+        ],
+        "source_ids": [
+          "guiberson2018",
+          "abramov2021",
+          "lammertse2020"
+        ],
+        "status": "expert_review_required"
+      },
+      "collaborators_or_assets": [
+        {
+          "name": "STXBP1 Foundation",
+          "kind": "patient_group",
+          "description": "Official community research directory linking published studies and registries.",
+          "url": "https://www.stxbp1disorders.org/clinicaltrialsandresearch",
+          "source_ids": [
+            "stxbp1-foundation"
+          ],
+          "access_status": "Public information reviewed 2026-10-04; no contact, collaboration or data access established."
+        },
+        {
+          "name": "STARR natural history study",
+          "kind": "study",
+          "description": "Observational STXBP1/SYNGAP1 outcome study; potential research-planning context, not a therapeutic intervention.",
+          "url": "https://clinicaltrials.gov/study/NCT06555965",
+          "source_ids": [
+            "stxbp1-foundation",
+            "nct06555965"
+          ],
+          "access_status": "Registry lists RECRUITING; last posted 2025-10-29, checked 2026-10-04. Team confirmation required; no eligibility or access determination."
+        },
+        {
+          "name": "ESCO natural history study and patient registry",
+          "kind": "study",
+          "description": "European STXBP1 Consortium observational effort for natural history, outcomes and trial readiness.",
+          "url": "https://clinicaltrials.gov/study/NCT06625112",
+          "source_ids": [
+            "stxbp1-foundation",
+            "nct06625112"
+          ],
+          "access_status": "Registry lists RECRUITING; last posted 2026-02-06, checked 2026-10-04. No collaboration, biobank access or eligibility established."
+        },
+        {
+          "name": "Phenylbutyrate pilot (NCT04937062)",
+          "kind": "study",
+          "description": "Glycerol phenylbutyrate early-phase open-label pilot; registration supports study existence, not efficacy. No results posted in this registry.",
+          "url": "https://clinicaltrials.gov/study/NCT04937062",
+          "source_ids": [
+            "nct04937062"
+          ],
+          "access_status": "ACTIVE_NOT_RECRUITING; last posted 2026-01-22, checked 2026-10-04. Published observational findings are separately cited."
+        },
+        {
+          "name": "Published Munc18-1 neuronal and worm models",
+          "kind": "published_model",
+          "description": "Published missense-model methods can inform replication. This entry establishes a publication, not ownership or material availability.",
+          "url": "https://www.nature.com/articles/s41467-018-06507-4",
+          "source_ids": [
+            "guiberson2018",
+            "abramov2021"
+          ],
+          "access_status": "Public methods; procurement, permissions and present availability unverified."
+        }
+      ],
+      "limitations": [
+        "One curated STXBP1 research demonstration, not a comprehensive therapeutic search.",
+        "The umbrella STXBP1 label uses DEE4 as an atlas navigation anchor; it does not equate every STXBP1 phenotype with DEE4.",
+        "Ratings are curator ordinal judgments from 0 to 1; scores are uncalibrated research-priority points, never efficacy estimates, probabilities or patient benefit predictions.",
+        "Null positive ratings receive zero credit; null risk ratings receive the full configured penalty. No unknown is interpreted as safe.",
+        "Disease-context ranking does not classify an individual variant. Any supplied variant requires expert functional review before compatibility or ranking.",
+        "Free 4-phenylbutyrate, sodium phenylbutyrate and glycerol phenylbutyrate are distinct preparations; exposures and safety are not interchangeable.",
+        "Parent-reported mixed-gene observations do not establish a STXBP1-specific treatment effect or causal developmental improvement.",
+        "ClinicalTrials.gov status is a dated sponsor registry entry; hasResults=false concerns posted registry results, not all published literature.",
+        "Related CPLX1 evidence provides a research connection; no therapy response is transferred across genes.",
+        "No dose, age eligibility, patient-specific treatment plan or trial-ready protocol is generated.",
+        "The Google Doc's example phenytoin contraindication for STXBP1 loss of function was not supported by the reviewed sources and is excluded.",
+        "Official resource links establish existence only; no outreach, clinical collaboration or material/data access has occurred."
+      ]
+    }
+  ]
+}

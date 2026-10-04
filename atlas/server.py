@@ -4,6 +4,7 @@
 """
 import datetime
 import json
+import logging
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 
@@ -13,6 +14,8 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from . import connect, enrich, llm
+from .analysis.models import AnalyzeRequest, AnalyzeResponse
+from .analysis.service import AnalysisService, EvidenceIntegrityError, SCHEMA_VERSION
 from .config import ATLAS_FILE, CONTRIBUTIONS_FILE, WEB
 from .store import Atlas, load_contributions
 
@@ -21,6 +24,32 @@ if not ATLAS_FILE.exists():
 
 atlas = Atlas()
 app = FastAPI(title="ConstellAI")
+analysis_service = AnalysisService(atlas=atlas)
+logger = logging.getLogger(__name__)
+
+
+@app.get("/api/v1/health")
+def health():
+    """Capability flags expose neither keys nor environment contents."""
+    return {"status": "ok", "schema_version": SCHEMA_VERSION,
+            "scoring_version": analysis_service.weights["config_version"],
+            "openai_enabled": llm.available()}
+
+
+@app.get("/api/v1/schema")
+def analysis_schema():
+    return {"request": AnalyzeRequest.model_json_schema(), "response": AnalyzeResponse.model_json_schema()}
+
+
+@app.post("/api/v1/analyze_disease", response_model=AnalyzeResponse)
+def analyze_disease(request: AnalyzeRequest):
+    try:
+        return analysis_service.analyze(request)
+    except EvidenceIntegrityError:
+        logger.error("Curated therapeutic evidence failed contract validation")
+        raise HTTPException(503, "Reviewed evidence is unavailable; therapeutic analysis was withheld.")
+    except ValueError:
+        raise HTTPException(422, "Disease must contain a name, gene symbol or exact identifier.")
 
 
 def disease_or_404(did):
@@ -37,10 +66,10 @@ def get_atlas():
 
 
 @app.get("/api/search")
-def search(q: str):
+def search(q: str, use_openai: bool = True):
     hits = atlas.search(q)
     resolved = None
-    if not hits and llm.available() and len(q) >= 4:
+    if not hits and use_openai and llm.available() and len(q) >= 4:
         # Reconcile: let the model propose names, but only accept ones that exist in the vocabulary.
         for cand in llm.resolve_query(q) or []:
             for h in atlas.search(cand, limit=2):
@@ -129,6 +158,11 @@ def contribute(c: Contribution):
 
 @app.get("/")
 def index():
+    return FileResponse(WEB / "research.html")
+
+
+@app.get("/atlas")
+def atlas_index():
     return FileResponse(WEB / "index.html")
 
 
