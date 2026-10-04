@@ -35,15 +35,15 @@ def ncbi(endpoint, **params):
     if NCBI_API_KEY:
         params["api_key"] = NCBI_API_KEY
     gap = 0.11 if NCBI_API_KEY else 0.36
-    for attempt in range(3):
+    for attempt in range(4):
         with _ncbi_lock:
             wait = _ncbi_last[0] + gap - time.time()
             if wait > 0:
                 time.sleep(wait)
             _ncbi_last[0] = time.time()
         r = HTTP.post(f"{EUTILS}/{endpoint}.fcgi", data=params)
-        if r.status_code == 429:
-            time.sleep(1 + attempt)
+        if r.status_code == 429 or r.status_code >= 500:  # rate limit or transient NCBI outage
+            time.sleep(1.5 * (attempt + 1))
             continue
         r.raise_for_status()
         return r

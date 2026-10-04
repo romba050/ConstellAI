@@ -1,0 +1,9 @@
+.venv
+.git
+.env
+__pycache__
+data/raw
+data/cache
+data/contributions.json
+pitch
+*.pdf

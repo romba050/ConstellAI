@@ -1,6 +1,19 @@
+---
+title: ConstellAI
+emoji: ✨
+colorFrom: indigo
+colorTo: yellow
+sdk: docker
+app_port: 7860
+pinned: false
+short_description: An AI atlas for the world's rare diseases
+---
+
 # ConstellAI — an AI atlas for the world's rare diseases
 
 *Hack-Nation 7th Global AI Hackathon · Challenge 05 (OpenAI × Buffalo Initiative)*
+
+**Live demo:** https://romba050-constellai.hf.space (source: https://huggingface.co/spaces/romba050/ConstellAI)
 
 Five thousand scattered points of light, one map to see the constellations. ConstellAI places **6,457 monogenic
 diseases** on one map, grouped by shared symptoms and shared pathways rather than by name. A patient-group leader
@@ -21,6 +34,12 @@ Requires [uv](https://docs.astral.sh/uv/) and Python ≥ 3.11.
 uv sync
 uv run python -m atlas.build                  # downloads public sources (~140 MB) and builds data/atlas.json.gz, ~1 min
 uv run uvicorn atlas.server:app --port 8000   # open http://localhost:8000
+```
+
+Or with Docker (the same image the live demo runs):
+
+```bash
+docker build -t constellai . && docker run --rm -p 7860:7860 constellai   # open http://localhost:7860
 ```
 
 `data/atlas.json.gz` (4 MB) is included, so the build command can be skipped for a quick look.

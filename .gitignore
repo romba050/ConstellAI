@@ -5,3 +5,4 @@ data/raw/
 data/cache/
 data/contributions.json
 .DS_Store
+.claudeignore
