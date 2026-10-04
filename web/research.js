@@ -55,6 +55,14 @@
     published_model: "Published research model",
     resource: "Research resource",
   };
+  const graphKindLabels = {
+    disease: "Disease", gene: "Gene", variant: "Variant", mechanism: "Mechanism",
+    pathway: "Pathway", phenotype: "Phenotype", candidate: "Research candidate",
+    paper: "Paper", clinical_study: "Clinical study", patient_organisation: "Patient organisation",
+    investigator: "Investigator", research_asset: "Research asset",
+  };
+  const confidenceLabels = { strong: "Strong", moderate: "Moderate", limited: "Limited", unresolved: "Unresolved" };
+  const assertionLabels = { observed: "Observed", inferred: "Inferred", unknown: "Unknown" };
   let requestSequence = 0;
   let activeController = null;
   let lastRequest = null;
@@ -64,6 +72,10 @@
   let sourceList = [];
   let searchSequence = 0;
   let searchTimer = null;
+  let graphFocusId = null;
+  let selectedGraphEdgeId = null;
+  let graphKindFilter = "all";
+  let graphSearchQuery = "";
   const searchChoices = new Map();
 
   function esc(value) {
@@ -134,7 +146,7 @@
     const lists = ["candidate_treatments", "related_disease_evidence", "collaborators_or_assets", "sources", "limitations"];
     const claims = ["variant_effect", "functional_mechanism", "pathway"];
     const validClaim = (value) => value && typeof value.summary === "string" && Array.isArray(value.source_ids);
-    if (!data || data.schema_version !== "constellai-analysis-v1" || !data.disease || typeof data.disease.name !== "string" ||
+    if (!data || data.schema_version !== "constellai-analysis-v2" || !data.disease || typeof data.disease.name !== "string" ||
         !Array.isArray(data.disease.source_ids) || !lists.every((key) => Array.isArray(data[key])) ||
         !claims.every((key) => validClaim(data[key])) || typeof data.conclusion !== "string" ||
         !["research_hypotheses_found", "insufficient_evidence"].includes(data.analysis_status) || !data.llm ||
@@ -155,6 +167,32 @@
     if (!Array.isArray(experiment.readouts) || !Array.isArray(experiment.prerequisites) || !Array.isArray(experiment.source_ids)) {
       throw new Error("The next-experiment response is incomplete. Please retry after the service is ready.");
     }
+    const graph = data.knowledge_graph;
+    if (!graph || !Array.isArray(graph.nodes) || !Array.isArray(graph.edges) || !Array.isArray(graph.limitations)) {
+      throw new Error("The connected evidence graph is missing. Please retry when the v2 service is ready.");
+    }
+    const nodeIds = new Set();
+    const edgeIds = new Set();
+    const sourceIds = new Set([...data.sources, ...data.candidate_treatments.flatMap((candidate) => candidate.sources)].map((source) => source.id));
+    const closedReferences = (ids) => Array.isArray(ids) && ids.every((id) => typeof id === "string" && sourceIds.has(id));
+    for (const node of graph.nodes) {
+      if (typeof node.id !== "string" || !node.id || nodeIds.has(node.id) || !Object.prototype.hasOwnProperty.call(graphKindLabels, node.kind) ||
+          typeof node.label !== "string" || typeof node.description !== "string" || !closedReferences(node.source_ids) ||
+          !(node.url === null || typeof node.url === "string")) {
+        throw new Error("An evidence-graph entity did not match the expected contract. No graph or ranking is shown.");
+      }
+      nodeIds.add(node.id);
+    }
+    for (const edge of graph.edges) {
+      if (typeof edge.id !== "string" || !edge.id || edgeIds.has(edge.id) || !nodeIds.has(edge.source) || !nodeIds.has(edge.target) ||
+          typeof edge.relationship_type !== "string" || !validClaim(edge.claim) || !closedReferences(edge.claim.source_ids) ||
+          !Object.prototype.hasOwnProperty.call(confidenceLabels, edge.confidence) || !Object.prototype.hasOwnProperty.call(assertionLabels, edge.assertion) ||
+          typeof edge.confidence_basis !== "string" || typeof edge.scope !== "string" || !Array.isArray(edge.contradictions) ||
+          !edge.contradictions.every((item) => validClaim(item) && closedReferences(item.source_ids))) {
+        throw new Error("An evidence-graph connection did not match the expected contract. No graph or ranking is shown.");
+      }
+      edgeIds.add(edge.id);
+    }
     return data;
   }
 
@@ -171,6 +209,207 @@
         <article class="overview-card"><div class="card-eyebrow">From gene to function</div>${claim(data.functional_mechanism, "Functional mechanism")}${claim(data.pathway, "Relevant pathway")}${atlasLink}</article>
       </div>
     </section>`;
+  }
+
+  function graphNodeById(data, id) {
+    return data.knowledge_graph.nodes.find((node) => node.id === id);
+  }
+
+  function edgeTitle(data, edge) {
+    const from = graphNodeById(data, edge.source);
+    const to = graphNodeById(data, edge.target);
+    return `${from?.label || edge.source} → ${to?.label || edge.target}`;
+  }
+
+  function visibleGraphNodes(data) {
+    const graph = data.knowledge_graph;
+    const focus = graphNodeById(data, graphFocusId) || graph.nodes[0];
+    if (!focus) return [];
+    const selectedEdge = graph.edges.find((edge) => edge.id === selectedGraphEdgeId);
+    if (!selectedEdge && focus.kind === "disease" && data.disease.id && focus.id.includes(data.disease.id)) {
+      const preferred = [
+        graph.nodes.find((node) => node.kind === "gene" && node.label === data.gene),
+        graph.nodes.find((node) => node.kind === "mechanism"),
+        graph.nodes.find((node) => node.kind === "pathway"),
+        data.variant ? graph.nodes.find((node) => node.kind === "variant" && node.id.startsWith("variant:entered:")) : null,
+        data.analysis_status === "research_hypotheses_found" && data.best_hypothesis_id ? graph.nodes.find((node) => node.kind === "candidate" && node.id.includes(data.best_hypothesis_id)) : null,
+      ].filter(Boolean);
+      const backbone = [focus];
+      for (const target of preferred) {
+        const routes = [[focus.id]];
+        const explored = new Set();
+        let route = null;
+        while (routes.length) {
+          const current = routes.shift();
+          const id = current[current.length - 1];
+          if (id === target.id) { route = current; break; }
+          if (explored.has(id)) continue;
+          explored.add(id);
+          graph.edges.filter((edge) => edge.source === id || edge.target === id).forEach((edge) => {
+            const nextId = edge.source === id ? edge.target : edge.source;
+            if (!explored.has(nextId)) routes.push([...current, nextId]);
+          });
+        }
+        if (route) {
+          const extra = route.map((id) => graphNodeById(data, id)).filter((node) => !backbone.some((existing) => existing.id === node.id));
+          if (backbone.length + extra.length <= 6) backbone.push(...extra);
+        }
+      }
+      if (backbone.length > 1) return backbone;
+    }
+    const priority = ["variant", "gene", "mechanism", "pathway", "candidate", "disease", "phenotype", "paper", "clinical_study", "patient_organisation", "investigator", "research_asset"];
+    const queue = [focus];
+    const selected = [];
+    const visited = new Set();
+    while (queue.length && selected.length < 6) {
+      const node = queue.shift();
+      if (visited.has(node.id)) continue;
+      visited.add(node.id);
+      selected.push(node);
+      const neighbors = graph.edges.filter((edge) => edge.source === node.id || edge.target === node.id)
+        .map((edge) => graphNodeById(data, edge.source === node.id ? edge.target : edge.source))
+        .filter(Boolean).sort((a, b) => {
+          const aSelected = selectedEdge && [selectedEdge.source, selectedEdge.target].includes(a.id);
+          const bSelected = selectedEdge && [selectedEdge.source, selectedEdge.target].includes(b.id);
+          return Number(bSelected) - Number(aSelected) || priority.indexOf(a.kind) - priority.indexOf(b.kind) || a.label.localeCompare(b.label);
+        });
+      queue.push(...neighbors.filter((neighbor) => !visited.has(neighbor.id)));
+    }
+    return selected;
+  }
+
+  function graphLabelLines(label, maxLength = 23) {
+    const words = String(label).split(/\s+/);
+    const lines = [];
+    let line = "";
+    for (const word of words) {
+      if (line && `${line} ${word}`.length > maxLength) { lines.push(line); line = word; }
+      else line = line ? `${line} ${word}` : word;
+    }
+    if (line) lines.push(line);
+    const display = lines.slice(0, 2).map((text) => text.length > maxLength ? `${text.slice(0, maxLength - 1)}…` : text);
+    if (lines.length > 2) display[display.length - 1] = `${display[display.length - 1].replace(/…$/, "").slice(0, maxLength - 1)}…`;
+    return display;
+  }
+
+  function graphSvg(data) {
+    const nodes = visibleGraphNodes(data);
+    if (!nodes.length) return '<p class="empty-note">No graph entities are recorded for this input.</p>';
+    const narrow = typeof window !== "undefined" && window.innerWidth < 1000;
+    const columns = narrow ? 2 : 3;
+    const width = narrow ? 350 : 555;
+    const nodeWidth = narrow ? 155 : 160;
+    const nodeHeight = 78;
+    const rowHeight = narrow ? 117 : 134;
+    const positions = new Map(nodes.map((node, index) => [node.id, {
+      x: 15 + (index % columns) * (narrow ? 170 : 182), y: 18 + Math.floor(index / columns) * rowHeight,
+    }]));
+    const height = Math.ceil(nodes.length / columns) * rowHeight + 3;
+    const visibleIds = new Set(nodes.map((node) => node.id));
+    const edges = data.knowledge_graph.edges.filter((edge) => visibleIds.has(edge.source) && visibleIds.has(edge.target));
+    const endpoint = (a, b) => {
+      const dx = b.x - a.x;
+      const dy = b.y - a.y;
+      const scale = Math.min(dx === 0 ? Infinity : (nodeWidth / 2 + 4) / Math.abs(dx), dy === 0 ? Infinity : (nodeHeight / 2 + 4) / Math.abs(dy));
+      return { x: a.x + nodeWidth / 2 + dx * scale, y: a.y + nodeHeight / 2 + dy * scale };
+    };
+    const edgeShapes = edges.map((edge) => {
+      const source = positions.get(edge.source);
+      const target = positions.get(edge.target);
+      const a = endpoint(source, target);
+      const b = endpoint(target, source);
+      const edgeIndex = data.knowledge_graph.edges.indexOf(edge);
+      const path = edge.source === edge.target ? `M${source.x + 45},${source.y - 3} C${source.x + 45},${source.y - 16} ${source.x + 115},${source.y - 16} ${source.x + 115},${source.y - 3}` : `M${a.x},${a.y} L${b.x},${b.y}`;
+      const bounds = edge.source === edge.target ? { x: source.x + 35, y: source.y - 25, width: 90, height: 30 } : {
+        x: Math.min(a.x, b.x) - 9, y: Math.min(a.y, b.y) - 9,
+        width: Math.max(Math.abs(b.x - a.x) + 18, 18), height: Math.max(Math.abs(b.y - a.y) + 18, 18),
+      };
+      const label = `${edgeTitle(data, edge)}: ${readableName(edge.relationship_type)}; ${assertionLabels[edge.assertion]}`;
+      return `<g class="graph-edge ${edge.assertion}${selectedGraphEdgeId === edge.id ? " selected" : ""}" data-graph-edge="${edgeIndex}" tabindex="0" role="button" aria-label="${esc(label)}"><title>${esc(label)}</title><rect class="edge-bounds" x="${bounds.x}" y="${bounds.y}" width="${bounds.width}" height="${bounds.height}" rx="3"/><path class="edge-hit" d="${path}"/><path class="edge-line" d="${path}" marker-end="url(#graph-arrow)"/></g>`;
+    }).join("");
+    const nodeShapes = nodes.map((node) => {
+      const position = positions.get(node.id);
+      const index = data.knowledge_graph.nodes.indexOf(node);
+      const lines = graphLabelLines(node.label, narrow ? 21 : 23);
+      return `<g class="graph-node${graphFocusId === node.id ? " selected" : ""}" data-kind="${node.kind}" data-graph-node="${index}" transform="translate(${position.x},${position.y})" tabindex="0" role="button" aria-label="${esc(`${graphKindLabels[node.kind]}: ${node.label}. Explore connections.`)}"><title>${esc(node.label)}</title><rect width="${nodeWidth}" height="${nodeHeight}" rx="9"/><text class="graph-kind" x="11" y="20">${esc(graphKindLabels[node.kind])}</text><text class="graph-label" x="11" y="42">${lines.map((line, lineIndex) => `<tspan x="11" dy="${lineIndex ? 15 : 0}">${esc(line)}</tspan>`).join("")}</text></g>`;
+    }).join("");
+    return `<svg class="graph-canvas" viewBox="0 0 ${width} ${height}" aria-label="Connected evidence around ${esc(graphNodeById(data, graphFocusId)?.label || nodes[0].label)}" role="group"><defs><marker id="graph-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#8495b5"/></marker></defs>${edgeShapes}${nodeShapes}</svg>`;
+  }
+
+  function graphEdgeButtons(data, edges, emptyText, visibleLimit = null) {
+    if (!edges.length) return `<p class="empty-note">${esc(emptyText)}</p>`;
+    const ordered = [...edges].sort((a, b) => Number(b.id === selectedGraphEdgeId) - Number(a.id === selectedGraphEdgeId));
+    const button = (edge) => `<button class="graph-connection${selectedGraphEdgeId === edge.id ? " selected" : ""}" type="button" data-graph-edge="${data.knowledge_graph.edges.indexOf(edge)}" aria-pressed="${selectedGraphEdgeId === edge.id}"><span class="graph-connection-title">${esc(edgeTitle(data, edge))}</span><span class="graph-connection-meta"><span>${esc(readableName(edge.relationship_type))}</span><span class="assertion-badge ${edge.assertion}">${esc(assertionLabels[edge.assertion])}</span></span></button>`;
+    if (visibleLimit && ordered.length > visibleLimit) return `${ordered.slice(0, visibleLimit).map(button).join("")}<details class="graph-more-connections"><summary>${ordered.length - visibleLimit} more connections in this view</summary><div>${ordered.slice(visibleLimit).map(button).join("")}</div></details>`;
+    return ordered.map(button).join("");
+  }
+
+  function graphNodeEvidence(data, node) {
+    if (!node) return '<p class="empty-note">No source-backed graph context is available for this input.</p>';
+    const connectedCount = data.knowledge_graph.edges.filter((edge) => edge.source === node.id || edge.target === node.id).length;
+    return `<div class="card-eyebrow">${esc(graphKindLabels[node.kind])}</div><h3>${esc(node.label)}</h3><p class="graph-detail-summary">${esc(node.description)}</p>${citations(node.source_ids)}${node.url ? link(node.url, "Open entity source ↗", "small-action") : ""}<p class="graph-selection-hint">${connectedCount} recorded ${connectedCount === 1 ? "connection" : "connections"}. Select a connection to inspect the claim, confidence basis, study scope and contrasting findings.</p>`;
+  }
+
+  function graphEdgeEvidence(data, edge) {
+    const sourceIds = [...new Set([...edge.claim.source_ids, ...edge.contradictions.flatMap((item) => item.source_ids)])];
+    return `<div class="card-eyebrow">Selected connection</div><h3>${esc(edgeTitle(data, edge))}</h3><p class="graph-relation">${esc(readableName(edge.relationship_type))}</p><div class="graph-assertion-row"><span class="assertion-badge ${edge.assertion}">${esc(assertionLabels[edge.assertion])}</span>${evidenceTag(edge.claim.evidence_type)}</div><p class="graph-detail-summary">${esc(edge.claim.summary)}</p>${citations(edge.claim.source_ids)}<dl class="graph-evidence-facts"><dt>Qualitative confidence · ${esc(confidenceLabels[edge.confidence])}</dt><dd>${esc(edge.confidence_basis)}<span class="confidence-note">A curator category, not a probability or treatment confidence.</span></dd><dt>Scope &amp; limits of this connection</dt><dd>${esc(edge.scope)}</dd></dl><details class="graph-contradictions"><summary>Contrasting findings &amp; uncertainty<span>${edge.contradictions.length} recorded</span></summary><div>${edge.contradictions.length ? edge.contradictions.map((item) => claim(item, "Contrasting claim", true)).join("") : '<p class="empty-note">No contrasting claim is recorded for this connection. The record may not contain all contrary evidence.</p>'}</div></details>${sourceIds.length ? `<details class="graph-source-record"><summary>Connection source records<span>${sourceIds.length}</span></summary><ol>${sourceIds.map((id) => sourceIndex.get(id)?.source).filter(Boolean).map((source) => `<li>${sourceDetails(source)}</li>`).join("")}</ol></details>` : '<p class="graph-selection-hint">No source is cited for this unresolved connection.</p>'}`;
+  }
+
+  function graphNodeBrowser(data) {
+    const query = graphSearchQuery.trim().toLowerCase();
+    const nodes = data.knowledge_graph.nodes.filter((node) => (graphKindFilter === "all" || node.kind === graphKindFilter) && (!query || `${node.label} ${node.description} ${graphKindLabels[node.kind]}`.toLowerCase().includes(query)));
+    if (!nodes.length) return '<p class="empty-note">No graph entities match these filters.</p>';
+    return nodes.map((node) => `<button type="button" class="graph-entity${graphFocusId === node.id ? " selected" : ""}" data-kind="${node.kind}" data-graph-node="${data.knowledge_graph.nodes.indexOf(node)}" aria-pressed="${graphFocusId === node.id}"><span class="graph-entity-kind">${esc(graphKindLabels[node.kind])}</span><span>${esc(node.label)}</span></button>`).join("");
+  }
+
+  function researchWorkflow(data) {
+    return `<details class="research-workflow"><summary>How the research steps are assembled<span>10× thesis · unmeasured</span></summary><div><p class="workflow-thesis">A 10× faster research workflow is a product hypothesis. This release assembles five reviewable stages; time saved has not been measured.</p><ol class="workflow-steps"><li><strong>Confirm identity.</strong><p>Match disease and gene; keep a supplied variant unresolved unless its function has been reviewed.</p></li><li><strong>Read the mechanism.</strong><p>Attach the functional mechanism and pathway to the source record and preserve their model or variant scope.</p></li><li><strong>Inspect connections.</strong><p>${data.knowledge_graph.nodes.length} entities and ${data.knowledge_graph.edges.length} recorded relationships carry their own claim, assertion, qualitative confidence basis and limitations.</p></li><li><strong>Compare evidence &amp; safety.</strong><p>Disclose candidate evidence, missing data, safety concerns and every research-priority score term. Unreviewed variants receive no candidate rank.</p></li><li><strong>Build the validation plan.</strong><p>Assemble the research question, design, readouts, falsification criteria and available research assets for expert review.</p></li></ol></div></details>`;
+  }
+
+  function evidenceGraph(data) {
+    const graph = data.knowledge_graph;
+    const kinds = Object.keys(graphKindLabels).filter((kind) => graph.nodes.some((node) => node.kind === kind));
+    const focus = graphNodeById(data, graphFocusId);
+    const visibleIds = new Set(visibleGraphNodes(data).map((node) => node.id));
+    const shownEdges = graph.edges.filter((edge) => visibleIds.has(edge.source) && visibleIds.has(edge.target));
+    const connected = graph.edges.filter((edge) => edge.source === graphFocusId || edge.target === graphFocusId);
+    return `<section class="research-section graph-section" aria-labelledby="graph-title"><div class="section-head"><div class="section-copy"><div class="card-eyebrow">Follow the evidence</div><h2 id="graph-title">A connected evidence map</h2><p class="section-subtitle">Select a node to explore its connections. Select an edge to inspect what supports it, the scope of the claim and what remains uncertain.</p></div><span class="graph-count">${graph.nodes.length} entities · ${graph.edges.length} connections</span></div><div class="evidence-map"><div class="graph-layout"><div class="graph-visual"><div id="graph-stage">${graphSvg(data)}</div><div class="graph-legend"><span><i class="observed"></i> Observed</span><span><i class="inferred"></i> Inferred</span><span><i class="unknown"></i> Unknown</span></div><p class="graph-caption">Only recorded relationships are drawn. Connections do not establish therapeutic efficacy or transfer evidence between diseases.</p><div class="graph-visible-connections"><h4>Connections in this view</h4><div id="graph-visible-edges">${graphEdgeButtons(data, shownEdges, "No recorded connections are available in this view.", 3)}</div></div></div><aside id="graph-evidence-detail" class="graph-evidence-detail" aria-label="Selected entity or connection evidence">${graphNodeEvidence(data, focus)}</aside></div><div id="graph-selection-status" class="graph-selection-status" role="status" aria-live="polite">Viewing ${esc(focus?.label || "unresolved input")}</div><details id="graph-expand" class="graph-expand"><summary>Expand the evidence graph<span>All entity types &amp; connections</span></summary><div><div class="graph-selection-tools"><label for="graph-kind-filter">Entity type<select id="graph-kind-filter"><option value="all">All types</option>${kinds.map((kind) => `<option value="${kind}">${esc(graphKindLabels[kind])}</option>`).join("")}</select></label><label for="graph-node-search">Find an entity<input id="graph-node-search" type="search" placeholder="Gene, candidate, paper, study…" autocomplete="off" maxlength="200"></label></div><div id="graph-node-browser" class="graph-node-browser">${graphNodeBrowser(data)}</div><h4 class="graph-focused-title" id="graph-focused-title">Connections around ${esc(focus?.label || "unresolved input")}</h4><div id="graph-connected-edges" class="graph-connected-edges">${graphEdgeButtons(data, connected, "No recorded connections are available for this entity.")}</div><details class="graph-limitations"><summary>Graph scope &amp; limitations</summary><ul>${graph.limitations.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></details></div></details></div>${researchWorkflow(data)}</section>`;
+  }
+
+  function updateGraph(data, announcement = "") {
+    const graph = data.knowledge_graph;
+    const focus = graphNodeById(data, graphFocusId);
+    const selectedEdge = graph.edges.find((edge) => edge.id === selectedGraphEdgeId);
+    const visibleIds = new Set(visibleGraphNodes(data).map((node) => node.id));
+    $("#graph-stage").innerHTML = graphSvg(data);
+    $("#graph-visible-edges").innerHTML = graphEdgeButtons(data, graph.edges.filter((edge) => visibleIds.has(edge.source) && visibleIds.has(edge.target)), "No recorded connections are available in this view.", 3);
+    $("#graph-evidence-detail").innerHTML = selectedEdge ? graphEdgeEvidence(data, selectedEdge) : graphNodeEvidence(data, focus);
+    $("#graph-node-browser").innerHTML = graphNodeBrowser(data);
+    $("#graph-connected-edges").innerHTML = graphEdgeButtons(data, graph.edges.filter((edge) => edge.source === graphFocusId || edge.target === graphFocusId), "No recorded connections are available for this entity.");
+    $("#graph-focused-title").textContent = `Connections around ${focus?.label || "unresolved input"}`;
+    $("#graph-selection-status").textContent = announcement || `Viewing ${focus?.label || "unresolved input"}`;
+  }
+
+  function selectGraphControl(control) {
+    if (!currentAnalysis || !control) return;
+    const preserveFocus = document.activeElement === control;
+    const region = preserveFocus ? ["#graph-node-browser", "#graph-connected-edges", "#graph-visible-edges"].find((selector) => control.closest(selector)) || "#graph-stage" : null;
+    const nodeIndex = control.getAttribute("data-graph-node");
+    const edgeIndex = control.getAttribute("data-graph-edge");
+    if (nodeIndex !== null) {
+      const node = currentAnalysis.knowledge_graph.nodes[Number(nodeIndex)];
+      if (!node) return;
+      graphFocusId = node.id;
+      selectedGraphEdgeId = null;
+      updateGraph(currentAnalysis, `Viewing ${graphKindLabels[node.kind]}: ${node.label}`);
+    } else if (edgeIndex !== null) {
+      const edge = currentAnalysis.knowledge_graph.edges[Number(edgeIndex)];
+      if (!edge) return;
+      graphFocusId = edge.source;
+      selectedGraphEdgeId = edge.id;
+      updateGraph(currentAnalysis, `Selected connection: ${edgeTitle(currentAnalysis, edge)}`);
+    }
+    if (preserveFocus) $(nodeIndex !== null ? `${region} [data-graph-node="${Number(nodeIndex)}"]` : `${region} [data-graph-edge="${Number(edgeIndex)}"]`)?.focus();
   }
 
   function technicalAssessment(candidate, key) {
@@ -195,7 +434,7 @@
     const mainRisk = toxicity.value === null ? toxicity : organ.value === null ? organ : toxicity.value >= organ.value ? toxicity : organ;
     const whySources = [...candidate.mechanism_alignment.source_ids, ...candidate.preclinical_evidence.source_ids, ...candidate.human_evidence.source_ids];
     const ranked = Number.isInteger(candidate.rank) && eligibleStatuses.has(candidate.status);
-    const score = ranked ? `<div class="score" aria-label="Research priority ${num(candidate.final_score)} out of 100">${num(candidate.final_score)}<small>priority / 100</small></div>` : `<div class="score unranked">Unranked<small>${candidate.status === "rejected" ? "excluded candidate" : "evidence unresolved"}</small></div>`;
+    const score = ranked ? `<div class="score" aria-label="Research priority ${num(candidate.final_score, 2)} out of 100">${num(candidate.final_score, 2)}<small>priority / 100</small></div>` : `<div class="score unranked">Unranked<small>${candidate.status === "rejected" ? "excluded candidate" : "evidence unresolved"}</small></div>`;
     const technicalKeys = Object.keys(assessmentLabels).filter((key) => key !== "toxicity_organ_burden");
     return `<article class="candidate-card${isBest ? " best" : ""}">${isBest ? '<div class="best-label"><span aria-hidden="true">✦</span> Leading hypothesis for investigation</div>' : ""}<div class="candidate-body"><div class="candidate-top"><div class="candidate-name"><span class="status-pill ${candidate.status}">${esc(statusLabels[candidate.status])}</span><h3>${ranked ? `${esc(candidate.rank)}. ` : ""}${esc(candidate.compound_name)}</h3></div>${score}</div><p class="role-label">${esc(roleLabels[candidate.therapeutic_role] || "Research hypothesis")}</p><dl class="candidate-facts">
       <dt>Why it might work</dt><dd>${esc(candidate.rationale)}${citations(whySources)}</dd>
@@ -235,21 +474,103 @@
     return `<section class="research-section" aria-labelledby="experiment-title"><div class="section-head"><div class="section-copy"><h2 id="experiment-title">${insufficient ? "Next evidence-building step" : "Proposed next experiment"}</h2><p class="section-subtitle">${insufficient ? "Resolve the evidence gap before investigating a therapeutic candidate." : "A testable question for a research team, with a result that could disprove the hypothesis."}</p></div></div><article class="experiment"><div class="experiment-intro"><div class="card-eyebrow">${insufficient ? "Evidence first" : "From hypothesis to validation"}</div><h3>${esc(experimentData.title)}</h3><p>${esc(experimentData.question)}</p><span class="experiment-status">${experimentData.status === "expert_review_required" ? "Expert review required" : "Proposed research"}</span>${citations(experimentData.source_ids)}</div><div class="experiment-design"><h4>Study design</h4><p>${esc(experimentData.design)}</p>${experimentData.readouts.length ? `<h4 style="margin-top:18px">Measure</h4><ul class="readouts">${experimentData.readouts.map((readout) => `<li>${esc(readout)}</li>`).join("")}</ul>` : ""}<div class="falsification"><h4>What would disprove it?</h4><p>${esc(experimentData.falsification)}</p></div>${experimentData.prerequisites.length ? `<details class="experiment-details"><summary>Requirements before starting</summary><ul>${experimentData.prerequisites.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></details>` : ""}</div></article></section>`;
   }
 
+  function literatureSourceClaims(data, sourceId) {
+    const entries = new Map();
+    const add = (label, item, scope = "", contrasting = false) => {
+      if (!item?.source_ids?.includes(sourceId)) return;
+      const key = `${item.summary}\u0000${scope}\u0000${contrasting}`;
+      if (!entries.has(key)) entries.set(key, { labels: new Set(), item, scope, contrasting });
+      entries.get(key).labels.add(label);
+    };
+    for (const edge of data.knowledge_graph.edges) {
+      const relation = `${edgeTitle(data, edge)} · ${readableName(edge.relationship_type)}`;
+      add(relation, edge.claim, edge.scope);
+      edge.contradictions.forEach((item) => add(`Contrasting finding for ${relation}`, item, edge.scope, true));
+    }
+    add("Variant effect", data.variant_effect);
+    add("Functional mechanism", data.functional_mechanism);
+    add("Relevant pathway", data.pathway);
+    for (const candidate of data.candidate_treatments) {
+      Object.keys(assessmentLabels).filter((key) => key !== "toxicity_organ_burden").forEach((key) => add(`${candidate.compound_name} · ${readableName(key)}`, candidate[key]));
+    }
+    for (const record of data.related_disease_evidence) {
+      add(`${record.disease.name} · Shared mechanism`, record.shared_mechanism);
+      add(`${record.disease.name} · Key difference`, record.key_difference);
+    }
+    for (const item of data.llm.verified_claims) add("Source-checked AI explanation", item);
+    return [...entries.values()];
+  }
+
+  function literatureSourceLimits(data, source) {
+    const notes = new Set([source.scope]);
+    for (const edge of data.knowledge_graph.edges) {
+      if (edge.claim.source_ids.includes(source.id) || edge.contradictions.some((item) => item.source_ids.includes(source.id))) {
+        if (edge.scope) notes.add(edge.scope);
+        if (["limited", "unresolved"].includes(edge.confidence) && edge.confidence_basis) notes.add(edge.confidence_basis);
+      }
+    }
+    for (const candidate of data.candidate_treatments) {
+      if (candidate.uncertainty.source_ids.includes(source.id)) notes.add(candidate.uncertainty.summary);
+      if (candidate.evidence_quality.source_ids.includes(source.id)) notes.add(candidate.evidence_quality.summary);
+    }
+    return [...notes].filter(Boolean);
+  }
+
+  function literatureReview(data) {
+    const order = ["human_clinical", "human_observational", "preclinical", "regulatory_label", "trial_registry", "disease_reference", "mechanistic_inference", "official_resource", "unknown"];
+    const groups = order.map((type) => ({ type, sources: sourceList.filter((source) => (Object.prototype.hasOwnProperty.call(evidenceLabels, source.evidence_type) ? source.evidence_type : "unknown") === type) })).filter((group) => group.sources.length);
+    const groupMarkup = groups.map((group) => `<section class="literature-group" aria-label="${esc(evidenceLabels[group.type])}"><div class="literature-group-head"><h3>${esc(evidenceLabels[group.type])}</h3><span>${group.sources.length} ${group.sources.length === 1 ? "source" : "sources"}</span></div>${group.sources.map((source) => {
+      const supports = literatureSourceClaims(data, source.id);
+      const limits = literatureSourceLimits(data, source);
+      const contradictions = supports.filter((entry) => entry.contrasting);
+      const supporting = supports.filter((entry) => !entry.contrasting);
+      const entries = (items) => items.map((entry) => `<div class="literature-claim${entry.contrasting ? " contrasting" : ""}"><h4>${esc([...entry.labels].join(" · "))}</h4>${evidenceTag(entry.item.evidence_type)}<p>${esc(entry.item.summary)}</p>${entry.scope ? `<p class="literature-claim-scope">Scope: ${esc(entry.scope)}</p>` : ""}${citations(entry.item.source_ids)}</div>`).join("");
+      return `<details class="literature-source"><summary><span class="literature-source-title">${esc(source.title)}</span><span class="literature-source-count">${supports.length} ${supports.length === 1 ? "claim" : "claims"}</span></summary><div class="literature-source-body">${sourceDetails(source)}<div class="literature-limits"><h4>Recorded scope &amp; study limitations</h4><ul>${limits.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></div><div class="literature-support"><h4 class="literature-subhead">Which mechanism &amp; candidate claims this source supports</h4>${supporting.length ? entries(supporting) : '<p class="empty-note">This source has no mapped mechanism or candidate assessment claim; consult its graph entity and source scope for the recorded use.</p>'}</div>${contradictions.length ? `<div class="literature-support"><h4 class="literature-subhead">Contrasting findings cited to this source</h4>${entries(contradictions)}</div>` : ""}</div></details>`;
+    }).join("")}</section>`).join("");
+    return `<details id="literature-review" class="literature-review"><summary>Literature review · evidence, claims &amp; study limitations<span>${sourceList.length} sources</span></summary><div><p class="literature-intro">Review sources by evidence type, then inspect the exact mechanism or candidate claims mapped to each paper, study or resource. Study scope, confidence limits and contrasting findings come from the recorded evidence graph and assessments.</p>${groupMarkup || '<p class="empty-note">No reviewed literature is available for this query. Therapeutic ranking remains withheld.</p>'}</div></details>`;
+  }
+
   function review(data) {
     const explanation = data.llm.verified_claims.length ? `<div class="ai-explanation">${data.llm.verified_claims.map((item) => claim(item, "Source-checked explanation", true)).join("")}</div>` : "";
     const aiAvailable = openaiEnabled && !fixtureMode;
     const aiStatus = fixtureMode ? "Fixture mode uses the saved source record." : aiAvailable ? "Optional: generate an explanation from the supplied sources using the server-side OpenAI connection." : "Available when the server key is configured. Cached research analysis is ready to use.";
-    return `<section class="review-panel" aria-label="Analysis details"><details><summary>Limitations &amp; responsible research use</summary><div><ul class="limitations">${data.limitations.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></div></details><details><summary>Source bibliography &amp; review dates<span>${sourceList.length} ${sourceList.length === 1 ? "source" : "sources"}</span></summary><div><ol class="bibliography">${sourceList.map((source, index) => `<li id="source-${index + 1}">${sourceDetails(source)}</li>`).join("")}</ol></div></details><details id="ai-details"><summary>Optional source-bound AI explanation<span id="ai-availability">${aiAvailable ? "Available" : "Not configured"}</span></summary><div class="ai-detail"><p id="ai-status">${esc(aiStatus)}</p>${explanation}<button class="secondary-button" id="openai-button" type="button"${aiAvailable ? "" : " disabled"}>Generate source-bound explanation</button><p class="provenance" style="margin-top:12px">${esc(data.llm.detail)}${data.llm.model ? ` Model: ${esc(data.llm.model)}.` : ""}</p></div></details></section>`;
+    return `<section class="review-panel" aria-label="Analysis details">${literatureReview(data)}<details><summary>Limitations &amp; responsible research use</summary><div><ul class="limitations">${data.limitations.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></div></details><details><summary>Source bibliography &amp; review dates<span>${sourceList.length} ${sourceList.length === 1 ? "source" : "sources"}</span></summary><div><ol class="bibliography">${sourceList.map((source, index) => `<li id="source-${index + 1}">${sourceDetails(source)}</li>`).join("")}</ol></div></details><details id="ai-details"><summary>Optional source-bound AI explanation<span id="ai-availability">${aiAvailable ? "Available" : "Not configured"}</span></summary><div class="ai-detail"><p id="ai-status">${esc(aiStatus)}</p>${explanation}<button class="secondary-button" id="openai-button" type="button"${aiAvailable ? "" : " disabled"}>Generate source-bound explanation</button><p class="provenance" style="margin-top:12px">${esc(data.llm.detail)}${data.llm.model ? ` Model: ${esc(data.llm.model)}.` : ""}</p></div></details></section>`;
   }
 
   function render(data) {
     collectSources(data);
-    results.innerHTML = overview(data) + candidates(data) + validation(data) + experiment(data) + review(data);
+    graphFocusId = data.knowledge_graph.nodes.find((node) => node.kind === "disease" && data.disease.id && node.id.includes(data.disease.id))?.id || data.knowledge_graph.nodes[0]?.id || null;
+    selectedGraphEdgeId = null;
+    graphKindFilter = "all";
+    graphSearchQuery = "";
+    results.innerHTML = overview(data) + evidenceGraph(data) + candidates(data) + validation(data) + experiment(data) + review(data);
     $("#openai-button").addEventListener("click", () => {
       if (openaiEnabled && !fixtureMode && lastRequest) analyze({ ...lastRequest, use_openai: true }, true);
     });
+    $("#graph-kind-filter").addEventListener("change", (event) => {
+      graphKindFilter = event.target.value;
+      $("#graph-node-browser").innerHTML = graphNodeBrowser(data);
+    });
+    $("#graph-node-search").addEventListener("input", (event) => {
+      graphSearchQuery = event.target.value;
+      $("#graph-node-browser").innerHTML = graphNodeBrowser(data);
+    });
     updateMode(data);
   }
+
+  results.addEventListener("click", (event) => {
+    selectGraphControl(event.target.closest("[data-graph-node], [data-graph-edge]"));
+  });
+  results.addEventListener("keydown", (event) => {
+    const control = event.target.closest("[data-graph-node], [data-graph-edge]");
+    if (["Enter", " "].includes(event.key) && control?.namespaceURI === "http://www.w3.org/2000/svg") {
+      event.preventDefault();
+      selectGraphControl(control);
+    }
+  });
+  if (typeof window !== "undefined") window.addEventListener("resize", () => {
+    if (currentAnalysis && $("#graph-stage")) $("#graph-stage").innerHTML = graphSvg(currentAnalysis);
+  });
 
   function updateMode(data = null) {
     const modeBanner = $("#mode-banner");

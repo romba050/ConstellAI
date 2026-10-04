@@ -5,15 +5,15 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from ..store import norm
-from . import explain
+from . import explain, graph
 from .models import (
     AnalyzeRequest, AnalyzeResponse, Assessment, Candidate, Claim, CollaboratorAsset,
-    ContractModel, Disease, Experiment, LLMProvenance, RelatedDisease, Source, VariantEffect,
+    ContractModel, Disease, Experiment, KnowledgeGraph, LLMProvenance, RelatedDisease, Source, VariantEffect,
 )
 from .ranking import load_weights, rank_candidates, score_candidate
 
 EVIDENCE_FILE = Path(__file__).with_name("evidence.json")
-SCHEMA_VERSION = "constellai-analysis-v1"
+SCHEMA_VERSION = "constellai-analysis-v2"
 NO_CANDIDATE = "No defensible therapeutic candidate found."
 
 
@@ -171,7 +171,18 @@ class AnalysisService:
             return None, "Disease alias is ambiguous; select an exact disease identity."
         return None, "No reviewed curator profile was matched to this disease."
 
-    def _empty(self, request, reviewed_on, disease=None, reason=None, sources=None):
+    def _attach_graph(self, result, ledger):
+        try:
+            result.knowledge_graph = graph.build_graph(result, atlas=self.atlas, sources=list(ledger.values()))
+            result.sources = [ledger[sid] for sid in sorted(source_references(result))]
+            validate_source_closure(result, result.sources)
+            graph.validate_graph(result.knowledge_graph, result.sources,
+                primary_disease_node=graph.disease_node_id(result.disease))
+            return result
+        except (graph.GraphIntegrityError, ValueError, KeyError, TypeError) as exc:
+            raise EvidenceIntegrityError("Knowledge graph could not be validated") from exc
+
+    def _empty(self, request, reviewed_on, disease=None, reason=None, sources=None, ledger=None):
         unresolved = "The supplied variant has no reviewed variant-specific functional evidence." if request.variant else "No reviewed functional evidence is available for this input."
         limits = [
             reason or "No reviewed therapeutic profile is available for this disease.",
@@ -199,6 +210,7 @@ class AnalysisService:
             sources=sources or [], conclusion=NO_CANDIDATE, best_hypothesis_id=None,
             analysis_status="insufficient_evidence", limitations=limits, evidence_reviewed_on=reviewed_on,
             llm=LLMProvenance(mode="cached_evidence", model=None, verified_claims=[], detail="No therapeutic inference was made from an unresolved or unsupported input."),
+            knowledge_graph=KnowledgeGraph(nodes=[], edges=[], limitations=[]),
         )
         if request.use_openai:
             result.llm = LLMProvenance(
@@ -206,7 +218,7 @@ class AnalysisService:
                 detail="OpenAI verification was skipped because the input has no defensible curated therapeutic profile.",
             )
         validate_source_closure(result, result.sources)
-        return result
+        return self._attach_graph(result, ledger or {s.id: s for s in result.sources})
 
     def analyze(self, request):
         request = request if isinstance(request, AnalyzeRequest) else AnalyzeRequest.model_validate(request)
@@ -219,20 +231,20 @@ class AnalysisService:
         library, ledger = self._library()
         resolved, error = self._resolve(clean.disease, library.profiles)
         if error or resolved is None:
-            return self._empty(clean, library.reviewed_on, reason=error)
+            return self._empty(clean, library.reviewed_on, reason=error, ledger=ledger)
         profile = next((p for p in library.profiles if p.disease.id == resolved["id"]), None)
         identity = profile.disease.model_copy(deep=True) if profile else Disease(id=resolved["id"], name=resolved["name"], source_ids=[])
         identity_sources = [ledger[sid] for sid in identity.source_ids]
         if clean.gene and clean.gene not in resolved["genes"]:
             return self._empty(clean, library.reviewed_on, identity,
-                "The supplied gene conflicts with this disease's atlas identity; therapeutic ranking was withheld.", identity_sources)
+                "The supplied gene conflicts with this disease's atlas identity; therapeutic ranking was withheld.", identity_sources, ledger)
         if profile is None:
             if not clean.gene and len(resolved["genes"]) == 1:
                 clean = clean.model_copy(update={"gene": resolved["genes"][0]})
-            return self._empty(clean, library.reviewed_on, identity, sources=identity_sources)
+            return self._empty(clean, library.reviewed_on, identity, sources=identity_sources, ledger=ledger)
         if clean.gene and clean.gene != profile.gene:
             return self._empty(clean, library.reviewed_on, identity,
-                "The supplied gene has no matching reviewed therapeutic profile for this disease.", identity_sources)
+                "The supplied gene has no matching reviewed therapeutic profile for this disease.", identity_sources, ledger)
         candidates = [self._candidate(raw, ledger) for raw in profile.candidate_treatments]
         variant_effect = profile.variant_effect.model_copy(deep=True)
         limitations = list(profile.limitations)
@@ -282,13 +294,14 @@ class AnalysisService:
             limitations=limitations, evidence_reviewed_on=library.reviewed_on,
             llm=LLMProvenance(mode="cached_evidence", model=None, verified_claims=[],
                 detail="Reviewed source-ledger claims and deterministic curator-rating scoring were used. No OpenAI call was requested."),
+            knowledge_graph=KnowledgeGraph(nodes=[], edges=[], limitations=[]),
         )
         result.sources = [ledger[sid] for sid in sorted(source_references(result))]
         validate_source_closure(result, result.sources)
         if clean.use_openai:
             result.llm = explain.classify_evidence(result)
             validate_source_closure(result, result.sources)
-        return result
+        return self._attach_graph(result, ledger)
 
 
 def analyze(request, atlas=None, **kwargs):

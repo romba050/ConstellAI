@@ -7,6 +7,7 @@ from unittest.mock import Mock, patch
 
 from atlas import llm
 from atlas.analysis.models import AnalyzeResponse, Candidate
+from atlas.analysis.graph import GraphIntegrityError, build_graph, disease_node_id, validate_graph
 from atlas.analysis.ranking import load_weights, rank_candidates, score_candidate
 from atlas.analysis.service import AnalysisService, EvidenceIntegrityError, NO_CANDIDATE, source_references
 
@@ -58,12 +59,15 @@ def fake_atlas():
     return SimpleNamespace(
         diseases={
             "MONDO:0012812": {"id": "MONDO:0012812", "name": "Developmental and epileptic encephalopathy, 4",
-                "genes": ["STXBP1"], "synonyms": ["DEE4", "ambiguous disease"], "xrefs": ["OMIM:612164"]},
+                "genes": ["STXBP1"], "synonyms": ["DEE4", "ambiguous disease"], "xrefs": ["OMIM:612164"],
+                "phenotypes": [{"hp": "HP:0001250", "refs": ["PMID:18469812"]},
+                               {"hp": "HP:0001263", "refs": ["PMID:999999999"]}]},
             "MONDO:0033372": {"id": "MONDO:0033372", "name": "Developmental and epileptic encephalopathy, 63",
                 "genes": ["CPLX1"], "synonyms": ["DEE63", "ambiguous disease"], "xrefs": []},
         },
         genes={"STXBP1": {"diseases": ["MONDO:0012812"]}, "CPLX1": {"diseases": ["MONDO:0033372"]},
                "MULTI": {"diseases": ["MONDO:0012812", "MONDO:0033372"]}},
+        hpo={"HP:0001250": {"name": "Seizure"}, "HP:0001263": {"name": "Global developmental delay"}},
     )
 
 
@@ -222,6 +226,175 @@ class AnalysisTests(unittest.TestCase):
         result = service().analyze({"disease": " DEE4 ", "gene": " stxbp1 ", "variant": "  "})
         self.assertIsNone(result.variant)
         self.assertEqual(result.candidate_treatments[0].rank, 1)
+
+
+class KnowledgeGraphTests(unittest.TestCase):
+    def test_graph_claims_and_endpoints_are_closed_and_scoring_is_unchanged(self):
+        result = service().analyze({"disease": "DEE4"})
+        graph = result.knowledge_graph
+        ids = {n.id for n in graph.nodes}
+        source_ids = {s.id for s in result.sources}
+        self.assertEqual(result.schema_version, "constellai-analysis-v2")
+        self.assertTrue(graph.nodes)
+        self.assertTrue(graph.edges)
+        self.assertTrue(source_references(graph) <= source_ids)
+        self.assertEqual(validate_graph(graph, result.sources), graph)
+        for edge in graph.edges:
+            self.assertIn(edge.source, ids)
+            self.assertIn(edge.target, ids)
+            self.assertTrue(edge.scope)
+            self.assertTrue(edge.confidence_basis)
+            if edge.assertion != "unknown":
+                self.assertTrue(edge.claim.source_ids)
+        for c in result.candidate_treatments:
+            self.assertEqual(c.score_breakdown, score_candidate(candidate(c.id)))
+        projected = build_graph(result, fake_atlas())
+        self.assertEqual(projected, graph)
+
+    def test_graph_order_stable_across_candidate_and_source_permutations(self):
+        rows = [candidate("b"), candidate("a"), candidate("tool", "insufficient_evidence")]
+        baseline = service(evidence(rows)).analyze({"disease": "DEE4"}).knowledge_graph
+        for permutation in itertools.permutations(rows):
+            raw = evidence(list(permutation))
+            raw["sources"].reverse()
+            result = service(raw).analyze({"disease": "DEE4"})
+            self.assertEqual(result.knowledge_graph, baseline)
+
+    def test_hpo_annotation_requires_exact_reviewed_reference(self):
+        raw = evidence()
+        raw["sources"].append({"id": "test-hpo-paper", "title": "Synthetic HPO reference", "url": "https://example.com/hpo-record",
+            "evidence_type": "human_observational", "reviewed_on": "2026-10-04", "scope": "Synthetic test; PMID:18469812.",
+            "excerpt": "Synthetic test reference, not clinical evidence."})
+        result = service(raw).analyze({"disease": "DEE4"})
+        phenotypes = [n for n in result.knowledge_graph.nodes if n.kind == "phenotype"]
+        self.assertEqual([n.id for n in phenotypes], ["phenotype:HP:0001250"])
+        self.assertEqual(phenotypes[0].source_ids, ["test-hpo-paper"])
+        self.assertIn("test-hpo-paper", {s.id for s in result.sources})
+        edge = next(e for e in result.knowledge_graph.edges if e.relationship_type == "annotated_phenotype")
+        self.assertIn("No new phenotype validation", edge.scope)
+        self.assertNotIn("phenotype:HP:0001263", {n.id for n in result.knowledge_graph.nodes})
+
+    def test_entered_variant_is_separate_from_reported_example_and_unresolved(self):
+        raw = evidence()
+        raw["sources"][0]["excerpt"] = "Synthetic L446F model observation."
+        raw["profiles"][0]["variant_effect"]["summary"] = "Synthetic L446F model evidence only."
+        result = service(raw).analyze({"disease": "DEE4", "variant": "L446F"})
+        variants = [n for n in result.knowledge_graph.nodes if n.kind == "variant"]
+        self.assertEqual(len(variants), 2)
+        entered = next(n for n in variants if ":entered:" in n.id)
+        reported = next(n for n in variants if ":reported:" in n.id)
+        self.assertNotEqual(entered.id, reported.id)
+        self.assertEqual(entered.source_ids, [])
+        self.assertEqual(reported.source_ids, ["test-source"])
+        edge = next(e for e in result.knowledge_graph.edges if e.target == entered.id)
+        self.assertEqual((edge.assertion, edge.confidence, edge.claim.evidence_type), ("unknown", "unresolved", "unknown"))
+        self.assertEqual(edge.claim.source_ids, [])
+        self.assertTrue(all(c.rank is None and c.status == "insufficient_evidence" for c in result.candidate_treatments))
+        self.assertEqual(result.variant_effect.effect, "unknown")
+
+    def test_unknown_and_known_without_profile_keep_honest_identity_graph(self):
+        for query in ({"disease": "CPLX1"}, {"disease": "unknown rare condition", "gene": "STXBP1"}):
+            result = service().analyze(query)
+            self.assertTrue(any(n.kind == "disease" for n in result.knowledge_graph.nodes))
+            self.assertFalse(any(n.kind in {"candidate", "mechanism", "pathway", "phenotype"} for n in result.knowledge_graph.nodes))
+            self.assertFalse(any(e.assertion != "unknown" for e in result.knowledge_graph.edges))
+            self.assertEqual(result.conclusion, NO_CANDIDATE)
+
+    def test_conflicting_gene_is_explicit_unresolved_input(self):
+        result = service().analyze({"disease": "DEE4", "gene": "CPLX1"})
+        edge = next(e for e in result.knowledge_graph.edges if e.relationship_type == "unresolved_input_gene")
+        self.assertEqual((edge.assertion, edge.confidence), ("unknown", "unresolved"))
+        self.assertEqual(edge.claim.source_ids, [])
+        node = next(n for n in result.knowledge_graph.nodes if n.id == edge.target)
+        self.assertEqual(node.label, "CPLX1")
+        self.assertIn("conflicts", node.description)
+        self.assertEqual(result.candidate_treatments, [])
+
+    def test_dangling_duplicate_and_unsourced_biology_fail_closed(self):
+        result = service().analyze({"disease": "DEE4"})
+        for mutation in ("endpoint", "source", "duplicate-node", "duplicate-edge", "uncited", "therapy-claim"):
+            graph = result.knowledge_graph.model_copy(deep=True)
+            if mutation == "endpoint":
+                graph.edges[0].target = "does-not-exist"
+            elif mutation == "source":
+                graph.edges[0].claim.source_ids = ["does-not-exist"]
+            elif mutation == "duplicate-node":
+                graph.nodes.append(graph.nodes[0].model_copy(deep=True))
+            elif mutation == "duplicate-edge":
+                graph.edges.append(graph.edges[0].model_copy(deep=True))
+            elif mutation == "uncited":
+                graph.edges[0].claim.source_ids = []
+            else:
+                graph.edges[0].relationship_type = "treats"
+            with self.assertRaises(GraphIntegrityError):
+                validate_graph(graph, result.sources)
+
+    def test_investigator_requires_explicit_asset_and_grounded_identity(self):
+        raw = evidence()
+        raw["sources"][0]["title"] = "Synthetic author Test Investigator"
+        result = service(raw).analyze({"disease": "DEE4"})
+        self.assertFalse(any(n.kind == "investigator" for n in result.knowledge_graph.nodes))
+        asset = {"name": "Test Investigator", "kind": "investigator", "description": "Synthetic identity only.",
+            "url": "https://example.com/test-investigator", "source_ids": ["test-source"],
+            "access_status": "No contact or availability established."}
+        raw["profiles"][0]["collaborators_or_assets"] = [asset]
+        result = service(raw).analyze({"disease": "DEE4"})
+        investigator = next(n for n in result.knowledge_graph.nodes if n.kind == "investigator")
+        self.assertEqual(investigator.label, "Test Investigator")
+        asset["name"] = "Invented unrelated person"
+        with self.assertRaises(EvidenceIntegrityError):
+            service(raw).analyze({"disease": "DEE4"})
+
+    def test_cited_unsafe_url_is_rejected(self):
+        result = service().analyze({"disease": "DEE4"})
+        graph = result.knowledge_graph.model_copy(deep=True)
+        graph.nodes[0].url = "javascript:alert(1)"
+        with self.assertRaises(GraphIntegrityError):
+            validate_graph(graph, result.sources)
+
+
+class ProductionGraphTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        from atlas.store import Atlas
+        cls.service = AnalysisService(atlas=Atlas())
+
+    def test_source_reviewed_stxbp1_graph_covers_typed_evidence_and_model_limits(self):
+        result = self.service.analyze({"disease": "STXBP1-related disorder"})
+        kinds = {n.kind for n in result.knowledge_graph.nodes}
+        self.assertTrue({"disease", "gene", "mechanism", "pathway", "phenotype", "variant", "candidate", "paper",
+                         "clinical_study", "patient_organisation", "investigator", "research_asset"} <= kinds)
+        functional = next(e for e in result.knowledge_graph.edges if e.relationship_type == "reviewed_functional_mechanism")
+        self.assertTrue(functional.contradictions)
+        self.assertTrue({"guiberson2018", "kovacevic2018", "lammertse2020"} <= source_references(functional.contradictions))
+        human = next(e for e in result.knowledge_graph.edges if e.relationship_type == "reported_human_evidence"
+                     and e.source == "candidate:stxbp1-levetiracetam")
+        self.assertTrue({"wang2022", "xian2023"} <= source_references(human.contradictions))
+        self.assertIn("cohorts and endpoints", human.contradictions[0].summary)
+        self.assertEqual(result.best_hypothesis_id, "stxbp1-levetiracetam")
+        self.assertEqual(result.candidate_treatments[0].final_score, 28.25)
+        self.assertEqual(validate_graph(result.knowledge_graph, result.sources, disease_node_id(result.disease)), result.knowledge_graph)
+
+    def test_cplx1_has_known_biology_and_no_therapeutic_transfer(self):
+        result = self.service.analyze({"disease": "CPLX1"})
+        self.assertEqual(result.conclusion, NO_CANDIDATE)
+        self.assertEqual(result.candidate_treatments, [])
+        self.assertIsNone(result.best_hypothesis_id)
+        self.assertTrue(result.functional_mechanism.source_ids)
+        self.assertTrue(result.pathway.source_ids)
+        self.assertEqual(result.variant_effect.effect, "unknown")
+        self.assertTrue(any(n.kind == "mechanism" for n in result.knowledge_graph.nodes))
+        self.assertFalse(any(n.kind == "candidate" for n in result.knowledge_graph.nodes))
+        self.assertTrue(any(e.relationship_type == "shared_research_mechanism" for e in result.knowledge_graph.edges))
+        self.assertTrue(source_references(result.knowledge_graph) <= {s.id for s in result.sources})
+
+    def test_related_disease_cannot_acquire_primary_candidate_evidence(self):
+        result = self.service.analyze({"disease": "STXBP1-related disorder"})
+        graph = result.knowledge_graph.model_copy(deep=True)
+        edge = next(e for e in graph.edges if e.relationship_type == "candidate_under_research")
+        edge.source = "disease:MONDO:0033372"
+        with self.assertRaises(GraphIntegrityError):
+            validate_graph(graph, result.sources, disease_node_id(result.disease))
 
 
 class ResponsesTests(unittest.TestCase):

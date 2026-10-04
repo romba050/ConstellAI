@@ -2,15 +2,9 @@
 const COLORS = ["#6ea8fe", "#f6c453", "#7ddc9a", "#f08a8a", "#c59bf5", "#5fd4d6", "#f5a05c", "#e58fc8",
   "#a5d65a", "#8f9cf7", "#e8d27a", "#58c7a0", "#f27fa5", "#9fb8d8"];
 const OTHER = "#56617d";
-const PERSONAS = {
-  maria: { tab: "connections", hint: "Patient organisation leader: closest constellations, reusable assets, next step." },
-  devon: { tab: "community", hint: "Newly diagnosed family: plain language, your community first." },
-  priya: { tab: "community", hint: "Biotech scout: search a mechanism to rank the constellations it touches." },
-  osei: { tab: "people", hint: "Researcher: who else works on this mechanism, under any gene name." },
-};
-const S = { persona: "maria", points: [], byId: new Map(), groups: [], meta: null, llm: null,
+const MARIA = { audience: "maria", tab: "connections", hint: "Patient organisation leader: closest constellations, reusable assets, next step." };
+const S = { points: [], byId: new Map(), groups: [], meta: null, llm: null,
   selected: null, neighbors: [], highlight: null, tab: null, evidence: {}, conn: null };
-try { S.persona = localStorage.getItem("persona") || "maria"; } catch (e) { /* private mode */ }
 
 const $ = (s, el = document) => el.querySelector(s);
 const panel = $("#panel");
@@ -22,7 +16,7 @@ const api = async (path) => {
 };
 const color = (g) => (g >= 0 && g < COLORS.length ? COLORS[g] : OTHER);
 const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
-const lay = (p) => (S.persona === "devon" && p.lay ? p.lay : p.name);
+const lay = (p) => p.name;
 const link = (url, text) => (url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>` : esc(text));
 const refLink = (ref) => {
   const [db, id] = ref.split(":");
@@ -41,9 +35,20 @@ d3.select(canvas).call(zoom).on("dblclick.zoom", null);
 
 function resize() {
   const r = canvas.parentElement.getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
+  if (r.width <= 0 || r.height <= 0) return;
+  const center = W > 0 && H > 0 && base > 0 ? {
+    x: (T.invertX(W / 2) - W / 2) / base,
+    y: (T.invertY(H / 2) - H / 2) / base,
+  } : null;
+  const scale = T.k;
   W = r.width; H = r.height; base = Math.min(W, H) * 0.47;
   canvas.width = W * dpr; canvas.height = H * dpr;
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  if (center) {
+    const t = d3.zoomIdentity.translate(W / 2 - scale * (W / 2 + center.x * base), H / 2 - scale * (H / 2 + center.y * base)).scale(scale);
+    d3.select(canvas).interrupt().call(zoom.transform, t);
+  }
+  hover = null; tip.hidden = true;
   dirty = true;
 }
 const px = (p) => T.applyX(W / 2 + p.x * base);
@@ -226,32 +231,15 @@ q.addEventListener("keydown", (ev) => {
 hitsEl.addEventListener("mousedown", (ev) => { const el = ev.target.closest(".hit[data-i]"); if (el) choose(hits[+el.dataset.i]); });
 q.addEventListener("blur", () => setTimeout(() => (hitsEl.hidden = true), 150));
 
-/* ------------------------------------------------------------------ persona */
-function renderPersona() {
-  document.querySelectorAll(".persona button").forEach((b) => b.classList.toggle("on", b.dataset.persona === S.persona));
-  q.placeholder = S.persona === "priya"
-    ? "Search a mechanism or pathway — e.g. “neurotransmitter release” or “lysosomal”"
-    : "Search a disease, gene, symptom, mechanism or patient group — e.g. “STXBP1” or “lysosomal”";
-}
-document.querySelector(".persona").addEventListener("click", (ev) => {
-  const b = ev.target.closest("button");
-  if (!b) return;
-  S.persona = b.dataset.persona; S.tab = null;
-  try { localStorage.setItem("persona", S.persona); } catch (e) { /* ignore */ }
-  renderPersona(); route();
-});
-
 /* ------------------------------------------------------------------ home */
 function renderHome() {
   const c = S.meta.counts;
-  const ex = S.persona === "priya"
-    ? [["Neurotransmitter release cycle", "neurotransmitter release"], ["Glycosphingolipid catabolism", "glycosphingolipid"], ["RAF/MAP kinase cascade", "RAF/MAP"]]
-    : [["STXBP1", "STXBP1"], ["Tay-Sachs disease", "Tay-Sachs"], ["SYNGAP1", "SYNGAP1"], ["Sanfilippo", "Sanfilippo"], ["Epileptic spasm", "Epileptic spasm"]];
+  const ex = [["STXBP1", "STXBP1"], ["Tay-Sachs disease", "Tay-Sachs"], ["SYNGAP1", "SYNGAP1"], ["Sanfilippo", "Sanfilippo"], ["Epileptic spasm", "Epileptic spasm"]];
   panel.innerHTML = `
     <h1>Five thousand scattered points of light. One map to see the constellations.</h1>
     <p class="lede" style="margin-top:12px">Every star is a rare disease caused by a single gene. Stars sit together when patients share
       symptoms and their genes work in the same pathway — whatever the diseases are called.</p>
-    <p class="muted">${esc(PERSONAS[S.persona].hint)}</p>
+    <p class="muted">${esc(MARIA.hint)}</p>
     <h2>Start from your disease</h2>
     <div class="chips">${ex.map(([l, v]) => `<button class="chip" data-example="${esc(v)}">${esc(l)}</button>`).join("")}</div>
     <h2>The atlas answers three questions</h2>
@@ -294,7 +282,7 @@ async function openDisease(id) {
 }
 
 function renderDisease() {
-  const d = S.detail, e = S.evidence[d.id], tab = S.tab || PERSONAS[S.persona].tab;
+  const d = S.detail, e = S.evidence[d.id], tab = S.tab || MARIA.tab;
   const resolved = S.resolved && S.resolved.id === d.id ? S.resolved.from : null;
   const tabs = [["connections", `Connections ${d.neighbors.length}`], ["biology", "Biology"], ["community", "Community"], ["people", "People"]];
   panel.innerHTML = `
@@ -304,7 +292,7 @@ function renderDisease() {
     <div class="chips">${d.genes.map((g) => geneChip(g.symbol)).join("")}
       ${d.inheritance.map((i) => `<span class="chip">${esc(i.replace(" inheritance", ""))}</span>`).join("")}
       ${d.onset.slice(0, 2).map((i) => `<span class="chip">${esc(i)}</span>`).join("")}</div>
-    ${d.def ? `<p class="def ${S.persona === "devon" ? "" : "muted"}" title="Click to expand">${esc(d.def)}</p>` : ""}
+    ${d.def ? `<p class="def muted" title="Click to expand">${esc(d.def)}</p>` : ""}
     <p class="small muted">${d.synonyms.length ? `Also known as ${d.synonyms.slice(0, 4).map(esc).join("; ")}${d.synonyms.length > 4 ? ` and ${d.synonyms.length - 4} more names` : ""}. ` : ""}
       ${d.links.map((l) => link(l.url, l.label)).join(" · ")}</p>
     <p class="small">Constellation: <a href="#k/${esc(d.cluster.id)}"><span style="color:${color(d.group)}">●</span> ${esc(d.cluster.label)}</a>
@@ -490,7 +478,7 @@ async function openConnection(a, b) {
     <h1>${esc(A.name)} <span class="muted">↔</span> ${esc(B.name)}</h1>
     <div class="loading">Reading both diseases' papers, studies and grants, and checking whether anyone has connected them before</div>`;
   let c;
-  try { c = await api(`/api/connection?a=${a}&b=${b}&audience=${S.persona}`); }
+  try { c = await api(`/api/connection?a=${a}&b=${b}&audience=${MARIA.audience}`); }
   catch (err) { panel.querySelector(".loading").outerHTML = `<div class="note stop">Could not build this connection: ${esc(err.message)}</div>`; return; }
   if (S.conn !== b || S.selected !== a) return;
   S.connection = c;
@@ -654,7 +642,7 @@ async function openEntity(type, id) {
     <p>${esc(e.note)}</p>
     ${e.specificity ? `<p><span class="chip ${e.specificity}">${e.specificity === "informative" ? "Unusually informative symptom" : e.specificity === "broad" ? "Broad symptom — weak evidence alone" : "Moderately specific symptom"}</span></p>` : ""}
     <h2>${plural(e.count, "disease")} across ${plural(e.clusters.length, "constellation")}, ranked</h2>
-    <p class="small muted">${S.persona === "priya" ? "Ranked by how many diseases in each cluster carry this mechanism. ◐ marks genes where losing one copy causes disease (ClinGen) — candidates for replacement or upregulation approaches." : "Highlighted on the map. Open a disease to see its connections."}</p>
+    <p class="small muted">Highlighted on the map. Open a disease to see its connections.</p>
     ${clusterRows(e.clusters)}`;
 }
 async function openCluster(cid) {
@@ -690,7 +678,7 @@ window.addEventListener("hashchange", route);
 window.addEventListener("resize", resize);
 
 (async function init() {
-  resize(); renderPersona();
+  resize();
   panel.innerHTML = `<div class="loading">Loading the atlas</div>`;
   const a = await api("/api/atlas");
   S.meta = a.meta; S.llm = a.llm; S.orgs = a.organizations; edges = a.edges;

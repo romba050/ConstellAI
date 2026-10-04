@@ -1,4 +1,4 @@
-"""Frozen constellai-analysis-v1 contract shared by API, mock, and frontend."""
+"""Frozen constellai-analysis-v2 contract shared by API, mock, and frontend."""
 from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -143,8 +143,40 @@ class LLMProvenance(ContractModel):
     verified_claims: list[Claim]
 
 
+class GraphNode(ContractModel):
+    id: str
+    kind: Literal[
+        "disease", "gene", "variant", "mechanism", "pathway", "phenotype",
+        "candidate", "paper", "clinical_study", "patient_organisation",
+        "investigator", "research_asset",
+    ]
+    label: str
+    description: str
+    source_ids: list[str]
+    url: str | None
+
+
+class GraphEdge(ContractModel):
+    id: str
+    source: str
+    target: str
+    relationship_type: str
+    claim: Claim
+    confidence: Literal["strong", "moderate", "limited", "unresolved"]
+    confidence_basis: str
+    assertion: Literal["observed", "inferred", "unknown"]
+    scope: str
+    contradictions: list[Claim]
+
+
+class KnowledgeGraph(ContractModel):
+    nodes: list[GraphNode]
+    edges: list[GraphEdge]
+    limitations: list[str]
+
+
 class AnalyzeResponse(ContractModel):
-    schema_version: Literal["constellai-analysis-v1"]
+    schema_version: Literal["constellai-analysis-v2"]
     disease: Disease
     gene: str | None
     variant: str | None
@@ -162,3 +194,4 @@ class AnalyzeResponse(ContractModel):
     limitations: list[str]
     evidence_reviewed_on: str
     llm: LLMProvenance
+    knowledge_graph: KnowledgeGraph

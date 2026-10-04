@@ -1,39 +1,296 @@
 {
-  "schema_version": "constellai-analysis-v1",
+  "schema_version": "constellai-analysis-v2",
   "disease": {
     "id": "MONDO:0012812",
     "name": "STXBP1-related disorders",
     "source_ids": [
+      "saitsu2008",
       "xian2023"
     ]
   },
   "gene": "STXBP1",
   "variant": null,
   "variant_effect": {
-    "summary": "Effects depend on the variant and genotype. Selected missense variants destabilize Munc18-1; homozygous L446F instead increased evoked transmission in a model. No individual functional classification is inferred.",
+    "summary": "Functional effects depend on variant, genotype and model. Selected missense models show instability/coaggregation; another heterozygous-background assay detected no dominant-negative functional effect. Homozygous L446F increased evoked transmission. No individual's functional direction is inferred.",
     "evidence_type": "mechanistic_inference",
     "source_ids": [
       "guiberson2018",
+      "kovacevic2018",
       "lammertse2020"
     ],
     "effect": "variant_dependent",
     "scope": "disease_context"
   },
   "functional_mechanism": {
-    "summary": "STXBP1 encodes Munc18-1, a regulator of synaptic vesicle release. Different disturbances can converge on neurodevelopmental and epilepsy phenotypes.",
+    "summary": "STXBP1 encodes Munc18-1, a presynaptic release regulator. Haploinsufficient mouse models link reduced cortical inhibition to hyperexcitability; selected missense and homozygous models show different functional effects.",
     "evidence_type": "preclinical",
     "source_ids": [
+      "saitsu2008",
+      "kovacevic2018",
+      "chen2020",
       "lammertse2020"
     ]
   },
   "pathway": {
-    "summary": "Presynaptic vesicle exocytosis and SNARE-mediated neurotransmitter release.",
+    "summary": "Presynaptic vesicle exocytosis and SNARE-mediated neurotransmitter release. GABAergic inhibitory-synapse dysfunction is demonstrated in Stxbp1 haploinsufficient mice; this does not assign the same defect to every variant or to CPLX1.",
     "evidence_type": "preclinical",
     "source_ids": [
-      "lammertse2020"
+      "lammertse2020",
+      "chen2020"
     ]
   },
   "candidate_treatments": [
+    {
+      "id": "stxbp1-levetiracetam",
+      "compound_name": "Levetiracetam",
+      "therapeutic_role": "symptom_targeting",
+      "mechanism_of_action": {
+        "summary": "Binds synaptic vesicle protein SV2A; the exact antiepileptic mechanism is incompletely understood. This is a seizure-targeting hypothesis, not established Munc18-1 repair.",
+        "evidence_type": "regulatory_label",
+        "source_ids": [
+          "keppra-label"
+        ]
+      },
+      "mechanism_alignment": {
+        "summary": "Shared synaptic context supports limited symptomatic relevance, not protein stabilization.",
+        "evidence_type": "mechanistic_inference",
+        "source_ids": [
+          "keppra-label",
+          "lammertse2020"
+        ],
+        "value": 0.45
+      },
+      "variant_effect_compatibility": {
+        "summary": "Disease-context seizure hypothesis; evidence does not establish compatibility for an individual variant or all functional classes.",
+        "evidence_type": "mechanistic_inference",
+        "source_ids": [
+          "wang2022",
+          "lammertse2020"
+        ],
+        "value": 0.45
+      },
+      "human_evidence": {
+        "summary": "Wang's observational cohort associated levetiracetam with partial remission; Xian's published cohort did not find superior seizure reduction. Response is heterogeneous.",
+        "evidence_type": "human_observational",
+        "source_ids": [
+          "wang2022",
+          "xian2023"
+        ],
+        "value": 0.45
+      },
+      "preclinical_evidence": {
+        "summary": "Acute and five-day levetiracetam treatment reduced cortical spike-wave discharges in Stxbp1+/- mice. This is one model's symptomatic ECoG endpoint, not evidence of Munc18-1 restoration.",
+        "evidence_type": "preclinical",
+        "source_ids": [
+          "kovacevic2018"
+        ],
+        "value": 0.4
+      },
+      "phenotype_relevance": {
+        "summary": "Seizure outcomes are relevant; these cohorts do not establish correction of the developmental disorder.",
+        "evidence_type": "human_observational",
+        "source_ids": [
+          "wang2022",
+          "xian2023"
+        ],
+        "value": 0.75
+      },
+      "evidence_quality": {
+        "summary": "Curator judgment: primary human cohorts support evaluation, with non-randomized treatment and conflicting comparative results.",
+        "evidence_type": "mechanistic_inference",
+        "source_ids": [
+          "wang2022",
+          "xian2023"
+        ],
+        "value": 0.6
+      },
+      "toxicity": {
+        "summary": "Behavioral symptoms, somnolence and serious hypersensitivity warnings warrant safety review.",
+        "evidence_type": "regulatory_label",
+        "source_ids": [
+          "keppra-label"
+        ],
+        "value": 0.45
+      },
+      "organ_burden": {
+        "summary": "Primarily renal clearance; impaired renal function reduces clearance.",
+        "evidence_type": "regulatory_label",
+        "source_ids": [
+          "keppra-label"
+        ],
+        "value": 0.4
+      },
+      "drug_interactions": {
+        "summary": "Several studied pharmacokinetic interactions were limited; co-medication review remains necessary and a low rating does not imply safety.",
+        "evidence_type": "regulatory_label",
+        "source_ids": [
+          "keppra-label"
+        ],
+        "value": 0.2
+      },
+      "off_target_spillover": {
+        "summary": "SV2A binding concerns vesicle function broadly; this is not STXBP1-specific targeting.",
+        "evidence_type": "mechanistic_inference",
+        "source_ids": [
+          "keppra-label"
+        ],
+        "value": 0.3
+      },
+      "uncertainty": {
+        "summary": "Curator judgment: seizure trajectory and non-randomized co-treatment complicate causal attribution; comparative findings differ.",
+        "evidence_type": "mechanistic_inference",
+        "source_ids": [
+          "wang2022",
+          "xian2023"
+        ],
+        "value": 0.65
+      },
+      "sources": [
+        {
+          "id": "keppra-label",
+          "title": "DailyMed: KEPPRA (levetiracetam) prescribing information",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ca9df05-a506-4ec8-a4fe-320f1219ab21",
+          "evidence_type": "regulatory_label",
+          "reviewed_on": "2026-10-04",
+          "scope": "Immediate-release label: SV2A pharmacology, behavioral/serious adverse effects, renal clearance, studied interactions. Does not establish disease modification.",
+          "excerpt": "KEPPRA may cause behavioral abnormalities and psychotic symptoms."
+        },
+        {
+          "id": "kovacevic2018",
+          "title": "Kovacevic et al. (2018): Protein instability, haploinsufficiency, and cortical hyper-excitability underlie STXBP1 encephalopathy",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5917748/",
+          "evidence_type": "preclinical",
+          "reviewed_on": "2026-10-04",
+          "scope": "Allelic series and Stxbp1 mouse models. Levetiracetam reduced spike-wave discharges after acute and five-day treatment in Stxbp1+/- mice; symptomatic ECoG endpoint, not human efficacy or Munc18-1 repair. Overexpression on a heterozygous neuronal background had no detectable functional effect. DOI 10.1093/brain/awy046; PMID 29538625.",
+          "excerpt": "Acute treatment with levetiracetam significantly reduced the number of spike-wave discharges"
+        },
+        {
+          "id": "lammertse2020",
+          "title": "Lammertse et al. (2020): Homozygous STXBP1 variant causes encephalopathy and gain-of-function in synaptic transmission",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7009479/",
+          "evidence_type": "preclinical",
+          "reviewed_on": "2026-10-04",
+          "scope": "Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+          "excerpt": "the homozygous L446F mutation causes a gain-of-function phenotype regarding release probability and synaptic transmission"
+        },
+        {
+          "id": "wang2022",
+          "title": "Wang et al. (2022): Efficacy of levetiracetam in STXBP1 encephalopathy with different phenotypic and genetic spectra",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35007884/",
+          "evidence_type": "human_observational",
+          "reviewed_on": "2026-10-04",
+          "scope": "Non-randomized cohort: 40 enrolled, medication histories in 37. DOI 10.1016/j.seizure.2021.12.006; no treatment-assignment intervention.",
+          "excerpt": "LEV was effective in improving the partial remission rate but did not achieve seizure freedom."
+        },
+        {
+          "id": "xian2023",
+          "title": "Xian et al. (2023): Delineating clinical and developmental outcomes in STXBP1-related disorders",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10689925/",
+          "evidence_type": "human_observational",
+          "reviewed_on": "2026-10-04",
+          "scope": "Published Brain cohort, not its preprint. PMID 38015929; DOI 10.1093/brain/awad287. Medication-response reconstruction in 61 individuals.",
+          "excerpt": "we did not find a superior effect of levetiracetam in seizure reduction in STXBP1"
+        }
+      ],
+      "final_score": 28.25,
+      "status": "research_hypothesis",
+      "rationale": "Levetiracetam is the highest-scoring disease-context research hypothesis after adding a mouse seizure-suppression study. Its human observations conflict, and this score establishes neither therapeutic superiority nor Munc18-1 repair.",
+      "next_validation_step": "Independently replicate symptomatic EEG findings in a defined haploinsufficient model, reconcile contrasting human cohorts, and separate seizure endpoints from protein rescue and developmental outcomes with expert review.",
+      "score_breakdown": {
+        "positive_components": [
+          {
+            "component": "mechanism_alignment",
+            "weight": 30.0,
+            "input_value": 0.45,
+            "used_value": 0.45,
+            "contribution": 13.5,
+            "missing_policy": "Unknown positive evidence receives zero credit."
+          },
+          {
+            "component": "variant_effect_compatibility",
+            "weight": 15.0,
+            "input_value": 0.45,
+            "used_value": 0.45,
+            "contribution": 6.75,
+            "missing_policy": "Unknown positive evidence receives zero credit."
+          },
+          {
+            "component": "human_evidence",
+            "weight": 20.0,
+            "input_value": 0.45,
+            "used_value": 0.45,
+            "contribution": 9.0,
+            "missing_policy": "Unknown positive evidence receives zero credit."
+          },
+          {
+            "component": "preclinical_evidence",
+            "weight": 10.0,
+            "input_value": 0.4,
+            "used_value": 0.4,
+            "contribution": 4.0,
+            "missing_policy": "Unknown positive evidence receives zero credit."
+          },
+          {
+            "component": "phenotype_relevance",
+            "weight": 10.0,
+            "input_value": 0.75,
+            "used_value": 0.75,
+            "contribution": 7.5,
+            "missing_policy": "Unknown positive evidence receives zero credit."
+          },
+          {
+            "component": "evidence_quality",
+            "weight": 15.0,
+            "input_value": 0.6,
+            "used_value": 0.6,
+            "contribution": 9.0,
+            "missing_policy": "Unknown positive evidence receives zero credit."
+          }
+        ],
+        "risk_penalties": [
+          {
+            "component": "toxicity_organ_burden",
+            "weight": 15.0,
+            "input_value": 0.45,
+            "used_value": 0.45,
+            "contribution": 6.75,
+            "missing_policy": "Unknown risk receives full penalty; toxicity and organ burden share the worse rating."
+          },
+          {
+            "component": "drug_interactions",
+            "weight": 10.0,
+            "input_value": 0.2,
+            "used_value": 0.2,
+            "contribution": 2.0,
+            "missing_policy": "Unknown risk receives its full configured penalty."
+          },
+          {
+            "component": "off_target_spillover",
+            "weight": 10.0,
+            "input_value": 0.3,
+            "used_value": 0.3,
+            "contribution": 3.0,
+            "missing_policy": "Unknown risk receives its full configured penalty."
+          },
+          {
+            "component": "uncertainty",
+            "weight": 15.0,
+            "input_value": 0.65,
+            "used_value": 0.65,
+            "contribution": 9.75,
+            "missing_policy": "Unknown risk receives its full configured penalty."
+          }
+        ],
+        "positive_total": 49.75,
+        "penalty_total": 21.5,
+        "unclamped_score": 28.25,
+        "final_score": 28.25,
+        "formula": "clamp(sum(weight * positive rating) - sum(weight * risk severity), 0, 100)",
+        "config_version": "therapeutic-priority-1",
+        "interpretation": "Ordinal curator ratings produce an auditable research-priority heuristic; this score is not a probability, an efficacy estimate, or a validated clinical model."
+      },
+      "rank": 1
+    },
     {
       "id": "stxbp1-phenylbutyrate",
       "compound_name": "Phenylbutyrate: preclinical 4-PBA; clinical glycerol formulation",
@@ -283,246 +540,6 @@
         "config_version": "therapeutic-priority-1",
         "interpretation": "Ordinal curator ratings produce an auditable research-priority heuristic; this score is not a probability, an efficacy estimate, or a validated clinical model."
       },
-      "rank": 1
-    },
-    {
-      "id": "stxbp1-levetiracetam",
-      "compound_name": "Levetiracetam",
-      "therapeutic_role": "symptom_targeting",
-      "mechanism_of_action": {
-        "summary": "Binds synaptic vesicle protein SV2A; the exact antiepileptic mechanism is incompletely understood. This is a seizure-targeting hypothesis, not established Munc18-1 repair.",
-        "evidence_type": "regulatory_label",
-        "source_ids": [
-          "keppra-label"
-        ]
-      },
-      "mechanism_alignment": {
-        "summary": "Shared synaptic context supports limited symptomatic relevance, not protein stabilization.",
-        "evidence_type": "mechanistic_inference",
-        "source_ids": [
-          "keppra-label",
-          "lammertse2020"
-        ],
-        "value": 0.45
-      },
-      "variant_effect_compatibility": {
-        "summary": "Disease-context seizure hypothesis; evidence does not establish compatibility for an individual variant or all functional classes.",
-        "evidence_type": "mechanistic_inference",
-        "source_ids": [
-          "wang2022",
-          "lammertse2020"
-        ],
-        "value": 0.45
-      },
-      "human_evidence": {
-        "summary": "Wang's observational cohort associated levetiracetam with partial remission; Xian's published cohort did not find superior seizure reduction. Response is heterogeneous.",
-        "evidence_type": "human_observational",
-        "source_ids": [
-          "wang2022",
-          "xian2023"
-        ],
-        "value": 0.45
-      },
-      "preclinical_evidence": {
-        "summary": "No STXBP1-specific preclinical rescue study curated for this candidate.",
-        "evidence_type": "unknown",
-        "source_ids": [],
-        "value": null
-      },
-      "phenotype_relevance": {
-        "summary": "Seizure outcomes are relevant; these cohorts do not establish correction of the developmental disorder.",
-        "evidence_type": "human_observational",
-        "source_ids": [
-          "wang2022",
-          "xian2023"
-        ],
-        "value": 0.75
-      },
-      "evidence_quality": {
-        "summary": "Curator judgment: primary human cohorts support evaluation, with non-randomized treatment and conflicting comparative results.",
-        "evidence_type": "mechanistic_inference",
-        "source_ids": [
-          "wang2022",
-          "xian2023"
-        ],
-        "value": 0.6
-      },
-      "toxicity": {
-        "summary": "Behavioral symptoms, somnolence and serious hypersensitivity warnings warrant safety review.",
-        "evidence_type": "regulatory_label",
-        "source_ids": [
-          "keppra-label"
-        ],
-        "value": 0.45
-      },
-      "organ_burden": {
-        "summary": "Primarily renal clearance; impaired renal function reduces clearance.",
-        "evidence_type": "regulatory_label",
-        "source_ids": [
-          "keppra-label"
-        ],
-        "value": 0.4
-      },
-      "drug_interactions": {
-        "summary": "Several studied pharmacokinetic interactions were limited; co-medication review remains necessary and a low rating does not imply safety.",
-        "evidence_type": "regulatory_label",
-        "source_ids": [
-          "keppra-label"
-        ],
-        "value": 0.2
-      },
-      "off_target_spillover": {
-        "summary": "SV2A binding concerns vesicle function broadly; this is not STXBP1-specific targeting.",
-        "evidence_type": "mechanistic_inference",
-        "source_ids": [
-          "keppra-label"
-        ],
-        "value": 0.3
-      },
-      "uncertainty": {
-        "summary": "Curator judgment: seizure trajectory and non-randomized co-treatment complicate causal attribution; comparative findings differ.",
-        "evidence_type": "mechanistic_inference",
-        "source_ids": [
-          "wang2022",
-          "xian2023"
-        ],
-        "value": 0.65
-      },
-      "sources": [
-        {
-          "id": "keppra-label",
-          "title": "DailyMed: KEPPRA (levetiracetam) prescribing information",
-          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ca9df05-a506-4ec8-a4fe-320f1219ab21",
-          "evidence_type": "regulatory_label",
-          "reviewed_on": "2026-10-04",
-          "scope": "Immediate-release label: SV2A pharmacology, behavioral/serious adverse effects, renal clearance, studied interactions. Does not establish disease modification.",
-          "excerpt": "KEPPRA may cause behavioral abnormalities and psychotic symptoms."
-        },
-        {
-          "id": "lammertse2020",
-          "title": "Lammertse et al. (2020): Homozygous STXBP1 variant causes encephalopathy and gain-of-function in synaptic transmission",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7009479/",
-          "evidence_type": "preclinical",
-          "reviewed_on": "2026-10-04",
-          "scope": "Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
-          "excerpt": "the homozygous L446F mutation causes a gain-of-function phenotype regarding release probability and synaptic transmission"
-        },
-        {
-          "id": "wang2022",
-          "title": "Wang et al. (2022): Efficacy of levetiracetam in STXBP1 encephalopathy with different phenotypic and genetic spectra",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35007884/",
-          "evidence_type": "human_observational",
-          "reviewed_on": "2026-10-04",
-          "scope": "Non-randomized cohort: 40 enrolled, medication histories in 37. DOI 10.1016/j.seizure.2021.12.006; no treatment-assignment intervention.",
-          "excerpt": "LEV was effective in improving the partial remission rate but did not achieve seizure freedom."
-        },
-        {
-          "id": "xian2023",
-          "title": "Xian et al. (2023): Delineating clinical and developmental outcomes in STXBP1-related disorders",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10689925/",
-          "evidence_type": "human_observational",
-          "reviewed_on": "2026-10-04",
-          "scope": "Published Brain cohort, not its preprint. PMID 38015929; DOI 10.1093/brain/awad287. Medication-response reconstruction in 61 individuals.",
-          "excerpt": "we did not find a superior effect of levetiracetam in seizure reduction in STXBP1"
-        }
-      ],
-      "final_score": 24.25,
-      "status": "research_hypothesis",
-      "rationale": "Levetiracetam binds a nerve-cell signalling protein called SV2A. It is a seizure-focused comparison hypothesis, with mixed patient observations; it has not been shown to repair Munc18-1.",
-      "next_validation_step": "Review the contrasting cohorts and pre-specify seizure endpoints, concomitant-treatment accounting and adverse-event capture with clinical experts.",
-      "score_breakdown": {
-        "positive_components": [
-          {
-            "component": "mechanism_alignment",
-            "weight": 30.0,
-            "input_value": 0.45,
-            "used_value": 0.45,
-            "contribution": 13.5,
-            "missing_policy": "Unknown positive evidence receives zero credit."
-          },
-          {
-            "component": "variant_effect_compatibility",
-            "weight": 15.0,
-            "input_value": 0.45,
-            "used_value": 0.45,
-            "contribution": 6.75,
-            "missing_policy": "Unknown positive evidence receives zero credit."
-          },
-          {
-            "component": "human_evidence",
-            "weight": 20.0,
-            "input_value": 0.45,
-            "used_value": 0.45,
-            "contribution": 9.0,
-            "missing_policy": "Unknown positive evidence receives zero credit."
-          },
-          {
-            "component": "preclinical_evidence",
-            "weight": 10.0,
-            "input_value": null,
-            "used_value": 0.0,
-            "contribution": 0.0,
-            "missing_policy": "Unknown positive evidence receives zero credit."
-          },
-          {
-            "component": "phenotype_relevance",
-            "weight": 10.0,
-            "input_value": 0.75,
-            "used_value": 0.75,
-            "contribution": 7.5,
-            "missing_policy": "Unknown positive evidence receives zero credit."
-          },
-          {
-            "component": "evidence_quality",
-            "weight": 15.0,
-            "input_value": 0.6,
-            "used_value": 0.6,
-            "contribution": 9.0,
-            "missing_policy": "Unknown positive evidence receives zero credit."
-          }
-        ],
-        "risk_penalties": [
-          {
-            "component": "toxicity_organ_burden",
-            "weight": 15.0,
-            "input_value": 0.45,
-            "used_value": 0.45,
-            "contribution": 6.75,
-            "missing_policy": "Unknown risk receives full penalty; toxicity and organ burden share the worse rating."
-          },
-          {
-            "component": "drug_interactions",
-            "weight": 10.0,
-            "input_value": 0.2,
-            "used_value": 0.2,
-            "contribution": 2.0,
-            "missing_policy": "Unknown risk receives its full configured penalty."
-          },
-          {
-            "component": "off_target_spillover",
-            "weight": 10.0,
-            "input_value": 0.3,
-            "used_value": 0.3,
-            "contribution": 3.0,
-            "missing_policy": "Unknown risk receives its full configured penalty."
-          },
-          {
-            "component": "uncertainty",
-            "weight": 15.0,
-            "input_value": 0.65,
-            "used_value": 0.65,
-            "contribution": 9.75,
-            "missing_policy": "Unknown risk receives its full configured penalty."
-          }
-        ],
-        "positive_total": 45.75,
-        "penalty_total": 21.5,
-        "unclamped_score": 24.25,
-        "final_score": 24.25,
-        "formula": "clamp(sum(weight * positive rating) - sum(weight * risk severity), 0, 100)",
-        "config_version": "therapeutic-priority-1",
-        "interpretation": "Ordinal curator ratings produce an auditable research-priority heuristic; this score is not a probability, an efficacy estimate, or a validated clinical model."
-      },
       "rank": 2
     },
     {
@@ -731,6 +748,7 @@
         "id": "MONDO:0033372",
         "name": "CPLX1-related developmental and epileptic encephalopathy",
         "source_ids": [
+          "karaca2015",
           "redler2017"
         ]
       },
@@ -739,15 +757,18 @@
         "summary": "Complexin-1 and Munc18-1 both participate in presynaptic SNARE/vesicle-release regulation; this is a pathway connection.",
         "evidence_type": "mechanistic_inference",
         "source_ids": [
+          "karaca2015",
           "redler2017",
           "lammertse2020"
         ]
       },
       "key_difference": {
-        "summary": "The CPLX1 report concerns recessive homozygous variants; STXBP1 commonly involves heterozygous/de novo disease and has functional exceptions.",
+        "summary": "Karaca and Redler report recessive homozygous CPLX1 variants in specific families; original STXBP1 cases included heterozygous/de novo disease, with later functional exceptions. These are reported contexts, not a count of all known cases.",
         "evidence_type": "human_observational",
         "source_ids": [
+          "karaca2015",
           "redler2017",
+          "saitsu2008",
           "lammertse2020"
         ]
       },
@@ -756,25 +777,26 @@
     }
   ],
   "recommended_next_experiment": {
-    "title": "Test variant-dependent rescue of Munc18-1 and synaptic function",
-    "question": "Does phenylbutyrate rescue function in a defined STXBP1 model at measured, non-cytotoxic exposure?",
-    "design": "Proposed adaptation of published neuronal assays: compare a characterized STXBP1 variant with wild-type and an isogenic control, using blinded independent preparations. Document exact transcript, zygosity and baseline functional direction. Specify the chemical/formulation, a measured exposure series and vehicle controls before analysis. Test protein solubility alongside evoked vesicle release and viability; a laboratory specialist must determine exposures from methods and model pharmacology.",
+    "title": "Separate symptomatic seizure control from protein/function rescue",
+    "question": "Can the mouse seizure-suppression result and selected-missense protein rescue be independently reproduced within their own defined models?",
+    "design": "Expert-review-required proposal: first replicate the levetiracetam cortical EEG endpoint in a characterized Stxbp1 haploinsufficient model with blinded analysis, baseline recording, vehicle and wild-type controls. Separately test exact-formulation phenylbutyrate in a characterized destabilizing missense neuronal model, pairing soluble protein with evoked release and viability. Predefine transcript, zygosity, functional direction, independent biological preparations and measured exposure. A laboratory specialist must determine model-appropriate methods and exposures. These distinct arms answer different questions and cannot establish therapeutic superiority or transfer a response between models.",
     "readouts": [
-      "Munc18-1 abundance and soluble/insoluble fraction",
-      "Evoked synaptic-vesicle recycling or synaptopHluorin signal",
-      "Spontaneous activity and evoked transmission considered separately",
+      "Prespecified cortical spike-wave-discharge burden in the haploinsufficient model",
+      "Munc18-1 abundance and soluble/insoluble fraction in the missense model",
+      "Evoked vesicle recycling or synaptopHluorin signal; spontaneous activity considered separately",
       "Viability and general cell stress",
-      "Prespecified comparison with corrected/wild-type control"
+      "Comparison with model-specific vehicle and corrected/wild-type controls"
     ],
-    "falsification": "Reject the rescue hypothesis for that model if protein stabilization does not improve the prespecified functional endpoint, if activity moves farther from control, or if apparent benefit appears only with cytotoxic exposure.",
+    "falsification": "The seizure-control hypothesis fails if the prespecified EEG endpoint does not improve on independent replication. The protein-rescue hypothesis fails if stabilization lacks functional rescue, activity diverges further from controls, or apparent benefit requires cytotoxic exposure. Improvement in one arm cannot validate the other.",
     "prerequisites": [
-      "Expert review of assay validity and statistical design",
-      "Verified variant, transcript, zygosity and functional classification",
-      "Verified chemical identity, formulation and measured exposure",
-      "Available models under appropriate consent and approvals; availability is not assumed",
-      "Independent biological preparations and prespecified endpoints"
+      "Expert review of distinct endpoint validity and statistical design",
+      "Verified genotype, transcript, zygosity and baseline function for each model",
+      "Verified chemical/formulation identity and measured model-specific exposure",
+      "Model availability, consent and approvals confirmed; access is not assumed",
+      "Independent preparations and prespecified analyses"
     ],
     "source_ids": [
+      "kovacevic2018",
       "guiberson2018",
       "abramov2021",
       "lammertse2020"
@@ -834,6 +856,39 @@
         "abramov2021"
       ],
       "access_status": "Public methods; procurement, permissions and present availability unverified."
+    },
+    {
+      "name": "Jacqueline Burre",
+      "kind": "investigator",
+      "description": "Coauthor of the 2018 chemical-chaperone and 2021 targeted-chaperone reports; public identity verified in an institutional profile.",
+      "url": "https://vivo.weill.cornell.edu/display/cwid-jab2058",
+      "source_ids": [
+        "guiberson2018",
+        "abramov2021",
+        "burre-profile"
+      ],
+      "access_status": "Public authorship identity reviewed 2026-10-04; no outreach, partnership, present availability or material/data access established."
+    },
+    {
+      "name": "CAP-002 study: terminated historical context",
+      "kind": "study",
+      "description": "Historical gene-therapy study. The current registry lists termination; the sponsor reports trial closure after a participant death with underlying cause unresolved. No clinical efficacy or available enrollment is inferred.",
+      "url": "https://clinicaltrials.gov/study/NCT06983158",
+      "source_ids": [
+        "nct06983158",
+        "capsida2026"
+      ],
+      "access_status": "TERMINATED; last registry update posted 2026-06-10, checked 2026-10-04. Historical safety context; no contact, eligibility or access determination."
+    },
+    {
+      "name": "Capsida natural history registration: withdrawn",
+      "kind": "study",
+      "description": "Historical STXBP1 natural history registration withdrawn with no patients enrolled; not a recruiting resource.",
+      "url": "https://clinicaltrials.gov/study/NCT05462054",
+      "source_ids": [
+        "nct05462054"
+      ],
+      "access_status": "WITHDRAWN; last posted 2024-10-18, checked 2026-10-04. No available cohort or participant access established."
     }
   ],
   "sources": [
@@ -856,6 +911,33 @@
       "excerpt": "One child (1/18) had severe toxicity, with metabolic acidosis and aspiration pneumonia requiring intubation."
     },
     {
+      "id": "burre-profile",
+      "title": "Weill Cornell institutional profile: Jacqueline Burre",
+      "url": "https://vivo.weill.cornell.edu/display/cwid-jab2058",
+      "evidence_type": "official_resource",
+      "reviewed_on": "2026-10-04",
+      "scope": "Public identity and selected-publication links reviewed 2026-10-04. Jacqueline Burre is a coauthor of the chemical-chaperone and targeted-chaperone reports. Authorship is not a collaboration, material-access, contact or availability determination.",
+      "excerpt": "Jacqueline Burre"
+    },
+    {
+      "id": "capsida2026",
+      "title": "Capsida (11 May 2026): CAP-002 Program Update: A Letter to the STXBP1 Community",
+      "url": "https://capsida.com/stx-community-letter-5-9-2026/",
+      "evidence_type": "official_resource",
+      "reviewed_on": "2026-10-04",
+      "scope": "Sponsor statement dated 2026-05-11 reports a participant death in September 2025, cerebral edema and trial closure; the underlying reason was not identified. Sponsor reporting is not an independently adjudicated causal mechanism or a universal gene-therapy risk estimate.",
+      "excerpt": "we have made the decision to close out the trial."
+    },
+    {
+      "id": "chen2020",
+      "title": "Chen et al. (2020): Stxbp1/Munc18-1 haploinsufficiency impairs inhibition and mediates key neurological features of STXBP1 encephalopathy",
+      "url": "https://elifesciences.org/articles/48705",
+      "evidence_type": "preclinical",
+      "reviewed_on": "2026-10-04",
+      "scope": "Two Stxbp1 haploinsufficient mouse models; cortical inhibitory synapses and network/behavioral phenotypes. Supports model-specific GABAergic dysfunction, not a universal pathway effect or treatment response. DOI 10.7554/eLife.48705; PMID 32073399.",
+      "excerpt": "Stxbp1 haploinsufficiency reduced cortical inhibitory neurotransmission"
+    },
+    {
       "id": "guiberson2018",
       "title": "Guiberson et al. (2018): Mechanism-based rescue of Munc18-1 dysfunction in varied encephalopathies by chemical chaperones",
       "url": "https://www.nature.com/articles/s41467-018-06507-4",
@@ -865,6 +947,15 @@
       "excerpt": "Three chemical chaperones stabilized the levels of mutant and wild-type Munc18-1 in transfected HEK293T cells: 4-phenylbutyrate, sorbitol, and trehalose"
     },
     {
+      "id": "karaca2015",
+      "title": "Karaca et al. (2015): Genes that affect brain structure and function identified by rare variant analyses of Mendelian neurologic disease",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4824012/",
+      "evidence_type": "human_observational",
+      "reviewed_on": "2026-10-04",
+      "scope": "Two siblings with homozygous CPLX1 nonsense p.E108X, epilepsy and cortical atrophy within a rare-variant family study. DOI 10.1016/j.neuron.2015.09.048; PMID 26539891. Genetic association and protein-function background, not a treatment or variant-function assay.",
+      "excerpt": "in the CPLX1 gene in two female siblings"
+    },
+    {
       "id": "keppra-label",
       "title": "DailyMed: KEPPRA (levetiracetam) prescribing information",
       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ca9df05-a506-4ec8-a4fe-320f1219ab21",
@@ -872,6 +963,15 @@
       "reviewed_on": "2026-10-04",
       "scope": "Immediate-release label: SV2A pharmacology, behavioral/serious adverse effects, renal clearance, studied interactions. Does not establish disease modification.",
       "excerpt": "KEPPRA may cause behavioral abnormalities and psychotic symptoms."
+    },
+    {
+      "id": "kovacevic2018",
+      "title": "Kovacevic et al. (2018): Protein instability, haploinsufficiency, and cortical hyper-excitability underlie STXBP1 encephalopathy",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5917748/",
+      "evidence_type": "preclinical",
+      "reviewed_on": "2026-10-04",
+      "scope": "Allelic series and Stxbp1 mouse models. Levetiracetam reduced spike-wave discharges after acute and five-day treatment in Stxbp1+/- mice; symptomatic ECoG endpoint, not human efficacy or Munc18-1 repair. Overexpression on a heterozygous neuronal background had no detectable functional effect. DOI 10.1093/brain/awy046; PMID 29538625.",
+      "excerpt": "Acute treatment with levetiracetam significantly reduced the number of spike-wave discharges"
     },
     {
       "id": "lammertse2020",
@@ -892,6 +992,15 @@
       "excerpt": "Glycerol Phenylbutyrate 1100 MG/ML [Ravicti]"
     },
     {
+      "id": "nct05462054",
+      "title": "ClinicalTrials.gov NCT05462054: Capsida pediatric STXBP1 natural history study",
+      "url": "https://clinicaltrials.gov/study/NCT05462054",
+      "evidence_type": "trial_registry",
+      "reviewed_on": "2026-10-04",
+      "scope": "Official API checked 2026-10-04; last update posted 2024-10-18. WITHDRAWN; no patients enrolled; actual enrollment 0; hasResults=false. Historical registration, not a recruiting asset.",
+      "excerpt": "Withdrawn, no patients enrolled"
+    },
+    {
       "id": "nct06555965",
       "title": "ClinicalTrials.gov NCT06555965: STXBP1 and SYNGAP1 Related Disorders Natural History Study",
       "url": "https://clinicaltrials.gov/study/NCT06555965",
@@ -910,6 +1019,15 @@
       "excerpt": "A Multicentric European Study to Promote Clinical Trial Readiness for STXBP1-related Disorders"
     },
     {
+      "id": "nct06983158",
+      "title": "ClinicalTrials.gov NCT06983158: CAP-002 gene therapy study in STXBP1 encephalopathy",
+      "url": "https://clinicaltrials.gov/study/NCT06983158",
+      "evidence_type": "trial_registry",
+      "reviewed_on": "2026-10-04",
+      "scope": "Official API checked 2026-10-04; last update posted 2026-06-10. TERMINATED; stopping rule met; actual enrollment 1; hasResults=false. Historical study and safety context, not an available trial or demonstrated efficacy.",
+      "excerpt": "Stopping rule for study was met"
+    },
+    {
       "id": "ravicti-label",
       "title": "DailyMed: RAVICTI (glycerol phenylbutyrate) prescribing information",
       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=900e7dc0-9afe-4f50-80de-90567bb78519",
@@ -926,6 +1044,15 @@
       "reviewed_on": "2026-10-04",
       "scope": "Three affected individuals with homozygous CPLX1 variants; mechanistic background is contextual, not a treatment study. DOI 10.1038/ejhg.2017.52; PMID 28422131.",
       "excerpt": "identified homozygous CPLX1 variants in three patients with ID from two unrelated families."
+    },
+    {
+      "id": "saitsu2008",
+      "title": "Saitsu et al. (2008): De novo mutations in the gene encoding STXBP1 (MUNC18-1) cause early infantile epileptic encephalopathy",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18469812/",
+      "evidence_type": "human_observational",
+      "reviewed_on": "2026-10-04",
+      "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+      "excerpt": "four unrelated individuals with EIEE had heterozygous missense mutations"
     },
     {
       "id": "stxbp1-foundation",
@@ -955,11 +1082,11 @@
       "excerpt": "we did not find a superior effect of levetiracetam in seizure reduction in STXBP1"
     }
   ],
-  "conclusion": "Phenylbutyrate: preclinical 4-PBA; clinical glycerol formulation is the highest-ranked eligible research candidate in the reviewed disease context; this ranking does not establish clinical benefit or support treatment decisions.",
-  "best_hypothesis_id": "stxbp1-phenylbutyrate",
+  "conclusion": "Levetiracetam is the highest-ranked eligible research candidate in the reviewed disease context; this ranking does not establish clinical benefit or support treatment decisions.",
+  "best_hypothesis_id": "stxbp1-levetiracetam",
   "analysis_status": "research_hypotheses_found",
   "limitations": [
-    "One curated STXBP1 research demonstration, not a comprehensive therapeutic search.",
+    "Curated STXBP1 therapeutic demonstration plus a CPLX1 evidence-context profile; not a comprehensive therapeutic or investigator search.",
     "The umbrella STXBP1 label uses DEE4 as an atlas navigation anchor; it does not equate every STXBP1 phenotype with DEE4.",
     "Ratings are curator ordinal judgments from 0 to 1; scores are uncalibrated research-priority points, never efficacy estimates, probabilities or patient benefit predictions.",
     "Null positive ratings receive zero credit; null risk ratings receive the full configured penalty. No unknown is interpreted as safe.",
@@ -970,7 +1097,11 @@
     "Related CPLX1 evidence provides a research connection; no therapy response is transferred across genes.",
     "No dose, age eligibility, patient-specific treatment plan or trial-ready protocol is generated.",
     "The Google Doc's example phenytoin contraindication for STXBP1 loss of function was not supported by the reviewed sources and is excluded.",
-    "Official resource links establish existence only; no outreach, clinical collaboration or material/data access has occurred."
+    "Official resource links establish existence only; no outreach, clinical collaboration or material/data access has occurred.",
+    "Levetiracetam's lead score reflects a modest curator preclinical rating of 0.40 for one short mouse EEG study; mixed human findings and distinct endpoints remain visible.",
+    "Missense coaggregation and the absence of a dominant-negative functional effect in another neuronal background are model-dependent findings; neither classifies all missense variants.",
+    "CAP-002 is listed TERMINATED and the older Capsida natural history study WITHDRAWN; historical registrations are not recruiting assets.",
+    "The native Literature reviews tab was checked separately from Final; optional programs, broad gene coverage and continuous update ideas are recorded as deferred in the traceability review."
   ],
   "evidence_reviewed_on": "2026-10-04",
   "llm": {
@@ -978,5 +1109,2218 @@
     "model": null,
     "detail": "Reviewed source-ledger claims and deterministic curator-rating scoring were used. No OpenAI call was requested.",
     "verified_claims": []
+  },
+  "knowledge_graph": {
+    "nodes": [
+      {
+        "id": "candidate:stxbp1-compound-13",
+        "kind": "candidate",
+        "label": "Compound 13 (Abramov research compound)",
+        "description": "insufficient_evidence: Keep as an experimental assay comparator. Unknown human safety and exposure prevent a defensible therapeutic candidate classification.",
+        "source_ids": [
+          "abramov2021"
+        ],
+        "url": null
+      },
+      {
+        "id": "candidate:stxbp1-levetiracetam",
+        "kind": "candidate",
+        "label": "Levetiracetam",
+        "description": "research_hypothesis: Levetiracetam is the highest-scoring disease-context research hypothesis after adding a mouse seizure-suppression study. Its human observations conflict, and this score establishes neither therapeutic superiority nor Munc18-1 repair.",
+        "source_ids": [
+          "keppra-label",
+          "kovacevic2018",
+          "lammertse2020",
+          "wang2022",
+          "xian2023"
+        ],
+        "url": null
+      },
+      {
+        "id": "candidate:stxbp1-phenylbutyrate",
+        "kind": "candidate",
+        "label": "Phenylbutyrate: preclinical 4-PBA; clinical glycerol formulation",
+        "description": "research_hypothesis: In studied models, 4-PBA helped stabilize Munc18-1, the protein involved in releasing nerve-cell signals. A laboratory test can check whether this holds for the exact variant and preparation; human benefit remains uncertain.",
+        "source_ids": [
+          "abramov2021",
+          "barbour2026",
+          "guiberson2018",
+          "lammertse2020",
+          "ravicti-label"
+        ],
+        "url": null
+      },
+      {
+        "id": "clinical_study:asset:0b753c7658bf32a3",
+        "kind": "clinical_study",
+        "label": "ESCO natural history study and patient registry",
+        "description": "European STXBP1 Consortium observational effort for natural history, outcomes and trial readiness. Access: Registry lists RECRUITING; last posted 2026-02-06, checked 2026-10-04. No collaboration, biobank access or eligibility established.",
+        "source_ids": [
+          "nct06625112",
+          "stxbp1-foundation"
+        ],
+        "url": "https://clinicaltrials.gov/study/NCT06625112"
+      },
+      {
+        "id": "clinical_study:asset:21ebc84b28c8b406",
+        "kind": "clinical_study",
+        "label": "STARR natural history study",
+        "description": "Observational STXBP1/SYNGAP1 outcome study; potential research-planning context, not a therapeutic intervention. Access: Registry lists RECRUITING; last posted 2025-10-29, checked 2026-10-04. Team confirmation required; no eligibility or access determination.",
+        "source_ids": [
+          "nct06555965",
+          "stxbp1-foundation"
+        ],
+        "url": "https://clinicaltrials.gov/study/NCT06555965"
+      },
+      {
+        "id": "clinical_study:asset:66d7a9f661e2e544",
+        "kind": "clinical_study",
+        "label": "Phenylbutyrate pilot (NCT04937062)",
+        "description": "Glycerol phenylbutyrate early-phase open-label pilot; registration supports study existence, not efficacy. No results posted in this registry. Access: ACTIVE_NOT_RECRUITING; last posted 2026-01-22, checked 2026-10-04. Published observational findings are separately cited.",
+        "source_ids": [
+          "nct04937062"
+        ],
+        "url": "https://clinicaltrials.gov/study/NCT04937062"
+      },
+      {
+        "id": "clinical_study:asset:b5d2556339037b66",
+        "kind": "clinical_study",
+        "label": "CAP-002 study: terminated historical context",
+        "description": "Historical gene-therapy study. The current registry lists termination; the sponsor reports trial closure after a participant death with underlying cause unresolved. No clinical efficacy or available enrollment is inferred. Access: TERMINATED; last registry update posted 2026-06-10, checked 2026-10-04. Historical safety context; no contact, eligibility or access determination.",
+        "source_ids": [
+          "capsida2026",
+          "nct06983158"
+        ],
+        "url": "https://clinicaltrials.gov/study/NCT06983158"
+      },
+      {
+        "id": "clinical_study:asset:d3f9c8e729a7040f",
+        "kind": "clinical_study",
+        "label": "Capsida natural history registration: withdrawn",
+        "description": "Historical STXBP1 natural history registration withdrawn with no patients enrolled; not a recruiting resource. Access: WITHDRAWN; last posted 2024-10-18, checked 2026-10-04. No available cohort or participant access established.",
+        "source_ids": [
+          "nct05462054"
+        ],
+        "url": "https://clinicaltrials.gov/study/NCT05462054"
+      },
+      {
+        "id": "disease:MONDO:0012812",
+        "kind": "disease",
+        "label": "STXBP1-related disorders",
+        "description": "Reviewed disease context with an atlas navigation anchor; no individual diagnosis is inferred.",
+        "source_ids": [
+          "saitsu2008",
+          "xian2023"
+        ],
+        "url": "/atlas#d/MONDO:0012812"
+      },
+      {
+        "id": "disease:MONDO:0033372",
+        "kind": "disease",
+        "label": "CPLX1-related developmental and epileptic encephalopathy",
+        "description": "Reviewed disease context with an atlas navigation anchor; no individual diagnosis is inferred.",
+        "source_ids": [
+          "karaca2015",
+          "redler2017"
+        ],
+        "url": "/atlas#d/MONDO:0033372"
+      },
+      {
+        "id": "gene:CPLX1",
+        "kind": "gene",
+        "label": "CPLX1",
+        "description": "Gene recorded in this reviewed disease context; this does not classify any individual variant.",
+        "source_ids": [
+          "karaca2015",
+          "redler2017"
+        ],
+        "url": null
+      },
+      {
+        "id": "gene:STXBP1",
+        "kind": "gene",
+        "label": "STXBP1",
+        "description": "Gene recorded in this reviewed disease context; this does not classify any individual variant.",
+        "source_ids": [
+          "saitsu2008",
+          "xian2023"
+        ],
+        "url": null
+      },
+      {
+        "id": "investigator:asset:1a815be80e4ff25f",
+        "kind": "investigator",
+        "label": "Jacqueline Burre",
+        "description": "Coauthor of the 2018 chemical-chaperone and 2021 targeted-chaperone reports; public identity verified in an institutional profile. Access: Public authorship identity reviewed 2026-10-04; no outreach, partnership, present availability or material/data access established.",
+        "source_ids": [
+          "abramov2021",
+          "burre-profile",
+          "guiberson2018"
+        ],
+        "url": "https://vivo.weill.cornell.edu/display/cwid-jab2058"
+      },
+      {
+        "id": "mechanism:efcb6a5e1b52c76b",
+        "kind": "mechanism",
+        "label": "Reviewed functional mechanism",
+        "description": "STXBP1 encodes Munc18-1, a presynaptic release regulator. Haploinsufficient mouse models link reduced cortical inhibition to hyperexcitability; selected missense and homozygous models show different functional effects.",
+        "source_ids": [
+          "chen2020",
+          "kovacevic2018",
+          "lammertse2020",
+          "saitsu2008"
+        ],
+        "url": null
+      },
+      {
+        "id": "paper:source:abramov2021",
+        "kind": "paper",
+        "label": "Abramov et al. (2021): Targeted stabilization of Munc18-1 function via pharmacological chaperones",
+        "description": "Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+        "source_ids": [
+          "abramov2021"
+        ],
+        "url": "https://link.springer.com/article/10.15252/emmm.202012354"
+      },
+      {
+        "id": "paper:source:barbour2026",
+        "kind": "paper",
+        "label": "Barbour et al. (2026): Parent-Reported Improvement in Seizure Control and Development After Phenylbutyrate Treatment in Children With STXBP1 and SLC6A1",
+        "description": "Uncontrolled interviews: 18 children, 13 STXBP1. Primarily glycerol formulation; one sodium exposure. PMID 42447769; DOI 10.1016/j.pediatrneurol.2026.06.012; online 2026-06-20.",
+        "source_ids": [
+          "barbour2026"
+        ],
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13405358/"
+      },
+      {
+        "id": "paper:source:chen2020",
+        "kind": "paper",
+        "label": "Chen et al. (2020): Stxbp1/Munc18-1 haploinsufficiency impairs inhibition and mediates key neurological features of STXBP1 encephalopathy",
+        "description": "Two Stxbp1 haploinsufficient mouse models; cortical inhibitory synapses and network/behavioral phenotypes. Supports model-specific GABAergic dysfunction, not a universal pathway effect or treatment response. DOI 10.7554/eLife.48705; PMID 32073399.",
+        "source_ids": [
+          "chen2020"
+        ],
+        "url": "https://elifesciences.org/articles/48705"
+      },
+      {
+        "id": "paper:source:guiberson2018",
+        "kind": "paper",
+        "label": "Guiberson et al. (2018): Mechanism-based rescue of Munc18-1 dysfunction in varied encephalopathies by chemical chaperones",
+        "description": "Selected missense models; primary mouse neurons and worms. DOI 10.1038/s41467-018-06507-4; PMID 30266908. No human efficacy test.",
+        "source_ids": [
+          "guiberson2018"
+        ],
+        "url": "https://www.nature.com/articles/s41467-018-06507-4"
+      },
+      {
+        "id": "paper:source:karaca2015",
+        "kind": "paper",
+        "label": "Karaca et al. (2015): Genes that affect brain structure and function identified by rare variant analyses of Mendelian neurologic disease",
+        "description": "Two siblings with homozygous CPLX1 nonsense p.E108X, epilepsy and cortical atrophy within a rare-variant family study. DOI 10.1016/j.neuron.2015.09.048; PMID 26539891. Genetic association and protein-function background, not a treatment or variant-function assay.",
+        "source_ids": [
+          "karaca2015"
+        ],
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4824012/"
+      },
+      {
+        "id": "paper:source:kovacevic2018",
+        "kind": "paper",
+        "label": "Kovacevic et al. (2018): Protein instability, haploinsufficiency, and cortical hyper-excitability underlie STXBP1 encephalopathy",
+        "description": "Allelic series and Stxbp1 mouse models. Levetiracetam reduced spike-wave discharges after acute and five-day treatment in Stxbp1+/- mice; symptomatic ECoG endpoint, not human efficacy or Munc18-1 repair. Overexpression on a heterozygous neuronal background had no detectable functional effect. DOI 10.1093/brain/awy046; PMID 29538625.",
+        "source_ids": [
+          "kovacevic2018"
+        ],
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5917748/"
+      },
+      {
+        "id": "paper:source:lammertse2020",
+        "kind": "paper",
+        "label": "Lammertse et al. (2020): Homozygous STXBP1 variant causes encephalopathy and gain-of-function in synaptic transmission",
+        "description": "Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+        "source_ids": [
+          "lammertse2020"
+        ],
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7009479/"
+      },
+      {
+        "id": "paper:source:redler2017",
+        "kind": "paper",
+        "label": "Redler et al. (2017): Variants in CPLX1 in two families with autosomal-recessive severe infantile myoclonic epilepsy and ID",
+        "description": "Three affected individuals with homozygous CPLX1 variants; mechanistic background is contextual, not a treatment study. DOI 10.1038/ejhg.2017.52; PMID 28422131.",
+        "source_ids": [
+          "redler2017"
+        ],
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5520065/"
+      },
+      {
+        "id": "paper:source:saitsu2008",
+        "kind": "paper",
+        "label": "Saitsu et al. (2008): De novo mutations in the gene encoding STXBP1 (MUNC18-1) cause early infantile epileptic encephalopathy",
+        "description": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "source_ids": [
+          "saitsu2008"
+        ],
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18469812/"
+      },
+      {
+        "id": "paper:source:wang2022",
+        "kind": "paper",
+        "label": "Wang et al. (2022): Efficacy of levetiracetam in STXBP1 encephalopathy with different phenotypic and genetic spectra",
+        "description": "Non-randomized cohort: 40 enrolled, medication histories in 37. DOI 10.1016/j.seizure.2021.12.006; no treatment-assignment intervention.",
+        "source_ids": [
+          "wang2022"
+        ],
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35007884/"
+      },
+      {
+        "id": "paper:source:xian2023",
+        "kind": "paper",
+        "label": "Xian et al. (2023): Delineating clinical and developmental outcomes in STXBP1-related disorders",
+        "description": "Published Brain cohort, not its preprint. PMID 38015929; DOI 10.1093/brain/awad287. Medication-response reconstruction in 61 individuals.",
+        "source_ids": [
+          "xian2023"
+        ],
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10689925/"
+      },
+      {
+        "id": "pathway:efcb6a5e1b52c76b",
+        "kind": "pathway",
+        "label": "Presynaptic vesicle exocytosis and SNARE-mediated neurotransmitter release. GABAergic inhibitory-synapse dysfunction is demonstrated in Stxbp1 haploinsufficient mice; this does not assign the same defect to every variant or to CPLX1.",
+        "description": "Reviewed pathway context; membership is not therapeutic efficacy evidence.",
+        "source_ids": [
+          "chen2020",
+          "lammertse2020"
+        ],
+        "url": null
+      },
+      {
+        "id": "patient_organisation:asset:30ecdbd8066b5360",
+        "kind": "patient_organisation",
+        "label": "STXBP1 Foundation",
+        "description": "Official community research directory linking published studies and registries. Access: Public information reviewed 2026-10-04; no contact, collaboration or data access established.",
+        "source_ids": [
+          "stxbp1-foundation"
+        ],
+        "url": "https://www.stxbp1disorders.org/clinicaltrialsandresearch"
+      },
+      {
+        "id": "phenotype:HP:0001252",
+        "kind": "phenotype",
+        "label": "Hypotonia",
+        "description": "Disease-level HPO annotation whose original reference resolves to a reviewed paper; not an individual patient's finding.",
+        "source_ids": [
+          "saitsu2008"
+        ],
+        "url": "https://hpo.jax.org/browse/term/HP:0001252"
+      },
+      {
+        "id": "phenotype:HP:0001266",
+        "kind": "phenotype",
+        "label": "Choreoathetosis",
+        "description": "Disease-level HPO annotation whose original reference resolves to a reviewed paper; not an individual patient's finding.",
+        "source_ids": [
+          "saitsu2008"
+        ],
+        "url": "https://hpo.jax.org/browse/term/HP:0001266"
+      },
+      {
+        "id": "phenotype:HP:0001344",
+        "kind": "phenotype",
+        "label": "Absent speech",
+        "description": "Disease-level HPO annotation whose original reference resolves to a reviewed paper; not an individual patient's finding.",
+        "source_ids": [
+          "saitsu2008"
+        ],
+        "url": "https://hpo.jax.org/browse/term/HP:0001344"
+      },
+      {
+        "id": "phenotype:HP:0002059",
+        "kind": "phenotype",
+        "label": "Cerebral atrophy",
+        "description": "Disease-level HPO annotation whose original reference resolves to a reviewed paper; not an individual patient's finding.",
+        "source_ids": [
+          "saitsu2008"
+        ],
+        "url": "https://hpo.jax.org/browse/term/HP:0002059"
+      },
+      {
+        "id": "phenotype:HP:0002069",
+        "kind": "phenotype",
+        "label": "Bilateral tonic-clonic seizure",
+        "description": "Disease-level HPO annotation whose original reference resolves to a reviewed paper; not an individual patient's finding.",
+        "source_ids": [
+          "saitsu2008"
+        ],
+        "url": "https://hpo.jax.org/browse/term/HP:0002069"
+      },
+      {
+        "id": "phenotype:HP:0002079",
+        "kind": "phenotype",
+        "label": "Hypoplasia of the corpus callosum",
+        "description": "Disease-level HPO annotation whose original reference resolves to a reviewed paper; not an individual patient's finding.",
+        "source_ids": [
+          "saitsu2008"
+        ],
+        "url": "https://hpo.jax.org/browse/term/HP:0002079"
+      },
+      {
+        "id": "phenotype:HP:0002187",
+        "kind": "phenotype",
+        "label": "Profound intellectual disability",
+        "description": "Disease-level HPO annotation whose original reference resolves to a reviewed paper; not an individual patient's finding.",
+        "source_ids": [
+          "saitsu2008"
+        ],
+        "url": "https://hpo.jax.org/browse/term/HP:0002187"
+      },
+      {
+        "id": "phenotype:HP:0002188",
+        "kind": "phenotype",
+        "label": "Delayed CNS myelination",
+        "description": "Disease-level HPO annotation whose original reference resolves to a reviewed paper; not an individual patient's finding.",
+        "source_ids": [
+          "saitsu2008"
+        ],
+        "url": "https://hpo.jax.org/browse/term/HP:0002188"
+      },
+      {
+        "id": "phenotype:HP:0002510",
+        "kind": "phenotype",
+        "label": "Spastic tetraplegia",
+        "description": "Disease-level HPO annotation whose original reference resolves to a reviewed paper; not an individual patient's finding.",
+        "source_ids": [
+          "saitsu2008"
+        ],
+        "url": "https://hpo.jax.org/browse/term/HP:0002510"
+      },
+      {
+        "id": "phenotype:HP:0010851",
+        "kind": "phenotype",
+        "label": "EEG with burst suppression",
+        "description": "Disease-level HPO annotation whose original reference resolves to a reviewed paper; not an individual patient's finding.",
+        "source_ids": [
+          "saitsu2008"
+        ],
+        "url": "https://hpo.jax.org/browse/term/HP:0010851"
+      },
+      {
+        "id": "phenotype:HP:0011097",
+        "kind": "phenotype",
+        "label": "Epileptic spasm",
+        "description": "Disease-level HPO annotation whose original reference resolves to a reviewed paper; not an individual patient's finding.",
+        "source_ids": [
+          "saitsu2008"
+        ],
+        "url": "https://hpo.jax.org/browse/term/HP:0011097"
+      },
+      {
+        "id": "phenotype:HP:0011344",
+        "kind": "phenotype",
+        "label": "Severe global developmental delay",
+        "description": "Disease-level HPO annotation whose original reference resolves to a reviewed paper; not an individual patient's finding.",
+        "source_ids": [
+          "saitsu2008"
+        ],
+        "url": "https://hpo.jax.org/browse/term/HP:0011344"
+      },
+      {
+        "id": "phenotype:HP:0200134",
+        "kind": "phenotype",
+        "label": "Epileptic encephalopathy",
+        "description": "Disease-level HPO annotation whose original reference resolves to a reviewed paper; not an individual patient's finding.",
+        "source_ids": [
+          "saitsu2008"
+        ],
+        "url": "https://hpo.jax.org/browse/term/HP:0200134"
+      },
+      {
+        "id": "research_asset:asset:4ab775bc3d49a54e",
+        "kind": "research_asset",
+        "label": "Published Munc18-1 neuronal and worm models",
+        "description": "Published missense-model methods can inform replication. This entry establishes a publication, not ownership or material availability. Access: Public methods; procurement, permissions and present availability unverified.",
+        "source_ids": [
+          "abramov2021",
+          "guiberson2018"
+        ],
+        "url": "https://www.nature.com/articles/s41467-018-06507-4"
+      },
+      {
+        "id": "research_asset:source:burre-profile",
+        "kind": "research_asset",
+        "label": "Weill Cornell institutional profile: Jacqueline Burre",
+        "description": "Public identity and selected-publication links reviewed 2026-10-04. Jacqueline Burre is a coauthor of the chemical-chaperone and targeted-chaperone reports. Authorship is not a collaboration, material-access, contact or availability determination.",
+        "source_ids": [
+          "burre-profile"
+        ],
+        "url": "https://vivo.weill.cornell.edu/display/cwid-jab2058"
+      },
+      {
+        "id": "research_asset:source:capsida2026",
+        "kind": "research_asset",
+        "label": "Capsida (11 May 2026): CAP-002 Program Update: A Letter to the STXBP1 Community",
+        "description": "Sponsor statement dated 2026-05-11 reports a participant death in September 2025, cerebral edema and trial closure; the underlying reason was not identified. Sponsor reporting is not an independently adjudicated causal mechanism or a universal gene-therapy risk estimate.",
+        "source_ids": [
+          "capsida2026"
+        ],
+        "url": "https://capsida.com/stx-community-letter-5-9-2026/"
+      },
+      {
+        "id": "research_asset:source:keppra-label",
+        "kind": "research_asset",
+        "label": "DailyMed: KEPPRA (levetiracetam) prescribing information",
+        "description": "Immediate-release label: SV2A pharmacology, behavioral/serious adverse effects, renal clearance, studied interactions. Does not establish disease modification.",
+        "source_ids": [
+          "keppra-label"
+        ],
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ca9df05-a506-4ec8-a4fe-320f1219ab21"
+      },
+      {
+        "id": "research_asset:source:ravicti-label",
+        "kind": "research_asset",
+        "label": "DailyMed: RAVICTI (glycerol phenylbutyrate) prescribing information",
+        "description": "Label revised September 2025; urea-cycle indication, metabolism, warnings and interactions. Approval does not establish STXBP1 benefit.",
+        "source_ids": [
+          "ravicti-label"
+        ],
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=900e7dc0-9afe-4f50-80de-90567bb78519"
+      },
+      {
+        "id": "variant:reported:abramov2021:G544D",
+        "kind": "variant",
+        "label": "G544D (reported example)",
+        "description": "Exact variant label in a reviewed publication excerpt. Source context applies; this is not the entered variant or an individual classification.",
+        "source_ids": [
+          "abramov2021"
+        ],
+        "url": "https://link.springer.com/article/10.15252/emmm.202012354"
+      },
+      {
+        "id": "variant:reported:lammertse2020:L446F",
+        "kind": "variant",
+        "label": "L446F (reported example)",
+        "description": "Exact variant label in a reviewed publication excerpt. Source context applies; this is not the entered variant or an individual classification.",
+        "source_ids": [
+          "lammertse2020"
+        ],
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7009479/"
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge:09944d79d01da021",
+        "source": "phenotype:HP:0011344",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:101cc8d4bd162233",
+        "source": "gene:STXBP1",
+        "target": "variant:reported:lammertse2020:L446F",
+        "relationship_type": "reported_variant_example",
+        "claim": {
+          "summary": "the homozygous L446F mutation causes a gain-of-function phenotype regarding release probability and synaptic transmission",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "lammertse2020"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Reported experimental evidence applies to the cited model, genotype and exposure; human translation remains unestablished.",
+        "assertion": "observed",
+        "scope": "Reported literature example only; preserve the cited genotype/model and do not transfer its function to the entered variant. [lammertse2020] Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:13e42554edf87210",
+        "source": "disease:MONDO:0012812",
+        "target": "disease:MONDO:0033372",
+        "relationship_type": "shared_research_mechanism",
+        "claim": {
+          "summary": "Complexin-1 and Munc18-1 both participate in presynaptic SNARE/vesicle-release regulation; this is a pathway connection.",
+          "evidence_type": "mechanistic_inference",
+          "source_ids": [
+            "karaca2015",
+            "redler2017",
+            "lammertse2020"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Cited differences or limiting findings constrain interpretation; differing cohorts and endpoints do not by themselves disprove another study.",
+        "assertion": "inferred",
+        "scope": "Compare assay methods and outcome concepts; shared pathways do not establish shared treatment response, dosing or eligibility. [karaca2015] Two siblings with homozygous CPLX1 nonsense p.E108X, epilepsy and cortical atrophy within a rare-variant family study. DOI 10.1016/j.neuron.2015.09.048; PMID 26539891. Genetic association and protein-function background, not a treatment or variant-function assay. [lammertse2020] Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function. [redler2017] Three affected individuals with homozygous CPLX1 variants; mechanistic background is contextual, not a treatment study. DOI 10.1038/ejhg.2017.52; PMID 28422131.",
+        "contradictions": [
+          {
+            "summary": "Karaca and Redler report recessive homozygous CPLX1 variants in specific families; original STXBP1 cases included heterozygous/de novo disease, with later functional exceptions. These are reported contexts, not a count of all known cases.",
+            "evidence_type": "human_observational",
+            "source_ids": [
+              "karaca2015",
+              "redler2017",
+              "saitsu2008",
+              "lammertse2020"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "edge:16bf5aa96b633705",
+        "source": "phenotype:HP:0001266",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:190e2ef82952b422",
+        "source": "disease:MONDO:0012812",
+        "target": "gene:STXBP1",
+        "relationship_type": "reviewed_gene_association",
+        "claim": {
+          "summary": "The existing atlas associates STXBP1 with STXBP1-related disorders; reviewed disease references provide the context.",
+          "evidence_type": "disease_reference",
+          "source_ids": [
+            "saitsu2008",
+            "xian2023"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "An existing atlas gene/disease association is anchored to reviewed disease references; no new causal or clinical validation was performed.",
+        "assertion": "observed",
+        "scope": "Disease-level atlas association; not a patient finding or variant-effect assignment. [saitsu2008] Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations. [xian2023] Published Brain cohort, not its preprint. PMID 38015929; DOI 10.1093/brain/awad287. Medication-response reconstruction in 61 individuals.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:199ab53c5ed6449d",
+        "source": "investigator:asset:1a815be80e4ff25f",
+        "target": "paper:source:guiberson2018",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Selected missense models; primary mouse neurons and worms. DOI 10.1038/s41467-018-06507-4; PMID 30266908. No human efficacy test.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "guiberson2018"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Selected missense models; primary mouse neurons and worms. DOI 10.1038/s41467-018-06507-4; PMID 30266908. No human efficacy test.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:1afd39751b722753",
+        "source": "disease:MONDO:0012812",
+        "target": "patient_organisation:asset:30ecdbd8066b5360",
+        "relationship_type": "listed_patient_organisation",
+        "claim": {
+          "summary": "Official community research directory linking published studies and registries.",
+          "evidence_type": "official_resource",
+          "source_ids": [
+            "stxbp1-foundation"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "A dated official resource documents identity or study context; status, eligibility and access require confirmation.",
+        "assertion": "observed",
+        "scope": "Public information reviewed 2026-10-04; no contact, collaboration or data access established. Identity or documented resource context only; no availability, efficacy or access is assumed. [stxbp1-foundation] Official research directory identifies STARR and ESCO; resource availability does not establish collaboration or access.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:21e709ca28a7dec6",
+        "source": "candidate:stxbp1-compound-13",
+        "target": "mechanism:efcb6a5e1b52c76b",
+        "relationship_type": "reviewed_mechanism_alignment",
+        "claim": {
+          "summary": "Direct Munc18-1 binding offers a mechanistic laboratory comparator.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "abramov2021"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Cited differences or limiting findings constrain interpretation; differing cohorts and endpoints do not by themselves disprove another study.",
+        "assertion": "inferred",
+        "scope": "Curated research alignment; not demonstrated clinical target rescue or individual compatibility. [abramov2021] Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+        "contradictions": [
+          {
+            "summary": "Model and variant limits to interpretation: Functional effects depend on variant, genotype and model. Selected missense models show instability/coaggregation; another heterozygous-background assay detected no dominant-negative functional effect. Homozygous L446F increased evoked transmission. No individual's functional direction is inferred.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "guiberson2018",
+              "kovacevic2018",
+              "lammertse2020"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "edge:246551fb304e15bd",
+        "source": "phenotype:HP:0002188",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:2869c35ff2c9ce6f",
+        "source": "research_asset:asset:4ab775bc3d49a54e",
+        "target": "paper:source:guiberson2018",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Selected missense models; primary mouse neurons and worms. DOI 10.1038/s41467-018-06507-4; PMID 30266908. No human efficacy test.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "guiberson2018"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Selected missense models; primary mouse neurons and worms. DOI 10.1038/s41467-018-06507-4; PMID 30266908. No human efficacy test.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:2883276ee92508ef",
+        "source": "gene:STXBP1",
+        "target": "variant:reported:abramov2021:G544D",
+        "relationship_type": "reported_variant_example",
+        "claim": {
+          "summary": "We found compounds 9 and 13 to significantly increase mean firing frequency in G544D Munc18‐1 neurons",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "abramov2021"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Reported experimental evidence applies to the cited model, genotype and exposure; human translation remains unestablished.",
+        "assertion": "observed",
+        "scope": "Reported literature example only; preserve the cited genotype/model and do not transfer its function to the entered variant. [abramov2021] Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:2b1cc0df5676e22d",
+        "source": "pathway:efcb6a5e1b52c76b",
+        "target": "paper:source:chen2020",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Two Stxbp1 haploinsufficient mouse models; cortical inhibitory synapses and network/behavioral phenotypes. Supports model-specific GABAergic dysfunction, not a universal pathway effect or treatment response. DOI 10.7554/eLife.48705; PMID 32073399.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "chen2020"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Two Stxbp1 haploinsufficient mouse models; cortical inhibitory synapses and network/behavioral phenotypes. Supports model-specific GABAergic dysfunction, not a universal pathway effect or treatment response. DOI 10.7554/eLife.48705; PMID 32073399.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:2d382f12bfb1cd8d",
+        "source": "disease:MONDO:0012812",
+        "target": "phenotype:HP:0001266",
+        "relationship_type": "annotated_phenotype",
+        "claim": {
+          "summary": "The existing atlas records Choreoathetosis as a phenotype annotation for this disease context.",
+          "evidence_type": "disease_reference",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "The original HPO annotation cites a reviewed reference; annotation evidence and frequency do not establish an individual finding or a therapeutic response.",
+        "assertion": "observed",
+        "scope": "Original HPO disease annotation; reference(s): PMID:18469812. No new phenotype validation or patient inference. [saitsu2008] Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:309c251204fa8815",
+        "source": "gene:STXBP1",
+        "target": "mechanism:efcb6a5e1b52c76b",
+        "relationship_type": "reviewed_functional_mechanism",
+        "claim": {
+          "summary": "STXBP1 encodes Munc18-1, a presynaptic release regulator. Haploinsufficient mouse models link reduced cortical inhibition to hyperexcitability; selected missense and homozygous models show different functional effects.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "saitsu2008",
+            "kovacevic2018",
+            "chen2020",
+            "lammertse2020"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Cited differences or limiting findings constrain interpretation; differing cohorts and endpoints do not by themselves disprove another study.",
+        "assertion": "observed",
+        "scope": "Reviewed disease context; model evidence does not classify the entered variant. [chen2020] Two Stxbp1 haploinsufficient mouse models; cortical inhibitory synapses and network/behavioral phenotypes. Supports model-specific GABAergic dysfunction, not a universal pathway effect or treatment response. DOI 10.7554/eLife.48705; PMID 32073399. [kovacevic2018] Allelic series and Stxbp1 mouse models. Levetiracetam reduced spike-wave discharges after acute and five-day treatment in Stxbp1+/- mice; symptomatic ECoG endpoint, not human efficacy or Munc18-1 repair. Overexpression on a heterozygous neuronal background had no detectable functional effect. DOI 10.1093/brain/awy046; PMID 29538625. [lammertse2020] Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function. [saitsu2008] Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": [
+          {
+            "summary": "Model and variant limits to interpretation: Functional effects depend on variant, genotype and model. Selected missense models show instability/coaggregation; another heterozygous-background assay detected no dominant-negative functional effect. Homozygous L446F increased evoked transmission. No individual's functional direction is inferred.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "guiberson2018",
+              "kovacevic2018",
+              "lammertse2020"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "edge:3265d118d4cc56a7",
+        "source": "candidate:stxbp1-phenylbutyrate",
+        "target": "mechanism:efcb6a5e1b52c76b",
+        "relationship_type": "reviewed_mechanism_alignment",
+        "claim": {
+          "summary": "Protein-stabilization fits the selected missense model's proteostasis deficit.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "guiberson2018"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Cited differences or limiting findings constrain interpretation; differing cohorts and endpoints do not by themselves disprove another study.",
+        "assertion": "inferred",
+        "scope": "Curated research alignment; not demonstrated clinical target rescue or individual compatibility. [guiberson2018] Selected missense models; primary mouse neurons and worms. DOI 10.1038/s41467-018-06507-4; PMID 30266908. No human efficacy test.",
+        "contradictions": [
+          {
+            "summary": "Model and variant limits to interpretation: Functional effects depend on variant, genotype and model. Selected missense models show instability/coaggregation; another heterozygous-background assay detected no dominant-negative functional effect. Homozygous L446F increased evoked transmission. No individual's functional direction is inferred.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "guiberson2018",
+              "kovacevic2018",
+              "lammertse2020"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "edge:38be65081c618679",
+        "source": "phenotype:HP:0002069",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:3d3f71b8f2570b99",
+        "source": "phenotype:HP:0011097",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:3db5c864a81e898f",
+        "source": "disease:MONDO:0012812",
+        "target": "phenotype:HP:0002187",
+        "relationship_type": "annotated_phenotype",
+        "claim": {
+          "summary": "The existing atlas records Profound intellectual disability as a phenotype annotation for this disease context.",
+          "evidence_type": "disease_reference",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "The original HPO annotation cites a reviewed reference; annotation evidence and frequency do not establish an individual finding or a therapeutic response.",
+        "assertion": "observed",
+        "scope": "Original HPO disease annotation; reference(s): PMID:18469812. No new phenotype validation or patient inference. [saitsu2008] Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:3e6cc3c750703f9d",
+        "source": "disease:MONDO:0012812",
+        "target": "phenotype:HP:0002079",
+        "relationship_type": "annotated_phenotype",
+        "claim": {
+          "summary": "The existing atlas records Hypoplasia of the corpus callosum as a phenotype annotation for this disease context.",
+          "evidence_type": "disease_reference",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "The original HPO annotation cites a reviewed reference; annotation evidence and frequency do not establish an individual finding or a therapeutic response.",
+        "assertion": "observed",
+        "scope": "Original HPO disease annotation; reference(s): PMID:18469812. No new phenotype validation or patient inference. [saitsu2008] Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:3ea7f278b87ab934",
+        "source": "disease:MONDO:0033372",
+        "target": "paper:source:redler2017",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Three affected individuals with homozygous CPLX1 variants; mechanistic background is contextual, not a treatment study. DOI 10.1038/ejhg.2017.52; PMID 28422131.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "redler2017"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Three affected individuals with homozygous CPLX1 variants; mechanistic background is contextual, not a treatment study. DOI 10.1038/ejhg.2017.52; PMID 28422131.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:40859e2df1af79cc",
+        "source": "gene:CPLX1",
+        "target": "paper:source:redler2017",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Three affected individuals with homozygous CPLX1 variants; mechanistic background is contextual, not a treatment study. DOI 10.1038/ejhg.2017.52; PMID 28422131.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "redler2017"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Three affected individuals with homozygous CPLX1 variants; mechanistic background is contextual, not a treatment study. DOI 10.1038/ejhg.2017.52; PMID 28422131.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:41bf234029f56599",
+        "source": "phenotype:HP:0001344",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:428b4d08db702478",
+        "source": "phenotype:HP:0001252",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:44dbe6b1b5e94d18",
+        "source": "phenotype:HP:0002510",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:48d8664f47d89910",
+        "source": "phenotype:HP:0002059",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:49dbace5b738d92b",
+        "source": "gene:STXBP1",
+        "target": "paper:source:xian2023",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Published Brain cohort, not its preprint. PMID 38015929; DOI 10.1093/brain/awad287. Medication-response reconstruction in 61 individuals.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "xian2023"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Published Brain cohort, not its preprint. PMID 38015929; DOI 10.1093/brain/awad287. Medication-response reconstruction in 61 individuals.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:4a69bdd3ed677500",
+        "source": "disease:MONDO:0012812",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:4e1f680cf96ec2e8",
+        "source": "candidate:stxbp1-levetiracetam",
+        "target": "paper:source:lammertse2020",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "lammertse2020"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:4ee150a4b50a9307",
+        "source": "candidate:stxbp1-levetiracetam",
+        "target": "research_asset:source:keppra-label",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Immediate-release label: SV2A pharmacology, behavioral/serious adverse effects, renal clearance, studied interactions. Does not establish disease modification.",
+          "evidence_type": "regulatory_label",
+          "source_ids": [
+            "keppra-label"
+          ]
+        },
+        "confidence": "strong",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Immediate-release label: SV2A pharmacology, behavioral/serious adverse effects, renal clearance, studied interactions. Does not establish disease modification.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:4f93cf55541034e9",
+        "source": "disease:MONDO:0012812",
+        "target": "clinical_study:asset:66d7a9f661e2e544",
+        "relationship_type": "registered_study_context",
+        "claim": {
+          "summary": "Glycerol phenylbutyrate early-phase open-label pilot; registration supports study existence, not efficacy. No results posted in this registry.",
+          "evidence_type": "trial_registry",
+          "source_ids": [
+            "nct04937062"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "A dated official resource documents identity or study context; status, eligibility and access require confirmation.",
+        "assertion": "observed",
+        "scope": "ACTIVE_NOT_RECRUITING; last posted 2026-01-22, checked 2026-10-04. Published observational findings are separately cited. Identity or documented resource context only; no availability, efficacy or access is assumed. [nct04937062] Official API checked 2026-10-04; last update posted 2026-01-22. ACTIVE_NOT_RECRUITING; early phase 1, open label; hasResults=false. Published observations are separate.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:506a7cf9e2b27d54",
+        "source": "clinical_study:asset:0b753c7658bf32a3",
+        "target": "patient_organisation:asset:30ecdbd8066b5360",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Official research directory identifies STARR and ESCO; resource availability does not establish collaboration or access.",
+          "evidence_type": "official_resource",
+          "source_ids": [
+            "stxbp1-foundation"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Official research directory identifies STARR and ESCO; resource availability does not establish collaboration or access.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:51cdfddff80c6257",
+        "source": "disease:MONDO:0012812",
+        "target": "investigator:asset:1a815be80e4ff25f",
+        "relationship_type": "documented_investigator_identity",
+        "claim": {
+          "summary": "Coauthor of the 2018 chemical-chaperone and 2021 targeted-chaperone reports; public identity verified in an institutional profile.",
+          "evidence_type": "official_resource",
+          "source_ids": [
+            "guiberson2018",
+            "abramov2021",
+            "burre-profile"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "A dated official resource documents identity or study context; status, eligibility and access require confirmation.",
+        "assertion": "observed",
+        "scope": "Public authorship identity reviewed 2026-10-04; no outreach, partnership, present availability or material/data access established. Identity or documented resource context only; no availability, efficacy or access is assumed. [abramov2021] Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17. [burre-profile] Public identity and selected-publication links reviewed 2026-10-04. Jacqueline Burre is a coauthor of the chemical-chaperone and targeted-chaperone reports. Authorship is not a collaboration, material-access, contact or availability determination. [guiberson2018] Selected missense models; primary mouse neurons and worms. DOI 10.1038/s41467-018-06507-4; PMID 30266908. No human efficacy test.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:57b5415b1afe3299",
+        "source": "pathway:efcb6a5e1b52c76b",
+        "target": "paper:source:lammertse2020",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "lammertse2020"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:59a8987905c01479",
+        "source": "candidate:stxbp1-levetiracetam",
+        "target": "disease:MONDO:0012812",
+        "relationship_type": "preclinical_model_evidence",
+        "claim": {
+          "summary": "Acute and five-day levetiracetam treatment reduced cortical spike-wave discharges in Stxbp1+/- mice. This is one model's symptomatic ECoG endpoint, not evidence of Munc18-1 restoration.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "kovacevic2018"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Reported experimental evidence applies to the cited model, genotype and exposure; human translation remains unestablished.",
+        "assertion": "observed",
+        "scope": "Cited study observations in their original scope; no causal efficacy, uniform response or cross-disease transfer is asserted. [kovacevic2018] Allelic series and Stxbp1 mouse models. Levetiracetam reduced spike-wave discharges after acute and five-day treatment in Stxbp1+/- mice; symptomatic ECoG endpoint, not human efficacy or Munc18-1 repair. Overexpression on a heterozygous neuronal background had no detectable functional effect. DOI 10.1093/brain/awy046; PMID 29538625.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:5a6395c4b355f43d",
+        "source": "candidate:stxbp1-phenylbutyrate",
+        "target": "paper:source:abramov2021",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "abramov2021"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:5dd9570f5d2dc70b",
+        "source": "phenotype:HP:0002079",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:5e6487472179a2a6",
+        "source": "candidate:stxbp1-levetiracetam",
+        "target": "paper:source:xian2023",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Published Brain cohort, not its preprint. PMID 38015929; DOI 10.1093/brain/awad287. Medication-response reconstruction in 61 individuals.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "xian2023"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Published Brain cohort, not its preprint. PMID 38015929; DOI 10.1093/brain/awad287. Medication-response reconstruction in 61 individuals.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:60e63dd82c78b1aa",
+        "source": "disease:MONDO:0012812",
+        "target": "phenotype:HP:0010851",
+        "relationship_type": "annotated_phenotype",
+        "claim": {
+          "summary": "The existing atlas records EEG with burst suppression as a phenotype annotation for this disease context.",
+          "evidence_type": "disease_reference",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "The original HPO annotation cites a reviewed reference; annotation evidence and frequency do not establish an individual finding or a therapeutic response.",
+        "assertion": "observed",
+        "scope": "Original HPO disease annotation; reference(s): PMID:18469812. No new phenotype validation or patient inference. [saitsu2008] Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:653698726e2dd04f",
+        "source": "disease:MONDO:0012812",
+        "target": "phenotype:HP:0011344",
+        "relationship_type": "annotated_phenotype",
+        "claim": {
+          "summary": "The existing atlas records Severe global developmental delay as a phenotype annotation for this disease context.",
+          "evidence_type": "disease_reference",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "The original HPO annotation cites a reviewed reference; annotation evidence and frequency do not establish an individual finding or a therapeutic response.",
+        "assertion": "observed",
+        "scope": "Original HPO disease annotation; reference(s): PMID:18469812. No new phenotype validation or patient inference. [saitsu2008] Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:656408333d7b5b89",
+        "source": "mechanism:efcb6a5e1b52c76b",
+        "target": "paper:source:lammertse2020",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "lammertse2020"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:6d89bf404e18990d",
+        "source": "variant:reported:lammertse2020:L446F",
+        "target": "paper:source:lammertse2020",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "lammertse2020"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:6e8b5c0ffe6df196",
+        "source": "clinical_study:asset:21ebc84b28c8b406",
+        "target": "patient_organisation:asset:30ecdbd8066b5360",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Official research directory identifies STARR and ESCO; resource availability does not establish collaboration or access.",
+          "evidence_type": "official_resource",
+          "source_ids": [
+            "stxbp1-foundation"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Official research directory identifies STARR and ESCO; resource availability does not establish collaboration or access.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:6eeea8209c0d55c6",
+        "source": "candidate:stxbp1-compound-13",
+        "target": "paper:source:abramov2021",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "abramov2021"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:72949463ea448ac0",
+        "source": "candidate:stxbp1-phenylbutyrate",
+        "target": "disease:MONDO:0012812",
+        "relationship_type": "preclinical_model_evidence",
+        "claim": {
+          "summary": "4-PBA improved protein solubility and synaptic readouts in selected neuronal and worm models.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "guiberson2018"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Reported experimental evidence applies to the cited model, genotype and exposure; human translation remains unestablished.",
+        "assertion": "observed",
+        "scope": "Cited study observations in their original scope; no causal efficacy, uniform response or cross-disease transfer is asserted. [guiberson2018] Selected missense models; primary mouse neurons and worms. DOI 10.1038/s41467-018-06507-4; PMID 30266908. No human efficacy test.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:73bd2659e0d8fa95",
+        "source": "candidate:stxbp1-phenylbutyrate",
+        "target": "paper:source:guiberson2018",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Selected missense models; primary mouse neurons and worms. DOI 10.1038/s41467-018-06507-4; PMID 30266908. No human efficacy test.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "guiberson2018"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Selected missense models; primary mouse neurons and worms. DOI 10.1038/s41467-018-06507-4; PMID 30266908. No human efficacy test.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:73f83964b68f8be6",
+        "source": "candidate:stxbp1-phenylbutyrate",
+        "target": "paper:source:barbour2026",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Uncontrolled interviews: 18 children, 13 STXBP1. Primarily glycerol formulation; one sodium exposure. PMID 42447769; DOI 10.1016/j.pediatrneurol.2026.06.012; online 2026-06-20.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "barbour2026"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Uncontrolled interviews: 18 children, 13 STXBP1. Primarily glycerol formulation; one sodium exposure. PMID 42447769; DOI 10.1016/j.pediatrneurol.2026.06.012; online 2026-06-20.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:7597121e471b9c4c",
+        "source": "candidate:stxbp1-levetiracetam",
+        "target": "paper:source:wang2022",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Non-randomized cohort: 40 enrolled, medication histories in 37. DOI 10.1016/j.seizure.2021.12.006; no treatment-assignment intervention.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "wang2022"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Non-randomized cohort: 40 enrolled, medication histories in 37. DOI 10.1016/j.seizure.2021.12.006; no treatment-assignment intervention.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:7657b010898edcf6",
+        "source": "mechanism:efcb6a5e1b52c76b",
+        "target": "paper:source:kovacevic2018",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Allelic series and Stxbp1 mouse models. Levetiracetam reduced spike-wave discharges after acute and five-day treatment in Stxbp1+/- mice; symptomatic ECoG endpoint, not human efficacy or Munc18-1 repair. Overexpression on a heterozygous neuronal background had no detectable functional effect. DOI 10.1093/brain/awy046; PMID 29538625.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "kovacevic2018"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Allelic series and Stxbp1 mouse models. Levetiracetam reduced spike-wave discharges after acute and five-day treatment in Stxbp1+/- mice; symptomatic ECoG endpoint, not human efficacy or Munc18-1 repair. Overexpression on a heterozygous neuronal background had no detectable functional effect. DOI 10.1093/brain/awy046; PMID 29538625.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:770af9ed8be230f9",
+        "source": "disease:MONDO:0012812",
+        "target": "phenotype:HP:0001344",
+        "relationship_type": "annotated_phenotype",
+        "claim": {
+          "summary": "The existing atlas records Absent speech as a phenotype annotation for this disease context.",
+          "evidence_type": "disease_reference",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "The original HPO annotation cites a reviewed reference; annotation evidence and frequency do not establish an individual finding or a therapeutic response.",
+        "assertion": "observed",
+        "scope": "Original HPO disease annotation; reference(s): PMID:18469812. No new phenotype validation or patient inference. [saitsu2008] Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:7cab78ce592034ea",
+        "source": "disease:MONDO:0012812",
+        "target": "phenotype:HP:0002188",
+        "relationship_type": "annotated_phenotype",
+        "claim": {
+          "summary": "The existing atlas records Delayed CNS myelination as a phenotype annotation for this disease context.",
+          "evidence_type": "disease_reference",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "The original HPO annotation cites a reviewed reference; annotation evidence and frequency do not establish an individual finding or a therapeutic response.",
+        "assertion": "observed",
+        "scope": "Original HPO disease annotation; reference(s): PMID:18469812. No new phenotype validation or patient inference. [saitsu2008] Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:7dc97365c899e5f4",
+        "source": "disease:MONDO:0012812",
+        "target": "clinical_study:asset:0b753c7658bf32a3",
+        "relationship_type": "registered_study_context",
+        "claim": {
+          "summary": "European STXBP1 Consortium observational effort for natural history, outcomes and trial readiness.",
+          "evidence_type": "trial_registry",
+          "source_ids": [
+            "stxbp1-foundation",
+            "nct06625112"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "A dated official resource documents identity or study context; status, eligibility and access require confirmation.",
+        "assertion": "observed",
+        "scope": "Registry lists RECRUITING; last posted 2026-02-06, checked 2026-10-04. No collaboration, biobank access or eligibility established. Identity or documented resource context only; no availability, efficacy or access is assumed. [nct06625112] Official API checked 2026-10-04; last update posted 2026-02-06. RECRUITING; observational registry; hasResults=false. Sponsor: European STXBP1 Consortium. [stxbp1-foundation] Official research directory identifies STARR and ESCO; resource availability does not establish collaboration or access.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:7e0e37e7ec944766",
+        "source": "candidate:stxbp1-levetiracetam",
+        "target": "mechanism:efcb6a5e1b52c76b",
+        "relationship_type": "reviewed_mechanism_alignment",
+        "claim": {
+          "summary": "Shared synaptic context supports limited symptomatic relevance, not protein stabilization.",
+          "evidence_type": "mechanistic_inference",
+          "source_ids": [
+            "keppra-label",
+            "lammertse2020"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Cited differences or limiting findings constrain interpretation; differing cohorts and endpoints do not by themselves disprove another study.",
+        "assertion": "inferred",
+        "scope": "Curated research alignment; not demonstrated clinical target rescue or individual compatibility. [keppra-label] Immediate-release label: SV2A pharmacology, behavioral/serious adverse effects, renal clearance, studied interactions. Does not establish disease modification. [lammertse2020] Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+        "contradictions": [
+          {
+            "summary": "Model and variant limits to interpretation: Functional effects depend on variant, genotype and model. Selected missense models show instability/coaggregation; another heterozygous-background assay detected no dominant-negative functional effect. Homozygous L446F increased evoked transmission. No individual's functional direction is inferred.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "guiberson2018",
+              "kovacevic2018",
+              "lammertse2020"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "edge:819ca8333c6c63da",
+        "source": "clinical_study:asset:b5d2556339037b66",
+        "target": "research_asset:source:capsida2026",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Sponsor statement dated 2026-05-11 reports a participant death in September 2025, cerebral edema and trial closure; the underlying reason was not identified. Sponsor reporting is not an independently adjudicated causal mechanism or a universal gene-therapy risk estimate.",
+          "evidence_type": "official_resource",
+          "source_ids": [
+            "capsida2026"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Sponsor statement dated 2026-05-11 reports a participant death in September 2025, cerebral edema and trial closure; the underlying reason was not identified. Sponsor reporting is not an independently adjudicated causal mechanism or a universal gene-therapy risk estimate.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:89773a5d65d5daf4",
+        "source": "candidate:stxbp1-phenylbutyrate",
+        "target": "research_asset:source:ravicti-label",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Label revised September 2025; urea-cycle indication, metabolism, warnings and interactions. Approval does not establish STXBP1 benefit.",
+          "evidence_type": "regulatory_label",
+          "source_ids": [
+            "ravicti-label"
+          ]
+        },
+        "confidence": "strong",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Label revised September 2025; urea-cycle indication, metabolism, warnings and interactions. Approval does not establish STXBP1 benefit.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:91611c53fbd0429b",
+        "source": "disease:MONDO:0012812",
+        "target": "phenotype:HP:0002069",
+        "relationship_type": "annotated_phenotype",
+        "claim": {
+          "summary": "The existing atlas records Bilateral tonic-clonic seizure as a phenotype annotation for this disease context.",
+          "evidence_type": "disease_reference",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "The original HPO annotation cites a reviewed reference; annotation evidence and frequency do not establish an individual finding or a therapeutic response.",
+        "assertion": "observed",
+        "scope": "Original HPO disease annotation; reference(s): PMID:18469812. No new phenotype validation or patient inference. [saitsu2008] Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:96145b389fd16b11",
+        "source": "investigator:asset:1a815be80e4ff25f",
+        "target": "research_asset:source:burre-profile",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Public identity and selected-publication links reviewed 2026-10-04. Jacqueline Burre is a coauthor of the chemical-chaperone and targeted-chaperone reports. Authorship is not a collaboration, material-access, contact or availability determination.",
+          "evidence_type": "official_resource",
+          "source_ids": [
+            "burre-profile"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Public identity and selected-publication links reviewed 2026-10-04. Jacqueline Burre is a coauthor of the chemical-chaperone and targeted-chaperone reports. Authorship is not a collaboration, material-access, contact or availability determination.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:a1be51bea5fe33cc",
+        "source": "candidate:stxbp1-phenylbutyrate",
+        "target": "paper:source:lammertse2020",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "lammertse2020"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:a3e9c44db382b90a",
+        "source": "investigator:asset:1a815be80e4ff25f",
+        "target": "paper:source:abramov2021",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "abramov2021"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:a545a1aaa739c6db",
+        "source": "gene:CPLX1",
+        "target": "paper:source:karaca2015",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Two siblings with homozygous CPLX1 nonsense p.E108X, epilepsy and cortical atrophy within a rare-variant family study. DOI 10.1016/j.neuron.2015.09.048; PMID 26539891. Genetic association and protein-function background, not a treatment or variant-function assay.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "karaca2015"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Two siblings with homozygous CPLX1 nonsense p.E108X, epilepsy and cortical atrophy within a rare-variant family study. DOI 10.1016/j.neuron.2015.09.048; PMID 26539891. Genetic association and protein-function background, not a treatment or variant-function assay.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:aac65e6dca4c73bf",
+        "source": "disease:MONDO:0012812",
+        "target": "paper:source:xian2023",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Published Brain cohort, not its preprint. PMID 38015929; DOI 10.1093/brain/awad287. Medication-response reconstruction in 61 individuals.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "xian2023"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Published Brain cohort, not its preprint. PMID 38015929; DOI 10.1093/brain/awad287. Medication-response reconstruction in 61 individuals.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:b0d1d7220990b3eb",
+        "source": "gene:CPLX1",
+        "target": "pathway:efcb6a5e1b52c76b",
+        "relationship_type": "shared_research_mechanism",
+        "claim": {
+          "summary": "Complexin-1 and Munc18-1 both participate in presynaptic SNARE/vesicle-release regulation; this is a pathway connection.",
+          "evidence_type": "mechanistic_inference",
+          "source_ids": [
+            "karaca2015",
+            "redler2017",
+            "lammertse2020"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Cited differences or limiting findings constrain interpretation; differing cohorts and endpoints do not by themselves disprove another study.",
+        "assertion": "inferred",
+        "scope": "Shared research context only. Compare assay methods and outcome concepts; shared pathways do not establish shared treatment response, dosing or eligibility. [karaca2015] Two siblings with homozygous CPLX1 nonsense p.E108X, epilepsy and cortical atrophy within a rare-variant family study. DOI 10.1016/j.neuron.2015.09.048; PMID 26539891. Genetic association and protein-function background, not a treatment or variant-function assay. [lammertse2020] Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function. [redler2017] Three affected individuals with homozygous CPLX1 variants; mechanistic background is contextual, not a treatment study. DOI 10.1038/ejhg.2017.52; PMID 28422131.",
+        "contradictions": [
+          {
+            "summary": "Karaca and Redler report recessive homozygous CPLX1 variants in specific families; original STXBP1 cases included heterozygous/de novo disease, with later functional exceptions. These are reported contexts, not a count of all known cases.",
+            "evidence_type": "human_observational",
+            "source_ids": [
+              "karaca2015",
+              "redler2017",
+              "saitsu2008",
+              "lammertse2020"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "edge:b2f1f7d0efe2601a",
+        "source": "mechanism:efcb6a5e1b52c76b",
+        "target": "paper:source:chen2020",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Two Stxbp1 haploinsufficient mouse models; cortical inhibitory synapses and network/behavioral phenotypes. Supports model-specific GABAergic dysfunction, not a universal pathway effect or treatment response. DOI 10.7554/eLife.48705; PMID 32073399.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "chen2020"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Two Stxbp1 haploinsufficient mouse models; cortical inhibitory synapses and network/behavioral phenotypes. Supports model-specific GABAergic dysfunction, not a universal pathway effect or treatment response. DOI 10.7554/eLife.48705; PMID 32073399.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:b811403756ffce9d",
+        "source": "gene:STXBP1",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:b889fabcc0932b4c",
+        "source": "disease:MONDO:0012812",
+        "target": "clinical_study:asset:b5d2556339037b66",
+        "relationship_type": "registered_study_context",
+        "claim": {
+          "summary": "Historical gene-therapy study. The current registry lists termination; the sponsor reports trial closure after a participant death with underlying cause unresolved. No clinical efficacy or available enrollment is inferred.",
+          "evidence_type": "trial_registry",
+          "source_ids": [
+            "nct06983158",
+            "capsida2026"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "A dated official resource documents identity or study context; status, eligibility and access require confirmation.",
+        "assertion": "observed",
+        "scope": "TERMINATED; last registry update posted 2026-06-10, checked 2026-10-04. Historical safety context; no contact, eligibility or access determination. Identity or documented resource context only; no availability, efficacy or access is assumed. [capsida2026] Sponsor statement dated 2026-05-11 reports a participant death in September 2025, cerebral edema and trial closure; the underlying reason was not identified. Sponsor reporting is not an independently adjudicated causal mechanism or a universal gene-therapy risk estimate. [nct06983158] Official API checked 2026-10-04; last update posted 2026-06-10. TERMINATED; stopping rule met; actual enrollment 1; hasResults=false. Historical study and safety context, not an available trial or demonstrated efficacy.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:bdddc94e49bd7856",
+        "source": "mechanism:efcb6a5e1b52c76b",
+        "target": "pathway:efcb6a5e1b52c76b",
+        "relationship_type": "reviewed_pathway_context",
+        "claim": {
+          "summary": "Presynaptic vesicle exocytosis and SNARE-mediated neurotransmitter release. GABAergic inhibitory-synapse dysfunction is demonstrated in Stxbp1 haploinsufficient mice; this does not assign the same defect to every variant or to CPLX1.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "lammertse2020",
+            "chen2020"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Reported experimental evidence applies to the cited model, genotype and exposure; human translation remains unestablished.",
+        "assertion": "observed",
+        "scope": "Curated pathway-level context; no drug response is inferred from membership. [chen2020] Two Stxbp1 haploinsufficient mouse models; cortical inhibitory synapses and network/behavioral phenotypes. Supports model-specific GABAergic dysfunction, not a universal pathway effect or treatment response. DOI 10.7554/eLife.48705; PMID 32073399. [lammertse2020] Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:bf359d2c27e7411c",
+        "source": "disease:MONDO:0012812",
+        "target": "phenotype:HP:0011097",
+        "relationship_type": "annotated_phenotype",
+        "claim": {
+          "summary": "The existing atlas records Epileptic spasm as a phenotype annotation for this disease context.",
+          "evidence_type": "disease_reference",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "The original HPO annotation cites a reviewed reference; annotation evidence and frequency do not establish an individual finding or a therapeutic response.",
+        "assertion": "observed",
+        "scope": "Original HPO disease annotation; reference(s): PMID:18469812. No new phenotype validation or patient inference. [saitsu2008] Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:c05d9bf221a65043",
+        "source": "mechanism:efcb6a5e1b52c76b",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:c1d4eb8dc8fd858e",
+        "source": "disease:MONDO:0033372",
+        "target": "gene:CPLX1",
+        "relationship_type": "reviewed_gene_association",
+        "claim": {
+          "summary": "The existing atlas associates CPLX1 with CPLX1-related developmental and epileptic encephalopathy; reviewed disease references provide the context.",
+          "evidence_type": "disease_reference",
+          "source_ids": [
+            "karaca2015",
+            "redler2017"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "An existing atlas gene/disease association is anchored to reviewed disease references; no new causal or clinical validation was performed.",
+        "assertion": "observed",
+        "scope": "Disease-level atlas association; not a patient finding or variant-effect assignment. [karaca2015] Two siblings with homozygous CPLX1 nonsense p.E108X, epilepsy and cortical atrophy within a rare-variant family study. DOI 10.1016/j.neuron.2015.09.048; PMID 26539891. Genetic association and protein-function background, not a treatment or variant-function assay. [redler2017] Three affected individuals with homozygous CPLX1 variants; mechanistic background is contextual, not a treatment study. DOI 10.1038/ejhg.2017.52; PMID 28422131.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:c3abbb5022da6e9d",
+        "source": "disease:MONDO:0012812",
+        "target": "phenotype:HP:0001252",
+        "relationship_type": "annotated_phenotype",
+        "claim": {
+          "summary": "The existing atlas records Hypotonia as a phenotype annotation for this disease context.",
+          "evidence_type": "disease_reference",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "The original HPO annotation cites a reviewed reference; annotation evidence and frequency do not establish an individual finding or a therapeutic response.",
+        "assertion": "observed",
+        "scope": "Original HPO disease annotation; reference(s): PMID:18469812. No new phenotype validation or patient inference. [saitsu2008] Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:c979ac80e2148034",
+        "source": "disease:MONDO:0012812",
+        "target": "research_asset:asset:4ab775bc3d49a54e",
+        "relationship_type": "published_model_reference",
+        "claim": {
+          "summary": "Published missense-model methods can inform replication. This entry establishes a publication, not ownership or material availability.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "guiberson2018",
+            "abramov2021"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Reported experimental evidence applies to the cited model, genotype and exposure; human translation remains unestablished.",
+        "assertion": "observed",
+        "scope": "Public methods; procurement, permissions and present availability unverified. Identity or documented resource context only; no availability, efficacy or access is assumed. [abramov2021] Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17. [guiberson2018] Selected missense models; primary mouse neurons and worms. DOI 10.1038/s41467-018-06507-4; PMID 30266908. No human efficacy test.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:cb73934c68a9186d",
+        "source": "candidate:stxbp1-levetiracetam",
+        "target": "paper:source:kovacevic2018",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Allelic series and Stxbp1 mouse models. Levetiracetam reduced spike-wave discharges after acute and five-day treatment in Stxbp1+/- mice; symptomatic ECoG endpoint, not human efficacy or Munc18-1 repair. Overexpression on a heterozygous neuronal background had no detectable functional effect. DOI 10.1093/brain/awy046; PMID 29538625.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "kovacevic2018"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Allelic series and Stxbp1 mouse models. Levetiracetam reduced spike-wave discharges after acute and five-day treatment in Stxbp1+/- mice; symptomatic ECoG endpoint, not human efficacy or Munc18-1 repair. Overexpression on a heterozygous neuronal background had no detectable functional effect. DOI 10.1093/brain/awy046; PMID 29538625.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:ce51f25fecf6a510",
+        "source": "disease:MONDO:0012812",
+        "target": "phenotype:HP:0002059",
+        "relationship_type": "annotated_phenotype",
+        "claim": {
+          "summary": "The existing atlas records Cerebral atrophy as a phenotype annotation for this disease context.",
+          "evidence_type": "disease_reference",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "The original HPO annotation cites a reviewed reference; annotation evidence and frequency do not establish an individual finding or a therapeutic response.",
+        "assertion": "observed",
+        "scope": "Original HPO disease annotation; reference(s): PMID:18469812. No new phenotype validation or patient inference. [saitsu2008] Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:d81962141c06791e",
+        "source": "disease:MONDO:0012812",
+        "target": "candidate:stxbp1-phenylbutyrate",
+        "relationship_type": "candidate_under_research",
+        "claim": {
+          "summary": "In studied models, 4-PBA helped stabilize Munc18-1, the protein involved in releasing nerve-cell signals. A laboratory test can check whether this holds for the exact variant and preparation; human benefit remains uncertain.",
+          "evidence_type": "mechanistic_inference",
+          "source_ids": [
+            "abramov2021",
+            "barbour2026",
+            "guiberson2018",
+            "lammertse2020",
+            "ravicti-label"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Cited differences or limiting findings constrain interpretation; differing cohorts and endpoints do not by themselves disprove another study.",
+        "assertion": "inferred",
+        "scope": "Disease-context research assessment, not efficacy or treatment advice. Confirm variant biology, formulation identity and measured exposure; independently replicate functional rescue with toxicity readouts before expert translational review. [abramov2021] Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17. [barbour2026] Uncontrolled interviews: 18 children, 13 STXBP1. Primarily glycerol formulation; one sodium exposure. PMID 42447769; DOI 10.1016/j.pediatrneurol.2026.06.012; online 2026-06-20. [guiberson2018] Selected missense models; primary mouse neurons and worms. DOI 10.1038/s41467-018-06507-4; PMID 30266908. No human efficacy test. [lammertse2020] Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function. [ravicti-label] Label revised September 2025; urea-cycle indication, metabolism, warnings and interactions. Approval does not establish STXBP1 benefit.",
+        "contradictions": [
+          {
+            "summary": "Safety findings limit translation; this does not disprove laboratory rescue: The observational report includes severe toxicity requiring intubation and seizure worsening; the glycerol label warns of metabolite-related neurotoxicity.",
+            "evidence_type": "human_observational",
+            "source_ids": [
+              "barbour2026",
+              "ravicti-label"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "edge:d8f298ca7fbe7d4f",
+        "source": "candidate:stxbp1-phenylbutyrate",
+        "target": "disease:MONDO:0012812",
+        "relationship_type": "reported_human_evidence",
+        "claim": {
+          "summary": "Parent reports in a mixed-gene uncontrolled cohort suggest benefit; mainly glycerol formulation. This does not establish causal efficacy or disease modification.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "barbour2026"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Cited differences or limiting findings constrain interpretation; differing cohorts and endpoints do not by themselves disprove another study.",
+        "assertion": "observed",
+        "scope": "Cited study observations in their original scope; no causal efficacy, uniform response or cross-disease transfer is asserted. [barbour2026] Uncontrolled interviews: 18 children, 13 STXBP1. Primarily glycerol formulation; one sodium exposure. PMID 42447769; DOI 10.1016/j.pediatrneurol.2026.06.012; online 2026-06-20.",
+        "contradictions": [
+          {
+            "summary": "Safety findings limit translation; this does not disprove laboratory rescue: The observational report includes severe toxicity requiring intubation and seizure worsening; the glycerol label warns of metabolite-related neurotoxicity.",
+            "evidence_type": "human_observational",
+            "source_ids": [
+              "barbour2026",
+              "ravicti-label"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "edge:da0b2a1489b966b5",
+        "source": "disease:MONDO:0012812",
+        "target": "phenotype:HP:0002510",
+        "relationship_type": "annotated_phenotype",
+        "claim": {
+          "summary": "The existing atlas records Spastic tetraplegia as a phenotype annotation for this disease context.",
+          "evidence_type": "disease_reference",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "The original HPO annotation cites a reviewed reference; annotation evidence and frequency do not establish an individual finding or a therapeutic response.",
+        "assertion": "observed",
+        "scope": "Original HPO disease annotation; reference(s): PMID:18469812. No new phenotype validation or patient inference. [saitsu2008] Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:e4ac7717ff814153",
+        "source": "research_asset:asset:4ab775bc3d49a54e",
+        "target": "paper:source:abramov2021",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "abramov2021"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:e73e7a0c90a56022",
+        "source": "phenotype:HP:0200134",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:e794618370f90de5",
+        "source": "disease:MONDO:0012812",
+        "target": "clinical_study:asset:d3f9c8e729a7040f",
+        "relationship_type": "registered_study_context",
+        "claim": {
+          "summary": "Historical STXBP1 natural history registration withdrawn with no patients enrolled; not a recruiting resource.",
+          "evidence_type": "trial_registry",
+          "source_ids": [
+            "nct05462054"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "A dated official resource documents identity or study context; status, eligibility and access require confirmation.",
+        "assertion": "observed",
+        "scope": "WITHDRAWN; last posted 2024-10-18, checked 2026-10-04. No available cohort or participant access established. Identity or documented resource context only; no availability, efficacy or access is assumed. [nct05462054] Official API checked 2026-10-04; last update posted 2024-10-18. WITHDRAWN; no patients enrolled; actual enrollment 0; hasResults=false. Historical registration, not a recruiting asset.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:e89770bf615ad1dd",
+        "source": "disease:MONDO:0012812",
+        "target": "clinical_study:asset:21ebc84b28c8b406",
+        "relationship_type": "registered_study_context",
+        "claim": {
+          "summary": "Observational STXBP1/SYNGAP1 outcome study; potential research-planning context, not a therapeutic intervention.",
+          "evidence_type": "trial_registry",
+          "source_ids": [
+            "stxbp1-foundation",
+            "nct06555965"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "A dated official resource documents identity or study context; status, eligibility and access require confirmation.",
+        "assertion": "observed",
+        "scope": "Registry lists RECRUITING; last posted 2025-10-29, checked 2026-10-04. Team confirmation required; no eligibility or access determination. Identity or documented resource context only; no availability, efficacy or access is assumed. [nct06555965] Official API checked 2026-10-04; last update posted 2025-10-29. RECRUITING; observational; hasResults=false. Status is a dated registry entry. [stxbp1-foundation] Official research directory identifies STARR and ESCO; resource availability does not establish collaboration or access.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:e8e785b36ff3cb33",
+        "source": "candidate:stxbp1-levetiracetam",
+        "target": "disease:MONDO:0012812",
+        "relationship_type": "reported_human_evidence",
+        "claim": {
+          "summary": "Wang's observational cohort associated levetiracetam with partial remission; Xian's published cohort did not find superior seizure reduction. Response is heterogeneous.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "wang2022",
+            "xian2023"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Cited differences or limiting findings constrain interpretation; differing cohorts and endpoints do not by themselves disprove another study.",
+        "assertion": "observed",
+        "scope": "Cited study observations in their original scope; no causal efficacy, uniform response or cross-disease transfer is asserted. [wang2022] Non-randomized cohort: 40 enrolled, medication histories in 37. DOI 10.1016/j.seizure.2021.12.006; no treatment-assignment intervention. [xian2023] Published Brain cohort, not its preprint. PMID 38015929; DOI 10.1093/brain/awad287. Medication-response reconstruction in 61 individuals.",
+        "contradictions": [
+          {
+            "summary": "Limits to comparison across cohorts and endpoints: Wang's observational cohort associated levetiracetam with partial remission; Xian's published cohort did not find superior seizure reduction. Response is heterogeneous.",
+            "evidence_type": "human_observational",
+            "source_ids": [
+              "wang2022",
+              "xian2023"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "edge:e9b47ffe28822342",
+        "source": "disease:MONDO:0012812",
+        "target": "candidate:stxbp1-compound-13",
+        "relationship_type": "candidate_evidence_insufficient",
+        "claim": {
+          "summary": "Keep as an experimental assay comparator. Unknown human safety and exposure prevent a defensible therapeutic candidate classification.",
+          "evidence_type": "mechanistic_inference",
+          "source_ids": [
+            "abramov2021"
+          ]
+        },
+        "confidence": "unresolved",
+        "confidence_basis": "The relationship is unresolved; contextual input does not establish biological function or compatibility.",
+        "assertion": "unknown",
+        "scope": "Disease-context research assessment, not efficacy or treatment advice. Verify the publication's exact chemical identity and supplier records; review selectivity, exposure and toxicology before considering any translational work. [abramov2021] Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:ec140853aaeadeae",
+        "source": "phenotype:HP:0010851",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:ecb1d2fa7acddc17",
+        "source": "disease:MONDO:0012812",
+        "target": "candidate:stxbp1-levetiracetam",
+        "relationship_type": "candidate_under_research",
+        "claim": {
+          "summary": "Levetiracetam is the highest-scoring disease-context research hypothesis after adding a mouse seizure-suppression study. Its human observations conflict, and this score establishes neither therapeutic superiority nor Munc18-1 repair.",
+          "evidence_type": "mechanistic_inference",
+          "source_ids": [
+            "keppra-label",
+            "kovacevic2018",
+            "lammertse2020",
+            "wang2022",
+            "xian2023"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Cited differences or limiting findings constrain interpretation; differing cohorts and endpoints do not by themselves disprove another study.",
+        "assertion": "inferred",
+        "scope": "Disease-context research assessment, not efficacy or treatment advice. Independently replicate symptomatic EEG findings in a defined haploinsufficient model, reconcile contrasting human cohorts, and separate seizure endpoints from protein rescue and developmental outcomes with expert review. [keppra-label] Immediate-release label: SV2A pharmacology, behavioral/serious adverse effects, renal clearance, studied interactions. Does not establish disease modification. [kovacevic2018] Allelic series and Stxbp1 mouse models. Levetiracetam reduced spike-wave discharges after acute and five-day treatment in Stxbp1+/- mice; symptomatic ECoG endpoint, not human efficacy or Munc18-1 repair. Overexpression on a heterozygous neuronal background had no detectable functional effect. DOI 10.1093/brain/awy046; PMID 29538625. [lammertse2020] Two homozygous L446F siblings and functional mouse-neuron assays; a counterexample to uniform loss of function. [wang2022] Non-randomized cohort: 40 enrolled, medication histories in 37. DOI 10.1016/j.seizure.2021.12.006; no treatment-assignment intervention. [xian2023] Published Brain cohort, not its preprint. PMID 38015929; DOI 10.1093/brain/awad287. Medication-response reconstruction in 61 individuals.",
+        "contradictions": [
+          {
+            "summary": "Limits to comparison across cohorts and endpoints: Wang's observational cohort associated levetiracetam with partial remission; Xian's published cohort did not find superior seizure reduction. Response is heterogeneous.",
+            "evidence_type": "human_observational",
+            "source_ids": [
+              "wang2022",
+              "xian2023"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "edge:ee033c8766b42cf4",
+        "source": "disease:MONDO:0033372",
+        "target": "paper:source:karaca2015",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Two siblings with homozygous CPLX1 nonsense p.E108X, epilepsy and cortical atrophy within a rare-variant family study. DOI 10.1016/j.neuron.2015.09.048; PMID 26539891. Genetic association and protein-function background, not a treatment or variant-function assay.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "karaca2015"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Two siblings with homozygous CPLX1 nonsense p.E108X, epilepsy and cortical atrophy within a rare-variant family study. DOI 10.1016/j.neuron.2015.09.048; PMID 26539891. Genetic association and protein-function background, not a treatment or variant-function assay.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:efd230f601f60e30",
+        "source": "phenotype:HP:0002187",
+        "target": "paper:source:saitsu2008",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+          "evidence_type": "human_observational",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:f6317dbd24588d40",
+        "source": "candidate:stxbp1-compound-13",
+        "target": "disease:MONDO:0012812",
+        "relationship_type": "preclinical_model_evidence",
+        "claim": {
+          "summary": "Selected neuronal and worm assays reported rescue; independent translational validation remains necessary.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "abramov2021"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "Reported experimental evidence applies to the cited model, genotype and exposure; human translation remains unestablished.",
+        "assertion": "observed",
+        "scope": "Cited study observations in their original scope; no causal efficacy, uniform response or cross-disease transfer is asserted. [abramov2021] Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:f7eb0f285c0a1a7b",
+        "source": "disease:MONDO:0012812",
+        "target": "phenotype:HP:0200134",
+        "relationship_type": "annotated_phenotype",
+        "claim": {
+          "summary": "The existing atlas records Epileptic encephalopathy as a phenotype annotation for this disease context.",
+          "evidence_type": "disease_reference",
+          "source_ids": [
+            "saitsu2008"
+          ]
+        },
+        "confidence": "moderate",
+        "confidence_basis": "The original HPO annotation cites a reviewed reference; annotation evidence and frequency do not establish an individual finding or a therapeutic response.",
+        "assertion": "observed",
+        "scope": "Original HPO disease annotation; reference(s): PMID:18469812. No new phenotype validation or patient inference. [saitsu2008] Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+        "contradictions": []
+      },
+      {
+        "id": "edge:f91a5d74e97a59a3",
+        "source": "variant:reported:abramov2021:G544D",
+        "target": "paper:source:abramov2021",
+        "relationship_type": "documented_by",
+        "claim": {
+          "summary": "The curated record cites this reviewed source; source scope: Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+          "evidence_type": "preclinical",
+          "source_ids": [
+            "abramov2021"
+          ]
+        },
+        "confidence": "limited",
+        "confidence_basis": "This edge records a reviewed citation or resource identity; it does not independently validate every claim or establish clinical benefit.",
+        "assertion": "observed",
+        "scope": "Compound 13 in selected missense neuronal/worm models; human safety unestablished. DOI 10.15252/emmm.202012354; PMID 33332765; online 2020-12-17.",
+        "contradictions": []
+      }
+    ],
+    "limitations": [
+      "This is a curated evidence graph over reviewed claims and existing atlas identities; it is not newly validated clinical discovery.",
+      "Qualitative confidence describes the cited relationship and its scope, not treatment efficacy or an individual prediction.",
+      "Shared pathways, phenotype annotations and literature examples do not transfer therapeutic response or classify an entered variant.",
+      "Only reviewed source references are projected; unreviewed atlas annotations are omitted.",
+      "A paper, registry, organisation or investigator identity does not establish current availability, collaboration or access."
+    ]
   }
 }

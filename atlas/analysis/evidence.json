@@ -117,6 +117,78 @@
       "reviewed_on": "2026-10-04",
       "scope": "Official API checked 2026-10-04; last update posted 2026-02-06. RECRUITING; observational registry; hasResults=false. Sponsor: European STXBP1 Consortium.",
       "excerpt": "A Multicentric European Study to Promote Clinical Trial Readiness for STXBP1-related Disorders"
+    },
+    {
+      "id": "karaca2015",
+      "title": "Karaca et al. (2015): Genes that affect brain structure and function identified by rare variant analyses of Mendelian neurologic disease",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4824012/",
+      "evidence_type": "human_observational",
+      "reviewed_on": "2026-10-04",
+      "scope": "Two siblings with homozygous CPLX1 nonsense p.E108X, epilepsy and cortical atrophy within a rare-variant family study. DOI 10.1016/j.neuron.2015.09.048; PMID 26539891. Genetic association and protein-function background, not a treatment or variant-function assay.",
+      "excerpt": "in the CPLX1 gene in two female siblings"
+    },
+    {
+      "id": "saitsu2008",
+      "title": "Saitsu et al. (2008): De novo mutations in the gene encoding STXBP1 (MUNC18-1) cause early infantile epileptic encephalopathy",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18469812/",
+      "evidence_type": "human_observational",
+      "reviewed_on": "2026-10-04",
+      "scope": "Original STXBP1 early infantile epileptic encephalopathy report with heterozygous missense variants; thermolability/syntaxin-binding experiments. DOI 10.1038/ng.150; PMID 18469812. A foundational phenotype association, not all STXBP1 presentations.",
+      "excerpt": "four unrelated individuals with EIEE had heterozygous missense mutations"
+    },
+    {
+      "id": "kovacevic2018",
+      "title": "Kovacevic et al. (2018): Protein instability, haploinsufficiency, and cortical hyper-excitability underlie STXBP1 encephalopathy",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5917748/",
+      "evidence_type": "preclinical",
+      "reviewed_on": "2026-10-04",
+      "scope": "Allelic series and Stxbp1 mouse models. Levetiracetam reduced spike-wave discharges after acute and five-day treatment in Stxbp1+/- mice; symptomatic ECoG endpoint, not human efficacy or Munc18-1 repair. Overexpression on a heterozygous neuronal background had no detectable functional effect. DOI 10.1093/brain/awy046; PMID 29538625.",
+      "excerpt": "Acute treatment with levetiracetam significantly reduced the number of spike-wave discharges"
+    },
+    {
+      "id": "chen2020",
+      "title": "Chen et al. (2020): Stxbp1/Munc18-1 haploinsufficiency impairs inhibition and mediates key neurological features of STXBP1 encephalopathy",
+      "url": "https://elifesciences.org/articles/48705",
+      "evidence_type": "preclinical",
+      "reviewed_on": "2026-10-04",
+      "scope": "Two Stxbp1 haploinsufficient mouse models; cortical inhibitory synapses and network/behavioral phenotypes. Supports model-specific GABAergic dysfunction, not a universal pathway effect or treatment response. DOI 10.7554/eLife.48705; PMID 32073399.",
+      "excerpt": "Stxbp1 haploinsufficiency reduced cortical inhibitory neurotransmission"
+    },
+    {
+      "id": "burre-profile",
+      "title": "Weill Cornell institutional profile: Jacqueline Burre",
+      "url": "https://vivo.weill.cornell.edu/display/cwid-jab2058",
+      "evidence_type": "official_resource",
+      "reviewed_on": "2026-10-04",
+      "scope": "Public identity and selected-publication links reviewed 2026-10-04. Jacqueline Burre is a coauthor of the chemical-chaperone and targeted-chaperone reports. Authorship is not a collaboration, material-access, contact or availability determination.",
+      "excerpt": "Jacqueline Burre"
+    },
+    {
+      "id": "nct06983158",
+      "title": "ClinicalTrials.gov NCT06983158: CAP-002 gene therapy study in STXBP1 encephalopathy",
+      "url": "https://clinicaltrials.gov/study/NCT06983158",
+      "evidence_type": "trial_registry",
+      "reviewed_on": "2026-10-04",
+      "scope": "Official API checked 2026-10-04; last update posted 2026-06-10. TERMINATED; stopping rule met; actual enrollment 1; hasResults=false. Historical study and safety context, not an available trial or demonstrated efficacy.",
+      "excerpt": "Stopping rule for study was met"
+    },
+    {
+      "id": "capsida2026",
+      "title": "Capsida (11 May 2026): CAP-002 Program Update: A Letter to the STXBP1 Community",
+      "url": "https://capsida.com/stx-community-letter-5-9-2026/",
+      "evidence_type": "official_resource",
+      "reviewed_on": "2026-10-04",
+      "scope": "Sponsor statement dated 2026-05-11 reports a participant death in September 2025, cerebral edema and trial closure; the underlying reason was not identified. Sponsor reporting is not an independently adjudicated causal mechanism or a universal gene-therapy risk estimate.",
+      "excerpt": "we have made the decision to close out the trial."
+    },
+    {
+      "id": "nct05462054",
+      "title": "ClinicalTrials.gov NCT05462054: Capsida pediatric STXBP1 natural history study",
+      "url": "https://clinicaltrials.gov/study/NCT05462054",
+      "evidence_type": "trial_registry",
+      "reviewed_on": "2026-10-04",
+      "scope": "Official API checked 2026-10-04; last update posted 2024-10-18. WITHDRAWN; no patients enrolled; actual enrollment 0; hasResults=false. Historical registration, not a recruiting asset.",
+      "excerpt": "Withdrawn, no patients enrolled"
     }
   ],
   "profiles": [
@@ -138,32 +210,38 @@
         "id": "MONDO:0012812",
         "name": "STXBP1-related disorders",
         "source_ids": [
+          "saitsu2008",
           "xian2023"
         ]
       },
       "gene": "STXBP1",
       "variant_effect": {
-        "summary": "Effects depend on the variant and genotype. Selected missense variants destabilize Munc18-1; homozygous L446F instead increased evoked transmission in a model. No individual functional classification is inferred.",
+        "summary": "Functional effects depend on variant, genotype and model. Selected missense models show instability/coaggregation; another heterozygous-background assay detected no dominant-negative functional effect. Homozygous L446F increased evoked transmission. No individual's functional direction is inferred.",
         "evidence_type": "mechanistic_inference",
         "source_ids": [
           "guiberson2018",
+          "kovacevic2018",
           "lammertse2020"
         ],
         "effect": "variant_dependent",
         "scope": "disease_context"
       },
       "functional_mechanism": {
-        "summary": "STXBP1 encodes Munc18-1, a regulator of synaptic vesicle release. Different disturbances can converge on neurodevelopmental and epilepsy phenotypes.",
+        "summary": "STXBP1 encodes Munc18-1, a presynaptic release regulator. Haploinsufficient mouse models link reduced cortical inhibition to hyperexcitability; selected missense and homozygous models show different functional effects.",
         "evidence_type": "preclinical",
         "source_ids": [
+          "saitsu2008",
+          "kovacevic2018",
+          "chen2020",
           "lammertse2020"
         ]
       },
       "pathway": {
-        "summary": "Presynaptic vesicle exocytosis and SNARE-mediated neurotransmitter release.",
+        "summary": "Presynaptic vesicle exocytosis and SNARE-mediated neurotransmitter release. GABAergic inhibitory-synapse dysfunction is demonstrated in Stxbp1 haploinsufficient mice; this does not assign the same defect to every variant or to CPLX1.",
         "evidence_type": "preclinical",
         "source_ids": [
-          "lammertse2020"
+          "lammertse2020",
+          "chen2020"
         ]
       },
       "candidate_treatments": [
@@ -315,10 +393,12 @@
             "value": 0.45
           },
           "preclinical_evidence": {
-            "summary": "No STXBP1-specific preclinical rescue study curated for this candidate.",
-            "evidence_type": "unknown",
-            "source_ids": [],
-            "value": null
+            "summary": "Acute and five-day levetiracetam treatment reduced cortical spike-wave discharges in Stxbp1+/- mice. This is one model's symptomatic ECoG endpoint, not evidence of Munc18-1 restoration.",
+            "evidence_type": "preclinical",
+            "source_ids": [
+              "kovacevic2018"
+            ],
+            "value": 0.4
           },
           "phenotype_relevance": {
             "summary": "Seizure outcomes are relevant; these cohorts do not establish correction of the developmental disorder.",
@@ -380,8 +460,8 @@
             "value": 0.65
           },
           "status": "research_hypothesis",
-          "rationale": "Levetiracetam binds a nerve-cell signalling protein called SV2A. It is a seizure-focused comparison hypothesis, with mixed patient observations; it has not been shown to repair Munc18-1.",
-          "next_validation_step": "Review the contrasting cohorts and pre-specify seizure endpoints, concomitant-treatment accounting and adverse-event capture with clinical experts."
+          "rationale": "Levetiracetam is the highest-scoring disease-context research hypothesis after adding a mouse seizure-suppression study. Its human observations conflict, and this score establishes neither therapeutic superiority nor Munc18-1 repair.",
+          "next_validation_step": "Independently replicate symptomatic EEG findings in a defined haploinsufficient model, reconcile contrasting human cohorts, and separate seizure endpoints from protein rescue and developmental outcomes with expert review."
         },
         {
           "id": "stxbp1-compound-13",
@@ -483,6 +563,7 @@
             "id": "MONDO:0033372",
             "name": "CPLX1-related developmental and epileptic encephalopathy",
             "source_ids": [
+              "karaca2015",
               "redler2017"
             ]
           },
@@ -491,15 +572,18 @@
             "summary": "Complexin-1 and Munc18-1 both participate in presynaptic SNARE/vesicle-release regulation; this is a pathway connection.",
             "evidence_type": "mechanistic_inference",
             "source_ids": [
+              "karaca2015",
               "redler2017",
               "lammertse2020"
             ]
           },
           "key_difference": {
-            "summary": "The CPLX1 report concerns recessive homozygous variants; STXBP1 commonly involves heterozygous/de novo disease and has functional exceptions.",
+            "summary": "Karaca and Redler report recessive homozygous CPLX1 variants in specific families; original STXBP1 cases included heterozygous/de novo disease, with later functional exceptions. These are reported contexts, not a count of all known cases.",
             "evidence_type": "human_observational",
             "source_ids": [
+              "karaca2015",
               "redler2017",
+              "saitsu2008",
               "lammertse2020"
             ]
           },
@@ -508,25 +592,26 @@
         }
       ],
       "recommended_next_experiment": {
-        "title": "Test variant-dependent rescue of Munc18-1 and synaptic function",
-        "question": "Does phenylbutyrate rescue function in a defined STXBP1 model at measured, non-cytotoxic exposure?",
-        "design": "Proposed adaptation of published neuronal assays: compare a characterized STXBP1 variant with wild-type and an isogenic control, using blinded independent preparations. Document exact transcript, zygosity and baseline functional direction. Specify the chemical/formulation, a measured exposure series and vehicle controls before analysis. Test protein solubility alongside evoked vesicle release and viability; a laboratory specialist must determine exposures from methods and model pharmacology.",
+        "title": "Separate symptomatic seizure control from protein/function rescue",
+        "question": "Can the mouse seizure-suppression result and selected-missense protein rescue be independently reproduced within their own defined models?",
+        "design": "Expert-review-required proposal: first replicate the levetiracetam cortical EEG endpoint in a characterized Stxbp1 haploinsufficient model with blinded analysis, baseline recording, vehicle and wild-type controls. Separately test exact-formulation phenylbutyrate in a characterized destabilizing missense neuronal model, pairing soluble protein with evoked release and viability. Predefine transcript, zygosity, functional direction, independent biological preparations and measured exposure. A laboratory specialist must determine model-appropriate methods and exposures. These distinct arms answer different questions and cannot establish therapeutic superiority or transfer a response between models.",
         "readouts": [
-          "Munc18-1 abundance and soluble/insoluble fraction",
-          "Evoked synaptic-vesicle recycling or synaptopHluorin signal",
-          "Spontaneous activity and evoked transmission considered separately",
+          "Prespecified cortical spike-wave-discharge burden in the haploinsufficient model",
+          "Munc18-1 abundance and soluble/insoluble fraction in the missense model",
+          "Evoked vesicle recycling or synaptopHluorin signal; spontaneous activity considered separately",
           "Viability and general cell stress",
-          "Prespecified comparison with corrected/wild-type control"
+          "Comparison with model-specific vehicle and corrected/wild-type controls"
         ],
-        "falsification": "Reject the rescue hypothesis for that model if protein stabilization does not improve the prespecified functional endpoint, if activity moves farther from control, or if apparent benefit appears only with cytotoxic exposure.",
+        "falsification": "The seizure-control hypothesis fails if the prespecified EEG endpoint does not improve on independent replication. The protein-rescue hypothesis fails if stabilization lacks functional rescue, activity diverges further from controls, or apparent benefit requires cytotoxic exposure. Improvement in one arm cannot validate the other.",
         "prerequisites": [
-          "Expert review of assay validity and statistical design",
-          "Verified variant, transcript, zygosity and functional classification",
-          "Verified chemical identity, formulation and measured exposure",
-          "Available models under appropriate consent and approvals; availability is not assumed",
-          "Independent biological preparations and prespecified endpoints"
+          "Expert review of distinct endpoint validity and statistical design",
+          "Verified genotype, transcript, zygosity and baseline function for each model",
+          "Verified chemical/formulation identity and measured model-specific exposure",
+          "Model availability, consent and approvals confirmed; access is not assumed",
+          "Independent preparations and prespecified analyses"
         ],
         "source_ids": [
+          "kovacevic2018",
           "guiberson2018",
           "abramov2021",
           "lammertse2020"
@@ -586,10 +671,43 @@
             "abramov2021"
           ],
           "access_status": "Public methods; procurement, permissions and present availability unverified."
+        },
+        {
+          "name": "Jacqueline Burre",
+          "kind": "investigator",
+          "description": "Coauthor of the 2018 chemical-chaperone and 2021 targeted-chaperone reports; public identity verified in an institutional profile.",
+          "url": "https://vivo.weill.cornell.edu/display/cwid-jab2058",
+          "source_ids": [
+            "guiberson2018",
+            "abramov2021",
+            "burre-profile"
+          ],
+          "access_status": "Public authorship identity reviewed 2026-10-04; no outreach, partnership, present availability or material/data access established."
+        },
+        {
+          "name": "CAP-002 study: terminated historical context",
+          "kind": "study",
+          "description": "Historical gene-therapy study. The current registry lists termination; the sponsor reports trial closure after a participant death with underlying cause unresolved. No clinical efficacy or available enrollment is inferred.",
+          "url": "https://clinicaltrials.gov/study/NCT06983158",
+          "source_ids": [
+            "nct06983158",
+            "capsida2026"
+          ],
+          "access_status": "TERMINATED; last registry update posted 2026-06-10, checked 2026-10-04. Historical safety context; no contact, eligibility or access determination."
+        },
+        {
+          "name": "Capsida natural history registration: withdrawn",
+          "kind": "study",
+          "description": "Historical STXBP1 natural history registration withdrawn with no patients enrolled; not a recruiting resource.",
+          "url": "https://clinicaltrials.gov/study/NCT05462054",
+          "source_ids": [
+            "nct05462054"
+          ],
+          "access_status": "WITHDRAWN; last posted 2024-10-18, checked 2026-10-04. No available cohort or participant access established."
         }
       ],
       "limitations": [
-        "One curated STXBP1 research demonstration, not a comprehensive therapeutic search.",
+        "Curated STXBP1 therapeutic demonstration plus a CPLX1 evidence-context profile; not a comprehensive therapeutic or investigator search.",
         "The umbrella STXBP1 label uses DEE4 as an atlas navigation anchor; it does not equate every STXBP1 phenotype with DEE4.",
         "Ratings are curator ordinal judgments from 0 to 1; scores are uncalibrated research-priority points, never efficacy estimates, probabilities or patient benefit predictions.",
         "Null positive ratings receive zero credit; null risk ratings receive the full configured penalty. No unknown is interpreted as safe.",
@@ -600,7 +718,154 @@
         "Related CPLX1 evidence provides a research connection; no therapy response is transferred across genes.",
         "No dose, age eligibility, patient-specific treatment plan or trial-ready protocol is generated.",
         "The Google Doc's example phenytoin contraindication for STXBP1 loss of function was not supported by the reviewed sources and is excluded.",
-        "Official resource links establish existence only; no outreach, clinical collaboration or material/data access has occurred."
+        "Official resource links establish existence only; no outreach, clinical collaboration or material/data access has occurred.",
+        "Levetiracetam's lead score reflects a modest curator preclinical rating of 0.40 for one short mouse EEG study; mixed human findings and distinct endpoints remain visible.",
+        "Missense coaggregation and the absence of a dominant-negative functional effect in another neuronal background are model-dependent findings; neither classifies all missense variants.",
+        "CAP-002 is listed TERMINATED and the older Capsida natural history study WITHDRAWN; historical registrations are not recruiting assets.",
+        "The native Literature reviews tab was checked separately from Final; optional programs, broad gene coverage and continuous update ideas are recorded as deferred in the traceability review."
+      ]
+    },
+    {
+      "aliases": [
+        "CPLX1",
+        "CPLX1-related disorder",
+        "CPLX1-related disorders",
+        "CPLX1-related developmental and epileptic encephalopathy",
+        "developmental and epileptic encephalopathy 63",
+        "developmental and epileptic encephalopathy, 63",
+        "DEE63",
+        "DEE 63",
+        "MONDO:0033372"
+      ],
+      "disease": {
+        "id": "MONDO:0033372",
+        "name": "CPLX1-related developmental and epileptic encephalopathy",
+        "source_ids": [
+          "karaca2015",
+          "redler2017"
+        ]
+      },
+      "gene": "CPLX1",
+      "variant_effect": {
+        "summary": "The primary family reports describe homozygous CPLX1 variants, including a nonsense allele. Recessive genetic association does not establish every variant's synaptic effect; individual functional direction remains unresolved.",
+        "evidence_type": "human_observational",
+        "source_ids": [
+          "karaca2015",
+          "redler2017"
+        ],
+        "effect": "unknown",
+        "scope": "disease_context"
+      },
+      "functional_mechanism": {
+        "summary": "CPLX1 encodes complexin-1, a presynaptic SNARE-associated regulator of neurotransmitter release. Family reports link homozygous variants to severe early epilepsy and developmental impairment; specific variant function still requires measurement.",
+        "evidence_type": "mechanistic_inference",
+        "source_ids": [
+          "karaca2015",
+          "redler2017"
+        ]
+      },
+      "pathway": {
+        "summary": "Presynaptic vesicle exocytosis and SNARE-mediated neurotransmitter release. This pathway context connects CPLX1 with STXBP1 research without establishing a shared functional direction or drug response.",
+        "evidence_type": "mechanistic_inference",
+        "source_ids": [
+          "karaca2015",
+          "redler2017",
+          "lammertse2020"
+        ]
+      },
+      "candidate_treatments": [],
+      "related_disease_evidence": [
+        {
+          "disease": {
+            "id": "MONDO:0012812",
+            "name": "STXBP1-related disorders",
+            "source_ids": [
+              "saitsu2008",
+              "xian2023"
+            ]
+          },
+          "gene": "STXBP1",
+          "shared_mechanism": {
+            "summary": "Complexin-1 and Munc18-1 both regulate presynaptic vesicle/SNARE function. This is a source-supported research connection, not therapeutic equivalence.",
+            "evidence_type": "mechanistic_inference",
+            "source_ids": [
+              "karaca2015",
+              "redler2017",
+              "lammertse2020"
+            ]
+          },
+          "key_difference": {
+            "summary": "The reviewed CPLX1 families have homozygous recessive variants; STXBP1 commonly involves heterozygous/de novo disease and has variant/model-specific effects, including a homozygous gain-of-function example.",
+            "evidence_type": "human_observational",
+            "source_ids": [
+              "karaca2015",
+              "redler2017",
+              "saitsu2008",
+              "lammertse2020"
+            ]
+          },
+          "research_use": "Compare evidence standards and assay methods. STXBP1 candidate scores, drug responses, studies and eligibility are not transferred to CPLX1.",
+          "atlas_url": "/atlas#d/MONDO:0012812"
+        }
+      ],
+      "recommended_next_experiment": {
+        "title": "Establish CPLX1 variant function before a compound hypothesis",
+        "question": "Does a defined CPLX1 genotype alter presynaptic release, and can a suitable assay distinguish it from corrected control?",
+        "design": "Feasibility proposal informed by the family reports and published synaptic-function assay methods: verify variant, transcript, zygosity and expression before selecting a neuronal preparation. A laboratory specialist must establish whether a vesicle-release assay is suitable for CPLX1. Compare blinded independent variant, isogenic-corrected and wild-type preparations with matched maturation and expression. Measure complexin-1 abundance/localization alongside separately specified evoked and spontaneous release and viability. No compound response is assumed or transferred from STXBP1.",
+        "readouts": [
+          "Verified genotype, transcript and complexin-1 expression/localization",
+          "Assay-validity and control performance",
+          "Evoked release and spontaneous activity considered separately",
+          "Viability and preparation quality",
+          "Replicable difference from isogenic-corrected/wild-type control"
+        ],
+        "falsification": "Withhold a mechanistic compound hypothesis if the assay cannot distinguish genotype effects from expression/preparation artifacts, if the result does not replicate, or if functional direction remains unresolved.",
+        "prerequisites": [
+          "Expert variant interpretation and model/assay feasibility review",
+          "Verified genotype, transcript and zygosity",
+          "Model access, permissions and consent confirmed; availability is not assumed",
+          "Independent preparations, matched controls and prespecified analyses"
+        ],
+        "source_ids": [
+          "karaca2015",
+          "redler2017",
+          "lammertse2020"
+        ],
+        "status": "expert_review_required"
+      },
+      "collaborators_or_assets": [
+        {
+          "name": "Published CPLX1 family evidence",
+          "kind": "resource",
+          "description": "Karaca and Redler primary family reports establish a starting evidence record. Publication does not establish current sample, model, investigator or patient access.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5520065/",
+          "source_ids": [
+            "karaca2015",
+            "redler2017"
+          ],
+          "access_status": "Public papers reviewed 2026-10-04; no outreach, case matching, material availability or data access established."
+        },
+        {
+          "name": "STXBP1 Foundation: comparison research directory",
+          "kind": "resource",
+          "description": "A public directory for the related STXBP1 research context. It is not a CPLX1 patient organization or evidence of CPLX1 study eligibility.",
+          "url": "https://www.stxbp1disorders.org/clinicaltrialsandresearch",
+          "source_ids": [
+            "stxbp1-foundation"
+          ],
+          "access_status": "Public STXBP1 comparison information only; no CPLX1 partnership, enrollment or access inferred."
+        }
+      ],
+      "limitations": [
+        "No defensible therapeutic candidate found.",
+        "This lean profile preserves reviewed CPLX1 genetic and pathway evidence while abstaining from therapeutic ranking.",
+        "Recessive association and predicted truncation are not measured functional direction for an arbitrary supplied variant.",
+        "Reported family findings do not establish the number or inheritance of every known CPLX1 case.",
+        "Ataxia mentioned in knockout mice must not be displayed as an observed human phenotype in these family reports.",
+        "Shared SNARE context does not establish a levetiracetam, phenylbutyrate or compound-13 response in CPLX1.",
+        "No reviewed CPLX1-specific drug-efficacy evidence is curated here; this is a scoped evidence gap, not proof that no program or patient group exists.",
+        "STXBP1 comparison resources establish public context only; no CPLX1 eligibility, investigator availability, collaboration or data/material access is assumed.",
+        "No dose, patient-specific treatment plan or trial-ready protocol is generated."
       ]
     }
   ]

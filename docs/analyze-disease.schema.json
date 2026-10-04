@@ -413,6 +413,174 @@
         "title": "Experiment",
         "type": "object"
       },
+      "GraphEdge": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "source": {
+            "title": "Source",
+            "type": "string"
+          },
+          "target": {
+            "title": "Target",
+            "type": "string"
+          },
+          "relationship_type": {
+            "title": "Relationship Type",
+            "type": "string"
+          },
+          "claim": {
+            "$ref": "#/$defs/Claim"
+          },
+          "confidence": {
+            "enum": [
+              "strong",
+              "moderate",
+              "limited",
+              "unresolved"
+            ],
+            "title": "Confidence",
+            "type": "string"
+          },
+          "confidence_basis": {
+            "title": "Confidence Basis",
+            "type": "string"
+          },
+          "assertion": {
+            "enum": [
+              "observed",
+              "inferred",
+              "unknown"
+            ],
+            "title": "Assertion",
+            "type": "string"
+          },
+          "scope": {
+            "title": "Scope",
+            "type": "string"
+          },
+          "contradictions": {
+            "items": {
+              "$ref": "#/$defs/Claim"
+            },
+            "title": "Contradictions",
+            "type": "array"
+          }
+        },
+        "required": [
+          "id",
+          "source",
+          "target",
+          "relationship_type",
+          "claim",
+          "confidence",
+          "confidence_basis",
+          "assertion",
+          "scope",
+          "contradictions"
+        ],
+        "title": "GraphEdge",
+        "type": "object"
+      },
+      "GraphNode": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "disease",
+              "gene",
+              "variant",
+              "mechanism",
+              "pathway",
+              "phenotype",
+              "candidate",
+              "paper",
+              "clinical_study",
+              "patient_organisation",
+              "investigator",
+              "research_asset"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "label": {
+            "title": "Label",
+            "type": "string"
+          },
+          "description": {
+            "title": "Description",
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Source Ids",
+            "type": "array"
+          },
+          "url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Url"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "label",
+          "description",
+          "source_ids",
+          "url"
+        ],
+        "title": "GraphNode",
+        "type": "object"
+      },
+      "KnowledgeGraph": {
+        "additionalProperties": false,
+        "properties": {
+          "nodes": {
+            "items": {
+              "$ref": "#/$defs/GraphNode"
+            },
+            "title": "Nodes",
+            "type": "array"
+          },
+          "edges": {
+            "items": {
+              "$ref": "#/$defs/GraphEdge"
+            },
+            "title": "Edges",
+            "type": "array"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Limitations",
+            "type": "array"
+          }
+        },
+        "required": [
+          "nodes",
+          "edges",
+          "limitations"
+        ],
+        "title": "KnowledgeGraph",
+        "type": "object"
+      },
       "LLMProvenance": {
         "additionalProperties": false,
         "properties": {
@@ -720,7 +888,7 @@
     "additionalProperties": false,
     "properties": {
       "schema_version": {
-        "const": "constellai-analysis-v1",
+        "const": "constellai-analysis-v2",
         "title": "Schema Version",
         "type": "string"
       },
@@ -825,6 +993,9 @@
       },
       "llm": {
         "$ref": "#/$defs/LLMProvenance"
+      },
+      "knowledge_graph": {
+        "$ref": "#/$defs/KnowledgeGraph"
       }
     },
     "required": [
@@ -845,7 +1016,8 @@
       "analysis_status",
       "limitations",
       "evidence_reviewed_on",
-      "llm"
+      "llm",
+      "knowledge_graph"
     ],
     "title": "AnalyzeResponse",
     "type": "object"

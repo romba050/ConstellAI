@@ -8,11 +8,11 @@ uses a server-side key and cannot change the deterministic score.
 | Time | Action | Narration |
 | --- | --- | --- |
 | 0-8 s | Search STXBP1 and analyze | Maria needs a defensible research direction for her community. |
-| 8-18 s | Read the gene/mechanism summary | Some STXBP1 changes disturb the protein that helps nerve cells release signals. Individual variants can behave differently. |
-| 18-32 s | Inspect the leading hypothesis | We compare source-backed research hypotheses, keeping mechanism-targeting and symptom-targeting evidence distinct. |
-| 32-42 s | Expand evidence and scoring | The sources, evidence type, safety gaps and arithmetic are inspectable. A research priority score is not a chance of clinical success. |
-| 42-53 s | Open validation resources and next experiment | The community can discuss a proposed variant-matched assay with researchers and explore existing study infrastructure. Access and clinical decisions need expert validation. |
-| 53-60 s | Enter an unreviewed variant or analyze CPLX1 | When the evidence cannot defend a candidate, the tool says so and shows the missing question. |
+| 8-17 s | Read the mechanism and select a graph connection | Individual variants and experimental models can behave differently. Each connection exposes its sources, scope, confidence basis and contrasting findings. |
+| 17-29 s | Inspect the leading hypothesis and score audit | The added mouse seizure study changes the research-priority order. Symptomatic seizure suppression and protein rescue are separate questions; the score establishes no clinical superiority. |
+| 29-40 s | Expand Literature review and a paper | The literature is the evidence backbone: source records map to actual mechanism, graph and candidate claims, with study limitations and contrary findings. |
+| 40-52 s | Open validation resources and next experiment | Independently test seizure control and protein/function rescue in their appropriate models. Published resources are starting points for expert discussion; access is unverified. |
+| 52-60 s | Enter an unreviewed variant or analyze CPLX1 | When the evidence cannot defend a candidate, the tool says so. CPLX1 retains its sourced biology without borrowing STXBP1 drug evidence. |
 
 The CPLX1/STXBP1 atlas remains at `/atlas` for downstream pathway/community
 exploration. Shared pathway evidence is never used to transfer treatment efficacy.
@@ -28,7 +28,8 @@ are invented here.
 {"disease":"STXBP1","gene":null,"variant":null,"use_openai":false}
 ```
 
-The frozen request/response schema is `docs/analyze-disease.schema.json` and is
+The frozen `constellai-analysis-v2` request/response schema includes the typed
+`knowledge_graph` and is saved in `docs/analyze-disease.schema.json`; it is
 also available through `/api/v1/schema`. `/?data=mock` uses `web/demo-analysis.json`
 from the same response contract. `/api/v1/health` exposes configuration status
 without credentials. Set `OPENAI_API_KEY` and optional `OPENAI_MODEL` in `.env`
@@ -56,7 +57,11 @@ the served code. The current local preview is sufficient for the challenge's
 easy-to-run-prototype route.
 
 Sources, corrections to draft claims and evidence boundaries are recorded in
-`docs/EVIDENCE_REVIEW.md`. Engineering verification is in `docs/VERIFICATION.md`.
+`docs/EVIDENCE_REVIEW.md`. The supplied Google Doc's separate Literature reviews
+tab is mapped to implemented, corrected and deferred items in
+`docs/LITERATURE_REVIEW_TRACEABILITY.md`. Judging alignment and the unmeasured
+10× workflow thesis are in `docs/JUDGING_READINESS.md`. Engineering verification
+is in `docs/VERIFICATION.md`.
 
 ## Teammate: activate the key after upload
 

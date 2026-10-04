@@ -18,10 +18,11 @@ This branch adds the therapeutic journey below; deploy this branch to the Space 
 
 ## Therapeutic journey (this branch)
 
-**Disease → gene/variant → mechanism → evidence and safety ranking → research hypothesis
+**Disease → gene/variant → mechanism → evidence graph → evidence and safety ranking → research hypothesis
 → related disease/community evidence → next experiment.** The default screen is a dark,
 plain-language journey for Maria, a patient-organisation leader. The deep reviewed hero is
-STXBP1; broad atlas coverage does not imply broad therapeutic validation.
+STXBP1; CPLX1 demonstrates sourced biology with an explicit therapeutic evidence gap.
+Broad atlas coverage does not imply broad therapeutic validation.
 
 Run `START_DEMO.cmd` on Windows, or `uv run uvicorn atlas.server:app --port 8800` and open
 http://127.0.0.1:8800. The included evidence snapshot runs without a key or fresh API calls.
@@ -30,9 +31,23 @@ For the small cached-demo runtime only: `python -m pip install -r requirements-d
 `pyproject.toml` and `uv.lock`; the included graph avoids rebuilding for the demo.
 
 `POST /api/v1/analyze_disease` accepts `disease`, optional `gene`, optional `variant` and
-`use_openai`. The frozen schema is in `docs/analyze-disease.schema.json`. The frontend mock
+`use_openai`. The frozen `constellai-analysis-v2` schema is in `docs/analyze-disease.schema.json`. The frontend mock
 at `/?data=mock` uses the same contract. The original map and CPLX1/STXBP1 journey remain
-available at `/atlas`, downstream from the therapeutic analysis.
+available at `/atlas`, downstream from the therapeutic analysis. Both views focus
+on Maria; the atlas has no other persona switcher or stored audience preference.
+
+The reviewed evidence graph connects disease, gene, published or unresolved variant,
+mechanism, pathway, phenotype, candidate, paper, study, organisation, investigator and
+research asset. Expand the map or select an edge to inspect relationship type, source,
+qualitative confidence, observed/inferred status, scope and contrasting evidence.
+Graph projection validates endpoints and citations before returning results. Existing
+HPO annotations enter only when their exact paper reference resolves to the reviewed ledger.
+
+The Google Doc's **Literature reviews** tab is traced into the source ledger and assessments.
+The UI's literature review groups sources by evidence type and maps them to the claims they
+support, study limitations and contrasting findings. See
+[tab-to-software traceability](docs/LITERATURE_REVIEW_TRACEABILITY.md) for included,
+corrected and deferred reference material.
 
 Six configurable positive components minus four risk penalties determine the 0-100 research
 priority index. Every component, missing-data policy and source is inspectable. Unknown
@@ -45,9 +60,17 @@ Optional OpenAI support uses the **Responses API** with strict Structured Output
 key in `.env` or the deployment environment and restart the server after upload. The key
 must never enter frontend code. Transport tests do not establish a successful live paid API call.
 
+The acceleration thesis is to assemble identity, mechanism, connected evidence, candidate
+comparison, safety gaps and a validation plan in one workflow. A **10× improvement is a
+hypothesis to measure**, not a measured result. Expert review, experiments, ethics,
+funding and partner response remain external. Patient organisations and researchers gain
+an auditable research direction and a concrete question for their next discussion.
+
 See [the one-minute demo and deployment handoff](docs/THERAPEUTIC_DEMO.md),
 [primary evidence and draft corrections](docs/EVIDENCE_REVIEW.md),
-and [engineering verification](docs/VERIFICATION.md). Run tests with
+and [engineering verification](docs/VERIFICATION.md). [Mandatory challenge coverage and video handoff](docs/CHALLENGE_SUBMISSION.md)
+maps all six PDF pages to concrete capabilities and remaining submission actions. [Judging readiness](docs/JUDGING_READINESS.md)
+maps the implemented journey and its limits to the challenge criteria. Run tests with
 `python -m unittest discover -s tests -v`.
 
 ## Existing atlas
@@ -86,24 +109,23 @@ Without a key everything still works in deterministic "template mode", and the i
 
 ## A one-minute walkthrough
 
-1. Search **CPLX1**. The gene resolves to *Developmental and epileptic encephalopathy, 63*: a disease with no
-   dedicated patient group, no registered study and no NIH project. The Community tab says so plainly.
+1. Search **CPLX1** in `/atlas`. The gene resolves to *Developmental and epileptic encephalopathy, 63*.
+   The Community tab shows retrieved records and evidence gaps; an empty search does not establish that no resource exists.
 2. Open **Connections**. The top lead is the STXBP1 disease: both genes sit in the neurotransmitter-release
    (SNARE) pathways and patients share unusually informative seizure types.
 3. Open that connection. The path *disease → gene → pathway → gene → disease* is drawn with a numbered evidence
    tag on every step; click a tag to see source, type (observed / inferred / curated), confidence and date.
 4. **What must be checked**: inheritance differs (recessive vs dominant), and the variant-effect evidence for each
    gene is listed with ClinGen, ClinVar and quoted papers.
-5. **What already exists**: the STXBP1 Foundation, a recruiting European trial-readiness study (NCT06625112) and two
-   further natural-history studies, with sponsors, investigators and outcome measures.
+5. **What already exists**: inspect the STXBP1 Foundation and linked studies, their sources, sponsors and outcome
+   measures. The reviewed therapeutic journey separately records dated current and historical registry statuses.
 6. **What to do this week**: who to write to, which protocol to ask for, the next experiment — and
    **Open the sourced proposal** to copy a ready-to-send, fully cited collaboration brief.
 
 For the honest-gap path, open any star on the outer edge of the map (for example *NEUROG3*).
 
-Switch **Viewing as** to change emphasis: Maria (connections and action), Devon (plain-language symptom names,
-community first), Priya (search a mechanism to rank the clusters it touches), Dr. Osei (people first, and
-"Scan the constellation" to find investigators who appear in several neighbouring communities).
+The atlas focuses on **Maria**, a patient-organisation leader: connections, reusable assets and the next research
+step. Biology, Community and People remain available as supporting research tabs within her journey.
 
 ## Architecture
 
@@ -156,7 +178,7 @@ the HPO evidence code, frequency, reference (PMID/OMIM) and curation date. Simil
 |---|---|---|---|
 | **Extract** | Reads abstracts, returns variant-effect and asset claims as structured JSON | The quote must appear verbatim in the cited abstract, or the claim is dropped | Sentence-level pattern matching |
 | **Reconcile** | Maps a lay or misspelled query to candidate names | Only candidates that exist in the atlas vocabulary are accepted | Synonym index only (MONDO, OMIM, Orphanet, HPO) |
-| **Explain** | Turns a graph path into plain language for the selected persona | Every cited `[E#]` must be in the evidence ledger, or the text is discarded | Template built from the ledger |
+| **Explain** | Turns a graph path into plain language for Maria | Every cited `[E#]` must be in the evidence ledger, or the text is discarded | Template built from the ledger |
 | **Name** | Gives colour groups short readable names at build time | Enrichment label is kept alongside | Enriched HPO terms |
 
 The model defaults to `gpt-5-mini` and is set with `OPENAI_MODEL`.

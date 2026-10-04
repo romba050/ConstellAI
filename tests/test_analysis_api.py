@@ -9,6 +9,7 @@ from unittest.mock import patch
 from fastapi.testclient import TestClient
 
 from atlas import server
+from atlas.analysis import graph as evidence_graph
 from atlas.analysis.models import AnalyzeResponse
 from atlas.analysis.service import AnalysisService, NO_CANDIDATE
 from test_analysis import evidence, fake_atlas, service
@@ -27,6 +28,7 @@ class AnalysisAPITests(unittest.TestCase):
         self.assertEqual(set(payload), {"status", "schema_version", "scoring_version", "openai_enabled"})
         self.assertIs(payload["openai_enabled"], False)
         self.assertEqual(payload["scoring_version"], "therapeutic-priority-1")
+        self.assertEqual(payload["schema_version"], "constellai-analysis-v2")
         self.assertNotIn("key", json.dumps(payload).lower())
 
     def test_schema_matches_frozen_contract_file(self):
@@ -84,6 +86,16 @@ class AnalysisAPITests(unittest.TestCase):
             response = self.client.post("/api/v1/analyze_disease", json={"disease": "DEE4"})
         self.assertEqual(response.status_code, 503)
         self.assertNotIn("private-invalid-source", response.text)
+        self.assertIn("withheld", response.json()["detail"])
+
+    def test_invalid_graph_is_withheld_before_api_return(self):
+        result = service().analyze({"disease": "DEE4"})
+        graph = result.knowledge_graph.model_copy(deep=True)
+        graph.edges[0].target = "private-invalid-endpoint"
+        with patch.object(server, "analysis_service", service()), patch.object(evidence_graph, "build_graph", return_value=graph):
+            response = self.client.post("/api/v1/analyze_disease", json={"disease": "DEE4"})
+        self.assertEqual(response.status_code, 503)
+        self.assertNotIn("private-invalid-endpoint", response.text)
         self.assertIn("withheld", response.json()["detail"])
 
     def test_original_graph_entities_and_routes_are_preserved(self):
