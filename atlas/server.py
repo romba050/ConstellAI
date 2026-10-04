@@ -4,6 +4,7 @@
 """
 import datetime
 import json
+import threading
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 
@@ -12,8 +13,8 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from . import connect, enrich, llm
-from .config import ATLAS_FILE, CONTRIBUTIONS_FILE, WEB
+from . import connect, enrich, llm, trials
+from .config import ATLAS_FILE, CONTRIBUTIONS_FILE, FOCUS_DISEASE, WEB
 from .store import Atlas, load_contributions
 
 if not ATLAS_FILE.exists():
@@ -21,6 +22,19 @@ if not ATLAS_FILE.exists():
 
 atlas = Atlas()
 app = FastAPI(title="ConstellAI")
+
+
+@app.on_event("startup")
+def warm_focus():
+    """Fetch the focus disease's evidence and trials in the background so the first visitor doesn't wait."""
+    def run():
+        d = atlas.diseases[FOCUS_DISEASE]
+        for job in (enrich.enrich, trials.find):
+            try:
+                job(d)
+            except Exception as e:
+                print(f"[warm] {job.__name__} failed: {e}")
+    threading.Thread(target=run, daemon=True).start()
 
 
 def disease_or_404(did):
@@ -31,7 +45,7 @@ def disease_or_404(did):
 
 @app.get("/api/atlas")
 def get_atlas():
-    return {"meta": atlas.meta, "llm": llm.status(), "points": atlas.map_points(), "edges": atlas.map_edges(),
+    return {"meta": atlas.meta, "llm": llm.status(), "focus": FOCUS_DISEASE, "points": atlas.map_points(), "edges": atlas.map_edges(),
             "groups": sorted(atlas.groups.values(), key=lambda g: (g["id"] < 0, g["id"])),
             "organizations": len(enrich.curated()["organizations"])}
 
@@ -63,6 +77,12 @@ def disease_evidence(did: str, refresh: bool = False):
     return {**enr, "effect": connect.effect_profile(atlas, d, enr)}
 
 
+@app.get("/api/disease/{did}/trials")
+def disease_trials(did: str, refresh: bool = False):
+    """Open studies a family could ask to join, each screened against the disease."""
+    return trials.find(disease_or_404(did), force=refresh)
+
+
 @app.get("/api/disease/{did}/network")
 def disease_network(did: str, n: int = 5):
     """Network overlap: people who appear in more than one of the closest disease communities."""
@@ -85,9 +105,9 @@ def disease_network(did: str, n: int = 5):
 
 
 @app.get("/api/connection")
-def connection(a: str, b: str, audience: str = "maria"):
+def connection(a: str, b: str):
     disease_or_404(a), disease_or_404(b)
-    return connect.connection(atlas, a, b, audience)
+    return connect.connection(atlas, a, b)
 
 
 @app.get("/api/entity/{typ}/{eid:path}")

@@ -106,7 +106,7 @@ def sponsor_overlap(ea, eb):
     return [{"name": k, "a": na[k], "b": nb[k]} for k in na if k in nb and k][:8]
 
 
-def connection(atlas, aid, bid, audience="maria"):
+def connection(atlas, aid, bid):
     a, b = atlas.diseases[aid], atlas.diseases[bid]
     with ThreadPoolExecutor(3) as ex:
         fa, fb = ex.submit(enrich.enrich, a), ex.submit(enrich.enrich, b)
@@ -296,7 +296,8 @@ def connection(atlas, aid, bid, audience="maria"):
         "verdict": grade, "novelty": novelty, "evidence": [{k: e[k] for k in ("id", "relation", "text", "kind", "source")} for e in evidence],
         "checks": [c["text"] for c in checks], "contradictions": [c["title"] for c in contradictions],
     }
-    narrative = llm.explain(context, [e["id"] for e in evidence], audience) if llm.available() else None
+    narrative = llm.explain(context, [e["id"] for e in evidence]) if llm.available() else None
+    narrative_by = "llm" if narrative else "template"
     if narrative is None:
         narrative = template_narrative(a, b, path, shared_ph, informative, link_e, checks, grade)
 
@@ -308,7 +309,7 @@ def connection(atlas, aid, bid, audience="maria"):
         "effects": {"a": eff_a, "b": eff_b}, "contradictions": contradictions, "checks": checks,
         "comention": co, "people": people, "sponsors": sponsors,
         "assets_a": assets_a, "assets_b": assets_b, "actions": actions, "experiment": experiment,
-        "evidence": evidence, "narrative": narrative, "narrative_by": "openai" if llm.available() and narrative else "template",
+        "evidence": evidence, "narrative": narrative, "narrative_by": narrative_by,
         "coverage": coverage(atlas, ea, eb),
     }
     out["brief"] = brief(atlas, a, b, out)

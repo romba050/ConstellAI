@@ -15,16 +15,19 @@ short_description: An AI atlas for the world's rare diseases
 
 **Live demo:** https://romba050-constellai.hf.space (source: https://huggingface.co/spaces/romba050/ConstellAI)
 
-Five thousand scattered points of light, one map to see the constellations. ConstellAI places **6,457 monogenic
-diseases** on one map, grouped by shared symptoms and shared pathways rather than by name. A patient-group leader
-types a disease, gene, symptom, mechanism or organisation into one search box and is carried to:
+ConstellAI is built for **Maria**, who leads the patient group for **STXBP1-related disorders**: a rare genetic
+epilepsy and developmental disorder with no approved treatment. It answers her three questions:
 
-1. **a supported connection** — the closest diseases, with every edge citing its source;
-2. **an existing asset** — registries, natural-history studies, trials, grants and models that already exist;
-3. **a collaborator** — the patient group, lead investigator or shared key opinion leader;
-4. **a concrete next step** — what to check first, who to write to this week, and a sourced proposal to send.
+1. **Which trials can our families join?** Every open study that mentions STXBP1, plus children's interventional
+   trials for the epilepsies STXBP1 patients have, each screened by gpt-oss-120b against its eligibility text and
+   filtered by the child's age and country.
+2. **Who shares our biology?** STXBP1 sits on a map of 6,457 monogenic diseases grouped by shared symptoms and
+   pathways rather than by name; every link to a neighbouring disease cites its source.
+3. **What should we do this week?** Which group or study team to write to, what to check first, and a ready-to-send
+   enquiry or sourced collaboration proposal.
 
-If no supported route exists, the atlas says so, shows what was searched and what evidence would change the answer.
+If the evidence does not support something, the atlas says so: today, for example, no open drug or gene-therapy
+trial names STXBP1, and the Trials tab states that before listing the broader trials that might accept it.
 
 ## Run it
 
@@ -44,29 +47,21 @@ docker build -t constellai . && docker run --rm -p 7860:7860 constellai   # open
 
 `data/atlas.json.gz` (4 MB) is included, so the build command can be skipped for a quick look.
 
-Optional: copy `.env.example` to `.env` and set `OPENAI_API_KEY` to switch on the OpenAI steps (see below).
-Without a key everything still works in deterministic "template mode", and the interface says which mode is active.
+Optional: copy `.env.example` to `.env` and set `CEREBRAS_API_KEY` (gpt-oss-120b) or `OPENAI_API_KEY` to switch on
+the AI steps (see below). Without a key everything still works in deterministic "template mode", and the interface
+says which mode is active.
 
 ## A one-minute walkthrough
 
-1. Search **CPLX1**. The gene resolves to *Developmental and epileptic encephalopathy, 63*: a disease with no
-   dedicated patient group, no registered study and no NIH project. The Community tab says so plainly.
-2. Open **Connections**. The top lead is the STXBP1 disease: both genes sit in the neurotransmitter-release
-   (SNARE) pathways and patients share unusually informative seizure types.
-3. Open that connection. The path *disease → gene → pathway → gene → disease* is drawn with a numbered evidence
-   tag on every step; click a tag to see source, type (observed / inferred / curated), confidence and date.
-4. **What must be checked**: inheritance differs (recessive vs dominant), and the variant-effect evidence for each
-   gene is listed with ClinGen, ClinVar and quoted papers.
-5. **What already exists**: the STXBP1 Foundation, a recruiting European trial-readiness study (NCT06625112) and two
-   further natural-history studies, with sponsors, investigators and outcome measures.
-6. **What to do this week**: who to write to, which protocol to ask for, the next experiment — and
-   **Open the sourced proposal** to copy a ready-to-send, fully cited collaboration brief.
-
-For the honest-gap path, open any star on the outer edge of the map (for example *NEUROG3*).
-
-Switch **Viewing as** to change emphasis: Maria (connections and action), Devon (plain-language symptom names,
-community first), Priya (search a mechanism to rank the clusters it touches), Dr. Osei (people first, and
-"Scan the constellation" to find investigators who appear in several neighbouring communities).
+1. The app opens on **STXBP1-related disorders**, Trials tab. Enter a child's age (4) and country (United States).
+2. A warning comes first: **no open drug or gene-therapy trial names STXBP1**. Below it, 13 experimental trials that
+   could include the child, grouped as medicine, diet or device. Each shows the model's one-line reason, the
+   eligibility criterion it is based on (quoted verbatim), extra requirements, nearby sites and the contact.
+3. **Draft an enquiry to the study team** produces an email Maria can send as-is.
+4. **STXBP1 studies to join now**: five registries and natural-history studies that keep families trial-ready.
+5. Open **Connections** and choose *Developmental and epileptic encephalopathy, 63* (CPLX1), or click any star on
+   the map. The path *STXBP1 → pathway → CPLX1 → disease* has a numbered evidence tag on every step, a plain-language
+   explanation by gpt-oss-120b, what must be checked before joining forces, and a sourced proposal to send.
 
 ## Architecture
 
@@ -76,7 +71,8 @@ atlas/
   build.py     Module 1 — reconcile → connect → score → cluster → layout → data/atlas.json.gz
   enrich.py    live evidence per disease: PubMed, ClinVar, ClinicalTrials.gov, NIH RePORTER, patient groups
   connect.py   Module 2+3 — evidence ledger, contradictions, checks, assets, actions, proposal
-  llm.py       OpenAI steps: Extract, Reconcile, Explain (each with verification and a fallback)
+  trials.py    open trials for the focus disease, screened for eligibility and grouped for families
+  llm.py       AI steps: Extract, Reconcile, Explain, Screen (each with verification and a fallback)
   store.py     in-memory graph, global search with synonym resolution, entity views
   server.py    FastAPI: JSON API + static frontend
 web/           no-build frontend: canvas constellation map (D3 zoom/quadtree) + evidence panel
@@ -121,8 +117,10 @@ the HPO evidence code, frequency, reference (PMID/OMIM) and curation date. Simil
 | **Reconcile** | Maps a lay or misspelled query to candidate names | Only candidates that exist in the atlas vocabulary are accepted | Synonym index only (MONDO, OMIM, Orphanet, HPO) |
 | **Explain** | Turns a graph path into plain language for the selected persona | Every cited `[E#]` must be in the evidence ledger, or the text is discarded | Template built from the ledger |
 | **Name** | Gives colour groups short readable names at build time | Enrichment label is kept alongside | Enriched HPO terms |
+| **Screen** | Reads each trial's eligibility criteria and decides whether an STXBP1 child could qualify, with a reason and extra requirements | The deciding criterion must be quoted verbatim or the quote is dropped; trials whose text names STXBP1 are always marked as such | Rules: gene restrictions in the title, gene named in the text |
 
-The model defaults to `gpt-5-mini` and is set with `OPENAI_MODEL`.
+The model is OpenAI's open-weight **gpt-oss-120b**, served by Cerebras (`CEREBRAS_API_KEY`). With only
+`OPENAI_API_KEY` set, the same steps run on the OpenAI API (`OPENAI_MODEL`, default `gpt-5-mini`).
 
 ## Reproducing the dataset
 
@@ -155,5 +153,8 @@ variant-effect check passes. Validating those four assumptions on one real pair 
 - The variant-effect call is made per gene, so genes with both loss- and gain-of-function diseases show as
   variant-dependent.
 - The patient-organisation list is hand-curated (87 entries) and only website liveness is checked automatically.
-- The OpenAI path was written against the API but not exercised in this build, because no key was available.
+- The Cerebras key allows 5 requests per minute. Trial screening is batched (about 8 trials per call) and cached per
+  trial version, but when several people open connections at once, explanations fall back to the template.
+- Trial eligibility is screened from the text on ClinicalTrials.gov only. Lists kept on a study's own website (for
+  example Simons Searchlight's gene list) are not seen.
 - Nothing here is medical advice. An inferred link is a hypothesis, not evidence that a treatment exists.

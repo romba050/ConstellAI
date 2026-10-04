@@ -15,7 +15,14 @@ CONTRIBUTIONS_FILE = DATA / "contributions.json"
 WEB = ROOT / "web"
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-5-mini").strip()
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "").strip() or "gpt-5-mini"
+# Cerebras serves OpenAI's open-weight gpt-oss-120b through an OpenAI-compatible API; preferred when set.
+CEREBRAS_API_KEY = os.getenv("CEREBRAS_API_KEY", "").strip()
+CEREBRAS_MODEL = os.getenv("CEREBRAS_MODEL", "").strip() or "gpt-oss-120b"
+CEREBRAS_BASE_URL = "https://api.cerebras.ai/v1"
+
+# The disease this deployment is built around (STXBP1 developmental and epileptic encephalopathy).
+FOCUS_DISEASE = "MONDO:0012812"
 NCBI_API_KEY = os.getenv("NCBI_API_KEY", "").strip()
 
 # Bulk files the graph builder needs. Everything else is fetched live per disease.

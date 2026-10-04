@@ -1,4 +1,7 @@
-"""OpenAI-backed steps: Extract, Reconcile, Explain.
+"""OpenAI-model steps: Extract, Reconcile, Explain, Screen trials.
+
+Runs on OpenAI's open-weight gpt-oss-120b via Cerebras when CEREBRAS_API_KEY is
+set, otherwise on the OpenAI API when OPENAI_API_KEY is set.
 
 Every function returns None (or leaves its input untouched) when no key is
 configured or the call fails, and the callers fall back to deterministic logic.
@@ -7,30 +10,64 @@ source abstract, and citations must point at evidence ids we supplied.
 """
 import json
 import re
+import threading
+import time
 
-from .config import OPENAI_API_KEY, OPENAI_MODEL
+from .config import (CEREBRAS_API_KEY, CEREBRAS_BASE_URL, CEREBRAS_MODEL,
+                     OPENAI_API_KEY, OPENAI_MODEL)
 
 _client = None
+if CEREBRAS_API_KEY:
+    PROVIDER, MODEL, _KEY, _BASE = "Cerebras", CEREBRAS_MODEL, CEREBRAS_API_KEY, CEREBRAS_BASE_URL
+elif OPENAI_API_KEY:
+    PROVIDER, MODEL, _KEY, _BASE = "OpenAI", OPENAI_MODEL, OPENAI_API_KEY, None
+else:
+    PROVIDER, MODEL, _KEY, _BASE = None, None, "", None
+
+
+# Cerebras' free tier allows 5 requests per minute; stay under it and degrade instead of queueing for long.
+RPM = 4 if PROVIDER == "Cerebras" else 60
+_calls = []
+_lock = threading.Lock()
+
+
+def _acquire(max_wait):
+    deadline = time.time() + max_wait
+    while True:
+        with _lock:
+            now = time.time()
+            while _calls and now - _calls[0] > 60:
+                _calls.pop(0)
+            if len(_calls) < RPM:
+                _calls.append(now)
+                return True
+            wait = 60 - (now - _calls[0]) + 0.2
+        if time.time() + wait > deadline:
+            return False
+        time.sleep(wait)
 
 
 def available():
-    return bool(OPENAI_API_KEY)
+    return bool(_KEY)
 
 
 def status():
-    return {"enabled": available(), "model": OPENAI_MODEL if available() else None}
+    return {"enabled": available(), "model": MODEL, "provider": PROVIDER}
 
 
-def _json(system, user, name, schema):
+def _json(system, user, name, schema, max_wait=15):
     global _client
     if not available():
+        return None
+    if not _acquire(max_wait):
+        print(f"[llm] {name} skipped: rate limit")
         return None
     try:
         if _client is None:
             from openai import OpenAI
-            _client = OpenAI(api_key=OPENAI_API_KEY, timeout=60)
+            _client = OpenAI(api_key=_KEY, base_url=_BASE, timeout=90, max_retries=2)
         r = _client.chat.completions.create(
-            model=OPENAI_MODEL,
+            model=MODEL,
             messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
             response_format={"type": "json_schema",
                              "json_schema": {"name": name, "strict": True, "schema": schema}},
@@ -101,15 +138,10 @@ def resolve_query(query):
     return out["candidates"] if out else None
 
 
-def explain(context, evidence_ids, audience):
+def explain(context, evidence_ids):
     """Plain-language explanation of a connection. Every sentence cites [E#] ids."""
     schema = _obj({"paragraphs": {"type": "array", "items": {"type": "string"}}})
-    tone = {
-        "devon": "a newly diagnosed family with no medical background (short sentences, no jargon, warm but honest)",
-        "maria": "a patient-organisation leader deciding whether to contact another community",
-        "priya": "a biotech scout assessing therapeutic opportunity",
-        "osei": "an academic researcher looking for collaborators on a shared mechanism",
-    }.get(audience, "a patient-organisation leader")
+    tone = "Maria, who leads the STXBP1 patient group and is deciding whether to contact another community"
     system = (
         f"You explain a link between two rare diseases to {tone}. Use ONLY the evidence items provided; each "
         "has an id like E3. After every factual sentence cite the supporting ids in square brackets, e.g. [E3]. "
@@ -144,3 +176,46 @@ def name_groups(groups, hpo, path_names):
         for g in groups:
             if g["id"] in names:
                 g["enrichment_label"], g["label"] = g["label"], names[g["id"]]
+
+
+
+def screen_trials(focus, batch):
+    """Judge, from eligibility text, whether a patient with the focus disease could enter each trial.
+
+    batch: trials with title/conditions/interventions/criteria. Returns {nct: result} where each quote is
+    verified as a verbatim span of that trial's text (an unverifiable quote is blanked), or None on failure.
+    """
+    schema = _obj({"results": {"type": "array", "items": _obj({
+        "nct": {"type": "string"},
+        "verdict": {"type": "string", "enum": ["names_disease", "could_include", "other_gene_only", "excludes"]},
+        "reason": {"type": "string"},
+        "quote": {"type": "string"},
+        "requirements": {"type": "array", "items": {"type": "string"}},
+    })}})
+    system = (
+        f"You help Maria, who leads the patient group for {focus['name']} ({focus['gene']}-related disorder: "
+        f"{focus['summary']}), find clinical trials her families could ask to join. For EACH trial below choose:\n"
+        f"- names_disease: the trial explicitly includes {focus['gene']} or this disease.\n"
+        "- could_include: not named, but the inclusion criteria are broad enough (e.g. any developmental and "
+        "epileptic encephalopathy, drug-resistant epilepsy of any cause, infantile spasms) that such a child might qualify.\n"
+        "- other_gene_only: restricted to a different gene or named syndrome (e.g. SCN2A, Dravet only).\n"
+        f"- excludes: the criteria would exclude a typical {focus['gene']} patient (e.g. adults only, normal development required).\n"
+        "`reason`: one plain sentence for a parent, no jargon. `quote`: the single deciding criterion copied EXACTLY "
+        "from that trial's text (max 200 characters). `requirements`: up to 3 short extra conditions a child must "
+        "meet (age, seizure frequency, medication...). Use only the text given. Return one result per trial."
+    )
+    user = "\n\n".join(
+        f"=== {t['nct']} ===\nTitle: {t['title']}\nConditions: {', '.join(t['conditions'])}\n"
+        f"Interventions: {', '.join(i['name'] for i in t['interventions'])}\nEligibility:\n{t['criteria'][:1800]}"
+        for t in batch)
+    out = _json(system, user, "trial_screen", schema, max_wait=180)
+    if not out:
+        return None
+    texts = {t["nct"]: _norm(t["criteria"] + " " + t["title"] + " " + " ".join(t["conditions"])) for t in batch}
+    results = {}
+    for r in out["results"]:
+        if r["nct"] in texts:
+            if not _norm(r["quote"]) or _norm(r["quote"]) not in texts[r["nct"]]:
+                r["quote"] = ""
+            results[r["nct"]] = r
+    return results

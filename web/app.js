@@ -2,15 +2,10 @@
 const COLORS = ["#6ea8fe", "#f6c453", "#7ddc9a", "#f08a8a", "#c59bf5", "#5fd4d6", "#f5a05c", "#e58fc8",
   "#a5d65a", "#8f9cf7", "#e8d27a", "#58c7a0", "#f27fa5", "#9fb8d8"];
 const OTHER = "#56617d";
-const PERSONAS = {
-  maria: { tab: "connections", hint: "Patient organisation leader: closest constellations, reusable assets, next step." },
-  devon: { tab: "community", hint: "Newly diagnosed family: plain language, your community first." },
-  priya: { tab: "community", hint: "Biotech scout: search a mechanism to rank the constellations it touches." },
-  osei: { tab: "people", hint: "Researcher: who else works on this mechanism, under any gene name." },
-};
-const S = { persona: "maria", points: [], byId: new Map(), groups: [], meta: null, llm: null,
-  selected: null, neighbors: [], highlight: null, tab: null, evidence: {}, conn: null };
-try { S.persona = localStorage.getItem("persona") || "maria"; } catch (e) { /* private mode */ }
+const S = { points: [], byId: new Map(), groups: [], meta: null, llm: null, focus: null,
+  selected: null, neighbors: [], highlight: null, tab: null, evidence: {}, trials: {}, conn: null,
+  profile: { age: "", country: "" } };
+try { Object.assign(S.profile, JSON.parse(localStorage.getItem("profile") || "{}")); } catch (e) { /* private mode */ }
 
 const $ = (s, el = document) => el.querySelector(s);
 const panel = $("#panel");
@@ -21,8 +16,8 @@ const api = async (path) => {
   return r.json();
 };
 const color = (g) => (g >= 0 && g < COLORS.length ? COLORS[g] : OTHER);
-const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
-const lay = (p) => (S.persona === "devon" && p.lay ? p.lay : p.name);
+const plural = (n, w) => `${n} ${n === 1 ? w : w.endsWith("y") ? w.slice(0, -1) + "ies" : w + "s"}`;
+const lay = (p) => p.name;
 const link = (url, text) => (url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>` : esc(text));
 const refLink = (ref) => {
   const [db, id] = ref.split(":");
@@ -30,7 +25,7 @@ const refLink = (ref) => {
     : db === "ORPHA" ? `https://www.orpha.net/en/disease/detail/${id}` : "";
   return link(url, ref);
 };
-const diseaseHref = (id) => `#d/${id}`;
+const diseaseHref = (id) => (id === S.focus ? "#" : `#d/${id}`);
 const geneChip = (g) => `<a class="chip gene" href="#e/gene/${esc(g)}">${esc(g)}</a>`;
 
 /* ------------------------------------------------------------------ map */
@@ -147,8 +142,9 @@ canvas.addEventListener("mousemove", (ev) => {
   }
 });
 canvas.addEventListener("mouseleave", () => { hover = null; tip.hidden = true; dirty = true; });
-canvas.addEventListener("click", (ev) => { const p = pointAt(ev); if (p) location.hash = diseaseHref(p.id); });
-$("#reset").onclick = () => { location.hash = ""; d3.select(canvas).transition().duration(600).call(zoom.transform, d3.zoomIdentity); };
+// Every star is read relative to the focus disease: clicking one opens its connection to it.
+canvas.addEventListener("click", (ev) => { const p = pointAt(ev); if (p) location.hash = p.id === S.focus ? "#" : `#c/${S.focus}/${p.id}`; });
+$("#reset").onclick = () => { S.highlight = null; dirty = true; d3.select(canvas).transition().duration(600).call(zoom.transform, d3.zoomIdentity); };
 
 function focus(ids, maxK = 14) {
   const pts = ids.map((i) => S.byId.get(i)).filter(Boolean);
@@ -173,7 +169,7 @@ function renderLegend() {
     <div class="foot">
       <p>Grouped by shared symptoms and pathways, not by disease name.</p>
       <p>${c.diseases.toLocaleString()} monogenic diseases · ${c.genes.toLocaleString()} genes · ${c.similarity_edges.toLocaleString()} evidence-backed links · ${c.clusters} clusters</p>
-      <p>Built ${esc(S.meta.built)} · ${S.llm.enabled ? "OpenAI " + esc(S.llm.model) : "template mode (no OpenAI key)"}</p>
+      <p>Built ${esc(S.meta.built)} · ${S.llm.enabled ? `AI: ${esc(S.llm.model)} via ${esc(S.llm.provider)}` : "template mode (no AI key)"}</p>
     </div>`;
 }
 $("#legend").addEventListener("click", (ev) => {
@@ -190,98 +186,15 @@ $("#legend").addEventListener("click", (ev) => {
   dirty = true;
 });
 
-/* ------------------------------------------------------------------ search */
-const q = $("#q"), hitsEl = $("#hits");
-let hits = [], hitIx = 0, searchSeq = 0;
-const TYPE_LABEL = { disease: "Disease", gene: "Gene", phenotype: "Symptom", mechanism: "Mechanism", group: "Patient group" };
-function renderHits() {
-  hitsEl.hidden = false;
-  hitsEl.innerHTML = hits.length ? hits.map((h, i) => `
-    <div class="hit ${i === hitIx ? "on" : ""}" data-i="${i}">
-      <span class="type">${TYPE_LABEL[h.type]}</span>
-      <span>${esc(h.label)}${h.matched ? `<small>matched “${esc(h.matched)}”</small>` : ""}</span>
-      <span class="sub">${esc(h.sub || "")}</span>
-    </div>`).join("")
-    : `<div class="hit none">No disease, gene, symptom, mechanism or patient group matches “${esc(q.value)}”. The atlas covers monogenic diseases with HPO annotations; try a gene symbol or an OMIM number.</div>`;
-}
-q.addEventListener("input", async () => {
-  const seq = ++searchSeq, text = q.value.trim();
-  if (text.length < 2) { hitsEl.hidden = true; return; }
-  const r = await api("/api/search?q=" + encodeURIComponent(text));
-  if (seq !== searchSeq) return;
-  hits = r.hits; hitIx = 0; renderHits();
-});
-function choose(h) {
-  if (!h) return;
-  hitsEl.hidden = true; q.blur();
-  if (h.matched) S.resolved = { from: h.matched, id: h.id };
-  location.hash = h.type === "disease" ? diseaseHref(h.id) : `#e/${h.type}/${encodeURIComponent(h.id)}`;
-}
-q.addEventListener("keydown", (ev) => {
-  if (ev.key === "ArrowDown") { hitIx = Math.min(hitIx + 1, hits.length - 1); renderHits(); ev.preventDefault(); }
-  else if (ev.key === "ArrowUp") { hitIx = Math.max(hitIx - 1, 0); renderHits(); ev.preventDefault(); }
-  else if (ev.key === "Enter") choose(hits[hitIx]);
-  else if (ev.key === "Escape") hitsEl.hidden = true;
-});
-hitsEl.addEventListener("mousedown", (ev) => { const el = ev.target.closest(".hit[data-i]"); if (el) choose(hits[+el.dataset.i]); });
-q.addEventListener("blur", () => setTimeout(() => (hitsEl.hidden = true), 150));
-
-/* ------------------------------------------------------------------ persona */
-function renderPersona() {
-  document.querySelectorAll(".persona button").forEach((b) => b.classList.toggle("on", b.dataset.persona === S.persona));
-  q.placeholder = S.persona === "priya"
-    ? "Search a mechanism or pathway — e.g. “neurotransmitter release” or “lysosomal”"
-    : "Search a disease, gene, symptom, mechanism or patient group — e.g. “STXBP1” or “lysosomal”";
-}
-document.querySelector(".persona").addEventListener("click", (ev) => {
-  const b = ev.target.closest("button");
-  if (!b) return;
-  S.persona = b.dataset.persona; S.tab = null;
-  try { localStorage.setItem("persona", S.persona); } catch (e) { /* ignore */ }
-  renderPersona(); route();
-});
-
-/* ------------------------------------------------------------------ home */
-function renderHome() {
-  const c = S.meta.counts;
-  const ex = S.persona === "priya"
-    ? [["Neurotransmitter release cycle", "neurotransmitter release"], ["Glycosphingolipid catabolism", "glycosphingolipid"], ["RAF/MAP kinase cascade", "RAF/MAP"]]
-    : [["STXBP1", "STXBP1"], ["Tay-Sachs disease", "Tay-Sachs"], ["SYNGAP1", "SYNGAP1"], ["Sanfilippo", "Sanfilippo"], ["Epileptic spasm", "Epileptic spasm"]];
-  panel.innerHTML = `
-    <h1>Five thousand scattered points of light. One map to see the constellations.</h1>
-    <p class="lede" style="margin-top:12px">Every star is a rare disease caused by a single gene. Stars sit together when patients share
-      symptoms and their genes work in the same pathway — whatever the diseases are called.</p>
-    <p class="muted">${esc(PERSONAS[S.persona].hint)}</p>
-    <h2>Start from your disease</h2>
-    <div class="chips">${ex.map(([l, v]) => `<button class="chip" data-example="${esc(v)}">${esc(l)}</button>`).join("")}</div>
-    <h2>The atlas answers three questions</h2>
-    <ol class="steps">
-      <li><strong>Who shares our disease characteristics?</strong><br><span class="muted">Closest diseases by mechanism and symptoms, with the evidence for each link.</span></li>
-      <li><strong>What useful work already exists?</strong><br><span class="muted">Registries, natural-history studies, models, grants and the groups behind them.</span></li>
-      <li><strong>What should we do together next?</strong><br><span class="muted">What to check first, who to write to, and a sourced proposal to send.</span></li>
-    </ol>
-    <h2>What is in the map</h2>
-    <table>
-      <tr><td>Diseases</td><td>${c.diseases.toLocaleString()} monogenic, reconciled to MONDO identifiers</td></tr>
-      <tr><td>Symptom links</td><td>${c.phenotype_annotations.toLocaleString()} HPO annotations, each with its reference</td></tr>
-      <tr><td>Mechanism links</td><td>${c.pathways.toLocaleString()} Reactome pathways across ${c.genes.toLocaleString()} genes</td></tr>
-      <tr><td>Live evidence</td><td>PubMed, ClinicalTrials.gov, NIH RePORTER and ClinVar, fetched when you open a disease</td></tr>
-      <tr><td>Communities</td><td>${S.orgs} patient organisations, websites checked</td></tr>
-    </table>
-    <h2>Sources</h2>
-    <p class="small muted">${S.meta.sources.map((s) => `${link(s.url, s.name)} (${esc(s.version)})`).join(" · ")}</p>
-    <p class="small muted">ConstellAI connects public research data. It is not medical advice, and an inferred link is a hypothesis, not proof that a treatment exists.</p>`;
-}
-panel.addEventListener("click", (ev) => {
-  const ex = ev.target.closest("[data-example]");
-  if (ex) { q.value = ex.dataset.example; q.focus(); q.dispatchEvent(new Event("input")); }
-});
-
 /* ------------------------------------------------------------------ disease */
 const GRADE_TEXT = { viable: "Viable lead", speculative: "Speculative", thin: "Thin data", unsupported: "Unsupported" };
 
 async function openDisease(id) {
   panel.innerHTML = `<div class="loading">Opening the atlas</div>`;
+  if (id === S.focus && !S.trials[id]) {
+    api(`/api/disease/${id}/trials`).then((t) => { S.trials[id] = t; if (S.selected === id && !S.conn) renderDisease(); })
+      .catch((err) => { S.trials[id] = { error: err.message }; if (S.selected === id && !S.conn) renderDisease(); });
+  }
   const d = await api("/api/disease/" + id);
   S.selected = id; S.neighbors = d.neighbors; S.highlight = null; S.conn = null; S.detail = d;
   focus([id, ...d.neighbors.map((n) => n.id)]);
@@ -294,23 +207,26 @@ async function openDisease(id) {
 }
 
 function renderDisease() {
-  const d = S.detail, e = S.evidence[d.id], tab = S.tab || PERSONAS[S.persona].tab;
-  const resolved = S.resolved && S.resolved.id === d.id ? S.resolved.from : null;
-  const tabs = [["connections", `Connections ${d.neighbors.length}`], ["biology", "Biology"], ["community", "Community"], ["people", "People"]];
+  const d = S.detail, e = S.evidence[d.id], isFocus = d.id === S.focus;
+  const tabs = (isFocus ? [["trials", "Trials to join"]] : [])
+    .concat([["connections", `Connections ${d.neighbors.length}`], ["community", "Community"], ["biology", "Biology"], ["people", "People"]]);
+  const tab = tabs.some(([k]) => k === S.tab) ? S.tab : tabs[0][0];
+  const focusName = S.byId.get(S.focus).genes;
   panel.innerHTML = `
-    <a class="back" href="#">← Whole atlas</a>
-    <h1>${esc(d.name)}</h1>
-    ${resolved ? `<p class="small" style="color:var(--accent)">“${esc(resolved)}” resolves to this disease.</p>` : ""}
+    ${isFocus ? `<p class="label">For Maria · STXBP1 patient-group leader</p>` : `<a class="back" href="#">← Back to ${esc(focusName)}</a>`}
+    <h1>${isFocus ? "STXBP1-related disorders" : esc(d.name)}</h1>
+    ${isFocus ? `<p class="small muted">${esc(d.name)} · one gene, one community, every open trial checked</p>`
+      : `<p class="small"><a href="#c/${S.focus}/${d.id}">See how it connects to ${esc(focusName)} →</a></p>`}
     <div class="chips">${d.genes.map((g) => geneChip(g.symbol)).join("")}
       ${d.inheritance.map((i) => `<span class="chip">${esc(i.replace(" inheritance", ""))}</span>`).join("")}
       ${d.onset.slice(0, 2).map((i) => `<span class="chip">${esc(i)}</span>`).join("")}</div>
-    ${d.def ? `<p class="def ${S.persona === "devon" ? "" : "muted"}" title="Click to expand">${esc(d.def)}</p>` : ""}
+    ${d.def ? `<p class="def muted" title="Click to expand">${esc(d.def)}</p>` : ""}
     <p class="small muted">${d.synonyms.length ? `Also known as ${d.synonyms.slice(0, 4).map(esc).join("; ")}${d.synonyms.length > 4 ? ` and ${d.synonyms.length - 4} more names` : ""}. ` : ""}
       ${d.links.map((l) => link(l.url, l.label)).join(" · ")}</p>
     <p class="small">Constellation: <a href="#k/${esc(d.cluster.id)}"><span style="color:${color(d.group)}">●</span> ${esc(d.cluster.label)}</a>
       <span class="muted">· ${plural(d.cluster.size, "disease")}</span></p>
     <div class="tabs">${tabs.map(([k, l]) => `<button data-tab="${k}" class="${k === tab ? "on" : ""}">${l}</button>`).join("")}</div>
-    <div id="tab">${{ connections: tabConnections, biology: tabBiology, community: tabCommunity, people: tabPeople }[tab](d, e)}</div>`;
+    <div id="tab">${{ trials: tabTrials, connections: tabConnections, biology: tabBiology, community: tabCommunity, people: tabPeople }[tab](d, e)}</div>`;
 }
 panel.addEventListener("click", (ev) => {
   if (ev.target.classList.contains("def")) ev.target.classList.toggle("open");
@@ -481,6 +397,109 @@ panel.addEventListener("click", async (ev) => {
   if (S.selected === id && !S.conn) renderDisease();
 });
 
+/* ------------------------------------------------------------------ trials */
+const VERDICT = {
+  names_disease: { label: "Made for STXBP1", cls: "viable" },
+  could_include: { label: "Could include your child", cls: "speculative" },
+  excludes: { label: "Likely excludes STXBP1", cls: "thin" },
+  other_gene_only: { label: "Other gene only", cls: "unsupported" },
+};
+const ageFits = (t, age) => age === "" || ((t.min_age == null || age >= t.min_age) && (t.max_age == null || age <= t.max_age));
+
+function trialCard(t) {
+  const sc = t.screen, country = S.profile.country;
+  const sites = country ? t.sites.filter((x) => x.country === country) : [];
+  const countries = [...new Set(t.sites.map((x) => x.country).filter(Boolean))];
+  const phase = t.phases.filter((p) => p !== "NA").map((p) => p.replace("EARLY_PHASE1", "Early phase 1").replace("PHASE", "Phase ")).join("/");
+  const contact = t.contacts[0];
+  return `<div class="card trial">
+    <div class="meta"><span class="badge ${VERDICT[sc.verdict].cls}">${VERDICT[sc.verdict].label}</span>
+      ${esc(t.kind)}${phase ? " · " + esc(phase) : ""} · ${esc(t.status.replace(/_/g, " ").toLowerCase())}</div>
+    <div class="title" style="margin-top:6px">${link(t.url, t.title)}</div>
+    <p class="small" style="margin:6px 0">${esc(sc.reason)}</p>
+    ${sc.quote ? `<blockquote>“${esc(sc.quote)}” <span class="muted">— eligibility criteria, ${esc(t.nct)}</span></blockquote>` : ""}
+    ${sc.requirements && sc.requirements.length ? `<div class="chips">${sc.requirements.map((r) => `<span class="chip">${esc(r)}</span>`).join("")}</div>` : ""}
+    <div class="meta">Ages ${esc(t.ages)}${t.interventions.length ? " · " + t.interventions.slice(0, 2).map((i) => esc(i.name)).join(", ") : ""} · ${esc(t.sponsor)}</div>
+    <div class="meta">${sites.length ? `<span style="color:var(--ok)">${plural(sites.length, "site")} in ${esc(country)}</span>: ${sites.slice(0, 3).map((x) => esc(x.city || x.facility)).join(", ")}`
+      : countries.length ? `${country ? `No site in ${esc(country)} · ` : ""}Sites in ${countries.slice(0, 4).map(esc).join(", ")}${countries.length > 4 ? ` +${countries.length - 4}` : ""}` : "Sites not listed yet"}</div>
+    ${contact ? `<div class="meta">Contact: ${esc(contact.name)}${contact.email ? ` · <a href="mailto:${esc(contact.email)}">${esc(contact.email)}</a>` : ""}${contact.phone ? " · " + esc(contact.phone) : ""}</div>` : ""}
+    <div style="margin-top:8px"><button class="chip" data-enquiry="${esc(t.nct)}">Draft an enquiry to the study team</button></div>
+  </div>`;
+}
+
+function tabTrials(d) {
+  const r = S.trials[d.id];
+  if (!r) return `<div class="loading">Checking every open study on ClinicalTrials.gov against STXBP1 — the first time takes about a minute</div>`;
+  if (r.error) return `<div class="note stop">Could not load trials: ${esc(r.error)}</div>`;
+  const age = S.profile.age === "" ? "" : +S.profile.age;
+  const all = r.trials, country = S.profile.country;
+  const countries = [...new Set(all.flatMap((t) => t.sites.map((x) => x.country)).filter(Boolean))].sort();
+  const usable = all.filter((t) => ["names_disease", "could_include"].includes(t.screen.verdict));
+  const fits = usable.filter((t) => ageFits(t, age));
+  const near = (t) => (country && t.sites.some((x) => x.country === country) ? 0 : 1);
+  const sorted = (list) => [...list].sort((a, b) => near(a) - near(b));
+  const experimental = sorted(fits.filter((t) => t.type === "INTERVENTIONAL"));
+  const named = sorted(fits.filter((t) => t.screen.verdict === "names_disease" && t.type !== "INTERVENTIONAL"));
+  const groups = {};
+  for (const t of experimental) (groups[t.kind] = groups[t.kind] || []).push(t);
+  const notFor = all.filter((t) => !usable.includes(t));
+  const tooOld = usable.length - fits.length;
+  const noStxbp1Drug = !all.some((t) => t.screen.verdict === "names_disease" && t.type === "INTERVENTIONAL");
+  return `
+    <p class="small muted" style="margin-top:12px">Every open study that mentions STXBP1, plus children's interventional trials for the epilepsies STXBP1 patients have,
+      read and screened by ${esc(r.model)}. Only the study team can confirm eligibility.</p>
+    <form class="profile">
+      <label>Child's age (years)<input name="age" type="number" min="0" max="80" step="0.5" value="${esc(S.profile.age)}" placeholder="any"></label>
+      <label>Country<select name="country"><option value="">Any</option>${countries.map((c) => `<option ${c === country ? "selected" : ""}>${esc(c)}</option>`).join("")}</select></label>
+    </form>
+    ${tooOld ? `<p class="small muted">${plural(tooOld, "study")} hidden because a ${esc(S.profile.age)}-year-old is outside the age range.</p>` : ""}
+    ${noStxbp1Drug ? `<div class="note warn"><strong>No open drug or gene-therapy trial names STXBP1 today.</strong> The experimental trials below are for broader epilepsies your families may qualify for. Joining a natural-history study keeps them trial-ready for when an STXBP1 therapy reaches the clinic.</div>` : ""}
+    <h2>Experimental trials your families could ask about <span class="muted small">· ${experimental.length}</span></h2>
+    ${Object.keys(groups).length ? Object.entries(groups).map(([k, ts]) => `<p class="label" style="margin-top:14px">${esc(k)} · ${ts.length}</p>${ts.map(trialCard).join("")}`).join("")
+      : `<p class="muted small">None match the filters.</p>`}
+    <h2>STXBP1 studies to join now <span class="muted small">· ${named.length}</span></h2>
+    <p class="small muted">Registries and natural-history studies. They test no treatment, but they build the data every future STXBP1 trial will need.</p>
+    ${named.map(trialCard).join("") || `<p class="muted small">None match the filters.</p>`}
+    <details><summary>Not suitable for STXBP1 <span>${notFor.length} studies</span></summary><div>
+      ${notFor.map((t) => `<div class="small" style="margin:8px 0"><span class="badge ${VERDICT[t.screen.verdict].cls}">${VERDICT[t.screen.verdict].label}</span> ${link(t.url, t.title)}<div class="muted">${esc(t.screen.reason)}</div></div>`).join("")}
+    </div></details>
+    <details><summary>Search coverage <span>fetched ${esc(r.fetched.slice(0, 16).replace("T", " "))}</span></summary><div>
+      <p class="small">${all.length} open studies (recruiting, not yet recruiting, or by invitation) from ClinicalTrials.gov:</p>
+      <ul class="small">${r.queries.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+      <p class="small muted">Trials restricted to another gene are filtered by rules; all others are read by ${esc(r.model)}, which must quote the deciding criterion verbatim or the quote is dropped.</p>
+      ${r.errors.length ? `<div class="note warn">Queries that failed: ${esc(r.errors.join(", "))}</div>` : ""}
+    </div></details>`;
+}
+
+panel.addEventListener("change", (ev) => {
+  const f = ev.target.closest("form.profile");
+  if (!f) return;
+  S.profile = { age: f.age.value, country: f.country.value };
+  try { localStorage.setItem("profile", JSON.stringify(S.profile)); } catch (e) { /* ignore */ }
+  renderDisease();
+});
+panel.addEventListener("click", (ev) => {
+  const b = ev.target.closest("[data-enquiry]");
+  if (!b) return;
+  const t = S.trials[S.focus].trials.find((x) => x.nct === b.dataset.enquiry);
+  const who = t.contacts[0] ? t.contacts[0].name : "study team";
+  const text = `Subject: Enquiry about ${t.nct} for a child with STXBP1-related disorder
+
+Dear ${who},
+
+I lead the STXBP1 patient group and am writing on behalf of our families. We found your study "${t.title}" (${t.nct}, ${t.url}).
+
+Our children have a confirmed pathogenic STXBP1 variant, usually with early-onset epilepsy and developmental delay${S.profile.age !== "" ? `; the child I am asking for is ${S.profile.age} years old` : ""}${S.profile.country ? `, based in ${S.profile.country}` : ""}.
+
+Could you tell us whether children with STXBP1-related disorder can be considered, which of the inclusion criteria usually rule them out, and which site is closest to us?
+
+Thank you,
+Maria
+`;
+  $("#brief").textContent = text; $("#modal").hidden = false;
+  S.connection = { brief: text };
+});
+
 /* ------------------------------------------------------------------ connection */
 async function openConnection(a, b) {
   if (S.selected !== a) await openDisease(a);
@@ -490,7 +509,7 @@ async function openConnection(a, b) {
     <h1>${esc(A.name)} <span class="muted">↔</span> ${esc(B.name)}</h1>
     <div class="loading">Reading both diseases' papers, studies and grants, and checking whether anyone has connected them before</div>`;
   let c;
-  try { c = await api(`/api/connection?a=${a}&b=${b}&audience=${S.persona}`); }
+  try { c = await api(`/api/connection?a=${a}&b=${b}`); }
   catch (err) { panel.querySelector(".loading").outerHTML = `<div class="note stop">Could not build this connection: ${esc(err.message)}</div>`; return; }
   if (S.conn !== b || S.selected !== a) return;
   S.connection = c;
@@ -498,7 +517,7 @@ async function openConnection(a, b) {
 }
 
 const evChip = (id) => `<button class="ev" data-e="${id}">${id}</button>`;
-const cite = (text) => esc(text).replace(/\[(E\d+)\]/g, (_, id) => evChip(id));
+const cite = (text) => esc(text).replace(/\[(E\d+(?:\s*,\s*E\d+)*)\]/g, (_, ids) => ids.split(/\s*,\s*/).map(evChip).join(""));
 
 function renderConnection(c) {
   const A = c.a, B = c.b, pw = c.path.pathways[0];
@@ -534,7 +553,7 @@ function renderConnection(c) {
     <div id="evcard"></div>
     <p class="small muted">Each numbered tag opens the source behind that step.</p>
     ${c.narrative.split("\n\n").map((p) => `<p>${cite(p)}</p>`).join("")}
-    <p class="small muted">${c.narrative_by === "openai" ? "Explanation written by OpenAI from the evidence ledger; citations checked against it." : "Explanation assembled from the evidence ledger (template mode)."}</p>
+    <p class="small muted">${c.narrative_by === "llm" ? `Explanation written by ${esc(S.llm.model)} from the evidence ledger; citations checked against it.` : "Explanation assembled from the evidence ledger (template mode)."}</p>
 
     <details open><summary>Why they are connected <span>${c.shared_pathways.length} pathways · ${c.shared_phenotypes.length} symptoms</span></summary><div>
       ${c.path.pathways.length ? `<p class="label">Shared pathways (observed)</p>${c.path.pathways.map((p) => `<div class="small">${link(p.url, p.name)} <span class="muted">· ${p.n_genes} genes</span> ${evChip(p.e)}</div>`).join("")}` : `<div class="note warn">No shared curated pathway.</div>`}
@@ -645,16 +664,16 @@ function clusterRows(clusters) {
 async function openEntity(type, id) {
   panel.innerHTML = `<div class="loading">Searching the atlas</div>`;
   const e = await api(`/api/entity/${type}/${encodeURIComponent(id)}`);
-  if (type === "gene" && e.count === 1) { S.resolved = { from: `gene ${id}`, id: e.ids[0] }; location.replace(diseaseHref(e.ids[0])); return; }
+  if (type === "gene" && e.count === 1) { location.replace(diseaseHref(e.ids[0])); return; }
   S.selected = null; S.neighbors = []; S.conn = null; S.highlight = new Set(e.ids); dirty = true;
   focus(e.ids, 8);
-  panel.innerHTML = `<a class="back" href="#">← Whole atlas</a>
+  panel.innerHTML = `<a class="back" href="#">← Back to STXBP1</a>
     <p class="label">${esc(e.kind)}</p><h1>${e.url ? link(e.url, e.title) : esc(e.title)}</h1>
     ${e.def ? `<p class="muted">${esc(e.def)}</p>` : ""}
     <p>${esc(e.note)}</p>
     ${e.specificity ? `<p><span class="chip ${e.specificity}">${e.specificity === "informative" ? "Unusually informative symptom" : e.specificity === "broad" ? "Broad symptom — weak evidence alone" : "Moderately specific symptom"}</span></p>` : ""}
     <h2>${plural(e.count, "disease")} across ${plural(e.clusters.length, "constellation")}, ranked</h2>
-    <p class="small muted">${S.persona === "priya" ? "Ranked by how many diseases in each cluster carry this mechanism. ◐ marks genes where losing one copy causes disease (ClinGen) — candidates for replacement or upregulation approaches." : "Highlighted on the map. Open a disease to see its connections."}</p>
+    <p class="small muted">Highlighted on the map. ◐ marks genes where losing one copy causes disease (ClinGen), as in STXBP1.</p>
     ${clusterRows(e.clusters)}`;
 }
 async function openCluster(cid) {
@@ -662,7 +681,7 @@ async function openCluster(cid) {
   const c = await api("/api/cluster/" + encodeURIComponent(cid));
   const ids = c.members.map((m) => m.id);
   S.selected = null; S.neighbors = []; S.conn = null; S.highlight = new Set(ids); dirty = true; focus(ids, 10);
-  panel.innerHTML = `<a class="back" href="#">← Whole atlas</a>
+  panel.innerHTML = `<a class="back" href="#">← Back to STXBP1</a>
     <p class="label">Constellation</p><h1>${esc(c.label)}</h1>
     <p class="muted">${plural(c.size, "disease")} that sit together because they share the features below — not because of their names.</p>
     ${c.pathways.length ? `<h2>Pathways they share</h2><div class="chips">${c.pathways.map((p) => `<a class="chip" href="#e/mechanism/${p.id}">${esc(p.name)} · ${Math.round(p.frac * 100)}%</a>`).join("")}</div>` : ""}
@@ -676,13 +695,13 @@ async function route() {
   const parts = decodeURIComponent(location.hash.slice(1)).split("/");
   document.querySelectorAll(".group.on").forEach((x) => x.classList.remove("on"));
   try {
-    if (parts[0] === "d" && S.byId.has(parts[1])) { S.conn = null; await openDisease(parts[1]); }
+    if (parts[0] === "d" && S.byId.has(parts[1]) && parts[1] !== S.focus) { S.conn = null; await openDisease(parts[1]); }
     else if (parts[0] === "c" && S.byId.has(parts[1]) && S.byId.has(parts[2])) await openConnection(parts[1], parts[2]);
     else if (parts[0] === "e") await openEntity(parts[1], parts.slice(2).join("/"));
     else if (parts[0] === "k") await openCluster(parts.slice(1).join("/"));
-    else { S.selected = null; S.neighbors = []; S.highlight = null; S.conn = null; dirty = true; renderHome(); }
+    else { S.conn = null; await openDisease(S.focus); }
   } catch (err) {
-    panel.innerHTML = `<a class="back" href="#">← Whole atlas</a><div class="note stop">${esc(err.message)}</div>`;
+    panel.innerHTML = `<a class="back" href="#">← Back to STXBP1</a><div class="note stop">${esc(err.message)}</div>`;
   }
   panel.scrollTop = 0;
 }
@@ -690,10 +709,10 @@ window.addEventListener("hashchange", route);
 window.addEventListener("resize", resize);
 
 (async function init() {
-  resize(); renderPersona();
+  resize();
   panel.innerHTML = `<div class="loading">Loading the atlas</div>`;
   const a = await api("/api/atlas");
-  S.meta = a.meta; S.llm = a.llm; S.orgs = a.organizations; edges = a.edges;
+  S.meta = a.meta; S.llm = a.llm; S.orgs = a.organizations; S.focus = a.focus; edges = a.edges;
   S.points = a.points.map(([id, name, x, y, group, cluster, genes, deg]) => ({ id, name, x, y, group, cluster, genes, deg }));
   S.points.forEach((p) => S.byId.set(p.id, p));
   S.groups = a.groups.map((g) => {

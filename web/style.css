@@ -179,3 +179,13 @@ th { color: var(--muted); font-weight: 500; }
 .def { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; cursor: pointer; }
 .def.open { display: block; }
 .tabs button { white-space: nowrap; }
+
+.focus { font-weight: 600; font-size: 15px; }
+.focus span { color: var(--muted); font-weight: 400; }
+form.profile { display: flex; gap: 14px; margin: 14px 0 6px; flex-wrap: wrap; }
+form.profile label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
+form.profile input, form.profile select { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line);
+  border-radius: 6px; padding: 6px 9px; min-width: 130px; }
+.card.trial .title { font-size: 14.5px; }
+.tabs { overflow-x: auto; scrollbar-width: none; }
+.tabs button { padding: 8px 10px; flex: none; }
