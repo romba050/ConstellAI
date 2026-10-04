@@ -15,7 +15,16 @@ CONTRIBUTIONS_FILE = DATA / "contributions.json"
 WEB = ROOT / "web"
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-5-mini").strip()
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "").strip() or "gpt-5-mini"
+# Cerebras serves OpenAI's open-weight gpt-oss-120b through an OpenAI-compatible
+# Chat Completions endpoint. When its key is set it takes precedence.
+CEREBRAS_API_KEY = os.getenv("CEREBRAS_API_KEY", "").strip()
+CEREBRAS_MODEL = os.getenv("CEREBRAS_MODEL", "").strip() or "gpt-oss-120b"
+CEREBRAS_BASE_URL = "https://api.cerebras.ai/v1"
+if CEREBRAS_API_KEY:
+    LLM_PROVIDER, LLM_API_KEY, LLM_MODEL, LLM_BASE_URL = "Cerebras", CEREBRAS_API_KEY, CEREBRAS_MODEL, CEREBRAS_BASE_URL
+else:
+    LLM_PROVIDER, LLM_API_KEY, LLM_MODEL, LLM_BASE_URL = ("OpenAI" if OPENAI_API_KEY else None), OPENAI_API_KEY, OPENAI_MODEL, None
 NCBI_API_KEY = os.getenv("NCBI_API_KEY", "").strip()
 
 # Bulk files the graph builder needs. Everything else is fetched live per disease.

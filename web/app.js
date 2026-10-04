@@ -178,7 +178,7 @@ function renderLegend() {
     <div class="foot">
       <p>Grouped by shared symptoms and pathways, not by disease name.</p>
       <p>${c.diseases.toLocaleString()} monogenic diseases · ${c.genes.toLocaleString()} genes · ${c.similarity_edges.toLocaleString()} evidence-backed links · ${c.clusters} clusters</p>
-      <p>Built ${esc(S.meta.built)} · ${S.llm.enabled ? "OpenAI " + esc(S.llm.model) : "template mode (no OpenAI key)"}</p>
+      <p>Built ${esc(S.meta.built)} · ${S.llm.enabled ? `${esc(S.llm.model)} via ${esc(S.llm.provider)}` : "template mode (no AI key)"}</p>
     </div>`;
 }
 $("#legend").addEventListener("click", (ev) => {

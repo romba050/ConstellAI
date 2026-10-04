@@ -62,7 +62,7 @@ class AnalysisAPITests(unittest.TestCase):
                                    output_text=json.dumps({"checks": [check]}))
         create = Mock(return_value=response)
         client = SimpleNamespace(responses=SimpleNamespace(create=create))
-        with patch.object(server, "analysis_service", service()), patch.object(server.llm, "available", return_value=True), patch.object(server.llm, "_client", client):
+        with patch.object(server, "analysis_service", service()), patch.object(server.llm, "available", return_value=True), patch.object(server.llm, "CHAT_TRANSPORT", False), patch.object(server.llm, "_client", client):
             cached = self.client.post("/api/v1/analyze_disease", json={"disease": "DEE4"}).json()
             result = self.client.post("/api/v1/analyze_disease", json={"disease": "DEE4", "use_openai": True})
         self.assertEqual(result.status_code, 200)

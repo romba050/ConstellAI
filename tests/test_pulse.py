@@ -400,7 +400,7 @@ class PulseServiceTests(unittest.TestCase):
                 "quote": "STXBP1 was examined in a mouse model.", "evidence_type": "preclinical"}]}))
         create = Mock(return_value=response)
         client = SimpleNamespace(responses=SimpleNamespace(create=create))
-        with patch("atlas.pulse.service.llm.available", return_value=True), patch("atlas.pulse.service.llm._client", client):
+        with patch("atlas.pulse.service.llm.available", return_value=True), patch("atlas.pulse.service.llm.CHAT_TRANSPORT", False), patch("atlas.pulse.service.llm._client", client):
             self.service.tick()
         options = create.call_args.kwargs
         self.assertFalse(options["store"])

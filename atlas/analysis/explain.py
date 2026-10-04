@@ -7,7 +7,7 @@ add compounds, alter statuses or weights, resolve a variant, or rewrite facts.
 import json
 
 from .. import llm
-from ..config import OPENAI_MODEL
+from ..config import LLM_MODEL as OPENAI_MODEL
 from .models import Claim, LLMProvenance
 
 

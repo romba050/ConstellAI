@@ -398,6 +398,27 @@ class ProductionGraphTests(unittest.TestCase):
 
 
 class ResponsesTests(unittest.TestCase):
+    def setUp(self):
+        patcher = patch.object(llm, "CHAT_TRANSPORT", False)
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
+    def test_chat_transport_for_cerebras_uses_strict_schema_and_validates(self):
+        def reply(content, finish="stop"):
+            return SimpleNamespace(choices=[SimpleNamespace(finish_reason=finish, message=SimpleNamespace(content=content, refusal=None))])
+        create = Mock(return_value=reply('{"candidates": ["STXBP1"]}'))
+        client = SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=create)))
+        with patch.object(llm, "CHAT_TRANSPORT", True), patch.object(llm, "available", return_value=True), patch.object(llm, "_client", client):
+            self.assertEqual(llm.resolve_query("test query"), ["STXBP1"])
+            args = create.call_args.kwargs
+            self.assertEqual(args["response_format"]["type"], "json_schema")
+            self.assertIs(args["response_format"]["json_schema"]["strict"], True)
+            self.assertLessEqual(args["timeout"], 25)
+            create.return_value = reply('{"candidates": ["STXBP1"]}', finish="length")
+            self.assertIsNone(llm.resolve_query("test query"))
+            create.return_value = reply('{"candidates": ["STXBP1"], "extra": 1}')
+            self.assertIsNone(llm.resolve_query("test query"))
+
     def response(self, payload, **fields):
         return SimpleNamespace(status="completed", error=None, incomplete_details=None, output=[],
                                output_text=__import__("json").dumps(payload), **fields)

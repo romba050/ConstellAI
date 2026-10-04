@@ -1,4 +1,8 @@
-"""OpenAI-backed steps: Extract, Reconcile, Explain.
+"""OpenAI-model steps: Extract, Reconcile, Explain.
+
+Runs on gpt-oss-120b via Cerebras when CEREBRAS_API_KEY is set (Chat
+Completions; Cerebras has no Responses endpoint), otherwise on the OpenAI
+Responses API when OPENAI_API_KEY is set.
 
 Every function returns None (or leaves its input untouched) when no key is
 configured or the call fails, and the callers fall back to deterministic logic.
@@ -10,19 +14,21 @@ import logging
 import math
 import re
 
-from .config import OPENAI_API_KEY, OPENAI_MODEL
+from .config import LLM_API_KEY, LLM_BASE_URL, LLM_MODEL, LLM_PROVIDER
 
 _client = None
 _logger = logging.getLogger(__name__)
 REQUEST_TIMEOUT_SECONDS = 25.0
+CHAT_TRANSPORT = LLM_PROVIDER == "Cerebras"
 
 
 def available():
-    return bool(OPENAI_API_KEY)
+    return bool(LLM_API_KEY)
 
 
 def status():
-    return {"enabled": available(), "model": OPENAI_MODEL if available() else None}
+    return {"enabled": available(), "model": LLM_MODEL if available() else None,
+            "provider": LLM_PROVIDER if available() else None}
 
 
 def _json(system, user, name, schema):
@@ -37,9 +43,11 @@ def _json(system, user, name, schema):
     try:
         if _client is None:
             from openai import OpenAI
-            _client = OpenAI(api_key=OPENAI_API_KEY, timeout=REQUEST_TIMEOUT_SECONDS, max_retries=0)
+            _client = OpenAI(api_key=LLM_API_KEY, base_url=LLM_BASE_URL, timeout=REQUEST_TIMEOUT_SECONDS, max_retries=0)
+        if CHAT_TRANSPORT:
+            return _chat_json(system, user, name, schema)
         r = _client.responses.create(
-            model=OPENAI_MODEL,
+            model=LLM_MODEL,
             input=[{"role": "system", "content": system}, {"role": "user", "content": user}],
             text={"format": {"type": "json_schema", "name": name, "strict": True, "schema": schema}},
             store=False,
@@ -55,8 +63,26 @@ def _json(system, user, name, schema):
         payload = json.loads(_field(r, "output_text", ""))
         return payload if _matches_schema(payload, schema) else None
     except Exception as e:  # network, quota, bad model name: degrade to template mode
-        _logger.warning("OpenAI operation %s unavailable (%s)", name, type(e).__name__)
+        _logger.warning("LLM operation %s unavailable (%s)", name, type(e).__name__)
         return None
+
+
+def _chat_json(system, user, name, schema):
+    """Chat Completions transport with the same acceptance rules as the Responses path."""
+    r = _client.chat.completions.create(
+        model=LLM_MODEL,
+        messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
+        response_format={"type": "json_schema", "json_schema": {"name": name, "strict": True, "schema": schema}},
+        timeout=REQUEST_TIMEOUT_SECONDS,
+    )
+    choices = _field(r, "choices", []) or []
+    if len(choices) != 1 or _field(choices[0], "finish_reason") != "stop":
+        return None
+    message = _field(choices[0], "message")
+    if _field(message, "refusal") or not _field(message, "content"):
+        return None
+    payload = json.loads(_field(message, "content"))
+    return payload if _matches_schema(payload, schema) else None
 
 
 def _field(value, name, default=None):
